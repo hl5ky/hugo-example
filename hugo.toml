@@ -1,4 +1,5 @@
-baseURL = "https://hl5ky.githug.io/"
+# baseURL = "https://hl5ky.githug.io/"
+baseURL = "/"
 title = "HL5KY & HL5BTF Amateur Radio"
 
 # Language settings
