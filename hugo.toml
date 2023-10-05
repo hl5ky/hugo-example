@@ -1,5 +1,5 @@
-baseURL = "/"
-title = "Goldydocs"
+baseURL = "https://hl5ky.githug.io/"
+title = "HL5KY & HL5BTF Amateur Radio"
 
 # Language settings
 contentDir = "content/en"
