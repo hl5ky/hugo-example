@@ -1,0 +1,13 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<details>
+    <summary class = "detail-title" style="font-Weight : bold; font-size : 15px; color : #3158ad;" >
+        {{- if  (.Get "summary")}}
+            {{- .Get "summary" -}}
+        {{- else}}
+            📃 코드  ( 접기 / 펼치기 )
+        {{end}}
+    </summary>
+    <div>
+        {{.Inner}}
+    </div>
+</details>
