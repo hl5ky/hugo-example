@@ -12,6 +12,8 @@ This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
 
+이것은 연습입니다.
+
 
 {{% detail summary="5단계단어연습" %}}
 ```go
