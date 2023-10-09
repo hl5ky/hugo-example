@@ -1,6 +1,6 @@
 # baseURL = "https://hl5ky.githug.io/"
 baseURL = "/"
-title = "HL5KY & HL5BTF Amateur Radio"
+title = "HL5KY & HL5BTF"
 
 # Language settings
 contentDir = "content/ko"
@@ -67,7 +67,7 @@ contentDir = "content/ko"
 # Weight used for sorting.
 weight = 1
 [languages.ko.params]
-title = "HL5KY & HL5BTF Amateur Radio"
+title = "HL5KY & HL5BTF"
 description = "World Wide Friendship Through the Radio"
 
 [languages.en]
@@ -75,7 +75,7 @@ languageName ="English"
 contentDir = "content/en"
 weight = 2
 [languages.en.params]
-title = "HL5KY & HL5BTF Amateur Radio"
+title = "HL5KY & HL5BTF"
 description = "World Wide Friendship Through the Radio"
 time_format_default = "Feb 01.2006"
 time_format_blog = "Feb 01.2006"
@@ -193,7 +193,7 @@ enable = false
   url = "https://github.com/google/docsy"
   icon = "fab fa-github"
   desc = "Development takes place here!"
-  
+
 [[params.links.user]]
   name = "My Github"
   url = "https://github.com/hl5ky/hl5ky.github.io"
