@@ -1,6 +1,7 @@
 ---
 title: HL5BTF & VK4BTF
 description: HL5BTF와 VK4BTF의 소중한 인연
+type: docs
 weight: 1
 ---
 

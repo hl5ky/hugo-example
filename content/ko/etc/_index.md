@@ -1,9 +1,8 @@
 ---
-title: Friendship
-linkTitle: Friendship
+title: etc
+linkTitle: etc
 type: docs
-menu: {main: {weight: 10}}
-weight: 10
+menu: {main: {weight: 60}}
 ---
 
 {{% pageinfo %}}

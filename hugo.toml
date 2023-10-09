@@ -2,6 +2,7 @@
 baseURL = "/"
 title = "HL5KY & HL5BTF"
 
+
 # Language settings
 contentDir = "content/ko"
 defaultContentLanguage = "ko"

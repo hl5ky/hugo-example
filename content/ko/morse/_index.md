@@ -1,9 +1,8 @@
 ---
-title: Friendship
-linkTitle: Friendship
+title: Morse Code
+linkTitle: Morse
 type: docs
-menu: {main: {weight: 10}}
-weight: 10
+menu: {main: {weight: 20}}
 ---
 
 {{% pageinfo %}}

@@ -1,9 +1,8 @@
 ---
-title: Friendship
-linkTitle: Friendship
+title: Recording
+linkTitle: Recording
 type: docs
-menu: {main: {weight: 10}}
-weight: 10
+menu: {main: {weight: 30}}
 ---
 
 {{% pageinfo %}}
