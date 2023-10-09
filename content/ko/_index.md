@@ -1,14 +1,19 @@
 ---
-title: Goldydocs
+title: Ham Radio
 ---
+
+
 
 
 {{< blocks/cover height="full" >}}
 
+
+<!--
+
 # World Wide Friendship Through the Radio #
 <br>
 
-<!--## 아마추어무선을 통한 전세계와의 우정 ##-->
+## 아마추어무선을 통한 전세계와의 우정 ##
 <br>
 <br>
 <br>
@@ -23,26 +28,27 @@ title: Goldydocs
 <br>
 <br>
 
-<!--
+
 ### 아마추어무선을 통한 전세계와의 우정 ###
 ### 전신 학습 방법(QSO 코흐법)
 ### 디지털 통신(DMR, DSTAR) ###
 ### 교신 녹음 ###
 
-{{< blocks/link-down color="info" >}} -->
+{{< blocks/link-down color="info" >}}
+-->
 
 {{< /blocks/cover >}}
 
 
 
 
-<!--
-{{% blocks/lead color="primary" %}}
-아마추어무선을 통한 전세계와의 우정에 관한 내용과 함께
 
-전신 학습 방법(QSO 코흐법), 디지털 통신(DMR, DSTAR), 교신 녹음 등의 내용을 다루고 있습니다.
-{{% /blocks/lead %}}
--->
+
+
+
+
+
+
 
 
 <!--
