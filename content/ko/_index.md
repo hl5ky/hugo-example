@@ -11,7 +11,7 @@ title: Amateur Radio
 {{< /blocks/cover >}}
 
 
-{{% blocks/lead color="primary" %}}
+{{% blocks/lead color="info" %}}
 ## World Wide Friendship Through the Radio
 <br>
 
