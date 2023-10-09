@@ -4,18 +4,18 @@ title: Amateur Radio
 
 
 <!-- height -> min, med, max, full or auto -->
-{{< blocks/cover height=max >}}
+{{< blocks/cover color="info" height=min >}}
 
 <p class="lead mt-5">     </p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
 
-{{% blocks/lead color="info" %}}
+{{% blocks/lead color="#ffffff" %}}
 ## World Wide Friendship Through the Radio
 <br>
 
-## 아마추어무선을 통한 전세계와의 우정
+### 아마추어무선을 통한 전세계와의 우정,  디지털통신 (DMR, DSTAR),  실제 교신 녹음
 {{% /blocks/lead %}}
 
 
