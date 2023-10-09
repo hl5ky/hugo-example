@@ -1,53 +1,22 @@
 ---
-title: Ham Radio
+title: Amateur Radio
 ---
 
 
+<!-- height -> min, med, max, full or auto -->
+{{< blocks/cover height=max >}}
 
-
-{{< blocks/cover height="full" >}}
-
-
-<!--
-
-# World Wide Friendship Through the Radio #
-<br>
-
-## 아마추어무선을 통한 전세계와의 우정 ##
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-### 아마추어무선을 통한 전세계와의 우정 ###
-### 전신 학습 방법(QSO 코흐법)
-### 디지털 통신(DMR, DSTAR) ###
-### 교신 녹음 ###
-
+<p class="lead mt-5">     </p>
 {{< blocks/link-down color="info" >}}
--->
-
 {{< /blocks/cover >}}
 
 
+{{% blocks/lead color="primary" %}}
+## World Wide Friendship Through the Radio
+<br>
 
-
-
-
-
-
-
-
+## 아마추어무선을 통한 전세계와의 우정
+{{% /blocks/lead %}}
 
 
 
