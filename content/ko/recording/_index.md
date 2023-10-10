@@ -1,8 +1,11 @@
 ---
-title: Recording
-linkTitle: Recording
+title: 교신 녹음 듣기
+linkTitle: 교신녹음
 type: docs
-menu: {main: {weight: 30}}
+icon: fa-solid fa-clone
+menu: {main: {pre: <i class="fa-solid fa-clone"></i>}}
+#menu: {main: {weight: 30}}
+weight: 30
 ---
 
 {{% pageinfo %}}

@@ -1,8 +1,10 @@
 ---
-title: Friendship
-linkTitle: Friendship
+title: 친구들
+linkTitle: 친구들
 type: docs
-menu: {main: {weight: 10}}
+icon: fa-solid fa-user-group
+menu: {main: {pre: <i class="fa-solid fa-user-group"></i>}}
+# menu: {main: {weight: 10}}
 weight: 10
 ---
 

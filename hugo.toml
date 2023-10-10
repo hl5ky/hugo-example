@@ -2,7 +2,6 @@
 baseURL = "/"
 title = "HL5KY & HL5BTF"
 
-
 # Language settings
 contentDir = "content/ko"
 defaultContentLanguage = "ko"
@@ -52,6 +51,17 @@ blog = "/:section/:year/:month/:day/:slug/"
 resampleFilter = "CatmullRom"
 quality = 75
 anchor = "smart"
+
+
+[[menu.main]]
+    name = 'HL5BTF 여행블로그 '
+    pre = '<i class="fa-solid fa-plane-departure"></i>'
+    post = '<i class="fa-solid fa-up-right-from-square fa-xs"></i>'
+    # post = "<span class='alert'>New!</span>"
+    url = 'https://blog.naver.com/etyuni'
+    weight = 200
+    [menu.main.params]
+      rel = 'external'
 
 [services]
 [services.googleAnalytics]

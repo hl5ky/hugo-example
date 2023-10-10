@@ -1,8 +1,10 @@
 ---
-title: etc
-linkTitle: etc
+title: 기타
+linkTitle: 기타
 type: docs
-menu: {main: {weight: 60}}
+icon: fa-solid fa-screwdriver-wrench
+menu: {main: {pre: <i class="fa-solid fa-screwdriver-wrench"></i>}}
+weight: 60
 ---
 
 {{% pageinfo %}}
