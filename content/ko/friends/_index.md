@@ -1,5 +1,5 @@
 ---
-title: 친구들
+title: 아마추어무선을 통한 교류활동
 linkTitle: 친구들
 type: docs
 icon: fa-solid fa-user-group
