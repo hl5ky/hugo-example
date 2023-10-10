@@ -1,7 +1,7 @@
 ---
 title: Examples
 weight: 3
-date: 2017-01-05
+type: docs
 description: See your project in action!
 ---
 
