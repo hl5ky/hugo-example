@@ -3,7 +3,6 @@ baseURL = "/"
 title = "HL5KY & HL5BTF"
 
 # Analytics
-[params]
 googleAnalytics = "G-L4DHC1T7GE"
 
 # Language settings
