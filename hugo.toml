@@ -2,9 +2,6 @@
 baseURL = "/"
 title = "HL5KY & HL5BTF"
 
-# Analytics
-googleAnalytics = "G-L4DHC1T7GE"
-
 # Language settings
 contentDir = "content/ko"
 defaultContentLanguage = "ko"
@@ -115,6 +112,9 @@ section = ["HTML", "print", "RSS"]
 [params]
 copyright = "HL5KY & HL5BTF"
 privacy_policy = "https://policies.google.com/privacy"
+
+# Analytics
+googleAnalytics = "G-L4DHC1T7GE"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
