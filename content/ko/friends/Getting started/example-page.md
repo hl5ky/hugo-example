@@ -72,11 +72,14 @@ CUAGN
 {{% detail summary="Code" %}}
 ```go
 **bold**, _italic_ *italic*, or ~~strikethrough~~
+<span style="color:red">**실화**</span>
 [Links_name](https://gohugo.io)
 ```
 {{% /detail %}}
 
 **bold**, _italic_ *italic*, or ~~strikethrough~~
+
+<span style="color:red">**실화**</span>
 
 [Links_name](https://gohugo.io)
 

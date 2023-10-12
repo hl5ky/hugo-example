@@ -26,12 +26,12 @@ title: Example Page
 ----------------------------------
 {{% detail summary="Code" %}}
 ```go
-<span style="color:blue; background-color:#fff5b1">**실화**</span>
+<span style="color:red; background-color:#fff5b1">**실화**</span>
 ```
 {{% /detail %}}
 글자색, 배경색, 강조
 
-<span style="color:blue; background-color:#fff5b1">**실화**</span>
+<span style="color:red; background-color:#fff5b1">**실화**</span>
 
 ----------------------------------
 {{% detail summary="Code" %}}
