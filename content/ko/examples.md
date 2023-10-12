@@ -1,7 +1,6 @@
 ---
 title: Example Page
-#type: docs
-
+type: docs
 ---
 
 {{% detail summary="Code" %}}
