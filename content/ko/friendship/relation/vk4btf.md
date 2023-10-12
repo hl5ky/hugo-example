@@ -159,7 +159,7 @@ Bernie는 얼른 송신 준비를 하고 호출한다.<br>
 
 TS-520이라는 무전기와 안테나튜너, 외부스피커, 외부VFO 그리고 디지털 디스플레이까지 한 세트였다. 당시에는 가격도 비쌌고 국내에서는 구하기도 쉽지 않은 장비였다. Bernie뿐만 아니라 자주 교신했던 VK5YM은 안테나지지용 베어링을 보내주기도 하였다.
 
-<img src="/friendship/relation/img/img/ts-520.png#center"><br>
+<img src="/friendship/relation/img/ts-520.png#center"><br>
 TS-520 세트
  
 
