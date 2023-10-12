@@ -28,7 +28,7 @@ HF의 원거리 교신이 어떻게 이루어지는지 궁금해 하는 분들�
 <iframe src="https://play-tv.kakao.com/embed/player/cliplink/429534357?service=daum_tistory" width="860" height="484" frameborder="0" allowfullscreen="true"></iframe>
 
 
-### 설명 1 ###
+### 설명 1. 서로의 호출부호 확인 ###
 (Whiskey 7 Juliet X-ray Radio this is HL5KY.)
 상대방의 호출부호를 포네틱으로 부르는 것은,
 내가 당신의 호출부호를 이렇게 수신했다고 말해주는 것입니다.
@@ -40,13 +40,13 @@ HF의 원거리 교신이 어떻게 이루어지는지 궁금해 하는 분들�
 나의 호출부호를 포네틱으로 말하지 않은 것은,
 상대는 이미 나의 호출부호를 알고 있으니 굳이 시간 낭비를 할 필요가 없어서 그렇게 한 것입니다.
 
-### 설명 2 ###
+### 설명 2.  further down the log ###
 (Hope to catch you again further down the log.)
 further down the log 는 햄들이 자주 사용하는 관용표현입니다.
 다음에 기록되는 로그에서 당신의 호출부호를 찾을 수 있으면 좋겠다.
 즉, 다시 만나자는 말입니다.
 
-### 설명 3 ###
+### 설명 3.  CQ 20 ###
 (CQ 20)
 20은 20미터 밴드, 즉 14MHz를 말합니다.
 오래전에는 대부분의 햄들이 무전기를 자작하였는데, 회로의 구성이 엉성하면 고조파가 많이 발생합니다.
@@ -57,7 +57,7 @@ further down the log 는 햄들이 자주 사용하는 관용표현입니다.
 지금은 대부분 잘 만들어진 메이커 제품을 사용하고 있어서 그럴 가능성이 희박하지만
 아직도 많은 햄들이 습관적으로 이렇게 송신하고 있습니다.
 
-### 설명 4 ###
+### 설명 4. 주파수 사용전 확인 방법 ###
 주파수를 사용하고 있는지 확인하는 방법으로,  
 CW에서는 QRL? 이라고 하면 되지만, 음성교신에서는 QRL이라고 하지 않고 보통의 영어로 말합니다.  
 사람에 따라 다르지만, 대략 아래와 같이 말합니다.
@@ -75,8 +75,7 @@ Frequency occupied?
 Frequency in use? (이때 use는 명사이기 때문에 '유스'로 발음함)
 <br>
 
-### 설명 5 ###
-(Vanity callsign systems)  
+### 설명 5. Vanity callsign systems ###
 영상의 마지막 교신에서 W5HVV는 처음에 KD4OJM으로 개국했다가,  
 나중에 자신의 멘토였던 W5HVV의 호출부호를 받았습니다.  
 이것은 미국의 Vanity callsign systems이란 제도가 1996년경에 도입되면서 가능해진 것입니다.
