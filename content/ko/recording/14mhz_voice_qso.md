@@ -85,27 +85,43 @@ further down the log 는 햄들이 자주 사용하는 관용표현입니다.
 
 ### 설명 4 ###
 주파수를 사용하고 있는지 확인하는 방법으로,  
+
 CW에서는 QRL? 이라고 하면 되지만, 음성교신에서는 보통의 영어로 하는 수밖에 없습니다.  
+
 사람에 따라 다르지만, 대략 아래와 같이 말합니다.  
+<br>
   
 Is this frequency occupied?  
+
 Is this frequency in use?
+<br>
+<br>
 
 그런데 이렇게 말하려면 너무 길어서 힘들다는 분도 있습니다.  
-다음과 같이 앞 부분을 줄여서 해도 됩니다.  
-  
-Frequency occupied?  
-Frequency in use? (이때 use는 명사이기 때문에 '유스'로 발음함)
 
+다음과 같이 앞 부분을 줄여서 해도 됩니다.  
+<br>
+
+Frequency occupied?  
+
+Frequency in use? (이때 use는 명사이기 때문에 '유스'로 발음함)
+<br>
 
 ### 설명 5 ###
 (Vanity callsign systems)  
+
 영상의 마지막 교신에서 W5HVV는 처음에 KD4OJM으로 개국했다가,  
+
 나중에 자신의 멘토였던 W5HVV의 호출부호를 받았습니다.  
+
 이것은 미국의 Vanity callsign systems이란 제도가 1996년경에 도입되면서 가능해진 것입니다.  
+<br>
   
 원한다고 무조건 주는 것은 아니고,  
+
 \- 미국의 호출부호는 자격급수에 따라 다르므로 급수에 맞아야 하며,  
+
 \- 가족인 경우나, 클럽국인 경우에 우선권을 줍니다.  
-  
+<br>
+
 처음에 이 제도가 도입될 때 엄청난(?) 반대가 있었으며 이 제도와 관련된 얘기도 참 많습니다.
