@@ -1,6 +1,6 @@
 ---
 linkTitle: 남아프리카와 DMR 교신
-title: 남아프리카(ZS6ARG)와의 DMR 교신 (38분)
+title: ZS6ARG와의 DMR 교신 (38분)
 # description: 
 type: docs
 weight: 10
