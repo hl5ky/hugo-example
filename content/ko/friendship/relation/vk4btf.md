@@ -14,7 +14,7 @@ weight: 1
 KARL지 2021년 11/12월호에 게재.
 
 
-글[.](https://hl5ky.github.io/examples) HL5KY.
+글. HL5KY.
 {{% /pageinfo %}}
 
 
