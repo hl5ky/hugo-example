@@ -6,8 +6,6 @@ type: docs
 weight: 20
 ---
 
-{{% pageinfo %}}
-교신을 통해서 만난 다양한 사람들.
-{{% /pageinfo %}}
+
 
 

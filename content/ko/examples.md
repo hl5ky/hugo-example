@@ -3,14 +3,15 @@ title: Example Page
 type: docs
 ---
 
-{{% detail summary="Code" %}}
+
+
+{{% detail summary="Code 샘플" %}}
 ```go
 
 ```
 {{% /detail %}}
 
-&snbp
-&snbp
+------------------------------------------
 
 <div style="text-align: left;">
   <a href="https://hits.seeyoufarm.com">
@@ -20,20 +21,50 @@ type: docs
   </a>
 </div>
 
+<br>
 
+--------------------------------------------
+
+{{% detail summary="Code 새로운 탭에서 외부링크" %}}
+```go
+{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}
+```
+{{% /detail %}}
+
+{{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}})
 
 ----------------------------------
-{{% detail summary="Code" %}}
+
+{{% detail summary="Code 그림넣기" %}}
+```go
+<img src="/friendship/events/img/jh1nbn.jpeg"><br>
+```
+{{% /detail %}}
+
+
+<img src="/friendship/events/img/jh1nbn.jpeg"><br>
+
+----------------------------------
+{{% detail summary="Code 글자색, 배경색, 강조" %}}
 ```go
 <span style="color:red; background-color:#fff5b1">**실화**</span>
 ```
 {{% /detail %}}
-글자색, 배경색, 강조
 
 <span style="color:red; background-color:#fff5b1">**실화**</span>
 
+-----------------------------------
+
+{{% detail summary="Code 글자 부분 배경" %}}
+```go
+Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
+```
+{{% /detail %}}
+
+Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
+
 ----------------------------------
-{{% detail summary="Code" %}}
+{{% detail summary="Code 사각 설명문" %}}
 ```go
 {% pageinfo %}
 This is a placeholder page. Replace it with your own content.
@@ -46,7 +77,7 @@ This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
 
 ------------------------------------------------
-{{% detail summary="Code" %}}
+{{% detail summary="Code 바탕색 변경 설명문" %}}
 ```go
 시작과 끝 라인에 ``` 이 필요함.
 시작 라인에 go 를 추가하면 복사아이콘이 생김.
@@ -61,7 +92,9 @@ foo := "bar";
 bar := "foo";
 ```
 
-{{% detail summary="Code" %}}
+-----------------------------------------------
+
+{{% detail summary="Code 문장 펼침" %}}
 ```go
 {를 하나씩 더 추가해야 함.
 
@@ -77,6 +110,8 @@ CUAGN
 ```
 {{% /detail %}}
 
+<br>
+
 {{% detail summary="5단계단어연습" %}}
 ```go
 QSO
@@ -88,7 +123,7 @@ CUAGN
 {{% /detail %}}
 
 ---------------------------------
-{{% detail summary="Code" %}}
+{{% detail summary="Code 글자-강조,이태릭체,취소선" %}}
 ```go
 **bold**, _italic_ *italic*, or ~~strikethrough~~
 [Links_name](https://gohugo.io)
@@ -100,7 +135,7 @@ CUAGN
 [Links_name](https://gohugo.io)
 
 --------------------------------------
-{{% detail summary="Code" %}}
+{{% detail summary="Code " %}}
 ```go
 > There should be no margin above this first sentence.
 >
@@ -288,13 +323,5 @@ If a table is too wide, it should scroll horizontally.
 | Beastie Boys      | License to Ill  | 1986 | Mercury Records | noawardsbutthistablecelliswide | Rhymin & Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) |
 
 ----------------
-{{% detail summary="Code" %}}
-```go
-Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
-```
-{{% /detail %}}
 
-Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
-
------------------------------------
 
