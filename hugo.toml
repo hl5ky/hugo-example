@@ -163,7 +163,7 @@ prism_syntax_highlighting = false
 #  Set to true to disable breadcrumb navigation. (ex. Docs/HL5BTF & VK4BTF)
 breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = true
+footer_about_disable = false
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
