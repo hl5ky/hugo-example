@@ -1,6 +1,6 @@
 ---
-title: 애피소드
-linkTitle: 애피소드
+title: 에피소드
+linkTitle: 에피소드
 type: docs
 weight : 20
 # menu: {main: {weight: 1}}
