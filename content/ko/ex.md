@@ -42,7 +42,7 @@ type: docs
 {{% /detail %}}
 
 
-<img src="/friendship/events/img/jh1nbn.jpeg"><br>
+<img src="/friendship/events/img/jh1nbn.jpeg" style="width:438px;height:359"><br>
 
 ----------------------------------
 {{% detail summary="Code 글자색, 배경색, 강조" %}}
