@@ -62,7 +62,7 @@ KARL지 2021년 11/12월호에 게재.
 
 ​호주는 넓은 국토를 가졌으나 상대적으로 인구가 적어 무선통신의 사용이 일반화되어 있었다. Bernie 또한 업무적 효율성과 새로운 것에 대한 호기심으로 무선통신을 사용하였다. 업무로만 무선통신을 사용하던 그는 점점 재미를 붙여 1986년에는 아마추어무선을 시작하여 VK4VJY로 아마추어무선국을 개설하였다.
 
-<img src="/friendship/friends_1/img/vk4vjy_radio_room.png"><br>
+<img src="/friendship/img/vk4vjy_radio_room.png"><br>
 VK4VJY의 무선실
 
 
@@ -143,7 +143,7 @@ Bernie는 얼른 송신 준비를 하고 호출한다.<br>
 
 교신뿐만 아니라 수시로 편지를 교환하기도 하고 선물을 보내기도 하였다. 김윤희는 한국 인형이나 장식품을 보냈고, Bernie는 호주의 원주민 기념품 등을 보내주었다. Bernie는 워낙 악필이어서 편지보다는 주로 카세트 테이프에 녹음을 하여 보내주었는데, 지금까지 김윤희가 받은 테이프의 수는 이백여 개가 넘는다.
 
-<img src="/friendship/friends_1/img/ornament.png#center"><br>
+<img src="/friendship/img/ornament.png#center"><br>
 한국 인형으로 장식된 Bernie의 방
 
 
@@ -159,7 +159,7 @@ Bernie는 얼른 송신 준비를 하고 호출한다.<br>
 
 TS-520이라는 무전기와 안테나튜너, 외부스피커, 외부VFO 그리고 디지털 디스플레이까지 한 세트였다. 당시에는 가격도 비쌌고 국내에서는 구하기도 쉽지 않은 장비였다. Bernie뿐만 아니라 자주 교신했던 VK5YM은 안테나지지용 베어링을 보내주기도 하였다.
 
-<img src="/friendship/friends_1/img/ts-520.png#center"><br>
+<img src="/friendship/img/ts-520.png#center"><br>
 TS-520 세트
  
 
@@ -168,7 +168,7 @@ TS-520 세트
 
 아마추어무선사로 교신은 해 왔지만 기술적인 내용은 잘 몰랐기 때문에 무전기와 안테나를 어떻게 설치해야 할지 고민하고 있을 때, 부산에서 함께 활동했던 HL5BCW, HL5BEF, HL5BUC 등 몇몇 햄들의 도움으로 안테나를 세우고 무전기를 설치할 수 있었으며, 개인무선국을 신청하여 HL5BTF라는 호출부호를 받았다.
 
-​<img src="/friendship/friends_1/img/ant.png#center"><br>
+​<img src="/friendship/img/ant.png#center"><br>
 빔안테나
 
 
@@ -190,11 +190,11 @@ TS-520 세트
 
 이런 상황으로 인해 한동안 교신을 할 수 없을 때도 있었지만 김윤희와는 계속해서 연락을 취하였다. 그는 이제 자신에게 남은 것은 김윤희뿐이고, 오직 김윤희만이 자신의 가족이라는 생각을 갖게 되었다. 자신에게 남은 것이 많지는 않았지만 전 재산을 김윤희에게 상속하기로 하고 유언장을 작성하였다. 또한 김윤희가 호주에 방문하였을 때, Bernie는 자신이 아끼던 오팔 원석 8개를 선물하며 자신의 마음을 전하였다.
 
-<img src="/friendship/friends_1/img/will.png#center"><br>
+<img src="/friendship/img/will.png#center"><br>
 유언장
  
 
-<img src="/friendship/friends_1/img/yuni_visit.png#center"><br>
+<img src="/friendship/img/yuni_visit.png#center"><br>
 Bernie의 집에 방문한 김윤희
 
 
@@ -212,14 +212,14 @@ Bernie의 집에 방문한 김윤희
 ​당시에 호주의 전립선암 전문병원에는 환자가 상당히 많았고, 전립선암의 진단을 받으면 대부분 6개월 이상 생존하기가 어려울 정도로 전립선암은 서양인들에게 무서운 병이었다.
 
  
-<img src="/friendship/friends_1/img/jenny_bernie.png#center"><br>
+<img src="/friendship/img/jenny_bernie.png#center"><br>
 김윤희의 딸과 Bernie
  
 
 Bernie는 약 두 달을 머무는 동안 차츰 한국 생활에 익숙해져서, 두 사람이 직장에 나가고 나면 혼자서 동네 노인들과 어울려 지내기도 하고 집안 청소도 하며 즐겁게 지냈지만 걷는 모습은 하루하루 조금씩 나빠지기 시작하였다.
 
 
-<img src="/friendship/friends_1/img/hl0m.png#center"><br>
+<img src="/friendship/img/hl0m.png#center"><br>
 HL0M 방문
  
 
@@ -264,7 +264,7 @@ HL0M 방문
 또한 김윤희의 호출부호와 같은 서픽스인 BTF를 얻기 위해서, 이미 이 호출부호를 가지고 있는 사람을 몇 번이나 찾아가서 통사정을 하여 호출부호를 양보받기까지 하였다. 호출부호를 바꾸기 위해서는 법적인 절차도 밟아야 하기 때문에 시간이 걸렸지만 결국 VK4BTF라는 호출부호를 받게 되었다.
 
  
-<img src="/friendship/friends_1/img/amp.png#center"><br>
+<img src="/friendship/img/amp.png#center"><br>
 리니어앰프가 놓여 있는 Bernie의 무선실
 
 
@@ -281,7 +281,7 @@ HL0M 방문
 
 > <span style="color:blue">**SK**</span> : Silent Key의 약자로 돌아가신 햄을 뜻한다. 다른 뜻으로, 전신교신을 마칠 때 마지막에 S와 K를 붙여서 송신하는 것은 교신을 종료한다는 의미이다.
 
-<img src="/friendship/friends_1/img/newspaper.png#center"><br>
+<img src="/friendship/img/newspaper.png#center"><br>
 지역신문에 게재된 Bernie의 이야기
 
 ### 친구들 ###
