@@ -1,5 +1,5 @@
 ---
-linkTitle: K6KPH와 CW 교신
+linkTitle: K6KPH CW 교신
 title: K6KPH의 담백한 버그키 송신
 # description:
 type: docs
@@ -10,7 +10,7 @@ weight: 45
 2023년 2월 6일 교신.
 {{% /pageinfo %}}
 
-얼마 전부터 CW 교신에 좀 더 많은 시간을 할애하고 있습니다. CW가 재미있어서이기도 하지만 SSB 교신에 조금 싫증이 난 이유도 있습니다. 뭐, 심각한 것은 아니고 일시적인 현상입니다.
+얼마 전부터 CW 교신에 좀 더 많은 시간을 할애하고 있습니다. CW가 재미있어서 이기도 하지만 SSB 교신에 조금 싫증이 난 이유도 있습니다. 뭐, 심각한 것은 아니고 일시적인 현상입니다.
 
 ​교신은 그렇게 많이 하지는 않습니다. 주로 수신을 많이 하고, 수신 후에 QRZ.COM에서 소개 글을 읽는 것이 재미있습니다. 주말에는 점심식사 후의 한가한 시간에 7MHz에서 국내국과 전신으로 잡담을 나누기도 합니다.
 
@@ -22,6 +22,7 @@ K6KPH의 부호는 장단의 길이가 일정하지만 전자키어와 패들을
 
 <img src="/recording/img/vibroplex.jpeg" style="width:350px;height:256"><br>
 Vibroplex Original Bug
+<br>
 <br>
 <iframe src="https://play-tv.kakao.com/embed/player/cliplink/435595538?service=daum_tistory" width="700" height="484" frameborder="0" allowfullscreen="true"></iframe>
 <br>

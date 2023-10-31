@@ -1,6 +1,6 @@
 ---
-linkTitle: 해외음성교신 및 해설
-title: 14MHz에서의 해외 음성 교신 및 해설
+linkTitle: 해외SSB교신 및 해설
+title: 14MHz에서의 해외 SSB 교신 및 해설
 # description:
 type: docs
 weight: 15

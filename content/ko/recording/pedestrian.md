@@ -1,6 +1,6 @@
 ---
 linkTitle: 걸으면서 HF교신
-title: 걸으면서 HF 원거리 교신 (Pedestrian Mobile)
+title: 걸으면서 HF 원거리 교신
 # description:
 type: docs
 weight: 25
