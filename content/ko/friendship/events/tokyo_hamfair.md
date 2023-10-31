@@ -79,7 +79,7 @@ VK3GK, HL5KY<br>
  
 <img src="/friendship/img/ja1nut.jpeg"><br>
 JA1NUT, HL5KY<br>
-영문 전신 래그추어만 하는분으로 실력과 인품이 아주 좋다고  평이 난 분입니다.<br>
+영문 전신 래그추어만 하는 분으로 실력과 인품이 아주 좋다고  평이 난 분입니다.<br>
 개인적으로 오랫동안 존경해 온 분으로 식당에서 우연히 마주쳤습니다.<br>
 하지만 교신한지가 너무 오래되어서 정작 본인은 저를 잘 기억하지 못합니다.<br>
 JA1NUT 영문 블로그 : {{< newtabref href="http://nuttycellist-unknown.blogspot.com" title="JA1NUT Blog" >}}
@@ -95,7 +95,7 @@ HL1BRU님과 함께 다니다가 SEAnet부스에서 만난 일본햄.
 <img src="/friendship/img/7j4ajh.jpeg"><br>
 7J4AJH, HL5KY<br>
 여러 행사에서 자주 만나는 일본거주 미국햄.<br>
-프로그래머이며 1,2년에 한번씩 여러나라로 거주지를 옮기면서 사는 특이한 사람입니다.
+프로그래머이며 1,2년에 한번씩 여러 지방/나라로 거주지를 옮기면서 사는 특이한 사람입니다.
 
 --------------------------------------
 

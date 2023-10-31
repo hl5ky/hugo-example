@@ -1,8 +1,9 @@
 ---
-linkTitle: VK4BTF
+linkTitle: VK4BTF *
 title: HL5BTF와 VK4BTF 의 소중한 인연
 # description: HL5BTF와 VK4BTF의 소중한 인연
 type: docs
+# icon: fa-solid fa-star
 weight: 1
 ---
 

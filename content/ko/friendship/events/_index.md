@@ -3,7 +3,8 @@ linkTitle: 행사.원정교신.기타
 title: 행사참여, 해외원정교신, 기타활동
 # description: 
 type: docs
-weight: 30
+icon: fa-solid fa-angle-down
+weight: 20
 ---
 
 

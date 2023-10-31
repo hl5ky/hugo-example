@@ -3,7 +3,7 @@ title: Example Page
 type: docs
 ---
 
-
+JJ3GNR KF5ZXG W3HNK KB7EVB ZL1ACE W6ZQ N2HT G0WID G3MHV VK6LC 3W6LI W6KP HL9EP  W7LR  BV4FH BA4AE BA4AC VK4DJ 
 
 {{% detail summary="Code 샘플" %}}
 ```go
@@ -25,13 +25,21 @@ type: docs
 
 --------------------------------------------
 
+{{% detail summary="Code 영상 링크" %}}
+```go
+<iframe src="https://play-tv.kakao.com/embed/player/cliplink/429534357?service=daum_tistory" width="860" height="484" frameborder="0" allowfullscreen="true"></iframe>
+```
+{{% /detail %}}
+
+---------------------------------------------
+
 {{% detail summary="Code 새로운 탭에서 외부링크" %}}
 ```go
 {< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}
 ```
 {{% /detail %}}
 
-{{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}})
+{{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}
 
 ----------------------------------
 
