@@ -1,6 +1,6 @@
 ---
-linkTitle: 해외전신교신 및 해설
-title: 해외 전신 교신 동영상 및 해설
+linkTitle: 해외CW교신 및 해설
+title: 해외 CW 교신 동영상 및 해설
 # description:
 type: docs
 weight: 10

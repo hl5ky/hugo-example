@@ -45,7 +45,7 @@ JJ3GNR KF5ZXG W3HNK KB7EVB ZL1ACE W6ZQ N2HT G0WID G3MHV VK6LC 3W6LI W6KP HL9EP  
 
 {{% detail summary="Code 그림넣기" %}}
 ```go
-<img src="/friendship/events/img/jh1nbn.jpeg"><br>
+<img src="/friendship/events/img/jh1nbn.jpeg" style="width:450px;height:256"><br>
 ```
 {{% /detail %}}
 

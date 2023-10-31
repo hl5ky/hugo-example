@@ -25,7 +25,7 @@ title: Amateur Radio
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-solid fa-user-group" title="HL5BTF와 VK4BTF의 아름다운 인연!" url="https://hl5ky.github.io/friendship/friends_1/vk4btf/" %}}
+{{% blocks/feature icon="fa-solid fa-user-group" title="HL5BTF와 VK4BTF의 아름다운 인연!" url="/friendship/friends_1/vk4btf/" %}}
 호주로 이민간 네덜란드인이 아마추어무선을 시작하여 한국 여성햄과 교신을 하게 되는데, 이전에 일본에서 만났던 한국 여성과 동일한 이름임을 알고 놀란다.
 {{% /blocks/feature %}}
 
@@ -34,7 +34,7 @@ title: Amateur Radio
 코흐법은 전신 학습을 위해 개발한 과학적인 학습법이다. 이것을 개량한 QSO 코흐법으로 효과적인 전신 학습을 할 수 있으며, 약 700여개의 녹음 파일로 연습이 가능하다.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-walkie-talkie" title="남아프리카와의 DMR 교신 듣기!" url="https://hl5ky.github.io/recording/zs6arg/" %}}
+{{% blocks/feature icon="fa-solid fa-walkie-talkie" title="남아프리카와의 DMR 교신 듣기!" url="/recording/zs6arg/" %}}
 아프리카는 단파대에서도 교신이 쉽지 않을뿐더러 장시간 대화는 더욱 어렵다. 인터넷을 사용하는 DMR에서는 전파상태와 상관이 없으므로 장시간 대화가 가능하다.
 {{% /blocks/feature %}}
 
