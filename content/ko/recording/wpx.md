@@ -22,9 +22,9 @@ weight: 65
 
 
 
-컨테스트에서 교환하는 내용은, 리포트와 추가정보입니다. 상세한 내용은 각 컨테스트에 대한 안내를 보아야 합니다. WA7NBM의 웹페이지에 전 세계의 컨테스트에 대한 정보가 잘 정리되어 있습니다.
+컨테스트에서 교환하는 내용은, 리포트와 추가정보입니다. 상세한 내용은 각 컨테스트에 대한 안내를 보아야 합니다. WA7BNM의 웹페이지에 전 세계의 컨테스트에 대한 정보가 잘 정리되어 있습니다.
 
-{{< newtabref href="https://www.contestcalendar.com/weeklycont.php" title="WB7NBM 8 Day Contest Calendar" >}}<br>
+{{< newtabref href="https://www.contestcalendar.com/weeklycont.php" title="WA7BNM 8 Day Contest Calendar" >}}<br>
 
 신호 리포트는 실제 신호의 세기보다는 59 또는 599 등으로 줍니다. 물론 실제 리포트를 주는 것이 잘못된 것은 아니지만 호출부호와 추가정보에 좀 더 집중해야 하기 때문에 리포트는 서로 신호를 인식했다는 정도의 형식적인 리포트만 교환합니다. 
 
