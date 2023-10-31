@@ -23,7 +23,7 @@ K6KPH의 부호는 장단의 길이가 일정하지만 전자키어와 패들을
 <img src="/recording/img/vibroplex.jpeg" style="width:350px;height:256"><br>
 Vibroplex Original Bug
 <br>
-<iframe src="https://play-tv.kakao.com/embed/player/cliplink/435595538?service=daum_tistory" width="860" height="484" frameborder="0" allowfullscreen="true"></iframe>
+<iframe src="https://play-tv.kakao.com/embed/player/cliplink/435595538?service=daum_tistory" width="700" height="484" frameborder="0" allowfullscreen="true"></iframe>
 <br>
 {{% alert title="K6KPH 송신의 두 가지 특징" %}}
 
