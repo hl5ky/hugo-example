@@ -1,0 +1,13 @@
+---
+linkTitle: W6ZQ
+title: W6ZQ
+# description: 
+type: docs
+weight: 150
+---
+{{% pageinfo %}}
+name : RONALD R CADE<br>
+QTH   : Tucson, AZ USA<br>
+작성 중<br>
+글. HL5KY.
+{{% /pageinfo %}}

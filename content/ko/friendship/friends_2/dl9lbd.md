@@ -9,6 +9,6 @@ weight: 50
 {{% pageinfo %}}
 name : Michael Räder<br>
 QTH   : Bad Oldesloe, Germany<br>
-2019. 11. 9일 작성<br>
-글. HL5KY.
+작성 중<br>
+글. HL5BTF.
 {{% /pageinfo %}}

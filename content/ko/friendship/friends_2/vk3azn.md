@@ -9,6 +9,6 @@ weight: 135
 {{% pageinfo %}}
 name : BOB VERSTEGEN<br>
 QTH   : Melbourne, Australia<br>
-2019. 11. 9일 작성<br>
+작성 중<br>
 글. HL5KY.
 {{% /pageinfo %}}
