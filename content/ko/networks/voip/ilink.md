@@ -1,5 +1,5 @@
 ---
-linkTitle: iLINK
+linkTitle: iLINK 소개
 title: iLINK (최초의 아마추어무선용 VOIP 프로그램)
 # description:
 type: docs
@@ -108,15 +108,15 @@ iLink의 제작자인 Graeme(M0CSH)의 {{< newtabref href="http://www.aacnet.net
 <img src="/networks/img/ilink_8.jpeg" style="width:250px;height:256"><br>
 그림7. 프로그램메뉴
 
-▷ LOG – 교신기록
+- LOG – 교신기록
 
-▷ SETUP – 서버의 주소등이 있는데, 그냥 두시는 것이 좋습니다.
+- SETUP – 서버의 주소등이 있는데, 그냥 두시는 것이 좋습니다.
 
-▷ EDIT INFO.TXT FILE – 그림4와 같이 상대방의 화면에 보이는 나의 정보를 입력하는 파일입니다. 자신의 간략한 소개를 적어두면 됩니다.
+- EDIT INFO.TXT FILE – 그림4와 같이 상대방의 화면에 보이는 나의 정보를 입력하는 파일입니다. 자신의 간략한 소개를 적어두면 됩니다.
 
-▷ HELP/OPTIONS – 별로 손 댈 것이 없습니다. 다만 다른 호출부호로 사용한다면 기입하는 공간이 있습니다.
+- HELP/OPTIONS – 별로 손 댈 것이 없습니다. 다만 다른 호출부호로 사용한다면 기입하는 공간이 있습니다.
 
-▷ RESET SYSTEM (!) – 서버에 있는 자신의 정보가 수정됩니다. 보안과 관련이 있는 것으로 지금은 특별한 용도가 없습니다. 만약 호기심으로 시도하시면 약 3시간 이상 연결을 허용하지 않습니다.
+- RESET SYSTEM (!) – 서버에 있는 자신의 정보가 수정됩니다. 보안과 관련이 있는 것으로 지금은 특별한 용도가 없습니다. 만약 호기심으로 시도하시면 약 3시간 이상 연결을 허용하지 않습니다.
 
 그 외의 메뉴는 사용하면서 파악하십시오.
 <br>

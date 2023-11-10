@@ -3,7 +3,6 @@ title: Example Page
 type: docs
 ---
 
-JJ3GNR KF5ZXG W3HNK KB7EVB ZL1ACE W6ZQ N2HT G0WID G3MHV VK6LC 3W6LI W6KP HL9EP  W7LR  BV4FH BA4AE BA4AC VK4DJ 
 
 {{% detail summary="Code 샘플" %}}
 ```go
