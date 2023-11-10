@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Rajdhani';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/l/font?kit=LDI2apCSOBg7S-QT7pb0EMOpa-jg0Pdml0zm7oGo&skey=74a1e835cd8e18f4&v=v15) format('woff2');
-}
