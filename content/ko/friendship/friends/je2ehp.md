@@ -37,7 +37,7 @@ Yoshi는 직업상 해외출장이 잦은데, 마침 교신 후 2주만에 한�
 -------------------------------------------
 <br>
 
-<img src="/friendship/img/je2ehp-3.JPG" style="width:500px;height:256"><br>
+<img src="/friendship/img/je2ehp-3.jpg" style="width:500px;height:256"><br>
 2003년, 가족여행, Inuyama.<br><br>
 
 <img src="/friendship/img/je2ehp.jpeg" style="width:500px;height:256"><br>
