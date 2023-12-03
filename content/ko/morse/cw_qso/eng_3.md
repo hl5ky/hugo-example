@@ -37,7 +37,7 @@ weight: 30
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
 <p data-ke-size="size16"><span style="color: #000000;">GUD : Good 좋은</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">RPT : report 리포트</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">RPT : report 리포트.&nbsp;&nbsp;  repeat 반복이라는 뜻의 약어로 사용하기도 함.</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">FB : Find business 좋은</span></p>
 {{% /alert %}}
 

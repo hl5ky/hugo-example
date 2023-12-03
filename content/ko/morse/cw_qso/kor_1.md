@@ -9,7 +9,7 @@ weight: 50
 {{% pageinfo %}}
 - 연습 방법에 대한 글을 읽고 시작하십시오.
 - 여러번 반복하여 내용을 완전히 숙지하고 몸에 배도록 익히시기 바랍니다.
-- 교신 예문은 일반적인 교신 내용을 익히는 것이므로 초보자를 위한 것입니다. (약 40부호/8wpm)
+- 교신 예문은 일반적인 교신 내용을 익히는 것이므로 초보자를 위한 것입니다. (약 45부호/9wpm)
 - 속도 연습은 평문 연습 페이지의 파일로 하시기 바랍니다.
 - 필요시 파일 우측의 점 세개를 눌러서 속도를 변경할 수 있습니다.
 - 2022년 5월 13일 작성
@@ -22,13 +22,13 @@ weight: 50
 <p data-ke-size="size16">
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL5KY HL5KY &lt;AR&gt; K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL5KY DE DS1ABC DS1ABC K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC DS1ABC K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS1ABC DE HL5KY TNX FER CALL UR RST IS 599 5NN VY GUD &lt;BT&gt; NAME IS JOE JOE QTH IS BUSAN BUSAN HW? DS1ABC DE HL5KY K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL5KY DE DS1ABC &lt;KA&gt; 조오엠님 안녕하십니까? &lt;BT&gt; 신호는 역시 599 5NN으로 잘 들어옵니다. 저의 이름은 홍길동 홍길동이며 서울 서울에 살고 있습니다 &lt;KA&gt; HL5KY DE DS1ABC K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC &lt;KA&gt; 조오엠님 안녕하십니까? &lt;BT&gt; 신호는 역시 599 5NN으로 잘 들어옵니다. 저의 이름은 홍길동 홍길동이며 서울 서울에 살고 있습니다 &lt;KA&gt; HL5KY DE DS1ABC K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS1ABC DE HL5KY &lt;KA&gt; 예 홍길동님 반갑습니다 &lt;BT&gt; 저의 이름은 조윤재 조윤재입니다. 한글로 교신하게 되니 아주 좋습니다 종종 뵙도록 하겠습니다 &lt;AR&gt; DS1ABC DE HL5KY KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL5KY DE DS1ABC &lt;KA&gt; 예 조오엠님 첫 교신 대단히 감사합니다 &lt;BT&gt; 다음에 또 뵙겠습니다. 안녕히 계십시오 &lt;AR&gt; HL5KY DE DS1ABC 73 TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC &lt;KA&gt; 예 조오엠님 첫 교신 대단히 감사합니다 &lt;BT&gt; 다음에 또 뵙겠습니다. 안녕히 계십시오 &lt;AR&gt; HL5KY DE DS1ABC 73 TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TNX QSO 73 TU &lt;SK&gt; E E&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> TU E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> TU E E</span></p>
 
 {{% alert title="교신방법/용어/약어 해설" %}}
 <p data-ke-size="size16">
