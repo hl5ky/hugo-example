@@ -1,6 +1,6 @@
 ---
 linkTitle: 40부호(8wpm)
-title: 영문 평문 40부호(8wpm)
+title: 한글 평문 40부호(8wpm)
 # description: 
 type: docs
 weight: 10

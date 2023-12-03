@@ -1,6 +1,6 @@
 ---
 linkTitle: 70부호(14wpm)
-title: 영문 평문 70부호(14wpm)
+title: 한글 평문 70부호(14wpm)
 # description: 
 type: docs
 weight: 40

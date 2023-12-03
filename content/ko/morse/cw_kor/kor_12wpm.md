@@ -1,6 +1,6 @@
 ---
 linkTitle: 60부호(12wpm)
-title: 영문 평문 60부호(12wpm)
+title: 한글 평문 60부호(12wpm)
 # description: 
 type: docs
 weight: 30
