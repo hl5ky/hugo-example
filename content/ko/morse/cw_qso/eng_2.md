@@ -24,13 +24,13 @@ weight: 20
 
 <p data-ke-size="size16">&nbsp;</p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL2BM HL2BM HL2BM PSE K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL2BM DE 6K5EIA 6K5EIA &lt;AR&gt; K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA 6K5EIA &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 6K5EIA DE HL2BM TNX FER CALL &lt;BT&gt; UR 599 5NN &lt;BT&gt; NAME IS KIM KIM HW? 6K5EIA DE HL2BM KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL2BM DE 6K5EIA OK DR KIM UR RST 589 58N NAME IS JANG JANG HW? HL2BM DE 6K5EIA KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA OK DR KIM UR RST 589 58N NAME IS JANG JANG HW? HL2BM DE 6K5EIA KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 6K5EIA DE HL2BM R OM JANG TNX FER QSO CUAGN 73 &lt;AR&gt; 6K5EIA DE HL2BM &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL2BM DE 6K5EIA OK DR KIM TNX FER QSO 73 &lt;AR&gt; HL2BM DE 6K5EIA &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA OK DR KIM TNX FER QSO 73 &lt;AR&gt; HL2BM DE 6K5EIA &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 <p data-ke-size="size16">&nbsp;</p>
 
 {{% alert title="용어/약어 해설" %}}

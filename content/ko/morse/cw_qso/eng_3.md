@@ -26,13 +26,13 @@ weight: 30
 <center><audio src="https://blog.kakaocdn.net/dn/nr6b1/btrBuy0V7Kr/IwJJkFmyUtdt88KB97x3i1/tfile.mp3" controls="controls"></audio></center>
 <br>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE DS2JJV DS2JJV &lt;AR&gt; K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS2JJV DE HL5KY HL5KY K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY HL5KY K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV TNX FER CALL &lt;BT&gt; UR 599 5NN NAME IS CHOI CHOI QTH IS WONJU WONJU &lt;BT&gt; HW? HL5KY DE DS2JJV KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS2JJV DE HL5KY R CHOI UR RST ALSO 599 5NN NAME IS JOE JOE QTH IS BUSAN BUSAN &lt;BT&gt; HW? DS2JJV DE HL5KY K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY R CHOI UR RST ALSO 599 5NN NAME IS JOE JOE QTH IS BUSAN BUSAN &lt;BT&gt; HW? DS2JJV DE HL5KY K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV = OK JOE TNX FER GUD RPT &lt;BT&gt; TNX FER 1ST QSO HPE TO CUAGN 73 &lt;AR&gt; HL5KY DE DS2JJV &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS2JJV DE HL5KY OK CHOI TNX FER FB QSO CUAGN 73 &lt;AR&gt; DS2JJV DE HL5KY TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY OK CHOI TNX FER FB QSO CUAGN 73 &lt;AR&gt; DS2JJV DE HL5KY TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>B:</b> E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
@@ -53,13 +53,13 @@ weight: 30
 <br>
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE DS3PXA DS3PXA DS3PXA K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS3PXA DE HL1ABC HL1ABC KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC HL1ABC KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA GM TNX FER CALL &lt;BT&gt; UR RST 599 5NN GUD SIG &lt;BT&gt; OP KANG KANG ES QTH DAEJEON DAEJEON HW? HL1ABC DE DS3PXA KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS3PXA DE HL1ABC GM DR KANG TNX FER FB RPRT &lt;BT&gt; UR RST IS 579 57N NAME KIM KIM QTH SEOUL SEOUL OK? DS3PXA DE HL1ABC KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC GM DR KANG TNX FER FB RPRT &lt;BT&gt; UR RST IS 579 57N NAME KIM KIM QTH SEOUL SEOUL OK? DS3PXA DE HL1ABC KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA &lt;BT&gt; TNX DR OM KIM FER RPRT ES FB QSO &lt;BT&gt; QSL VIA BURO NW 73 ES GL GB HL1ABC DE DS3PXA TU &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> DS3PXA DE HL1ABC OK OM KANG TNX FOR NICE QSO &lt;BT&gt; QSL OK VIA BURO 73 ES CUAGN DS3PXA DE HL1ABC TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC OK OM KANG TNX FOR NICE QSO &lt;BT&gt; QSL OK VIA BURO 73 ES CUAGN DS3PXA DE HL1ABC TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 73 TU &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> E</span></p>
 
 {{% alert title="용어/약어 해설" %}}
@@ -85,13 +85,13 @@ weight: 30
 <br>
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE JA6EGL JA6EGL &lt;AR&gt; K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> JA6EGL DE DU8DJ DU8DJ KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ DU8DJ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL GE TNX FER CALL &lt;BT&gt; UR 559 55N &lt;BT&gt; NAME IS MIYAKE MIYAKE &lt;BT&gt; QTH IS FUKUOKA FUKUOKA HW CPI? DU8DJ DE JA6EGL KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> JA6EGL DE DU8DJ GE MIYAKE SAN TNX FER RPT &lt;BT&gt; UR RST IS 579 57N NAME FRED FRED QTH ZAMBOANGA ZAMBOANGA HW? JA6EGL DE DU8DJ KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ GE MIYAKE SAN TNX FER RPT &lt;BT&gt; UR RST IS 579 57N NAME FRED FRED QTH ZAMBOANGA ZAMBOANGA HW? JA6EGL DE DU8DJ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL &lt;BT&gt; TNX FRED TKS FB QSO &lt;BT&gt; 73 CUAGAN DU8DJ DE JA6EGL &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> JA6EGL DE DU8DJ OK MIYAKE SAN TNX FOR NICE QSO CUAGN 73 JA6EGL DE DU8DJ TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ OK MIYAKE SAN TNX FOR NICE QSO CUAGN 73 JA6EGL DE DU8DJ TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 73 TU &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> E</span></p>
 
 {{% alert title="용어/약어 해설" %}}

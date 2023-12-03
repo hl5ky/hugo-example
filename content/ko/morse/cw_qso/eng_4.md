@@ -25,15 +25,15 @@ weight: 40
 <br>
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL1ABC HL1ABC PSE K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL1ABC DE DS5XYZ DS5XYZ KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ DS5XYZ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; GA ES TNX FER CALL &lt;BT&gt; UR RST 569 56N &lt;BT&gt; NAME IS LEE LEE QTH SEOUL SEOUL &lt;BT&gt; HW? &lt;AR&gt; DS5XYZ DE HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL1ABC DE DS5XYZ &lt;BT&gt; GA DR LEE TNX FB RPT UR RST 599 5NN &lt;BT&gt; OP PARK PARK ES QTH MASAN MASAN &lt;BT&gt; HW? &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; GA DR LEE TNX FB RPT UR RST 599 5NN &lt;BT&gt; OP PARK PARK ES QTH MASAN MASAN &lt;BT&gt; HW? &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; R PARK TNX RPT ES INFO OM PARK &lt;BT&gt; RIG IS IC7300 ANT IS DP &lt;BT&gt; WX IS WARM 28DC &lt;BT&gt; HW? &lt;AR&gt; DS5XYZ DE HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL1ABC DE DS5XYZ &lt;BT&gt; RIG IS FT817 ANT IS INV &lt;BT&gt; WX IS RAINY AND COOL &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; RIG IS FT817 ANT IS INV &lt;BT&gt; WX IS RAINY AND COOL &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; MNI TNX INFO ES FB QSO &lt;BT&gt; QSL VIA BURO &lt;BT&gt; 73 ES CUAGN &lt;AR&gt; DS5XYZ DE HL1ABC &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> HL1ABC DE DS5XYZ &lt;BT&gt; FB LEE TNX FER NICE QSO 73 ES BCNU &lt;AR&gt; HL1ABC DE DS5XYZ &lt;SK&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; FB LEE TNX FER NICE QSO 73 ES BCNU &lt;AR&gt; HL1ABC DE DS5XYZ &lt;SK&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU 73 E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><span style="color: #006dd7;"><b>B:</b></span> TU E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> TU E E</span></p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
