@@ -24,9 +24,9 @@ weight: 50
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL5KY HL5KY &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC DS1ABC K</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS1ABC DE HL5KY TNX FER CALL UR RST IS 599 5NN VY GUD &lt;BT&gt; NAME IS JOE JOE QTH IS BUSAN BUSAN HW? DS1ABC DE HL5KY K</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC &lt;KA&gt; 조오엠님 안녕하십니까? &lt;BT&gt; 신호는 역시 599 5NN으로 잘 들어옵니다. 저의 이름은 홍길동 홍길동이며 서울 서울에 살고 있습니다 &lt;KA&gt; HL5KY DE DS1ABC K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS1ABC DE HL5KY &lt;KA&gt; 예 홍길동님 반갑습니다 &lt;BT&gt; 저의 이름은 조윤재 조윤재입니다. 한글로 교신하게 되니 아주 좋습니다 종종 뵙도록 하겠습니다 &lt;AR&gt; DS1ABC DE HL5KY KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC &lt;KA&gt; 예 조오엠님 첫 교신 대단히 감사합니다 &lt;BT&gt; 다음에 또 뵙겠습니다. 안녕히 계십시오 &lt;AR&gt; HL5KY DE DS1ABC 73 TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC <span style="color: red;">&lt;KA&gt;</span><span style="color: #006dd7;"> 조오엠님 안녕하십니까? &lt;BT&gt; 신호는 역시 599 5NN으로 잘 들어옵니다. 저의 이름은 홍길동 홍길동이며 서울 서울에 살고 있습니다 <span style="color: red;">&lt;KA&gt;</span><span style="color: #006dd7;"> HL5KY DE DS1ABC K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS1ABC DE HL5KY <span style="color: red;">&lt;KA&gt;</span><span style="color: #000000;"> 예 홍길동님 반갑습니다 &lt;BT&gt; 저의 이름은 조윤재 조윤재입니다. 한글로 교신하게 되니 아주 좋습니다 종종 뵙도록 하겠습니다 &lt;AR&gt; DS1ABC DE HL5KY KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC <span style="color: red;">&lt;KA&gt;</span><span style="color: #006dd7;"> 예 조오엠님 첫 교신 대단히 감사합니다 &lt;BT&gt; 다음에 또 뵙겠습니다. 안녕히 계십시오 &lt;AR&gt; HL5KY DE DS1ABC 73 TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TNX QSO 73 TU &lt;SK&gt; E E&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> TU E E</span></p>
 

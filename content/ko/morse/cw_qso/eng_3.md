@@ -27,15 +27,16 @@ weight: 30
 <br>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE DS2JJV DS2JJV &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY HL5KY K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV TNX FER CALL &lt;BT&gt; UR 599 5NN NAME IS CHOI CHOI QTH IS WONJU WONJU &lt;BT&gt; HW? HL5KY DE DS2JJV KN</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV TNX FER CALL &lt;BT&gt; UR 599 5NN NAME IS CHOI CHOI QTH IS WONJU WONJU &lt;BT&gt; <span style="color: red;">HW?</span><span style="color: #000000;"> HL5KY DE DS2JJV KN</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY R CHOI UR RST ALSO 599 5NN NAME IS JOE JOE QTH IS BUSAN BUSAN &lt;BT&gt; HW? DS2JJV DE HL5KY K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV = OK JOE TNX FER GUD RPT &lt;BT&gt; TNX FER 1ST QSO HPE TO CUAGN 73 &lt;AR&gt; HL5KY DE DS2JJV &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY OK CHOI TNX FER FB QSO CUAGN 73 &lt;AR&gt; DS2JJV DE HL5KY TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV = OK JOE TNX FER <span style="color: red;">GUD RPT</span><span style="color: #006dd7;"> &lt;BT&gt; TNX FER 1ST QSO HPE TO CUAGN 73 &lt;AR&gt; HL5KY DE DS2JJV &lt;SK&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY OK CHOI TNX FER <span style="color: red;">FB</span><span style="color: #006dd7;"> QSO CUAGN 73 &lt;AR&gt; DS2JJV DE HL5KY TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
+<p data-ke-size="size16"><span style="color: #000000;">HW? : How의 약어이지만 대개 How do you copy? 잘 수신했습니까?의 의미로 사용함</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">GUD : Good 좋은</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">RPT : report 리포트.&nbsp;&nbsp;  repeat 반복이라는 뜻의 약어로 사용하기도 함.</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">FB : Find business 좋은</span></p>
@@ -54,9 +55,9 @@ weight: 30
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE DS3PXA DS3PXA DS3PXA K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA GM TNX FER CALL &lt;BT&gt; UR RST 599 5NN GUD SIG &lt;BT&gt; OP KANG KANG ES QTH DAEJEON DAEJEON HW? HL1ABC DE DS3PXA KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC GM DR KANG TNX FER FB RPRT &lt;BT&gt; UR RST IS 579 57N NAME KIM KIM QTH SEOUL SEOUL OK? DS3PXA DE HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA &lt;BT&gt; TNX DR OM KIM FER RPRT ES FB QSO &lt;BT&gt; QSL VIA BURO NW 73 ES GL GB HL1ABC DE DS3PXA TU &lt;SK&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA GM TNX FER CALL &lt;BT&gt; UR RST 599 5NN GUD SIG &lt;BT&gt; <span style="color: red;">OP</span><span style="color: #000000;"> KANG KANG ES QTH DAEJEON DAEJEON HW? HL1ABC DE DS3PXA KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC <span style="color: red;">GM</span><span style="color: #006dd7;"> DR KANG TNX FER FB <span style="color: red;">RPRT</span><span style="color: #006dd7;"> &lt;BT&gt; UR RST <span style="color: red;">IS</span><span style="color: #006dd7;"> 579 57N NAME KIM KIM QTH SEOUL SEOUL OK? DS3PXA DE HL1ABC KN</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL1ABC DE DS3PXA &lt;BT&gt; TNX DR OM KIM FER RPRT ES FB QSO &lt;BT&gt; QSL <span style="color: red;">VIA BURO</span><span style="color: #000000;"> NW 73 ES GL GB HL1ABC DE DS3PXA TU &lt;SK&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS3PXA DE HL1ABC OK OM KANG TNX FOR NICE QSO &lt;BT&gt; QSL OK VIA BURO 73 ES CUAGN DS3PXA DE HL1ABC TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 73 TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
@@ -71,8 +72,8 @@ weight: 30
 <p data-ke-size="size16"><span style="color: #000000;">GB : Good bye</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">GL : Good luck</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">RPRT = RPT : report 리포트</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">IS : RST, NAME, QTH 등의 주어 다음에 IS 를 사용하기도 하지만 대개는 생략함</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">VIA BURO : QSL 카드를 연맹을 경유하여 보냄</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">IS : RST, NAME, QTH 등의 주어 다음에 IS 를 사용하기도 함</span></p>
 {{% /alert %}}
 
 <p data-ke-size="size16">&nbsp;</p>
@@ -86,8 +87,8 @@ weight: 30
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE JA6EGL JA6EGL &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ DU8DJ KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL GE TNX FER CALL &lt;BT&gt; UR 559 55N &lt;BT&gt; NAME IS MIYAKE MIYAKE &lt;BT&gt; QTH IS FUKUOKA FUKUOKA HW CPI? DU8DJ DE JA6EGL KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ GE MIYAKE SAN TNX FER RPT &lt;BT&gt; UR RST IS 579 57N NAME FRED FRED QTH ZAMBOANGA ZAMBOANGA HW? JA6EGL DE DU8DJ KN</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL GE TNX FER CALL &lt;BT&gt; UR 559 55N &lt;BT&gt; NAME IS MIYAKE MIYAKE &lt;BT&gt; QTH IS FUKUOKA FUKUOKA <span style="color: red;">HW CPI?</span><span style="color: #000000;"> DU8DJ DE JA6EGL KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ GE MIYAKE <span style="color: red;">SAN</span><span style="color: #006dd7;"> TNX FER RPT &lt;BT&gt; UR RST IS 579 57N NAME FRED FRED QTH ZAMBOANGA ZAMBOANGA HW? JA6EGL DE DU8DJ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL &lt;BT&gt; TNX FRED TKS FB QSO &lt;BT&gt; 73 CUAGAN DU8DJ DE JA6EGL &lt;SK&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ OK MIYAKE SAN TNX FOR NICE QSO CUAGN 73 JA6EGL DE DU8DJ TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 73 TU &lt;SK&gt; E E</span></p>

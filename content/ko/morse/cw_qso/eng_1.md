@@ -25,12 +25,12 @@ weight: 10
 
 <center><audio src="https://blog.kakaocdn.net/dn/vX9kL/btrBsFMGkTh/VK9jGMxMUXdvemrG8cVj8k/tfile.mp3" controls="controls"></audio></center>
 
-<p data-ke-size="size16"><span style="color: #000000;">A: CQ CQ DE DS0AHQ DS0AHQ &lt;AR&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;">B: DS0AHQ DE HL5KY HL5KY K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">A: HL5KY DE DS0AHQ UR 599 5NN &lt;BT&gt; KDN C01 C01 BK</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;">B: BK UR 599 5NN ES KDN B22 B22 BK</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">A: OK TNX QSO 73 &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;">B: TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: CQ CQ <span style="color: red;">DE</span><span style="color: #000000;"> DS0AHQ DS0AHQ <span style="color: red;">&lt;AR&gt;</span><span style="color: #000000;"></span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: DS0AHQ DE HL5KY HL5KY <span style="color: red;">K</span><span style="color: #006dd7;"></span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: HL5KY DE DS0AHQ <span style="color: red;">UR</span><span style="color: #000000;"> 599 <span style="color: red;">5NN &lt;BT&gt;</span><span style="color: #000000;"> KDN C01 C01 <span style="color: red;">BK</span><span style="color: #000000;"></span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: BK UR 599 5NN <span style="color: red;">ES</span><span style="color: #006dd7;"> KDN B22 B22 BK</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: OK <span style="color: red;">TNX</span><span style="color: #000000;"> QSO <span style="color: red;">73 &lt;SK&gt;</span><span style="color: #000000;"> E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: <span style="color: red;">TU</span><span style="color: #006dd7;"> &lt;SK&gt; <span style="color: red;">E E</span><span style="color: #006dd7;"></span></p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
@@ -62,16 +62,16 @@ weight: 10
 
 <p data-ke-size="size16"><span style="color: #000000;">A: CQ CQ DE HL0CW HL0CW &lt;AR&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;">B: HL0CW DE DS5GJS DS5GJS K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">A: DS5GJS DE HL0CW UR 599 5NN &lt;BT&gt; OP IS PARK PARK ES KDN IS C06 C06 DS5GJS DE HL0CW K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: DS5GJS DE HL0CW UR 599 5NN &lt;BT&gt; <span style="color: red;">OP IS</span><span style="color: #000000;"> PARK PARK ES KDN IS C06 C06 DS5GJS DE HL0CW K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;">B: HL0CW DE DS5GJS TNX DR PARK UR 599 5NN NAME LEE LEE KDN K03 K03 HL0CW DE DS5GJS K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">A: FB DR LEE TKS QSO 73 &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: <span style="color: red;">FB</span><span style="color: #006dd7;"> DR LEE <span style="color: red;">TKS</span><span style="color: #006dd7;"> QSO 73 &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;">B: TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16">&nbsp;</p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
 <p data-ke-size="size16"><span style="color: #000000;">OP: operator 운용자. 보통 name의 의미로 사용함</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">IS : RST, NAME, QTH 등의 주어 다음에 IS 를 사용하기도 함</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">IS : RST, NAME, QTH 등의 주어 다음에 IS 를 사용하기도 하지만 대개는 생략함</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">FB : Fine business 좋은, 좋다</span></p>
 <p data-ke-size="size16"><span style="color: #000000;">TKS : Thanks 감사. TNX를 사용하기도 함</span></p>
 {{% /alert %}}
