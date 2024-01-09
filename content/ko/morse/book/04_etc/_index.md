@@ -4,7 +4,7 @@ title: 기타
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
-weight: 40
+weight: 50
 ---
 
 {{% pageinfo %}}
