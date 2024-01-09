@@ -1,10 +1,11 @@
 ---
-linkTitle: 수신연습은
-title: 수신 연습시 고려할 내용
+linkTitle: 연습방법및순서
+title: 연습 방법
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
-weight: 20
+# icon: fa-solid fa-asterisk
+weight: 50
 ---
 
 {{% pageinfo %}}
