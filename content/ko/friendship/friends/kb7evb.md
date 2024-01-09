@@ -1,5 +1,5 @@
 ---
-linkTitle: KB7EVB
+linkTitle: KB7EVB (작성중)
 title: KB7EVB
 # description: 
 type: docs

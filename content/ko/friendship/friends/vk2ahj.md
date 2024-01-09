@@ -1,5 +1,5 @@
 ---
-linkTitle: VK2AHJ *
+linkTitle: VK2AHJ
 title: VK2AHJ
 # description: 
 type: docs

@@ -1,6 +1,6 @@
 ---
-linkTitle: 부호 연습
-title: 부호 연습 방법
+linkTitle: 부호연습(QSO 코흐법)
+title: QSO 코흐법으로 부호 연습
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down

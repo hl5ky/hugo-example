@@ -1,6 +1,6 @@
 ---
 linkTitle: 영문 예문 2
-title: 영문 교신 예문 2 (RST, NAME 교환)
+title: 영문 교신 예문 2 (HL0CW 스케쥴교신)
 # description: 
 type: docs
 weight: 20
@@ -19,34 +19,24 @@ weight: 20
 2022. 5. 5일 작성
 {{% /pageinfo %}}
 
-<p data-ke-size="size16">&nbsp;</p>
-<center><audio src="https://blog.kakaocdn.net/dn/ckZEE5/btrBuz6zeZd/skeYJmglqWgRGa1t3hhJY0/tfile.mp3" controls="controls"></audio></center>
+<br>
 
-<p data-ke-size="size16">&nbsp;</p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL2BM HL2BM HL2BM <span style="color: red;">PSE K</span><span style="color: #000000;"></span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA 6K5EIA &lt;AR&gt; K</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 6K5EIA DE HL2BM TNX FER CALL &lt;BT&gt; UR 599 5NN &lt;BT&gt; NAME IS KIM KIM HW? 6K5EIA DE HL2BM KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA OK <span style="color: red;">DR</span><span style="color: #006dd7;"> KIM UR <span style="color: red;">RST</span><span style="color: #006dd7;"> 589 58N NAME IS JANG JANG <span style="color: red;">HW?</span><span style="color: #006dd7;"> HL2BM DE 6K5EIA <span style="color: red;">KN</span><span style="color: #006dd7;"></span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 6K5EIA DE HL2BM <span style="color: red;">R OM</span><span style="color: #000000;"> JANG TNX <span style="color: red;">FER QSO CUAGN</span><span style="color: #006dd7;"> 73 &lt;AR&gt; 6K5EIA DE HL2BM &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL2BM DE 6K5EIA OK DR KIM TNX FER QSO 73 &lt;AR&gt; HL2BM DE 6K5EIA &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> <span style="color: red;">TU</span><span style="color: #000000;"> &lt;SK&gt; E E</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
+<center><audio src="https://blog.kakaocdn.net/dn/wCEBJ/btrC0M38SBh/4ZqJgHYJKFPCkEKVx6OS4k/tfile.mp3" controls="controls"></audio></center>
+<br>
+<p data-ke-size="size16"><span style="color: #000000;">A: CQ CQ DE HL0CW HL0CW &lt;AR&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: HL0CW DE DS5GJS DS5GJS K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: DS5GJS DE HL0CW UR 599 5NN &lt;BT&gt; <span style="color: red;">OP IS</span><span style="color: #000000;"> PARK PARK ES KDN IS C06 C06 DS5GJS DE HL0CW K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: HL0CW DE DS5GJS TNX DR PARK UR 599 5NN NAME LEE LEE KDN K03 K03 HL0CW DE DS5GJS K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">A: <span style="color: red;">FB</span><span style="color: #006dd7;"> DR LEE <span style="color: red;">TKS</span><span style="color: #006dd7;"> QSO 73 &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;">B: TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16">&nbsp;</p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
-<p data-ke-size="size16"><span style="color: #000000;">PSE : please</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">K : CQ를 내고 나서 &lt;AR&gt; 또는 K를 송신후에 수신 대기하거나, &lt;AR&gt;과 K를 함께 사용하기도 함</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">DR : dear 친애하는, 귀하 등의 의미로 상대를 높이는 말</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">RST : 신호리포트</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">HW? : How의 약어이지만 대개 How do you copy? 잘 수신했습니까?의 의미로 사용함</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">KN : K와 같이 over의 의미이지만, 지정한 상대국에게만 키를 넘긴다는 의미</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">R : Roger 알았다 는 의미</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">OM : Old Man 역시 상대를 높이는 말</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">FER : for의 줄임말이지만, for를 모두 송신하는 경우도 있음</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">QSO : 교신</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">CUAGN : See you again 다시 만납시다</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">TU : Thank you</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">OP: operator 운용자. 보통 name의 의미로 사용함</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">IS : RST, NAME, QTH 등의 주어 다음에 IS 를 사용하기도 하지만 대개는 생략함</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">FB : Fine business 좋은, 좋다</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">TKS : Thanks 감사. TNX를 사용하기도 함</span></p>
 {{% /alert %}}
-<p data-ke-size="size16">&nbsp;</p>
-<p data-ke-size="size16">&nbsp;</p>
+
+

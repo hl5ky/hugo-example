@@ -1,5 +1,5 @@
 ---
-linkTitle: VK4BTF *
+linkTitle: HAM을 통한 소중한 인연
 title: HL5BTF와 VK4BTF 의 소중한 인연
 # description: HL5BTF와 VK4BTF의 소중한 인연
 type: docs

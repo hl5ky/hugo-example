@@ -1,5 +1,5 @@
 ---
-linkTitle: JE1LET *
+linkTitle: JE1LET
 title: JE1LET
 # description: 
 type: docs

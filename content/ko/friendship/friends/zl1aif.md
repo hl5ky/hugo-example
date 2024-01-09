@@ -1,5 +1,5 @@
 ---
-linkTitle: ZL1AIF *
+linkTitle: ZL1AIF
 title: ZL1AIF
 # description: 
 type: docs

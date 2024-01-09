@@ -1,5 +1,5 @@
 ---
-linkTitle: VK3AZN *
+linkTitle: VK3AZN  (작성중)
 title: VK3AZN
 # description: 
 type: docs

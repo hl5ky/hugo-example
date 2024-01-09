@@ -1,5 +1,5 @@
 ---
-linkTitle: ZL1SN *
+linkTitle: ZL1SN (작성중)
 title: ZL1SN
 # description: 
 type: docs

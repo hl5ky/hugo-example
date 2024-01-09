@@ -3,7 +3,7 @@ linkTitle: 한글 예문 3
 title: 한글 교신 예문 3 (RST, QTH, 서로의 근황)
 # description: 
 type: docs
-weight: 70
+weight: 100
 ---
 
 {{% pageinfo %}}
@@ -17,8 +17,8 @@ weight: 70
 
 <br>
 
-<center><audio src="/morse/img/qso_kor_03.mp3" controls="controls"></audio></center><br>
-
+<center><audio src="/morse/img/qso_kor_03.mp3" controls="controls"></audio></center>
+<br>
 <p data-ke-size="size16"><b>A&nbsp;:&nbsp;</b>CQ&nbsp;CQ&nbsp;CQ&nbsp;DE&nbsp;HL2BCW&nbsp;HL2BCW&nbsp;K <br />
 
 <span style="color: #006dd7;"><b>B&nbsp;:&nbsp;</b>HL2BCW&nbsp;DE&nbsp;HL5MP&nbsp;KN </span><br />

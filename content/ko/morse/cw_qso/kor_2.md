@@ -3,7 +3,7 @@ linkTitle: 한글 예문 2
 title: 한글 교신 예문 2 (RST, 이름, QTH, 날씨 교환)
 # description: 
 type: docs
-weight: 60
+weight: 90
 ---
 
 {{% pageinfo %}}
@@ -16,8 +16,9 @@ weight: 60
 {{% /pageinfo %}}
 
 <br>
-<center><audio src="/morse/img/qso_kor_02.mp3" controls="controls"></audio></center><br>
 
+<center><audio src="/morse/img/qso_kor_02.mp3" controls="controls"></audio></center>
+<br>
 <p data-ke-size="size16"><b>A&nbsp;:&nbsp;</b>CQ&nbsp;CQ&nbsp;CQ&nbsp;DE&nbsp;HL4LF&nbsp;HL4LF&nbsp;&lt;AR&gt; <br />
 
 <span style="color: #006dd7;"><b>B&nbsp;:&nbsp;</b>HL4LF&nbsp;DE&nbsp;6K5EIA&nbsp;6K5EIA&nbsp;KN</span> <br />

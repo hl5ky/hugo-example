@@ -1,6 +1,6 @@
 ---
 linkTitle: 영문 예문 4
-title: 영문 교신 예문 4 (RST, NAME, QTH, WX, RIG, ANT 교환)
+title: 영문 교신 예문 4 (RST, NAME, QTH 교환)
 # description: 
 type: docs
 weight: 40
@@ -21,30 +21,21 @@ weight: 40
 
 <br>
 
-<center><audio src="https://blog.kakaocdn.net/dn/kUsm3/btrBsEAXhe0/YkS9CcfkU6wkdNh2UOQKB1/tfile.mp3" controls="controls"></audio></center>
+<center><audio src="https://blog.kakaocdn.net/dn/nr6b1/btrBuy0V7Kr/IwJJkFmyUtdt88KB97x3i1/tfile.mp3" controls="controls"></audio></center>
 <br>
-
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL1ABC HL1ABC PSE K</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ DS5XYZ KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; GA ES TNX FER CALL &lt;BT&gt; UR RST 569 56N &lt;BT&gt; NAME IS LEE LEE QTH SEOUL SEOUL &lt;BT&gt; HW? &lt;AR&gt; DS5XYZ DE HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; GA DR LEE TNX FB RPT UR RST 599 5NN &lt;BT&gt; OP PARK PARK ES QTH MASAN MASAN &lt;BT&gt; HW? &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; R PARK TNX RPT ES INFO OM PARK &lt;BT&gt; <span style="color: red;">RIG</span><span style="color: #000000;"> IS IC7300 <span style="color: red;">ANT</span><span style="color: #000000;"> IS <span style="color: red;">DP</span><span style="color: #000000;"> &lt;BT&gt; <span style="color: red;">WX</span><span style="color: #000000;"> IS WARM 28<span style="color: red;">DC</span><span style="color: #000000;"> &lt;BT&gt; HW? &lt;AR&gt; DS5XYZ DE HL1ABC KN</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; RIG IS FT817 ANT IS <span style="color: red;">INV</span><span style="color: #006dd7;"> &lt;BT&gt; WX IS RAINY AND COOL &lt;AR&gt; HL1ABC DE DS5XYZ KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DS5XYZ DE HL1ABC &lt;BT&gt; MNI TNX INFO ES FB QSO &lt;BT&gt; QSL VIA BURO &lt;BT&gt; 73 ES CUAGN &lt;AR&gt; DS5XYZ DE HL1ABC &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL1ABC DE DS5XYZ &lt;BT&gt; FB LEE TNX FER NICE QSO 73 ES <span style="color: red;">BCNU</span><span style="color: #006dd7;"> &lt;AR&gt; HL1ABC DE DS5XYZ &lt;SK&gt;</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU 73 E E</span></p>
-<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> TU E E</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE DS2JJV DS2JJV &lt;AR&gt; K</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY HL5KY K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV TNX FER CALL &lt;BT&gt; UR 599 5NN NAME IS CHOI CHOI QTH IS WONJU WONJU &lt;BT&gt; <span style="color: red;">HW?</span><span style="color: #000000;"> HL5KY DE DS2JJV KN</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY R CHOI UR RST ALSO 599 5NN NAME IS JOE JOE QTH IS BUSAN BUSAN &lt;BT&gt; HW? DS2JJV DE HL5KY K</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> HL5KY DE DS2JJV = OK JOE TNX FER <span style="color: red;">GUD RPT</span><span style="color: #006dd7;"> &lt;BT&gt; TNX FER 1ST QSO HPE TO CUAGN 73 &lt;AR&gt; HL5KY DE DS2JJV &lt;SK&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> DS2JJV DE HL5KY OK CHOI TNX FER <span style="color: red;">FB</span><span style="color: #006dd7;"> QSO CUAGN 73 &lt;AR&gt; DS2JJV DE HL5KY TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TU &lt;SK&gt; E E</span></p>
+<p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
 
 {{% alert title="용어/약어 해설" %}}
 <p data-ke-size="size16">
-<p data-ke-size="size16"><span style="color: #000000;">RIG : 무전기</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">ANT : antenna 안테나</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">DP : dipole 다이폴 안테나</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">WX : weather 날씨</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">DC : degrees Celsius 섭씨온도</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">INV : Inverted V 역브이 안테나</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">MNI : many</span></p>
-<p data-ke-size="size16"><span style="color: #000000;">BCNU : Be seeing you 다시 만나기를.... CUAGN과 같은 의미</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">HW? : How의 약어이지만 대개 How do you copy? 잘 수신했습니까?의 의미로 사용함</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">GUD : Good 좋은</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">RPT : report 리포트.&nbsp;&nbsp;  repeat 반복이라는 뜻의 약어로 사용하기도 함.</span></p>
+<p data-ke-size="size16"><span style="color: #000000;">FB : Find business 좋은</span></p>
 {{% /alert %}}
-<p data-ke-size="size16">&nbsp;</p>
-<p data-ke-size="size16">&nbsp;</p>

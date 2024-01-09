@@ -1,12 +1,11 @@
 ---
-title: 전신 학습을 위한 안내 및 자료
+title: 전신 학습을 위한 안내 및 연습 자료
 linkTitle: 전신학습
 type: docs
 icon: fa-solid fa-ear-listen
 
 menu: {main: {weight: 20}}
 ---
-
 
 
 <!--
@@ -24,3 +23,14 @@ menu: {main: {weight: 20}}
 {{% /pageinfo %}} 
 
 -->
+
+{{% pageinfo %}}
+전신 학습을 위한 디지털 책입니다.
+
+성인 독학자에게 초점을 맞추었습니다.
+
+처음 시작하시는 분은 <전신 학습 안내서>를 꼭 읽어보시기 바랍니다.
+<br><br>
+2022년 4월 25일 작성<br>
+글. HL5KY.
+{{% /pageinfo %}}

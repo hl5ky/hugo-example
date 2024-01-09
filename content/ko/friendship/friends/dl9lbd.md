@@ -1,5 +1,5 @@
 ---
-linkTitle: DL9LBD *
+linkTitle: DL9LBD (작성중)
 title: DL9LBD
 # description: 
 type: docs

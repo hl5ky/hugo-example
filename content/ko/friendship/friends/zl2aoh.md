@@ -1,5 +1,5 @@
 ---
-linkTitle: ZL2AOH *
+linkTitle: ZL2AOH
 title: ZL2AOH
 # description: 
 type: docs

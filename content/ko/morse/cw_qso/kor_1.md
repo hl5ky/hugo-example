@@ -3,7 +3,7 @@ linkTitle: 한글 예문 1
 title: 한글 교신 예문 1 (RST, 이름, QTH 교환)
 # description: 
 type: docs
-weight: 50
+weight: 80
 ---
 
 {{% pageinfo %}}
@@ -19,7 +19,7 @@ weight: 50
 
 <center><audio src="https://blog.kakaocdn.net/dn/tsMF4/btrB5opWLvC/NA8hgQiBL7kiUI0z0oneU1/tfile.mp3" controls="controls"></audio></center>
 
-<p data-ke-size="size16">
+<br>
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE HL5KY HL5KY &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> HL5KY DE DS1ABC DS1ABC K</span></p>
@@ -30,7 +30,7 @@ weight: 50
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> TNX QSO 73 TU &lt;SK&gt; E E&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> TU E E</span></p>
 
-{{% alert title="교신방법/용어/약어 해설" %}}
+{{% alert title="한글 교신시 참고 사항" %}}
 <p data-ke-size="size16">
 
 - 상대방이 한글 교신이 가능한지 알 수 없는 경우에는 일단 영문으로 응답하는 것이 좋다.

@@ -1,5 +1,5 @@
 ---
-linkTitle: JJ3GNR
+linkTitle: JJ3GNR (작성중)
 title: JJ3GNR
 # description: 
 type: docs
