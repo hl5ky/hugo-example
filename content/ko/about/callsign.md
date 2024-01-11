@@ -3,7 +3,7 @@ linkTitle: 호출부호
 title: 호출부호 소개
 # description: 
 type: docs
-weight: 10
+weight: 20
 ---
 
 ### HM5KY (1976 ~ 1981)

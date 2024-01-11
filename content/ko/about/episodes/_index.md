@@ -2,7 +2,7 @@
 title: 에피소드
 linkTitle: 에피소드
 type: docs
-weight : 20
+weight : 50
 # menu: {main: {weight: 1}}
 ---
 
