@@ -46,7 +46,7 @@ weight: 30
 <br>
 <img src="/about/img/017_RSC_ver2.jpg" style="width:950px;height:256"><br>
 
-> 2013년. REMOTE (Dual Remote Controller ver2 + CD78 Controller + Tower Controller + ANT Controller (homebrew))
+> 2013년. Dual Remote Controller ver2 + CD78 Controller + Tower Controller + ANT Controller (homebrew)
 
 <br>
 <img src="/about/img/018_RSC_ver3.jpg" style="width:600px;height:256"><br>
