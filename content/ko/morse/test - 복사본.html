@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>CW Trainer</title>
+<title>Hangul CW Trainer</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -188,27 +188,17 @@ audio {
 </head>
 <body>
 <div class="page">
-<h2>CW Trainer</h2>
+<h2>Hangul CW Trainer by DS1TZE</h2>
 <div class="setting">
-
-    <span class="setting_group_2">
-        <button id="play">PLAY</button>
-        <button id="stop">STOP</button>
-        <label id="make"></label>
-        <lable id="make_tze"></lable>
-        <!--span id="mp3"> </span>
-        <a id="tze"></a-->
-        </span>   
-
 <span class="setting_group_2">
-<span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
+<span class="setting_bold">Frequency</span> <input type="number" id="freq" value="600" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
-<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
-
-<span class="setting_bold"></span> <label id="volume" value="100" size="3" min="1" max="100" step="1"></label>
+<span class="setting_bold">Speed</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
+&nbsp;
+<span class="setting_bold">Volume</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
 </span>
 <span class="setting_group">
-<span class="setting_bold">부호간격</span> : 
+<span class="setting_bold">Extra Gap</span> : 
 <label><input type="radio" name="key" value="computer" checked /> None (1.0)</label>
 <label><input type="radio" name="key" value="hangul_smaller" /> Smaller (1.5)</label>
 <label><input type="radio" name="key" value="hangul_small" /> Small (2.0)</label>
@@ -219,31 +209,37 @@ audio {
 <label><input type="radio" name="key" value="straightbad" /> Random - Bad</label>
 <label><input type="radio" name="key" value="straightvbad" /> Random - Very Bad</label-->
 </span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="setting_group_2">
+<button id="play">PLAY</button>
+<button id="stop">STOP</button>
+<button id="make">MAKE MP3</button>
+<button id="make_tze">MAKE 1TZE</button>
+<span id="mp3"> </span>
+<a id="tze"></a>
+</span>
 <span class="setting_group">
-<span class="setting_bold">옵션</span> : <label id="selection_only" /></label>
-<label id="highlight_slowly" /></label>
-<label><input type="checkbox" id="hide_text" /> 글자지우기</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="repeat" /> 반복</label>&nbsp;&nbsp;
-<label id="flute"></label>
-<label id="noise"></label>
-<label id="fading"></label>&nbsp;&nbsp;
+<span class="setting_bold">Play option</span> : <label><input type="checkbox" id="selection_only" /> Selection only</label>
+<label><input type="checkbox" id="repeat" /> Repeat</label>&nbsp;&nbsp;
 </span>
-
+<span class="setting_group">
+<span class="setting_bold">Highlight option</span> : <label><input type="checkbox" id="highlight_slowly" /> Highlight slowly</label>
+<label><input type="checkbox" id="hide_text" /> Hide text</label>&nbsp;&nbsp;
+</span>
+<span class="setting_group">
+<span class="setting_bold">Effect</span> : <label><input type="checkbox" id="flute"> Flute Sound</label>
+<label><input type="checkbox" id="noise"> Noise</label>
+<label><input type="checkbox" id="fading"> Fading</label>&nbsp;&nbsp;
+</span>
 </div>
-
 <div id="keyer_setting">
-
-<!--span class="setting_bold">CW Keyer*</span> : -->
-<label id="connect"></label>
-<label id="disconnect"></label>
-<!--&nbsp;
-<(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
+<span class="setting_bold">CW Keyer*</span> : 
+<button id="connect">CONNECT</button>
+<button id="disconnect">UNCONNECTED</button>
+&nbsp;
+(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
 </span>
-</div-->
-
-
-<br>
+</div>
+<div>
 <span class="sample_group">
 <button id="hangul_qso_1">Hangul Sample 1</button>
 <button id="hangul_qso_2">Hangul Sample 2</button>
@@ -444,8 +440,64 @@ TU E E
     <button id="hangul_frequent_syllables">Frequent Syllables</button>
 </div>
 
+<br />
+<h3>Intro.</h3>
+안녕하세요. DS1TZE 입니다.<br /><br />
+위 프로그램은 한글 CW 청취 연습기입니다.<br />영문과 숫자를 포함해 원하는 내용을 입력하고 PLAY 버튼을 누르면 모스 부호로 들려줍니다.<br />
+CW 청취 연습에 유용한 웹사이트인 Seiuchy를 사용하던 중, 그 근간이 되는 모스 코드 생성 라이브러리를 알게 되어, 한글 자모 분해 라이브러리를 붙여 만들게 되었습니다.<br />
+많은 활용 바라며, 기능 제안은 온에어에서 말씀해주시기 바랍니다.<br />
+<br />
+<br />
 
+<h3>※ As CW Keyer.</h3>
+최신 웹브라우저에선 COM 포트를 이용한 통신이 가능하며, 이를 이용해 컴퓨터와 연결된 무전기를 제어할 수 있습니다. (모바일에선 안됨)<br />
+IC-7300 이나 IC-7610 은 USB 케이블을 이용해 컴퓨터와 바로 연결하고, 다른 무전기들은 $2 미만의 USB to UART 모듈을 이용해 인터페이스 장치를 만들어 연결합니다.<br />
+<span class="setting_bold">CW Keying via Serial Port</span> 정도로 웹 검색을 하면, 간단하게 장치를 만드는 방법이 나옵니다.<br />
+이 프로그램에선 COM 포트의 DTR 핀을 ON(Low)/OFF(High) 시켜, 무전기에게 CW 신호를 보낼지 말지를 알리고 있습니다.<br />
+무전기가 Serial Port를 이용한 CW Keying 메커니즘을 제공하지 않는다면, USB to UART 모듈의 DTR & GND 핀의 신호를 활용해, CW Key 단자가 서로 맞붙도록 회로를 만드는 것입니다.<br />
+이런 방식은 대부분의 무전기에서 확실히 동작할 것입니다.<br />
+<br />
+<br />
 
+<h3>Links</h3>
+Hangul CW Decoder - <a href="hangul_cw_decoder.html" target="_blank">http://shingiru.github.io/hangul_cw_decoder.html</a><br />
+Seiuchy - <a href="http://seiuchy.macache.com/" target="_blank">http://seiuchy.macache.com/</a><br />
+Morse Code generator Javascript 라이브러리 - <a href="https://gist.github.com/eholk/0115691987090973cefe" target="_blank">https://gist.github.com/eholk/0115691987090973cefe</a><br />
+위 라이브러리 제작 관련 글 - <a href="https://blog.theincredibleholk.org/blog/2014/06/23/generating-morse-code-with-javascript/" target="_blank">https://blog.theincredibleholk.org/blog/2014/06/23/generating-morse-code-with-javascript/</a><br />
+위 라이브러리가 사용하는 기술인 Web Audio API - <a href="https://webaudio.github.io/web-audio-api/" target="_blank">https://webaudio.github.io/web-audio-api/<a/><br />
+한글 자모 분해 Javascipt 라이브러리* - <a href="https://github.com/e-/Hangul.js/" target="_blank">https://github.com/e-/Hangul.js/</a><br />
+※ 한글 CW는 26개 부호만 사용하기 때문에, 라이브러리를 살짝 수정해 "ㅖ"와 "ㅒ"는 각각 "ㅕ" + "ㅣ" 및 "ㅑ" + "ㅣ" 로 분해하도록 하고, 같은 홑낱자로 이루어진 겹낱자도 분해하도록 했습니다.<br />
+<br />
+<br />
+
+<h3>DE DS1TZE - <a href="https://www.qrz.com/db/DS1TZE" target="_blank" class="font_medium">https://www.qrz.com/db/DS1TZE</a>
+<span id="counter">
+	<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fshingiru.github.io%2Fhangul_cw_trainer.html&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+</span>
+</h3>
+	
+<br />
+<h3>Change Log</h3>
+<span class="font_medium">
+2023.05.13. Extra Gap - Hangul's syllable gap enlarged.<br />
+2023.04.16. Extra Gap types simplified.<br />
+2023.04.09. Extra Gap - Hangul training type updated, random type removed. Random text - Hangul words updated as 2 letter words. Hangul letter - Frequent Syllables added(using 2 letter words' syllables).<br />
+2023.03.13. Pause and Resume function added. Hangul Letter Training Feature added.<br /> 
+2023.03.02. Random text generation added.<br />
+2023.01.04. Extra Gap - Hangul training type added.<br />
+2022.11.21. Flute-like sound effect added.<br />
+2022.09.07. 1TZE file generation added. Tone pitch rises for 4 mills.<br />
+2022.09.06. MP3 file generation added. Playing position move function added : 5 sec forward/backward using arrow key.<br />
+2022.09.05. Extra Gap - random type added.<br />
+2022.09.03. Keyer function added.<br />
+2022.08.28. Noise effect added. Fading effect added(15 seconds cycle).<br />
+2022.08.26. Rich editor(Code Mirror) adopted. "Hide text" added.<br />
+2022.08.24. "User Text" added.<br />
+2022.08.15. "Repeat" added.<br />
+2022.08.14. "Highlight slowly" added. More QSO samples added.<br />
+2022.08.13. "Selection only" added. Hangul character gap fixed : 5 dots. Prosign(inc. "KA") support added. Remember settings using localStorage. Highlight effect added.<br />
+2022.08.12. First version of Hangul CW Trainer.<br />
+</span>
 </div>
 </body>
 <!--script>Mp3LameEncoderConfig = { memoryInitializerPrefixURL: "" };</script-->
@@ -1148,27 +1200,25 @@ function makeBufferAndEncode(encoder, withNoise, noiseVolume) {
 			j = 0;
 		}
 		
-//		if (i > sampleIndex) {
-//			if (queueIndex < queueLen - 1) queueIndex++;
-//			sampleIndex = parseInt(queue[queueIndex][0] * MP3_SAMPLE_RATE);
-//			if (volume != nextVolume) {
-//				rising_step = rising_steps;
-//				rising_start_volume = volume;
-//				rising_end_volume = nextVolume;
-//			}
-//			volume = nextVolume;
-//			nextVolume = queue[queueIndex][1];
-//		}
+		if (i > sampleIndex) {
+			if (queueIndex < queueLen - 1) queueIndex++;
+			sampleIndex = parseInt(queue[queueIndex][0] * MP3_SAMPLE_RATE);
+			if (volume != nextVolume) {
+				rising_step = rising_steps;
+				rising_start_volume = volume;
+				rising_end_volume = nextVolume;
+			}
+			volume = nextVolume;
+			nextVolume = queue[queueIndex][1];
+		}
 		
-//		if (rising_step-- > 0) {
-//			if (rising_start_volume > rising_end_volume) volume = rising_end_volume + (rising_start_volume - rising_end_volume) * rising_step / rising_steps;
-//			else volume = rising_start_volume + (rising_end_volume - rising_start_volume) * (rising_steps - rising_step) / rising_steps;
-//		}
-//		buffer[j] = Math.sin(i * angular_frequency_factor) * volume; // https://teropa.info/blog/2016/08/04/sine-waves.html
-//		if (withNoise) buffer[j] = buffer[j] * Math.cos(0.5*0.5*Math.PI) + ((Math.random() * 2) - 1) * noiseVolume * Math.cos(0.5*0.5*Math.PI); // half + half
-
-    }
-
+		if (rising_step-- > 0) {
+			if (rising_start_volume > rising_end_volume) volume = rising_end_volume + (rising_start_volume - rising_end_volume) * rising_step / rising_steps;
+			else volume = rising_start_volume + (rising_end_volume - rising_start_volume) * (rising_steps - rising_step) / rising_steps;
+		}
+		buffer[j] = Math.sin(i * angular_frequency_factor) * volume; // https://teropa.info/blog/2016/08/04/sine-waves.html
+		if (withNoise) buffer[j] = buffer[j] * Math.cos(0.5*0.5*Math.PI) + ((Math.random() * 2) - 1) * noiseVolume * Math.cos(0.5*0.5*Math.PI); // half + half
+	}
 	encoder.encode([buffer, buffer]);
 	
 	return duration;
@@ -1196,42 +1246,40 @@ function saveRecording(blob, duration) {
 	mp3.replaceChild(div, mp3.firstChild);
 }
 
-//makeTze.onclick = function() {
-//	stop.click();
-//	morse.playString(true, DELAY_AMOUNT, 
-//		doc.getValue(), 
-//		1.0, 
-//		document.querySelector('input[name="key"]:checked').value,
-//		false);
-//	queue.push([queue[queue.length - 1][0] + 1, 0]);
-//	saveTzeFile();
-//}
-
-//function saveTzeFile() {
-//	var data = packTzeFile();
-//	var blob = new Blob([JSON.stringify(data)], {type:"application/json"});
-//	var url = URL.createObjectURL(blob);
+makeTze.onclick = function() {
+	stop.click();
+	morse.playString(true, DELAY_AMOUNT, 
+		doc.getValue(), 
+		1.0, 
+		document.querySelector('input[name="key"]:checked').value,
+		false);
+	queue.push([queue[queue.length - 1][0] + 1, 0]);
+	saveTzeFile();
+}
+function saveTzeFile() {
+	var data = packTzeFile();
+	var blob = new Blob([JSON.stringify(data)], {type:"application/json"});
+	var url = URL.createObjectURL(blob);
 	
-//	var link = document.createElement("A");
-//	link.href = url;
-//	link.appendChild(document.createTextNode("[1TZE DOWN]"));
-//	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 14);
-//	link.download = filename + ".tze";
+	var link = document.createElement("A");
+	link.href = url;
+	link.appendChild(document.createTextNode("[1TZE DOWN]"));
+	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 14);
+	link.download = filename + ".tze";
 	
-//	var anchor = document.querySelector("#tze");
-//    link.id = anchor.id;
-//    anchor.parentNode.replaceChild(link, anchor);
-//}
-
-//function packTzeFile() {
-//	return {
-//		version: 1,
-//		creatdAt: (new Date()).toISOString(),
-//		wpm: parseInt(wpm.value),
-//		hangul: hasHangul,
-//		queue: queue.map(x => [x[0].toFixed(3),parseInt(x[1])])
-//	};
-//}
+	var anchor = document.querySelector("#tze");
+    link.id = anchor.id;
+    anchor.parentNode.replaceChild(link, anchor);
+}
+function packTzeFile() {
+	return {
+		version: 1,
+		creatdAt: (new Date()).toISOString(),
+		wpm: parseInt(wpm.value),
+		hangul: hasHangul,
+		queue: queue.map(x => [x[0].toFixed(3),parseInt(x[1])])
+	};
+}
 
 var ditdah = document.querySelector("#ditdah");
 var last = false, lastWidth = 0;
@@ -1265,10 +1313,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1296,10 +1344,7 @@ keyStraightBad.onchange = function() {
 keyStraightVBad.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }*/
-
-
-
-/*flute.onchange = function() {
+flute.onchange = function() {
 	smoothingDuration = flute.checked ? 0.02 : 0.004;
     window.localStorage.setItem('flute', flute.checked);
 }
@@ -1311,8 +1356,7 @@ fading.onchange = function() {
 }
 selectionOnly.onchange = function() {
     window.localStorage.setItem('selection_only', selectionOnly.checked);
-}*/
-
+}
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
 }

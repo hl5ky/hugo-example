@@ -201,11 +201,11 @@ audio {
         </span>   
 
 <span class="setting_group_2">
-<span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
+<span class="setting_bold">음색</span> <input type="number" id="freq" value="600" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
-
-<span class="setting_bold"></span> <label id="volume" value="100" size="3" min="1" max="100" step="1"></label>
+&nbsp;
+<span class="setting_bold"></span> <label id="volume" value="100" size="3" min="1" max="100" step="1"></label> </label>
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -219,21 +219,19 @@ audio {
 <label><input type="radio" name="key" value="straightbad" /> Random - Bad</label>
 <label><input type="radio" name="key" value="straightvbad" /> Random - Very Bad</label-->
 </span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 <span class="setting_group">
-<span class="setting_bold">옵션</span> : <label id="selection_only" /></label>
+<span class="setting_bold">옵션</span> : <label><input type="checkbox" id="selection_only" /> Selection only</label>
+<label><input type="checkbox" id="repeat" /> 반복</label>&nbsp;&nbsp;
 <label id="highlight_slowly" /></label>
 <label><input type="checkbox" id="hide_text" /> 글자지우기</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="repeat" /> 반복</label>&nbsp;&nbsp;
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;&nbsp;
 </span>
 
 </div>
-
-<div id="keyer_setting">
-
+<!--div id="keyer_setting"-->
 <!--span class="setting_bold">CW Keyer*</span> : -->
 <label id="connect"></label>
 <label id="disconnect"></label>
@@ -241,9 +239,7 @@ audio {
 <(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
 </span>
 </div-->
-
-
-<br>
+<div>
 <span class="sample_group">
 <button id="hangul_qso_1">Hangul Sample 1</button>
 <button id="hangul_qso_2">Hangul Sample 2</button>
@@ -1148,27 +1144,25 @@ function makeBufferAndEncode(encoder, withNoise, noiseVolume) {
 			j = 0;
 		}
 		
-//		if (i > sampleIndex) {
-//			if (queueIndex < queueLen - 1) queueIndex++;
-//			sampleIndex = parseInt(queue[queueIndex][0] * MP3_SAMPLE_RATE);
-//			if (volume != nextVolume) {
-//				rising_step = rising_steps;
-//				rising_start_volume = volume;
-//				rising_end_volume = nextVolume;
-//			}
-//			volume = nextVolume;
-//			nextVolume = queue[queueIndex][1];
-//		}
+		if (i > sampleIndex) {
+			if (queueIndex < queueLen - 1) queueIndex++;
+			sampleIndex = parseInt(queue[queueIndex][0] * MP3_SAMPLE_RATE);
+			if (volume != nextVolume) {
+				rising_step = rising_steps;
+				rising_start_volume = volume;
+				rising_end_volume = nextVolume;
+			}
+			volume = nextVolume;
+			nextVolume = queue[queueIndex][1];
+		}
 		
-//		if (rising_step-- > 0) {
-//			if (rising_start_volume > rising_end_volume) volume = rising_end_volume + (rising_start_volume - rising_end_volume) * rising_step / rising_steps;
-//			else volume = rising_start_volume + (rising_end_volume - rising_start_volume) * (rising_steps - rising_step) / rising_steps;
-//		}
-//		buffer[j] = Math.sin(i * angular_frequency_factor) * volume; // https://teropa.info/blog/2016/08/04/sine-waves.html
-//		if (withNoise) buffer[j] = buffer[j] * Math.cos(0.5*0.5*Math.PI) + ((Math.random() * 2) - 1) * noiseVolume * Math.cos(0.5*0.5*Math.PI); // half + half
-
-    }
-
+		if (rising_step-- > 0) {
+			if (rising_start_volume > rising_end_volume) volume = rising_end_volume + (rising_start_volume - rising_end_volume) * rising_step / rising_steps;
+			else volume = rising_start_volume + (rising_end_volume - rising_start_volume) * (rising_steps - rising_step) / rising_steps;
+		}
+		buffer[j] = Math.sin(i * angular_frequency_factor) * volume; // https://teropa.info/blog/2016/08/04/sine-waves.html
+		if (withNoise) buffer[j] = buffer[j] * Math.cos(0.5*0.5*Math.PI) + ((Math.random() * 2) - 1) * noiseVolume * Math.cos(0.5*0.5*Math.PI); // half + half
+	}
 	encoder.encode([buffer, buffer]);
 	
 	return duration;
@@ -1196,42 +1190,40 @@ function saveRecording(blob, duration) {
 	mp3.replaceChild(div, mp3.firstChild);
 }
 
-//makeTze.onclick = function() {
-//	stop.click();
-//	morse.playString(true, DELAY_AMOUNT, 
-//		doc.getValue(), 
-//		1.0, 
-//		document.querySelector('input[name="key"]:checked').value,
-//		false);
-//	queue.push([queue[queue.length - 1][0] + 1, 0]);
-//	saveTzeFile();
-//}
-
-//function saveTzeFile() {
-//	var data = packTzeFile();
-//	var blob = new Blob([JSON.stringify(data)], {type:"application/json"});
-//	var url = URL.createObjectURL(blob);
+makeTze.onclick = function() {
+	stop.click();
+	morse.playString(true, DELAY_AMOUNT, 
+		doc.getValue(), 
+		1.0, 
+		document.querySelector('input[name="key"]:checked').value,
+		false);
+	queue.push([queue[queue.length - 1][0] + 1, 0]);
+	saveTzeFile();
+}
+function saveTzeFile() {
+	var data = packTzeFile();
+	var blob = new Blob([JSON.stringify(data)], {type:"application/json"});
+	var url = URL.createObjectURL(blob);
 	
-//	var link = document.createElement("A");
-//	link.href = url;
-//	link.appendChild(document.createTextNode("[1TZE DOWN]"));
-//	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 14);
-//	link.download = filename + ".tze";
+	var link = document.createElement("A");
+	link.href = url;
+	link.appendChild(document.createTextNode("[1TZE DOWN]"));
+	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 14);
+	link.download = filename + ".tze";
 	
-//	var anchor = document.querySelector("#tze");
-//    link.id = anchor.id;
-//    anchor.parentNode.replaceChild(link, anchor);
-//}
-
-//function packTzeFile() {
-//	return {
-//		version: 1,
-//		creatdAt: (new Date()).toISOString(),
-//		wpm: parseInt(wpm.value),
-//		hangul: hasHangul,
-//		queue: queue.map(x => [x[0].toFixed(3),parseInt(x[1])])
-//	};
-//}
+	var anchor = document.querySelector("#tze");
+    link.id = anchor.id;
+    anchor.parentNode.replaceChild(link, anchor);
+}
+function packTzeFile() {
+	return {
+		version: 1,
+		creatdAt: (new Date()).toISOString(),
+		wpm: parseInt(wpm.value),
+		hangul: hasHangul,
+		queue: queue.map(x => [x[0].toFixed(3),parseInt(x[1])])
+	};
+}
 
 var ditdah = document.querySelector("#ditdah");
 var last = false, lastWidth = 0;
@@ -1265,10 +1257,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1296,10 +1288,7 @@ keyStraightBad.onchange = function() {
 keyStraightVBad.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }*/
-
-
-
-/*flute.onchange = function() {
+flute.onchange = function() {
 	smoothingDuration = flute.checked ? 0.02 : 0.004;
     window.localStorage.setItem('flute', flute.checked);
 }
@@ -1311,8 +1300,7 @@ fading.onchange = function() {
 }
 selectionOnly.onchange = function() {
     window.localStorage.setItem('selection_only', selectionOnly.checked);
-}*/
-
+}
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
 }
