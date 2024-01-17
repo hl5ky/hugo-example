@@ -3,7 +3,7 @@ linkTitle: 한글/영문 먼저
 title: 한글과 영문, 어느 것을 먼저 시작해야 할까
 # description: 
 type: docs
-weight: 60
+weight: 70
 ---
 {{% pageinfo %}}
 한글을 하고 나면 영문은 쉽게 된다?

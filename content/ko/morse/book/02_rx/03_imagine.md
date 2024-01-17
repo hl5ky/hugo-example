@@ -1,5 +1,5 @@
 ---
-linkTitle: 상상 수신
+linkTitle: 상상수신
 title: 상상 수신도 연습의 일부분
 # description: 
 type: docs

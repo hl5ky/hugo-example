@@ -3,7 +3,7 @@ linkTitle: 빠른속도 허와 실
 title: 교신 형태별 속도
 # description: 
 type: docs
-weight: 40
+weight: 50
 ---
 {{% pageinfo %}}
 겨우 자신의 호출부호만 알아 듣는 수준인데, DX 교신을 한다고?

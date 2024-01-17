@@ -1,5 +1,5 @@
 ---
-linkTitle: 성인 독학자
+linkTitle: 성인독학자
 title: 성인 독학자의 어려움
 # description: 
 type: docs

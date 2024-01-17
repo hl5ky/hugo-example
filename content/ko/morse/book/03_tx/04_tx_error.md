@@ -1,5 +1,5 @@
 ---
-linkTitle: 송신 불량
+linkTitle: 송신불량
 title: 연습할 때는 잘 되는데 실제 교신에서는...
 # description: 
 type: docs

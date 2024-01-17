@@ -1,9 +1,9 @@
 ---
-linkTitle: 부호의 기준
+linkTitle: 부호의기준
 title: 모오스 부호의 기준과 속도
 # description: 
 type: docs
-weight: 20
+weight: 30
 ---
 {{% pageinfo %}}
 부호의 기준을 굳이 외우려고 하지 마십시오. 읽을 때 이해가 되면 그냥 넘어가시면 됩니다.

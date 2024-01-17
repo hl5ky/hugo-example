@@ -60,6 +60,6 @@ FT-243 형 크리스탈. 사진과 비슷한 모양입니다.
 > 불법무선국을 흔히 UC라고 하는데, 이것은 일본에서 건너온 잘못된 영어입니다.<br>
 > undercover의 사전적 뜻은 "비밀 또는 위장 첩보 활동을 하는 요원"을 말합니다.<br>
 > 미국햄에게 UC의 의미를 아는지 물었더니, 'University of California'를 말하느냐고 되묻더군요.<br>
-> 영어로 불법무선국은 Pirate이라고 합니다.<br>
+> 영어로 불법무선국은 'pirate'이라고 합니다.<br>
 > {{< newtabref href="https://hl5ky.github.io/recording/1990/" title="W6KP와의 교신 듣기" >}} 
 
