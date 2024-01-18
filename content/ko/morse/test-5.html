@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>CW Trainer</title>
+<title>QSO코흐법</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -46,6 +46,7 @@ input {
     font-family: 'Helvetica', 'sans serif';
     font-size: large;
 }
+
 input:focus { 
     border: 1px solid teal;
     box-shadow: 0 0 5px 1px powderblue;
@@ -188,52 +189,55 @@ audio {
 </head>
 <body>
 <div class="page">
-<h2>CW Trainer</h2>
+<h2>QSO 코흐법 (영문)</h2>
 <div class="setting">
 
     <span class="setting_group_2">
         <button id="play">PLAY</button>
         <button id="stop">STOP</button>
         <label id="make"></label>
-        <lable id="make_tze"></lable>
+        <label id="make_tze"></label>
         <!--span id="mp3"> </span>
         <a id="tze"></a-->
         </span>   
 
 <span class="setting_group_2">
-<span class="setting_bold">음색</span> <input type="number" id="freq" value="600" step="10" size="4" min="200" max="1200" /> Hz
+<span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
-
-<span class="setting_bold"></span> <label id="volume" value="100" size="3" min="1" max="100" step="1"></label>
+&nbsp;
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
-<label><input type="radio" name="key" value="computer" checked /> None (1.0)</label>
-<label><input type="radio" name="key" value="hangul_smaller" /> Smaller (1.5)</label>
-<label><input type="radio" name="key" value="hangul_small" /> Small (2.0)</label>
-<label><input type="radio" name="key" value="hangul" /> Large (3.0)</label>&nbsp;&nbsp;
+<label><input type="radio" name="key" value="computer" checked /> 정상</label>
+<label><input type="radio" name="key" value="space_1" /> ></label>
+<label><input type="radio" name="key" value="space_2" /> >></label>
+<label><input type="radio" name="key" value="space_3" /> >>></label>
+<label><input type="radio" name="key" value="space_4" /> >>>></label>
+<label><input type="radio" name="key" value="space_5" /> >>>>></label>&nbsp;&nbsp;
 <!--label><input type="radio" name="key" value="elmer" /> Small</label>
 <label><input type="radio" name="key" value="farnsworth" /> Large</label>
 <label><input type="radio" name="key" value="straightmed" /> Random - Medium</label>
 <label><input type="radio" name="key" value="straightbad" /> Random - Bad</label>
 <label><input type="radio" name="key" value="straightvbad" /> Random - Very Bad</label-->
 </span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;
+
 <span class="setting_group">
-<span class="setting_bold">옵션</span> : <label id="selection_only" /></label>
-<label><input type="checkbox" id="repeat" /> 반복</label>&nbsp;&nbsp;
+<span class="setting_bold">옵션</span> : 
+<label id="selection_only" /></label>
 <label id="highlight_slowly" /></label>
-<label><input type="checkbox" id="hide_text" /> 글자지우기</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" /> 글자숨기기</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="repeat" /> 연속반복</label>&nbsp;&nbsp;
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;&nbsp;
 </span>
 
 </div>
-
-<div id="keyer_setting">
-
+<!--div id="keyer_setting"-->
 <!--span class="setting_bold">CW Keyer*</span> : -->
 <label id="connect"></label>
 <label id="disconnect"></label>
@@ -241,9 +245,7 @@ audio {
 <(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
 </span>
 </div-->
-
-
-<br>
+<div>
 <span class="sample_group">
 <button id="hangul_qso_1">Hangul Sample 1</button>
 <button id="hangul_qso_2">Hangul Sample 2</button>
@@ -702,15 +704,21 @@ MorseNode.prototype.dotfac = function(t) {
             if (t=='.' || t=='i') return Math.random()*1.6+0.8;
             if (t=='s') return Math.random()*0.85+0.4;
             return Math.random()*0.8+0.6;
-        case 'hangul_smaller':
-			if (t=='s') return 1.5;
-            if (t=='l') return 1.5;
-        case 'hangul_small':
-			if (t=='s') return 2;
-            if (t=='l') return 2;
-        case 'hangul':
+        case 'space_1':
+			if (t=='s') return 1.4;
+            if (t=='l') return 1.4;
+        case 'space_2':
+			if (t=='s') return 2.2;
+            if (t=='l') return 2.2;
+        case 'space_3':
 			if (t=='s') return 3;
             if (t=='l') return 3;
+        case 'space_4':
+			if (t=='s') return 4;
+            if (t=='l') return 4;            
+        case 'space_5':
+			if (t=='s') return 5;
+            if (t=='l') return 5;            
         case 'farnsworth': //uses farnsworth
             if (t=='s') return 6;
             if (t=='l') return 4;
@@ -834,9 +842,11 @@ var makeTze = document.querySelector("#make_tze");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
 //var keyElmer = document.querySelector('input[name="key"][value="elmer"]');
 //var keyFarnsworth = document.querySelector('input[name="key"][value="farnsworth"]');
-var keyHangulSmaller = document.querySelector('input[name="key"][value="hangul_smaller"]');
-var keyHangulSmall = document.querySelector('input[name="key"][value="hangul_small"]');
-var keyHangul = document.querySelector('input[name="key"][value="hangul"]');
+var keySpace1 = document.querySelector('input[name="key"][value="space_1"]');
+var keySpace2 = document.querySelector('input[name="key"][value="space_2"]');
+var keySpace3 = document.querySelector('input[name="key"][value="space_3"]');
+var keySpace4 = document.querySelector('input[name="key"][value="space_4"]');
+var keySpace5 = document.querySelector('input[name="key"][value="space_5"]');
 //var keyStraightMed = document.querySelector('input[name="key"][value="straightmed"]');
 //var keyStraightBad = document.querySelector('input[name="key"][value="straightbad"]');
 //var keyStraightVBad = document.querySelector('input[name="key"][value="straightvbad"]');
@@ -1274,13 +1284,19 @@ keyComputer.onchange = function() {
 keyFarnsworth.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }*/
-keyHangulSmaller.onchange = function() {
+keySpace1.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
-keyHangulSmall.onchange = function() {
+keySpace2.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
-keyHangul.onchange = function() {
+keySpace3.onchange = function() {
+    window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
+}
+keySpace4.onchange = function() {
+    window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
+}
+keySpace5.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
 /*keyStraightMed.onchange = function() {
