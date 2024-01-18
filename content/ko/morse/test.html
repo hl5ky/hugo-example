@@ -56,6 +56,7 @@ button {
     font-family: 'Helvetica', 'sans serif';
     font-size: large;
     font-weight: bold;
+    margin-top: 2px;
 }
 #play {
     color: blue;
@@ -140,7 +141,7 @@ textarea {
 
 .log_container_ditdah {
     width : 100%;
-    height : 16px;
+    height : 12px;
     overflow: hidden;
     padding: 10px;
     border: 1px solid lightsalmon;
@@ -151,7 +152,7 @@ textarea {
     font-family: 'monospace';
     font-size: small;
     white-space: nowrap;
-    margin-top: 20px;
+    margin-top: 1px;
 }
 #ditdah {
     height:10px;
@@ -235,8 +236,8 @@ audio {
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;&nbsp;
 </span>
-
 </div>
+
 <!--div id="keyer_setting"-->
 <!--span class="setting_bold">CW Keyer*</span> : -->
 <label id="connect"></label>
@@ -245,6 +246,7 @@ audio {
 <(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
 </span>
 </div-->
+
 <div>
 <span class="sample_group">
 <button id="hangul_qso_1">Hangul Sample 1</button>
@@ -258,6 +260,7 @@ audio {
 <button id="hangul_syllable">Hangul Letter Training</button>
 </span>
 </div>
+
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
 <textarea id="hangul_txt_1" rows="16">
@@ -426,17 +429,6 @@ TU E E
     <button id="random_kdn_city">KDN City</button>
 </div>
 
-<button id="hangul_initial_consonants">Initial Consonants</button>
-<button id="hangul_simple_vowels">Simple Vowels</button>
-<button id="hangul_simple_syllables">Simple Syllables</button>
-<button id="hangul_final_consonants">Final Consonants</button>
-<button id="hangul_syllables">Syllables</button>
-<button id="hangul_complex_vowels">Complex Vowels</button>
-<button id="hangul_complex_syllables">Complex Syllables</button>
-<button id="hangul_random_syllables">Random Syllables</button>
-<button id="hangul_frequent_syllables">Frequent Syllables</button>
-
-
 <textarea id="hangul_txt" rows="16" class="hidden_sample">
 아래 학습 단계를 선택해 연습할 문구를 생성하세요.
 </textarea>
@@ -446,8 +438,16 @@ TU E E
     <label><input type="checkbox" id="random" /> Random</label>&nbsp;
     <label><input type="checkbox" id="extend" /> Extend</label>&nbsp;&nbsp;
 </span>
+    <button id="hangul_initial_consonants">Initial Consonants</button>
+    <button id="hangul_simple_vowels">Simple Vowels</button>
+    <button id="hangul_simple_syllables">Simple Syllables</button>
+    <button id="hangul_final_consonants">Final Consonants</button>
+    <button id="hangul_syllables">Syllables</button>
+    <button id="hangul_complex_vowels">Complex Vowels</button>
+    <button id="hangul_complex_syllables">Complex Syllables</button>
+    <button id="hangul_random_syllables">Random Syllables</button>
+    <button id="hangul_frequent_syllables">Frequent Syllables</button>
 </div>
-
 
 
 
