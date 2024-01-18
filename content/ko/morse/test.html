@@ -46,6 +46,18 @@ input {
     font-family: 'Helvetica', 'sans serif';
     font-size: large;
 }
+
+input_1 {
+    padding: 0px;
+    border: 0px solid lightsalmon;
+    transition: box-shadow 0.3s;
+    background: lightyellow;
+    border-radius: 0px;
+    color: black;
+    font-family: 'Helvetica', 'sans serif';
+    font-size: large;
+}
+
 input:focus { 
     border: 1px solid teal;
     box-shadow: 0 0 5px 1px powderblue;
@@ -201,11 +213,11 @@ audio {
         </span>   
 
 <span class="setting_group_2">
-<span class="setting_bold">음색</span> <input type="number" id="freq" value="600" step="10" size="4" min="200" max="1200" /> Hz
+<span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 &nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
+<span class="setting_bold"></span> <input_1 type="number" id="volume" value="100" size="3" min="1" max="100" step="1" />
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
