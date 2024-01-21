@@ -272,7 +272,7 @@ audio {
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
 <label id="random_qso"></label>
-<label id="hangul_syllable"></label>
+
 </span>
 </div>
 
@@ -284,6 +284,9 @@ audio {
 <button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">1-2 단어연습 1 (10/2)</button>&nbsp;
 <button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">1-3 단어연습 2 (10/2)</button>&nbsp;
 <button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">1-4 호출부호연습 (10/3)</button>
+
+
+
 
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
@@ -1256,6 +1259,7 @@ function makeEditor(textArea, display) {
 		//, extraKeys: { Left: function() {rollback(true);}, Right: function() {rollback(false);} }
 	});
 }
+
 makeEditor(document.querySelector("#hangul_txt_1"));
 makeEditor(document.querySelector("#user_txt"));
 makeEditor(document.querySelector("#random_txt"));
@@ -1266,9 +1270,6 @@ var userTxt = document.querySelector("#user_txt");
 var hangulQso1 = document.querySelector("#hangul_qso_1");
 var userQso = document.querySelector("#user_qso");
 var randomQso = document.querySelector("#random_qso");
-var hangulSyllable = document.querySelector("#hangul_syllable");
-
-
 
 var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
@@ -1311,9 +1312,6 @@ userQso.onclick = function() {
 }
 randomQso.onclick = function() {
     changeQsoSample("random_txt");
-}
-hangulSyllable.onclick = function() {
-    changeQsoSample("hangul_txt");
 }
 
 function getRepeatCount() {
