@@ -351,12 +351,8 @@ audio {
 <label id="hangul_frequent_syllables"></label>
 </div>
 
-<span class="sample_group">
-    <button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/cw_practice'">&nbsp;홈페이지로 돌아가기&nbsp;</button>
-</span>
 
-
-
+<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/cw_practice'">&nbsp;홈페이지로 돌아가기&nbsp;</button>
 
 
 <h3> ◆ 프로그램 정보</h3>
@@ -1381,11 +1377,7 @@ SubMenu3.onclick = function() {
 
     ];
     var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 1 /* 5 */; n++) {
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
+    for (var n = 0; n < 1 ; n++) {
         QSO_WORDS.sort(() => Math.random() - 0.5);
         for (var word of QSO_WORDS)
             repeated.push(Array(repeatCount).fill(word).join("  "));
