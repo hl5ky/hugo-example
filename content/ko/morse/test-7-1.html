@@ -121,7 +121,7 @@ textarea {
 
 .CodeMirror {
     width : 100%;
-    height : 14em;
+    height : 24em;
     padding: 10px;
     border: 1px solid lightsalmon;
     transition: box-shadow 0.3s;
@@ -194,7 +194,7 @@ audio {
 
 <div class="setting">
     <span class="setting_group_2">
-        <button id="play">PLAY</button>&nbsp;
+        <button id="play">PLAY</button>
         <button id="stop">STOP</button>
         <label id="make"></label>
         <label id="make_tze"></label>
@@ -211,12 +211,12 @@ audio {
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
-<label><input type="radio" name="key" value="computer" checked /> 정상</label>&nbsp;
-<label><input type="radio" name="key" value="space_1" /> 1></label>&nbsp;
-<label><input type="radio" name="key" value="space_2" /> 2>></label>&nbsp;
-<label><input type="radio" name="key" value="space_3" /> 3>>></label>&nbsp;
-<label><input type="radio" name="key" value="space_4" /> 4>>>></label>&nbsp;
-<label><input type="radio" name="key" value="space_5" /> 5>>>>></label>&nbsp;
+<label><input type="radio" name="key" value="computer" checked /> 정상</label>
+<label><input type="radio" name="key" value="space_1" /> ></label>
+<label><input type="radio" name="key" value="space_2" /> >></label>
+<label><input type="radio" name="key" value="space_3" /> >>></label>
+<label><input type="radio" name="key" value="space_4" /> >>>></label>
+<label><input type="radio" name="key" value="space_5" /> >>>>></label>&nbsp;&nbsp;
 <!--label><input type="radio" name="key" value="elmer" /> Small</label>
 <label><input type="radio" name="key" value="farnsworth" /> Large</label>
 <label><input type="radio" name="key" value="straightmed" /> Random - Medium</label>
@@ -228,13 +228,13 @@ audio {
 
 <span class="setting_group">
 <span class="setting_bold">옵션</span> : 
-<label id="selection_only" ></label>
-<label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_text" checked="checked" /> 글자숨기기</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="repeat" /> 연속반복</label>
+<label id="selection_only" /></label>
+<label id="highlight_slowly" /></label>
+<label><input type="checkbox" id="hide_text" /> 글자숨기기</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="repeat" /> 연속반복</label>&nbsp;&nbsp;
 <label id="flute"></label>
 <label id="noise"></label>
-<label id="fading"></label>&nbsp;
+<label id="fading"></label>&nbsp;&nbsp;
 </span>
 </div>
 
@@ -249,107 +249,136 @@ audio {
 
 <div>
 <span class="sample_group">
-<button style="background-color:rgb(240, 250, 200);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;2단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;3단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;4단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;5단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;6단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;7단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;8단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;9단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;10단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;11단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;12단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;13단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='http://127.0.0.1:1313/morse/test-1.html'">&nbsp;14단계&nbsp;</button>
-
-
-
-
-<!-- keep the lines bleow -->
-<label id="hangul_qso_1"></label>
-<label id="user_qso"></label>
-<label id="random_qso"></label>
-<label id="hangul_syllable"></label>
+<button id="main_menu_1">Main Menu 1</button>
+<button id="main_menu_2">Main Menu 2</button>
+<button id="main_menu_3">Main Menu 3</button>
+<button id="main_menu_4">Main Menu 4</button>
+<button id="main_menu_5">Main Menu 5</button>
+<button id="main_menu_6">Main Menu 6</button>
+<button id="main_menu_7">Main Menu 7</button>
+<button id="main_menu_8">Main Menu 8</button>
+<button onClick="location.href='http://127.0.0.1:1313/morse/test-7.html'">Main Menu 9</button>
 </span>
 </div>
-
-
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-
-
-
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">QSO Elements</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">Basic</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">Stamp QSO</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">Hangul Words</button>
-
-
-
-
-
-
-<textarea id="hangul_txt_1" rows="10">
-
+<textarea id="text_1" rows="10" class="hidden_sample">
+TEXT 1
+TEXT 1
+TEXT 1
 </textarea>
-<div id="hangul_txt_1_caption"></div>
+<div id="text_1_caption" class="hidden_sample">
+    <button id="random_hl_callsigns">Menu 1-1</button>
+    <button id="random_ja_callsigns">Menu 1-2</button>
+    <button id="random_babv_callsigns">Menu 1-3</button>
+</div>    
 
-
-<textarea id="user_txt" rows="16" class="hidden_sample">
-자유롭게 입력해서 사용하세요. 입력한 내용은 브라우저에 기억됩니다.
+<textarea id="text_2" rows="10" class="hidden_sample">
+TEXT 2
+TEXT 2
+TEXT 2
 </textarea>
-<div id="user_txt_caption" class="hidden_sample"></div>
+<div id="text_2_caption" class="hidden_sample">
+    <button id="random_hl_callsigns">Menu 2-1</button>
+    <button id="random_ja_callsigns">Menu 2-2</button>
+    <button id="random_babv_callsigns">Menu 2-3</button>
+</div>    
 
-
-<textarea id="random_txt" rows="16" class="hidden_sample">
-아래 랜덤 문구 생성 기능을 이용해 연습할 문구를 생성하세요.
+<textarea id="text_3" rows="16" class="hidden_sample">
+TEXT 3
+TEXT 3
+TEXT 3
 </textarea>
-<div id="random_txt_caption" class="hidden_sample">
-<span class="setting_group">
-    <span class="setting_bold">REPEAT</span> : 
-    <label><input type="radio" name="repeat_count" value="1" checked /> 1</label>
-    <label><input type="radio" name="repeat_count" value="2" /> 2</label>
-    <label><input type="radio" name="repeat_count" value="3" /> 3</label>
-</span>
-    <button id="random_hl_callsigns">Random HL Callsigns</button>
-    <button id="random_ja_callsigns">JA</button>
-    <button id="random_babv_callsigns">BA/BV</button>
-    <button id="random_hljababv_callsigns">HL/JA/BA/BV</button>
-    <button id="random_qso_elements">QSO Elements</button>
-    <button id="random_qso_basic_elements">Basic</button>
-    <button id="random_stamp_qso">Stamp QSO</button>
-    <button id="random_hl_words">Hangul Words</button>
-    <button id="random_hl_phrases">Hangul Phrases</button>
-    <button id="random_kdn">KDN</button>
-    <button id="random_kdn_city">KDN City</button>
+<div id="text_3_caption" class="hidden_sample">
+    <button id="random_hl_callsigns">Menu 3-1</button>
+    <button id="random_ja_callsigns">Menu 3-2</button>
+    <button id="random_babv_callsigns">Menu 3-3</button>
 </div>
 
 
-
-<textarea id="hangul_txt" rows="16" class="hidden_sample">
-아래 학습 단계를 선택해 연습할 문구를 생성하세요.
+<textarea id="text_4" rows="16" class="hidden_sample">
+TEXT 4
+TEXT 4
+TEXT 4
 </textarea>
-<div id="hangul_txt_caption" class="hidden_sample">
-<span class="setting_group">
-    <span class="setting_bold">Option</span> : 
-    <label><input type="checkbox" id="random" checked="checked" /> Random</label>&nbsp;
-    <label><input type="checkbox" id="extend" /> Extend</label>&nbsp;&nbsp;
-</span>
-
-<button id="hangul_initial_consonants">Initial Consonants</button>
-<button id="hangul_simple_vowels">Simple Vowels</button>
-<button id="hangul_simple_syllables">Simple Syllables</button>
-<button id="hangul_final_consonants">Final Consonants</button>
-<button id="hangul_syllables">Syllables</button>
-<button id="hangul_complex_vowels">Complex Vowels</button>
-<button id="hangul_complex_syllables">Complex Syllables</button>
-<button id="hangul_random_syllables">Random Syllables</button>
-<button id="hangul_frequent_syllables">Frequent Syllables</button>
+<div id="text_4_caption" class="hidden_sample">
+<button id="random_hl_callsigns">Menu 4-1</button>
+<button id="random_ja_callsigns">Menu 4-2</button>
+<button id="random_babv_callsigns">Menu 4-3</button>
 </div>
 
+<textarea id="text_5" rows="16" class="hidden_sample">
+TEXT 5
+TEXT 5
+TEXT 5
+</textarea>
+<div id="text_5_caption" class="hidden_sample">
+    <button id="random_hl_callsigns">Menu 5-1</button>
+    <button id="random_ja_callsigns">Menu 5-2</button>
+    <button id="random_babv_callsigns">Menu 5-3</button>
+</div>
+
+<textarea id="text_6" rows="16" class="hidden_sample">
+TEXT 6
+TEXT 6
+TEXT 6 
+</textarea>
+<div id="text_6_caption" class="hidden_sample">
+    <button id="hangul_initial_consonants">Menu 6-1</button>
+    <button id="random_ja_callsigns">Menu 6-2</button>
+    <button id="random_babv_callsigns">Menu 6-3</button>
+</div>
+
+<textarea id="text_7" rows="16" class="hidden_sample">
+TEXT 7
+TEXT 7
+TEXT 7 
+</textarea>
+<div id="text_7_caption" class="hidden_sample">
+    <span class="setting_group">
+        <span class="setting_bold">REPEAT</span> : 
+        <label><input type="radio" name="repeat_count" value="1" checked /> 1</label>
+        <label><input type="radio" name="repeat_count" value="2" /> 2</label>
+        <label><input type="radio" name="repeat_count" value="3" /> 3</label>
+    </span>    
+<button id="random_hl_callsigns">Menu 7-1</button>
+<button id="random_ja_callsigns">Menu 7-2</button>
+<button id="random_babv_callsigns">Menu 7-3</button>    
+</div>
+
+<textarea id="text_8" rows="16" class="hidden_sample">
+TEXT 8
+TEXT 8
+TEXT 8 
+</textarea>
+<div id="text_8_caption" class="hidden_sample">
+    <span class="setting_group">
+        <span class="setting_bold">Option</span> : 
+        <label><input type="checkbox" id="random" checked="checked" /> Random</label>&nbsp;
+        <label><input type="checkbox" id="extend" /> Extend</label>&nbsp;&nbsp;
+    </span>
+<button id="random_hl_callsigns">Menu 8-1</button>
+<button id="random_ja_callsigns">Menu 8-2</button>
+<button id="random_babv_callsigns">Menu 8-3</button>    
+</div>
+
+<textarea id="text_9" rows="16" class="hidden_sample">
+TEXT 9
+TEXT 9
+TEXT 9 
+</textarea>
+<div id="text_9_caption" class="hidden_sample">
+<button id="random_hl_callsigns">Menu 9-1</button>
+<button id="random_ja_callsigns">Menu 9-2</button>
+<button id="random_babv_callsigns">Menu 9-3</button>    
+</div>
+
+
+<textarea id="text_100" rows="16" class="hidden_sample">
+    </textarea>
+    <div id="text_100_caption" class="hidden_sample">
+    </div>
 
 <h3> ◆ 프로그램 정보</h3>
 <span class="font_medium">
@@ -1264,7 +1293,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('key')) document.querySelector('input[name="key"][value="'+window.localStorage.getItem('key')+'"]').checked = true;
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
-        else changeQsoSample("hangul_txt_1");
+        else changeQsoSample("text_1");
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1279,17 +1308,27 @@ function makeEditor(textArea, display) {
 		//, extraKeys: { Left: function() {rollback(true);}, Right: function() {rollback(false);} }
 	});
 }
-makeEditor(document.querySelector("#hangul_txt_1"));
-makeEditor(document.querySelector("#user_txt"));
-makeEditor(document.querySelector("#random_txt"));
-makeEditor(document.querySelector("#hangul_txt"));
-var txt = document.querySelector("#hangul_txt_1");
-var userTxt = document.querySelector("#user_txt");
+makeEditor(document.querySelector("#text_1"));
+makeEditor(document.querySelector("#text_2"));
+makeEditor(document.querySelector("#text_3"));
+makeEditor(document.querySelector("#text_4"));
+makeEditor(document.querySelector("#text_5"));
+makeEditor(document.querySelector("#text_6"));
+makeEditor(document.querySelector("#text_7"));
+makeEditor(document.querySelector("#text_8"));
+makeEditor(document.querySelector("#text_9"));
+var txt = document.querySelector("#text_1");
+var userTxt = document.querySelector("#text_100");
 
-var hangulQso1 = document.querySelector("#hangul_qso_1");
-var userQso = document.querySelector("#user_qso");
-var randomQso = document.querySelector("#random_qso");
-var hangulSyllable = document.querySelector("#hangul_syllable");
+var MainMenu1 = document.querySelector("#main_menu_1");
+var MainMenu2 = document.querySelector("#main_menu_2");
+var MainMenu3 = document.querySelector("#main_menu_3");
+var MainMenu4 = document.querySelector("#main_menu_4");
+var MainMenu5 = document.querySelector("#main_menu_5");
+var MainMenu6 = document.querySelector("#main_menu_6");
+var MainMenu7 = document.querySelector("#main_menu_7");
+var MainMenu8 = document.querySelector("#main_menu_8");
+var MainMenu9 = document.querySelector("#main_menu_9");
 
 
 var randomHLCallsigns = document.querySelector("#random_hl_callsigns");
@@ -1313,109 +1352,6 @@ var hangulComplexVowels = document.querySelector("#hangul_complex_vowels");
 var hangulComplexSyllables = document.querySelector("#hangul_complex_syllables");
 var hangulRandomSyllables = document.querySelector("#hangul_random_syllables");
 var hangulFrequentSyllables = document.querySelector("#hangul_frequent_syllables");
-
-
-var SubMenu1 = document.querySelector("#sub_menu_1");
-var SubMenu2 = document.querySelector("#sub_menu_2");
-var SubMenu3 = document.querySelector("#sub_menu_3");
-var SubMenu4 = document.querySelector("#sub_menu_4");
-
-SubMenu1.onclick = function() {
-    stop.click();
-    var QSO_ELEMENTS = [
-        "D", "E",
-    ];
-    var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 70; n++) {
-        QSO_ELEMENTS.sort(() => Math.random() - 0.5);
-        for (var element of QSO_ELEMENTS)
-            repeated.push(Array(repeatCount).fill(element).join(""));
-    }
-    doc.setValue(repeated.join(""));
-}
-
-SubMenu2.onclick = function() {
-    stop.click();
-    QSO_BASIC_ELEMENTS = [
-        "CQ", "DE", "PSE", "K", "<AR>",
-        "GM", "GA", "GE", "DR", "OM",
-        "TNX", "FER", "CALL", "<BT>",
-        "ES", "UR", "RST", "IS", "599", "5NN",
-        "HR", "OP", "NAME",
-        "HW?",
-        "HPE", "CUAGN", "GL", "GB", "73", "TU",
-        "RR", "OK", "FB", "<BK>",
-        "<KN>", "<VA>"
-    ];
-    var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 10; n++) {
-        QSO_BASIC_ELEMENTS.sort(() => Math.random() - 0.5);
-        for (var element of QSO_BASIC_ELEMENTS)
-            repeated.push(Array(repeatCount).fill(element).join(" "));
-    }
-    doc.setValue(repeated.join("   "));
-}
-
-SubMenu3.onclick = function() {
-    stop.click();
-    QSO_WORDS = [
-        /*"안녕하세요", "예", "신호", "599", "5NN",
-        "오엠님", "말씀", "잘", "수신", "입니다",
-        "고맙습니다", "오늘", "교신", "한글",
-        "전신", "대단히", "그동안", "저는", "여기는", "이곳은",
-        "패이딩", "운영자", "드립니다",
-        "다음", "주말", "즐거운", "저녁", "또",
-        "오랜만에", "이곳", "뵙겠습니다", "종료합니다", "이만"*/
-        "안녕","신호","오엠","말씀","수신","오늘","교신","한글","전신","여기","이곳","운영","다음","주말","저녁","종료","이만",
-        "가게","가격","가구","가방","가수","가슴","가요","가위","가을","가족","간식","간장","갈비","갈색","감기","감동","감자","개인","거기","거리","거실","거울","건물","게임","겨울","결과","경기","경주","경찰","경치","경험","계단","계란","계절","계획","고기","고모","고장","고추","고향","골목","골프","공간","공기","공연","공원","공짜","공책","공항","과거","과일","과자","과학","관계","관심","광고","교수","교실","교통","교회","구두","구름","구월","국내","국립","국수","국어","국적","국제","군인","규칙","그거","그것","그곳","그날","그때","그램","그릇","그림","그분","그쪽","극장","근처","금연","기간","기름","기분","기사","기사","기온","기자","기차","기침","기타","김밥","김치","꽃집",
-        "나라","나무","나이","나중","나흘","낚시","날씨","날짜","남녀","남미","남산","남자","남쪽","남편","내과","내년","내용","내일","냄비","냄새","냉면","노래","노트","녹색","녹차","농구","누구","누나","눈물","뉴스","뉴욕","느낌","능력",
-        "다리","다리","다음","단어","단점","달러","달력","담배","답장","당근","당신","대학","대화","대회","덕분","도로","도시","도움","도쿄","독서","독일","동네","동물","동생","동안","동양","동전","동쪽","돼지","된장","두부","듣기","등산","딸기","떡국",
-
-    ];
-    var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 1 /* 5 */; n++) {
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        QSO_WORDS.sort(() => Math.random() - 0.5);
-        for (var word of QSO_WORDS)
-            repeated.push(Array(repeatCount).fill(word).join("  "));
-    }
-    doc.setValue(repeated.join("   "));
-}
-SubMenu4.onclick = function() {
-    stop.click();
-    var QSO_PHRASES = [
-        "안녕하세요?",
-        "반갑습니다.",
-        "예,",
-        "오엠님",
-        "말씀 잘 수신했습니다.",
-        "신호는 599 5NN 입니다.",
-        "오늘 교신 고맙습니다.",
-        "잘 지내셨나요?",
-        "그동안 잘 지내셨는지요?",
-        "저는 용인, 용인 에 사는 김대성, 김대성 입니다.",
-        "여기는 고양, 고양 이고 운영자는 최영일, 최영일 입니다.",
-        "이곳은 성남, 성남 이고 저는 최병태, 최병태 입니다.",
-        "이름은 배태원, 배태원 이고 경기광주, 경기광주 에서 신호 드리고 있습니다.",
-        "안녕히계세요.",
-        "다음에 또 뵙겠습니다.",
-        "한글 전신 교신 대단히 감사합니다.",
-        "평안한 저녁 되세요.",
-        "오랜만에 뵙습니다.",
-        "신호 받아주셔서 고맙습니다."
-    ];
-    var repeated = [];
-    for (var n = 0; n < 3; n++) {
-        QSO_PHRASES.sort(() => Math.random() - 0.5);
-        for (var phrase of QSO_PHRASES)
-            repeated.push(phrase);
-    }
-    doc.setValue(repeated.join("    "));
-}
-
 
 function changeQsoSample(newTxtId) {
     var newTxt = document.querySelector("#" + newTxtId);
@@ -1445,17 +1381,32 @@ function changeQsoSample(newTxtId) {
     window.localStorage.setItem('qso_sample', newTxtId);
     window.localStorage.setItem('user_txt', userTxt.CodeMirror.doc.getValue());
 }
-hangulQso1.onclick = function() {
-    changeQsoSample("hangul_txt_1");
+MainMenu1.onclick = function() {
+    changeQsoSample("text_1");
 }
-userQso.onclick = function() {
-    changeQsoSample("user_txt");
+MainMenu2.onclick = function() {
+    changeQsoSample("text_2");
 }
-randomQso.onclick = function() {
-    changeQsoSample("random_txt");
+MainMenu3.onclick = function() {
+    changeQsoSample("text_3");
 }
-hangulSyllable.onclick = function() {
-    changeQsoSample("hangul_txt");
+MainMenu4.onclick = function() {
+    changeQsoSample("text_4");
+}
+MainMenu5.onclick = function() {
+    changeQsoSample("text_5");
+}
+MainMenu6.onclick = function() {
+    changeQsoSample("text_6");
+}
+MainMenu7.onclick = function() {
+    changeQsoSample("text_7");
+}
+MainMenu8.onclick = function() {
+    changeQsoSample("text_8");
+}
+MainMenu9.onclick = function() {
+    changeQsoSample("text_9");
 }
 
 var NUM_RANDOM_CALLSIGNS = 200;
@@ -1743,6 +1694,22 @@ randomKDNCity.onclick = function() {
     var KDNCities = [
         "서울 종로","서울 중구","서울 성동","서울 동대문","서울 성북","서울 서대문","서울 마포","서울 용산","서울 영등포","서울 관악","서울 도봉","서울 강남","서울 강서","서울 은평","서울 동작","서울 구로","서울 강동","서울 중랑","서울 노원","서울 서초","서울 양천","서울 송파","서울 금천","서울 광진","서울 강북",
         "부산 동구","부산 중구","부산 서구","부산 영도","부산 부산진","부산 동래","부산 남구","부산 북구","부산 해운대","부산 사하","부산 금정","부산 강서","부산 연제","부산 수영","부산 사상","부산 기장",
+        "수원","의정부","성남","부천","안양","광명","동두천","구리","평택","안산","과천","오산","하남","군포","의왕","시흥","고양","남양주","용인","이천","파주","김포","안성","화성","광주","포천","양주","여주","양평","가평","연천",
+        "춘천","원주","강릉","속초","동해","태백","삼척","홍천","횡성","평창","정선","영월","양양","인제","고성","양구","화천","철원",
+        "청주","충주","제천","청원","보은","옥천","영동","괴산","진천","음성","단양","증평",
+        "천안","공주","서산","아산","보령","논산","계룡","당진","예산","홍성","청양","서천","부여","금산","태안",
+        "전주","군산","남원","김제","정읍","익산","완주","부안","고창","순창","임실","장수","진안","무주",
+        "목포","여수","순천","나주","광양","장성","담양","곡성","구례","고흥","보성","화순","함평","영광","무안","영암","강진","장흥","해남","완도","진도","신안",
+        "김천","경주","안동","포항","구미","영주","영천","상주","경산","문경","고령","성주","칠곡","군위","예천","봉화","영양","의성","청도","청송","영덕","울진","울릉",
+        "진주","창원","김해","밀양","통영","거제","사천","양산","함안","남해","고성","하동","산청","함양","거창","합천","의령","창녕",
+        "제주","서귀포",
+        "인천 중구","인천 동구","인천 미추홀","인천 남동","인천 서구","인천 부평","인천 계양","인천 연수","인천 강화","인천 옹진",
+        "대구 중구","대구 동구","대구 서구","대구 남구","대구 북구","대구 수성","대구 달서","대구 달성",
+        "광주 동구","광주 서구","광주 북구","광주 광산","광주 남구",
+        "대전 대덕","대전 동구","대전 서구","대전 중구","대전 유성",
+        "울산 중구","울산 남구","울산 동구","울산 북구","울산 울주",
+        "세종",
+        "독도","마라도","흑산도","격렬비열도","백령도"
     ];
     var repeated = [], repeatCount = getRepeatCount();
     for (var n = 0; n < 1; n++) {
@@ -1917,40 +1884,7 @@ hangulComplexSyllables.onclick = function() {
     }
     doc.setValue(repeated.join("   "));
 }
-hangulRandomSyllables.onclick = function() {
-    stop.click();
 
-    var consonants = ["ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
-    if (isExtend()) consonants = consonants.concat(["ㄲ","ㄸ","ㅃ","ㅆ","ㅉ"]);
-    var vowels = ["ㅏ","ㅑ","ㅓ","ㅕ","ㅗ","ㅛ","ㅜ","ㅠ","ㅡ","ㅣ","ㅔ","ㅐ"];
-    if (isExtend()) vowels = vowels.concat(["ㅒ","ㅖ","ㅘ","ㅙ","ㅚ","ㅝ","ㅞ","ㅟ","ㅢ"]);
-    var finals = ["","ㄱ","ㄴ","ㄷ","ㄹ","ㅁ","ㅂ","ㅅ","ㅆ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
-    if (isExtend()) finals = ["","ㄱ","ㄲ","ㄳ","ㄴ","ㄵ","ㄶ","ㄷ","ㄹ","ㄺ","ㄻ","ㄼ","ㄽ","ㄾ","ㄿ","ㅀ","ㅁ","ㅂ","ㅄ","ㅅ","ㅆ","ㅇ","ㅈ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
-    var repeated = [];
-    for (var i = 0; i < (isExtend() ? 1 : 1); i++) {
-        var syllables = [];
-        for (var c of consonants) {
-            for (var v of vowels) {
-                for (var f of finals) {
-                    var letter = Hangul.a([c, v, f]);
-                    if (isKSX1001(letter)) syllables.push(letter);
-                }
-            }
-        }
-        if (isRandom()) syllables.sort(() => Math.random() - 0.5);
-        repeated = repeated.concat(syllables);
-    }
-    doc.setValue(repeated.join("   "));
-}
-hangulFrequentSyllables.onclick = function() {
-    stop.click();
-    var SYLLABLES = ["가","게","가","격","가","구","가","방","가","수","가","슴","가","요","가","위","가","을","가","족","간","식","간","장","갈","비","갈","색","감","기","감","동","감","자","개","인","거","기","거","리","거","실","거","울","건","물","게","임","겨","울","결","과","경","기","경","주","경","찰","경","치","경","험","계","단","계","란","계","절","계","획","고","기","고","모","고","장","고","추","고","향","골","목","골","프","공","간","공","기","공","연","공","원","공","짜","공","책","공","항","과","거","과","일","과","자","과","학","관","계","관","심","광","고","교","수","교","실","교","통","교","회","구","두","구","름","구","월","국","내","국","립","국","수","국","어","국","적","국","제","군","인","규","칙","그","거","그","것","그","곳","그","날","그","때","그","램","그","릇","그","림","그","분","그","쪽","극","장","근","처","금","연","기","간","기","름","기","분","기","사","기","사","기","온","기","자","기","차","기","침","기","타","김","밥","김","치","꽃","집","나","라","나","무","나","이","나","중","나","흘","낚","시","날","씨","날","짜","남","녀","남","미","남","산","남","자","남","쪽","남","편","내","과","내","년","내","용","내","일","냄","비","냄","새","냉","면","노","래","노","트","녹","색","녹","차","농","구","누","구","누","나","눈","물","뉴","스","뉴","욕","느","낌","능","력","다","리","다","리","다","음","단","어","단","점","달","러","달","력","담","배","답","장","당","근","당","신","대","학","대","화","대","회","덕","분","도","로","도","시","도","움","도","쿄","독","서","독","일","동","네","동","물","동","생","동","안","동","양","동","전","동","쪽","돼","지","된","장","두","부","듣","기","등","산","딸","기","떡","국","라","면","로","션","마","늘","마","음","만","두","만","화","매","일","매","주","맥","주","머","리","머","리","메","뉴","메","모","며","칠","면","도","명","절","모","양","모","임","모","자","목","적","몸","살","몽","골","무","료","무","릎","무","엇","무","역","무","용","문","장","문","제","문","화","물","건","미","국","미","래","미","술","바","다","바","람","바","지","박","수","반","지","반","찬","발","음","발","표","방","법","방","송","방","학","배","구","배","달","배","우","배","탈","버","스","번","호","벚","꽃","병","원","볼","펜","봉","지","봉","투","부","모","부","부","부","산","부","엌","부","인","부","탁","북","쪽","비","누","비","밀","빌","딩","빨","래","빵","집","사","고","사","과","사","람","사","물","사","원","사","월","사","이","사","장","사","전","사","진","사","촌","사","탕","사","흘","산","책","삼","월","삼","촌","상","자","상","처","상","품","새","벽","새","우","색","깔","생","선","생","신","생","일","생","활","샴","푸","서","류","서","양","서","울","서","점","서","쪽","선","배","선","수","설","날","설","탕","성","격","성","함","세","계","센","터","소","리","소","설","소","식","소","파","소","포","소","풍","손","님","송","이","수","건","수","도","수","박","수","업","수","영","수","저","수","첩","수","학","숙","제","순","서","스","키","습","관","시","간","시","계","시","골","시","내","시","디","시","민","시","설","시","외","시","월","시","작","시","장","시","청","시","험","식","당","식","사","식","탁","신","문","신","발","실","수","쓰","기","아","기","아","내","아","들","아","래","아","빠","아","이","아","침","아","침","악","기","안","경","야","구","야","채","약","국","약","사","약","속","양","말","양","복","양","식","양","파","어","깨","어","디","어","른","언","니","얼","굴","얼","마","얼","음","엄","마","여","권","여","기","여","름","여","자","여","행","역","사","연","세","연","필","연","휴","열","쇠","열","차","엽","서","영","국","영","상","영","어","영","하","영","화","예","약","옛","날","오","리","오","빠","오","월","오","이","오","전","오","후","올","해","옷","장","외","국","왼","쪽","요","금","요","리","요","일","요","즘","우","리","우","산","우","유","우","표","월","급","월","세","웬","일","위","치","유","럽","유","리","유","월","유","학","유","행","은","행","음","식","음","악","의","미","의","사","의","자","이","거","이","것","이","곳","이","름","이","모","이","번","이","분","이","사","이","월","이","유","이","쪽","이","틀","인","구","인","기","인","도","인","삼","인","상","인","천","인","형","일","기","일","본","일","식","일","월","읽","기","입","구","입","학","자","기","자","료","자","리","자","신","자","연","자","유","작","년","잔","치","잡","지","장","갑","장","마","장","미","장","소","장","점","재","료","재","킷","저","거","저","것","저","곳","저","기","저","녁","저","녁","저","분","저","쪽","저","희","전","공","전","화","점","수","점","심","점","심","점","원","점","퍼","정","도","정","문","정","보","제","목","제","일","조","카","종","로","종","류","종","이","종","일","주","말","주","변","주","부","주","사","주","소","주","스","주","위","주","인","중","국","중","식","중","심","증","세","지","갑","지","도","지","방","지","하","직","업","직","원","직","장","찌","개","창","문","채","소","책","상","책","장","처","음","최","고","추","석","추","억","축","구","축","제","출","구","출","장","취","미","치","과","치","마","치","약","친","구","친","척","칠","월","칠","판","침","대","칫","솔","카","드","카","레","카","페","커","피","코","트","코","피","콜","라","콧","물","크","기","탁","구","태","국","태","풍","택","시","통","장","특","징","파","티","팔","월","패","션","편","지","평","일","포","도","포","장","표","현","피","자","필","름","필","통","하","늘","하","루","하","숙","학","교","학","기","학","년","학","생","학","원","한","강","한","국","한","글","한","번","한","복","한","식","한","자","할","인","합","격","해","외","햇","빛","행","복","행","사","허","리","현","금","현","재","형","제","호","주","호","텔","혼","자","홍","차","화","가","환","자","회","사","회","색","회","의","후","배","휴","가","휴","일","휴","지","흰","색"];
-    SYLLABLES.sort(() => Math.random() - 0.5);
-    SYLLABLES.sort(() => Math.random() - 0.5);
-    SYLLABLES.sort(() => Math.random() - 0.5);
-    SYLLABLES.sort(() => Math.random() - 0.5);
-    SYLLABLES.sort(() => Math.random() - 0.5);
-    doc.setValue(SYLLABLES.join("   "));
-}
+
 </script>
 </html>
