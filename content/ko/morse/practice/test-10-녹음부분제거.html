@@ -197,6 +197,8 @@ audio {
     <span class="setting_group_2">
         <button id="play">PLAY</button>&nbsp;
         <button id="stop">STOP</button>
+        <!--span id="mp3"> </span>
+        <a id="tze"></a-->
         </span>   
 
 <span class="setting_group_2">
@@ -214,6 +216,11 @@ audio {
 <label><input type="radio" name="key" value="space_3" /> 3>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_4" /> 4>>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_5" /> 5>>>>></label>&nbsp;
+<!--label><input type="radio" name="key" value="elmer" /> Small</label>
+<label><input type="radio" name="key" value="farnsworth" /> Large</label>
+<label><input type="radio" name="key" value="straightmed" /> Random - Medium</label>
+<label><input type="radio" name="key" value="straightbad" /> Random - Bad</label>
+<label><input type="radio" name="key" value="straightvbad" /> Random - Very Bad</label-->
 </span>
 
 &nbsp;&nbsp;&nbsp;
@@ -230,6 +237,14 @@ audio {
 </span>
 </div>
 
+<!--div id="keyer_setting"-->
+<!--span class="setting_bold">CW Keyer*</span> : -->
+<label id="connect"></label>
+<label id="disconnect"></label>
+<!--&nbsp;
+<(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
+</span>
+</div-->
 
 <div>
 <span class="sample_group">
@@ -735,7 +750,45 @@ var selectionOnly = document.querySelector("#selection_only");
 var highlightSlowly = document.querySelector("#highlight_slowly");
 var hideText = document.querySelector("#hide_text");
 var repeat = document.querySelector("#repeat");
+var connect = document.querySelector("#connect");
+var disconnect = document.querySelector("#disconnect");
 
+connect.addEventListener("click", async () => {
+	if (isAndroid || isIOS) {
+        alert("Mobile devices don't support serial communication.");
+        return;
+    }
+	
+	var options = { baudRate: 115200, flowControl: 'hardware' };
+	if (!cwPortInitialized) {
+		navigator.serial.requestPort().then(async (port) => {
+			cwPort = port;
+			await cwPort.open(options); // DTR should be set on the radio
+			await cwPort.setSignals({dataTerminalReady:false});
+			toggleConnectButtons(true);
+			cwPortInitialized = true;
+			cwPortOpen = true;
+		}).catch((e) => {
+		});
+	} else if (!cwPortOpen) {
+		await cwPort.open(options);
+		await cwPort.setSignals({dataTerminalReady:false});
+		toggleConnectButtons(true);
+		cwPortOpen = true;
+	}
+}, false);
+disconnect.addEventListener("click", async () => {
+	if (cwPort != null && cwPortOpen) {
+		await cwPort.setSignals({dataTerminalReady:false});
+		await cwPort.close();
+		toggleConnectButtons(false);
+		cwPortOpen = false;
+	}
+}, false);
+function toggleConnectButtons(connected) {
+	connect.replaceChild(document.createTextNode(connected ? "CONNECTED!" : "CONNECT"), connect.firstChild);
+	disconnect.replaceChild(document.createTextNode(connected ? "DISCONNECT" : "DISCONNECTED!"), disconnect.firstChild);
+}
 
 function renewMorse() {
     ac = (ac || new AudioContext());

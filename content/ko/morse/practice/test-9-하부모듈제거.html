@@ -192,11 +192,15 @@ audio {
 </head>
 <body>
 <div class="page">
-<h2>QSO 코흐법 (영문)</h2> computer
+<h2>QSO 코흐법 (영문)</h2> 
 <div class="setting">
     <span class="setting_group_2">
         <button id="play">PLAY</button>&nbsp;
         <button id="stop">STOP</button>
+        <label id="make"></label>
+        <label id="make_tze"></label>
+        <!--span id="mp3"> </span>
+        <a id="tze"></a-->
         </span>   
 
 <span class="setting_group_2">
@@ -214,6 +218,11 @@ audio {
 <label><input type="radio" name="key" value="space_3" /> 3>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_4" /> 4>>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_5" /> 5>>>>></label>&nbsp;
+<!--label><input type="radio" name="key" value="elmer" /> Small</label>
+<label><input type="radio" name="key" value="farnsworth" /> Large</label>
+<label><input type="radio" name="key" value="straightmed" /> Random - Medium</label>
+<label><input type="radio" name="key" value="straightbad" /> Random - Bad</label>
+<label><input type="radio" name="key" value="straightvbad" /> Random - Very Bad</label-->
 </span>
 
 &nbsp;&nbsp;&nbsp;
@@ -230,6 +239,14 @@ audio {
 </span>
 </div>
 
+<!--div id="keyer_setting"-->
+<!--span class="setting_bold">CW Keyer*</span> : -->
+<label id="connect"></label>
+<label id="disconnect"></label>
+<!--&nbsp;
+<(IC-7300,7610 : <span class="setting_bold">USB Keying(CW) - DTR</span>)
+</span>
+</div-->
 
 <div>
 <span class="sample_group">
@@ -717,6 +734,8 @@ var wpm = document.querySelector("#speed");
 var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
+var make = document.querySelector("#make");
+var makeTze = document.querySelector("#make_tze");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
 //var keyElmer = document.querySelector('input[name="key"][value="elmer"]');
 //var keyFarnsworth = document.querySelector('input[name="key"][value="farnsworth"]');
@@ -735,7 +754,45 @@ var selectionOnly = document.querySelector("#selection_only");
 var highlightSlowly = document.querySelector("#highlight_slowly");
 var hideText = document.querySelector("#hide_text");
 var repeat = document.querySelector("#repeat");
+var connect = document.querySelector("#connect");
+var disconnect = document.querySelector("#disconnect");
 
+connect.addEventListener("click", async () => {
+	if (isAndroid || isIOS) {
+        alert("Mobile devices don't support serial communication.");
+        return;
+    }
+	
+	var options = { baudRate: 115200, flowControl: 'hardware' };
+	if (!cwPortInitialized) {
+		navigator.serial.requestPort().then(async (port) => {
+			cwPort = port;
+			await cwPort.open(options); // DTR should be set on the radio
+			await cwPort.setSignals({dataTerminalReady:false});
+			toggleConnectButtons(true);
+			cwPortInitialized = true;
+			cwPortOpen = true;
+		}).catch((e) => {
+		});
+	} else if (!cwPortOpen) {
+		await cwPort.open(options);
+		await cwPort.setSignals({dataTerminalReady:false});
+		toggleConnectButtons(true);
+		cwPortOpen = true;
+	}
+}, false);
+disconnect.addEventListener("click", async () => {
+	if (cwPort != null && cwPortOpen) {
+		await cwPort.setSignals({dataTerminalReady:false});
+		await cwPort.close();
+		toggleConnectButtons(false);
+		cwPortOpen = false;
+	}
+}, false);
+function toggleConnectButtons(connected) {
+	connect.replaceChild(document.createTextNode(connected ? "CONNECTED!" : "CONNECT"), connect.firstChild);
+	disconnect.replaceChild(document.createTextNode(connected ? "DISCONNECT" : "DISCONNECTED!"), disconnect.firstChild);
+}
 
 function renewMorse() {
     ac = (ac || new AudioContext());
@@ -947,6 +1004,137 @@ function rollback(back) {
 	morse.timeMove(back ? -5 : 5);
 }
 
+var MP3_SAMPLE_RATE = 16000; //(isMobile ? 16000 : 44100);
+var MP3_BIT_RATE = 32; //(isMobile ? 32 : 128);
+var MP3_SAMPLE_BLOCK_SIZE = 1152;
+make.onclick = function() {
+	stop.click();
+	
+	var mp3 = document.querySelector("#mp3");
+	mp3.replaceChild(document.createTextNode(" Generating.. Please wait a few minutes."), mp3.firstChild);
+	
+	setTimeout(makeMp3, 1);
+};
+async function makeMp3() {
+	morse.playString(true, DELAY_AMOUNT, 
+		doc.getValue(), 
+		vol, 
+		document.querySelector('input[name="key"]:checked').value,
+		fading.checked);
+		
+	var encoder = new Mp3LameEncoder(MP3_SAMPLE_RATE, MP3_BIT_RATE);
+	var duration = makeBufferAndEncode(encoder, noise.checked, vol);
+	saveRecording(encoder.finish(), duration);
+}
+function makeBufferAndEncode(encoder, withNoise, noiseVolume) {
+	if (queue.length == 0) return;
+	
+	var queueLen = queue.length;
+	var duration = Math.ceil(queue[queueLen - 1][0]);
+	var sampleLen = parseInt((duration + DELAY_AMOUNT) * MP3_SAMPLE_RATE);
+	//sampleLen = Math.ceil(sampleLen / MP3_SAMPLE_BLOCK_SIZE) * MP3_SAMPLE_BLOCK_SIZE;
+	var buffer = new Float32Array(MP3_SAMPLE_BLOCK_SIZE);
+	var angular_frequency = freq.value * 2 * Math.PI;
+	var angular_frequency_factor = angular_frequency / MP3_SAMPLE_RATE;
+	var rising_step = rising_start_volume = rising_end_volume = 0;
+	var rising_steps = MP3_SAMPLE_RATE * smoothingDuration;
+	
+	var queueIndex = 0, sampleIndex = 0, volume = 0.0, nextVolume = 0.0;
+	for ( ; queueIndex < queueLen; queueIndex++) {
+		var item = queue[queueIndex];
+		if (item[1] > 0) {
+			sampleIndex = parseInt(item[0] * MP3_SAMPLE_RATE);
+			nextVolume = item[1];
+			break;
+		}
+	}
+	for (var i = 0, j = 0; i < sampleLen; i++, j++) {
+		if (j == MP3_SAMPLE_BLOCK_SIZE) {
+			encoder.encode([buffer, buffer]);
+			buffer.fill(0);
+			j = 0;
+		}
+		
+		if (i > sampleIndex) {
+			if (queueIndex < queueLen - 1) queueIndex++;
+			sampleIndex = parseInt(queue[queueIndex][0] * MP3_SAMPLE_RATE);
+			if (volume != nextVolume) {
+				rising_step = rising_steps;
+				rising_start_volume = volume;
+				rising_end_volume = nextVolume;
+			}
+			volume = nextVolume;
+			nextVolume = queue[queueIndex][1];
+		}
+		
+		if (rising_step-- > 0) {
+			if (rising_start_volume > rising_end_volume) volume = rising_end_volume + (rising_start_volume - rising_end_volume) * rising_step / rising_steps;
+			else volume = rising_start_volume + (rising_end_volume - rising_start_volume) * (rising_steps - rising_step) / rising_steps;
+		}
+		buffer[j] = Math.sin(i * angular_frequency_factor) * volume; // https://teropa.info/blog/2016/08/04/sine-waves.html
+		if (withNoise) buffer[j] = buffer[j] * Math.cos(0.5*0.5*Math.PI) + ((Math.random() * 2) - 1) * noiseVolume * Math.cos(0.5*0.5*Math.PI); // half + half
+	}
+	encoder.encode([buffer, buffer]);
+	
+	return duration;
+}
+function saveRecording(blob, duration) {
+	var url = URL.createObjectURL(blob);
+	
+	var sound = document.createElement("AUDIO");
+	sound.controls = 'controls';
+	sound.src = url;
+	sound.type = 'audio/mpeg';
+	
+	var link = document.createElement("A");
+	link.href = url;
+	link.appendChild(document.createTextNode("[MP3 DOWN]"));
+	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 12);
+	filename += "_" + wpm.value + "wpm_" + parseInt(duration + 2) + "s_" + MP3_BIT_RATE + "kbps";
+	link.download = filename + ".mp3";
+	
+	var div = document.createElement("DIV");
+	div.appendChild(sound);
+	div.appendChild(link);
+	
+	var mp3 = document.querySelector("#mp3");
+	mp3.replaceChild(div, mp3.firstChild);
+}
+
+makeTze.onclick = function() {
+	stop.click();
+	morse.playString(true, DELAY_AMOUNT, 
+		doc.getValue(), 
+		1.0, 
+		document.querySelector('input[name="key"]:checked').value,
+		false);
+	queue.push([queue[queue.length - 1][0] + 1, 0]);
+	saveTzeFile();
+}
+function saveTzeFile() {
+	var data = packTzeFile();
+	var blob = new Blob([JSON.stringify(data)], {type:"application/json"});
+	var url = URL.createObjectURL(blob);
+	
+	var link = document.createElement("A");
+	link.href = url;
+	link.appendChild(document.createTextNode("[1TZE DOWN]"));
+	var filename = (new Date()).toISOString().replace(/[\-\:T]/ig, '').substring(0, 14);
+	link.download = filename + ".tze";
+	
+	var anchor = document.querySelector("#tze");
+    link.id = anchor.id;
+    anchor.parentNode.replaceChild(link, anchor);
+}
+function packTzeFile() {
+	return {
+		version: 1,
+		creatdAt: (new Date()).toISOString(),
+		wpm: parseInt(wpm.value),
+		hangul: hasHangul,
+		queue: queue.map(x => [x[0].toFixed(3),parseInt(x[1])])
+	};
+}
 
 var ditdah = document.querySelector("#ditdah");
 var last = false, lastWidth = 0;
