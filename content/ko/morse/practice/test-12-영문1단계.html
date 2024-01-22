@@ -218,7 +218,9 @@ audio {
 <label><input type="radio" name="key" value="space_3" /> 3>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_4" /> 4>>>></label>&nbsp;
 <label><input type="radio" name="key" value="space_5" /> 5>>>>></label>&nbsp;
-</span>&nbsp;&nbsp;&nbsp;
+</span>
+
+&nbsp;&nbsp;&nbsp;
 
 <span class="setting_group">
 <span class="setting_bold">옵션</span> : 
@@ -250,13 +252,20 @@ audio {
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-13.html'">&nbsp;13단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button>
 
+
+
+
+<!-- keep the lines bleow -->
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
+<label id="random_qso"></label>
 
 </span>
 </div>
 
+
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
+
 
 <button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1-1 알파벳연습 (10/1)</button>&nbsp;
 <button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">1-2 단어연습 1 (10/2)</button>&nbsp;
@@ -264,20 +273,49 @@ audio {
 <button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">1-4 호출부호연습 (10/3)</button>
 
 
+
+
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
+
 <!--  user_txt         -->
 <textarea id="user_txt" rows="16" class="hidden_sample">
+
 </textarea>
-<div id="user_txt_caption" class="hidden_sample">
-<label><input type="radio" name="repeat_count" value="1" checked /></label>
+<div id="user_txt_caption" class="hidden_sample"></div>
+
+
+<!--  random_txt         -->
+<textarea id="random_txt" rows="16" class="hidden_sample">
+
+</textarea>
+<div id="random_txt_caption" class="hidden_sample">
+
+<span class="setting_group">
+    <span class="setting_bold"></span>
+    <label><input type="radio" name="repeat_count" value="1" checked /></label>
+    <label><input type="radio" name="repeat_count" value="2" /></label>
+    <label><input type="radio" name="repeat_count" value="3" /></label>
+</span>
+</div>
+
+
+<!--  hangul_txt         -->
+<textarea id="hangul_txt" rows="16" class="hidden_sample">
+
+</textarea>
+<div id="hangul_txt_caption" class="hidden_sample">
+
+<label input type="checkbox" id="random" checked="checked" ></label>&nbsp;
+<label input type="checkbox" id="extend" ></label>&nbsp;&nbsp;
 </div>
 
 
 <button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/practice'">&nbsp;홈페이지로 돌아가기&nbsp;</button>
+
 
 <h3> ◆ 프로그램 정보</h3>
 <span class="font_medium">
@@ -291,9 +329,10 @@ audio {
 <br /><br />
 </span>
 
+
+
 </div>
 </body>
-
 <!--script>Mp3LameEncoderConfig = { memoryInitializerPrefixURL: "" };</script-->
 <script src="Mp3LameEncoder.min.js"></script>
 <script type="text/javascript">
@@ -1038,12 +1077,14 @@ function makeEditor(textArea, display) {
 
 makeEditor(document.querySelector("#hangul_txt_1"));
 makeEditor(document.querySelector("#user_txt"));
-
+makeEditor(document.querySelector("#random_txt"));
+makeEditor(document.querySelector("#hangul_txt"));
 var txt = document.querySelector("#hangul_txt_1");
 var userTxt = document.querySelector("#user_txt");
 
 var hangulQso1 = document.querySelector("#hangul_qso_1");
 var userQso = document.querySelector("#user_qso");
+var randomQso = document.querySelector("#random_qso");
 
 var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
@@ -1083,6 +1124,9 @@ hangulQso1.onclick = function() {
 }
 userQso.onclick = function() {
     changeQsoSample("user_txt");
+}
+randomQso.onclick = function() {
+    changeQsoSample("random_txt");
 }
 
 function getRepeatCount() {
