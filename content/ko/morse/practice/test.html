@@ -1048,7 +1048,8 @@ var userQso = document.querySelector("#user_qso");
 var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
 var SubMenu3 = document.querySelector("#sub_menu_3");
-var SubMenu4 = document.querySelector("#sub_menu_4");
+// var SubMenu4 = document.querySelector("#sub_menu_4");
+var randomSB = document.querySelector("#sub_menu_4");
 
 function changeQsoSample(newTxtId) {
     var newTxt = document.querySelector("#" + newTxtId);
@@ -1092,15 +1093,43 @@ function getRepeatCount() {
 SubMenu1.onclick = function() {
     stop.click();
     var QSO_ELEMENTS = [
-        "d", "e",
+        "A", "B", "C", "D", "E",
+        "F", "G", "H", "I", "J",
     ];
     var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 70; n++) {
+    for (var n = 0; n < 1; n++) {
         QSO_ELEMENTS.sort(() => Math.random() - 0.5);
         for (var element of QSO_ELEMENTS)
-            repeated.push(Array(repeatCount).fill(element).join(""));
+        repeated.push(Array(repeatCount).fill(element).join(""));
     }
-    doc.setValue(repeated.join(""));
+    doc.setValue(repeated.join("  "));
+}
+
+function generateSB(loopCount, sliceNumber) {
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+    var WORDS = [
+        "A", "B", "C", "D", "E",
+        "F", "G", "H", "I", "J", "K"
+    ];
+
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        slicedWORDS = WORDS.slice(0, sliceNumber);
+        slicedWORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of slicedWORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+    return addedWORDS;
+}
+
+
+randomSB.onclick = function() {
+    stop.click();
+    doc.setValue(generateSB(1, 3).join(" ")); // generateSB(loopCount, sliceNumber)
 }
 
 SubMenu2.onclick = function() {
@@ -1117,7 +1146,7 @@ SubMenu2.onclick = function() {
         "<KN>", "<VA>"
     ];
     var repeated = [], repeatCount = getRepeatCount();
-    for (var n = 0; n < 10; n++) {
+    for (var n = 0; n < 1; n++) {
         QSO_BASIC_ELEMENTS.sort(() => Math.random() - 0.5);
         for (var element of QSO_BASIC_ELEMENTS)
             repeated.push(Array(repeatCount).fill(element).join(" "));
@@ -1147,7 +1176,7 @@ SubMenu3.onclick = function() {
         for (var word of QSO_WORDS)
             repeated.push(Array(repeatCount).fill(word).join("  "));
     }
-    doc.setValue(repeated.join("   "));
+    doc.setValue(repeated.join(" "));
 }
 SubMenu4.onclick = function() {
     stop.click();

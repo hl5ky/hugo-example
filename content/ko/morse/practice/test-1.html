@@ -1562,6 +1562,7 @@ function generateBABVCallsigns(count, repeatCount) {
     }
     return callsigns;
 }
+
 randomBABVCallsigns.onclick = function() {
     stop.click();
     doc.setValue(generateBABVCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("   "));
