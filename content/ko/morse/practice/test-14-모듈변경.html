@@ -235,7 +235,7 @@ audio {
 
 <div>
 <span class="sample_group">
-<!--button style="background-color:rgb(240, 250, 200);" onClick="location.href='/morse/practice/eng-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
+<button style="background-color:rgb(240, 250, 200);" onClick="location.href='/morse/practice/eng-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-2.html'">&nbsp;2단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-3.html'">&nbsp;3단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-4.html'">&nbsp;4단계&nbsp;</button>&nbsp;
@@ -248,7 +248,7 @@ audio {
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-11.html'">&nbsp;11단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-12.html'">&nbsp;12단계&nbsp;</button>&nbsp;
 <button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-13.html'">&nbsp;13단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button-->
+<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button>
 
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
@@ -258,8 +258,8 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1-1 새로운부호연습 (10/3)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">1-2 단어연습 (10/3)</button>&nbsp;
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1-1 알파벳연습 (10/1)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">1-2 단어연습 1 (10/2)</button>&nbsp;
 <button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">1-3 단어연습 2 (10/2)</button>&nbsp;
 <button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">1-4 호출부호연습 (10/3)</button>
 
@@ -1048,8 +1048,8 @@ var userQso = document.querySelector("#user_qso");
 var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
 var SubMenu3 = document.querySelector("#sub_menu_3");
-var SubMenu4 = document.querySelector("#sub_menu_4");
-//var randomSB = document.querySelector("#sub_menu_4");
+// var SubMenu4 = document.querySelector("#sub_menu_4");
+var randomSB = document.querySelector("#sub_menu_4");
 
 function changeQsoSample(newTxtId) {
     var newTxt = document.querySelector("#" + newTxtId);
@@ -1090,95 +1090,19 @@ function getRepeatCount() {
     return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
 }
 
-//<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
-
 SubMenu1.onclick = function() {
     stop.click();
-    loopCount = 5
-    //sliceNumber = 5
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "EE", "EEE", "EEEE", "EEEEE",
+    var QSO_ELEMENTS = [
+        "A", "B", "C", "D", "E",
+        "F", "G", "H", "I", "J",
     ];
-
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    var repeated = [], repeatCount = getRepeatCount();
+    for (var n = 0; n < 1; n++) {
+        QSO_ELEMENTS.sort(() => Math.random() - 0.5);
+        for (var element of QSO_ELEMENTS)
+        repeated.push(Array(repeatCount).fill(element).join(""));
     }
-    doc.setValue(addedWORDS.join(" ")
-    + "\n" 
-    + "                                                                                                         \n"
-    + "-----------------------------------------------------------------------------------------------------------"
-    + ""
-    
-    
-    );
-}
-
-SubMenu2.onclick = function() {
-    stop.click();
-    loopCount = 5
-    //sliceNumber = 5
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "DD", "DDD", "DDDD", "DDDDD",
-    ];
-
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-    doc.setValue(addedWORDS.join(" ")
-    + "\n" 
-    + "                                                                                                         \n"
-    + "-----------------------------------------------------------------------------------------------------------"
-    + ""
-    
-    
-    );
-}
-
-
-SubMenu3.onclick = function() {
-    stop.click();
-    loopCount = 2
-    //sliceNumber = 5
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "DEDDE", "DEDEE", "DEDE", "EDEDE", "DED", "DEE", "EDE",
-    "EEDE", "DEDD", "EDED", "EEDD", "DDE", "EDEE", "EDD", "DE",
-    "EDEDD", "DEEDE","ED", "EED", "DDED", "EDDD", "DEED",
-    "DEDED", "DDEDE", "EDDED", "EDDED", "EDEED"
-    ];
-
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice(0, 17);   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-    doc.setValue(addedWORDS.join(" "));
+    doc.setValue(repeated.join("  "));
 }
 
 function generateSB(loopCount, sliceNumber) {
@@ -1186,7 +1110,6 @@ function generateSB(loopCount, sliceNumber) {
     var repeatedWORDS = [];
     var addedWORDS = [];
     repeatCount = getRepeatCount();
-
     var WORDS = [
         "A", "B", "C", "D", "E",
         "F", "G", "H", "I", "J", "K"
@@ -1194,7 +1117,8 @@ function generateSB(loopCount, sliceNumber) {
 
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
+        WORDS.sort(() => Math.random() - 0.5);
+        slicedWORDS = WORDS.slice(0, sliceNumber);
         slicedWORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of slicedWORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
@@ -1208,7 +1132,29 @@ randomSB.onclick = function() {
     doc.setValue(generateSB(1, 3).join(" ")); // generateSB(loopCount, sliceNumber)
 }
 
-SubMenu5.onclick = function() {
+SubMenu2.onclick = function() {
+    stop.click();
+    QSO_BASIC_ELEMENTS = [
+        "CQ", "DE", "PSE", "K", "<AR>",
+        "GM", "GA", "GE", "DR", "OM",
+        "TNX", "FER", "CALL", "<BT>",
+        "ES", "UR", "RST", "IS", "599", "5NN",
+        "HR", "OP", "NAME",
+        "HW?",
+        "HPE", "CUAGN", "GL", "GB", "73", "TU",
+        "RR", "OK", "FB", "<BK>",
+        "<KN>", "<VA>"
+    ];
+    var repeated = [], repeatCount = getRepeatCount();
+    for (var n = 0; n < 1; n++) {
+        QSO_BASIC_ELEMENTS.sort(() => Math.random() - 0.5);
+        for (var element of QSO_BASIC_ELEMENTS)
+            repeated.push(Array(repeatCount).fill(element).join(" "));
+    }
+    doc.setValue(repeated.join("   "));
+}
+
+SubMenu3.onclick = function() {
     stop.click();
     QSO_WORDS = [
         /*"안녕하세요", "예", "신호", "599", "5NN",
@@ -1232,7 +1178,7 @@ SubMenu5.onclick = function() {
     }
     doc.setValue(repeated.join(" "));
 }
-SubMenu6.onclick = function() {
+SubMenu4.onclick = function() {
     stop.click();
     var QSO_PHRASES = [
         "안녕하세요?",
