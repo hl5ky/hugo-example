@@ -9,10 +9,10 @@ weight: 30
 
 {{% pageinfo %}}
 
-새로운 부호 : 1, 4, 0
+* 새로운 부호 : 1, 4, 0
 
-전체 학습 부호<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 알파벳 : C, D, E, Q,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;숫자 : 1, 4, 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* 전체 학습 부호<br>
+알파벳 : C, D, E, Q,<br>
+숫자 : 1, 4, 0<br>
+
 {{% /pageinfo %}}

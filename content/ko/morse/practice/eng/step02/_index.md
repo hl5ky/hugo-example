@@ -9,9 +9,9 @@ weight: 20
 
 {{% pageinfo %}}
 
-새로운 부호 : C, Q
+* 새로운 부호 : C, Q
 
-전체 학습 부호 : C, D, E, Q
+* 전체 학습 부호 : C, D, E, Q
 
 {{% /pageinfo %}}
 

@@ -9,11 +9,11 @@ weight: 50
 
 {{% pageinfo %}}
 
-새로운 부호 : A, R, 2, &lt;AR&gt;
+* 새로운 부호 : A, R, 2, &lt;AR&gt;
 
-전체 학습 부호<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 알파벳 : A, C, D, E, K, Q, R<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;숫자 : 1, 2, 4, 5, 6, 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProSign : &lt;AR&gt;
+* 전체 학습 부호<br>
+알파벳 : A, C, D, E, K, Q, R<br>
+숫자 : 1, 2, 4, 5, 6, 0<br>
+ProSign : &lt;AR&gt;
 {{% /pageinfo %}}
 

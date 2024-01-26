@@ -9,11 +9,11 @@ weight: 40
 
 {{% pageinfo %}}
 
-새로운 부호 : K, 5, 6
+* 새로운 부호 : K, 5, 6
 
-전체 학습 부호<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 알파벳 : C, D, E, K, Q<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;숫자 : 1, 4, 5, 6, 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* 전체 학습 부호<br>
+알파벳 : C, D, E, K, Q<br>
+숫자 : 1, 4, 5, 6, 0<br>
+
 {{% /pageinfo %}}
 

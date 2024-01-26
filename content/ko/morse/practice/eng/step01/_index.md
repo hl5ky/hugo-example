@@ -9,7 +9,7 @@ weight: 10
 
 {{% pageinfo %}}
 
-새로운 부호 : D, E
+* 새로운 부호 : D, E
 
 {{% /pageinfo %}}
 
