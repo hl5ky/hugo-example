@@ -1157,7 +1157,7 @@ SubMenu2.onclick = function() {
 
 SubMenu3.onclick = function() {
     stop.click();
-    loopCount = 5
+    loopCount = 4
     //sliceNumber = 5
 
     var slicedWORDS = [];
@@ -1189,7 +1189,7 @@ SubMenu3.onclick = function() {
 
 SubMenu4.onclick = function() {
     stop.click();
-    loopCount = 2
+    loopCount = 1
     //sliceNumber = 5
 
     var slicedWORDS = [];
@@ -1206,7 +1206,7 @@ SubMenu4.onclick = function() {
 
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice(0, 17);   // slice(0, sliceNumber)
+        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
         slicedWORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of slicedWORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));

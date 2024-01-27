@@ -1212,7 +1212,7 @@ SubMenu4.onclick = function() {
 
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
+        slicedWORDS = WORDS.slice(0, 48);   // slice(0, sliceNumber)
         slicedWORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of slicedWORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
@@ -1283,7 +1283,7 @@ SubMenu5.onclick = function() {
 
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice(0, 44);   // slice(0, sliceNumber)
+        slicedWORDS = WORDS.slice(0, 33);   // slice(0, sliceNumber)
         slicedWORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of slicedWORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
@@ -1325,7 +1325,7 @@ SubMenu6.onclick = function() {
 
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice(0, 21);   // slice(0, sliceNumber)
+        slicedWORDS = WORDS.slice(0, 16);   // slice(0, sliceNumber)
         slicedWORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of slicedWORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
