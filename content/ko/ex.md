@@ -3,6 +3,28 @@ title: Example Page
 type: docs
 ---
 
+{{< newtabref href="/morse/practice/eng/step01/eng01.html" title="eng01.html" >}}
+{{< newtabref href="/morse/practice/eng/step02/eng02.html" title="eng02.html" >}}
+{{< newtabref href="/morse/practice/eng/step03/eng03.html" title="eng03.html" >}}
+{{< newtabref href="/morse/practice/eng/step04/eng04.html" title="eng04.html" >}}
+{{< newtabref href="/morse/practice/eng/step05/eng05.html" title="eng05.html" >}}
+{{< newtabref href="/morse/practice/eng/step06/eng06.html" title="eng06.html" >}}
+{{< newtabref href="/morse/practice/eng/step07/eng07.html" title="eng07.html" >}}
+{{< newtabref href="/morse/practice/eng/step08/eng08.html" title="eng08.html" >}}
+{{< newtabref href="/morse/practice/eng/step09/eng09.html" title="eng09.html" >}}
+{{< newtabref href="/morse/practice/eng/step10/eng10.html" title="eng10.html" >}}
+{{< newtabref href="/morse/practice/eng/step11/eng11.html" title="eng11.html" >}}
+{{< newtabref href="/morse/practice/eng/step12/eng12.html" title="eng12.html" >}}
+{{< newtabref href="/morse/practice/eng/step13/eng13.html" title="eng13.html" >}}
+{{< newtabref href="/morse/practice/eng/step14/eng14.html" title="eng14.html" >}}
+{{< newtabref href="/morse/practice/eng/step15/eng15.html" title="eng15.html" >}}
+{{< newtabref href="/morse/practice/eng/step16/eng16.html" title="eng16.html" >}}
+{{< newtabref href="/morse/practice/eng/step17/eng17.html" title="eng17.html" >}}
+{{< newtabref href="/morse/practice/eng/step18/eng18.html" title="eng18.html" >}}
+
+
+
+
 
 {{% detail summary="Code 샘플" %}}
 ```go

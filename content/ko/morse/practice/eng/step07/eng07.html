@@ -194,7 +194,7 @@ audio {
 <div class="page">
 
 <p><span style="font-size:200%"><b>QSO 코흐법</b></span>
-    <span style="font-size:150%">&nbsp;(영문 3단계)</span>
+    <span style="font-size:150%">&nbsp;(영문 7단계)</span>
 </p>
 
 <div class="setting">
@@ -258,12 +258,9 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 1 (10/2)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호 4 (10/2)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 부호 0 (10/2)</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 조합1 (10/2)</button>&nbsp;
-<button id="sub_menu_5" style="background-color:rgb(240, 250, 200);">5 조합2 (10/2)</button>&nbsp;
-<button id="sub_menu_6" style="background-color:rgb(240, 250, 200);">6 호출부호 (10/3)</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 T, 3, 7 (11/2)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (11/2)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 호출부호 (11/2)</button>
 
 
 <!--  hangul_txt_1         -->
@@ -1105,30 +1102,27 @@ SubMenu1.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "11", "111", "1111", "11111",
+    "T37"
     ];
 
-    loopCount = 5
+    loopCount = 25
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
         WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 13
+    FinalSliceNumber = 23
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
-    + "                                                                                                         \n"
-    + "\n"     
+    //+ "                                                                                                         \n"
+    //+ "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 목표 속도 변경 (부호~조합2)\n"
+    //+ ""
     );
 }
+
 
 SubMenu2.onclick = function() {
     stop.click();
@@ -1139,88 +1133,22 @@ SubMenu2.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "44", "444", "4444", "44444",
-    ];
-
-    loopCount = 5
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 14
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-      
-    );
-}
-
-SubMenu3.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "00", "000", "0000", "00000",
-    ];
-
-    loopCount = 5
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 13
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-      
-    );
-}
-
-SubMenu4.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "CE", "CD", "CQ", "C1", "C4",
-    "C0", "EC", "ED", "EQ", "E1",
-    "E4", "E0", "DC", "DE", "DQ",
-    "D1", "D4", "D0", "QC", "QE",
-    "QD", "Q1", "Q4", "Q0", "1C",
-    "1E", "1D", "1Q", "14", "10",
-    "4C", "4E", "4D", "4Q", "41",
-    "40", "0C", "0E", "0D", "0Q",
-    "01", "04", "C1", "4D", "0Q",
-    "E0", "D1", "D4", "Q4", "0C",
-    "1Q", "4E", "4C", "0D", "1C",
-    "1E", "CD", "CQ", "C1", "C4",
-    "C0", "EC", "ED"
-    ];
+    "T2+", "]7I", "3+R", "7]S", "+7T",
+    "ET9", "T7C", "37S", "CE3", "]7S",
+    "3T+", "K]T", "7E3", "3S+", "]3T",
+    "S+T", "SEI", "T57", "9+3", "S7E",
+    "D]3", "C3]", "E3T", "QT7", "7]S",
+    "T2S", "EI3", "39R", "7]T", "+3T",
+    "7T9", "E3C", "7TS", "Q79", "S]3",
+    "37T", "E6T", "593", "7T]", "+93",
+    "ST7", "SEI", "63T", "2+7", "E7T",
+    "E]3", "C7+", "9T3", "ITE", "3]R",
+    "79A", "4]T", "3+S", "ETR", "K3C",
+    "3ST", "K97", "T]7", "E3T", "56T",
+    "723", "7T]", "]93", "S+7", "S7I",
+    "2ET", "3+7", "S7T", "Q]3", "D7+",
+    "5T3", "ST7", "E]R",
+     ];
 
     loopCount = 1
     for (var n = 0; n < loopCount; n++) {
@@ -1233,87 +1161,12 @@ SubMenu4.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 48
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-    );
-}
-
-
-SubMenu5.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "CED", "CQ", "CE1Q", "CE4Q", "CE0",
-    "C0DE", "CDQ", "C4D1", "CD4", "C0",
-    "CQ", "CQ4D", "0CQ1", "CQ4", "CQ0",
-    "C1E", "CQ1D", "C1", "C14Q", "C10",
-    "C4E", "4D", "CE4Q", "C41", "CD40",
-    "C0E", "C0", "C0QD", "C01", "C0Q4",
-    "EC1D", "ECQ", "E1D", "EC4", "QEC0",
-    "EDC", "EDCQ", "D1", "EDQ4", "ED0",
-    "EC", "EQ4D", "EQ11", "EQ4", "EQ0",
-    "E1C", "1D", "ED1Q", "E1C4", "E10",
-    "E4C", "EQ4D", "4Q", "EC41", "E40",
-    "0C", "E0D", "DE0Q", "E01", "EC04",
-    "DC4E", "DCQ", "D1", "DC4Q", "DC0",
-    "DEC0", "DEQ", "DE1", "E4", "DE0Q",
-    "DQ4C", "DQE", "D0Q1", "DQ4", "DQ0",
-    "D1C", "4D1E", "D1Q", "14", "D1Q0",
-    "D4C", "D4EQ", "DC4Q", "D41", "40",
-    "D0", "D0E", "DE0Q", "D0C1", "D04",
-    "QC4E", "QD", "QC1", "QC4", "QDC0",
-    "QEC", "QE0D", "QE1", "CQE4", "QE",
-    "QC", "Q4DE", "QD1", "QD4C", "QD0",
-    "Q10C", "Q1E", "Q41D", "Q1", "Q10",
-    "Q4", "Q4E", "Q04D", "Q41", "Q140",
-    "0C", "Q0DE", "Q01D", "Q01", "Q04",
-    "1CE", "1C", "1C4Q", "1C40", "1C0",
-    "1EC", "14ED", "1EQ", "1E", "C1E0",
-    "10DC", "1D4E", "1DQ", "Q1D4", "1D0",
-    "1QC", "1Q4E", "1QD", "01Q4", "1Q0",
-    "14CQ", "14CE", "14D", "14Q", "140",
-    "10C1", "140E", "10D", "C10Q", "104",
-    "4CE", "4CQD", "4CQ", "4C", "4DC0",
-    "4EC", "4E0D", "41EQ", "4E1", "4E0",
-    "41DC", "4D0E", "4DQ", "14D1", "4D0",
-    "4QC", "4Q0E", "4QD", "4QD1", "4Q0",
-    "41DC", "4Q1E", "1D", "41Q", "410",
-    "40C", "40E1", "40", "D40Q", "401",
-    "0CQE", "0C", "0CQ", "04C1", "0C4",
-    "0C", "0ED", "0E4Q", "0E01", "0E4",
-    "04DC", "0DE", "10DQ", "D1", "0D4",
-    "0QC", "10QE", "0QD", "0Q", "40Q4",
-    "041C", "01E", "01DD", "01Q", "C014",
-    "04C", "04", "04DC", "04Q", "0Q41"
-     ];
-
-     loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 32
+    FinalSliceNumber = 36
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }
 
-SubMenu6.onclick = function() {
+SubMenu3.onclick = function() {
     stop.click();
 
     var slicedWORDS = [];
@@ -1322,25 +1175,46 @@ SubMenu6.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "CQ DE CD1QD ", "CD1EC", "CQ DE CD1DQ ", "CD1EQ", "CD1DC",
-    "CQ DE CD1CQ ", "CD1QE", "CD4DQ", "CD4CE", "CQ DE CD4QD ",
-    "CD4QE", "CQ DE CD4QC ", "CD0QD", "CD0EC", "CQ DE CD0DQ ",
-    "CD0EQ", "CD0DC", "CQ DE CD0CQ ", "CD0QE", "CQ DE DE1QD ",
-    "CD0DQ", "CQ DE DC1QD ", "DC1EC", "DC1DQ", "CQ DE DC1EQ ",
-    "DC1DC", "CQ DE DC1CQ ", "DC4QD", "CQ DE DC4EC ", "DC4DQ",
-    "CQ DE DC4EQ ", "DC4DC", "CQ DE DC4CQ ", "DC0QD", "DC0EC",
-    "DC0DQ", "DE1EC", "CQ DE DE1DQ ", "DE1DC", "DE1CQ",
-    "DE1QE", "CQ DE DE4DQ ", "DE4EC", "DE4DQ", "DE4DC",
-    "CQ DE DE4CQ ", "DE4QE", "DE0QD", "CQ DE DE0EC ", "DE0DQ",
-    "DE0DC", "CQ DE DE0CQ ", "DE0QE", "CQ DE EC1QD ", "EC1EC",
-    "EC1DQ", "CQ DE EC1EQ ", "EC1DC", "CQ DE EC1CQ ", "EC4QD",
-    "EC4EC", "CQ DE EC4DQ ", "EC4EQ", "EC4DC", "CQ DE EC4CQ ",
-    "EC0QD", "EC0EC", "EC0DQ", "CQ DE EC0EQ ", "EC0DC",
-    "EC0CQ", "CQ DE ED1QD ", "ED1EC", "ED1DQ", "ED1EQ",
-    "CQ DE ED1DC ", "ED1CQ", "ED1QE", "ED4QD", "CQ DE ED4EC ",
-    "ED4DQ", "ED4EQ", "CQ DE ED4DC ", "ED4CQ", "ED4QE",
-    "CQ DE ED0QD ", "ED0EC", "ED0DQ", "CQ DE ED0EQ ", "ED0DC",
-    "ED0CQ", "ED0QE"
+    "CQ DE 2E0IET + ", "2E0TQK", "3D2TQ", "3D2SRI", "DE 3D2ITR 73]EE ",
+    "3D2TS", "6K2SIT", "6K2STD", "CQ DE 6K2ETI + ", "6K2TIQ",
+    "6K2EIT", "6K2QSI", "DE 6K2KTI 73]EE ", "6K2DIQ", "6K5DSQ",
+    "6K5KTS", "6K5TRS", "DE 6K5TQE  73]EE ", "6K5KIC", "6K5SKT",
+    "6K5IET", "CQ DE AC1TSC + ", "AC1IQR", "AC2TSQ", "AC2ETS",
+    "DE AC2ITQ 73]EE ", "AC3ESQ", "AC5DTI", "AC6ISQ", "DE AC7DTC 73]EE ",
+    "AC0ITQ", "AC7QKS", "AD1EKS", "AD2TI", "CQ DE AD3KTA + ",
+    "AD4ITR", "AD5DTS", "DE AD6TKQ 73]EE ", "AD7QIT", "AD9EKS",
+    "AD0ITI", "AE1RIC", "DE AE2SKQ 73]EE ", "AE2T", "AE6R",
+    "AE7S", "DE AE2TRQ 73]EE ", "AE7QS", "AE9RTI", "CT1ERS",
+    "DE CT2IDS 73]EE ", "CT3QSI", "CT3CTS", "CT9SKT", "CQ DE DK3EIQ + ",
+    "DK3TIE", "DK7STD", "DK7ETI", "DE DK4TSQ 73]EE ", "DS1TIR",
+    "DS2ART", "DS3ITS", "DS4KRT", "DE DS5CTI 73]EE ", "DS0ST",
+    "DS0IR", "DS0AQ", "EA1TSQ", "EA2TCS", "CQ DE EA3CKQ + ",
+    "EA3EQ", "EA3QIS", "DE EA4EQT 73]EE ", "EA5STQ", "EA7KIQ",
+    "EA7TQ", "EA9DTI", "DE EA0STD 73]EE ", "I1IQR", "I2EST",
+    "I7SCD", "DE I7STR 73]EE ", "I9KQS", "IS0AEI", "IS0KST",
+    "CQ DE IT1SQS + ", "IT7DQS", "IT3RQS", "DE IT3STI 73]EE ", "IT9SRQ",
+    "IT9CQS", "IT9SRI", "DE K1ER 73]EE ", "K2ST", "K3IS",
+    "K9QS", "K1ESD", "K2QTK", "CQ DE K2QRS + ", "K3AIT",
+    "K3ISD", "DE K3ITS 73]EE ", "K5TDC", "K7SIT", "K7STD",
+    "K7QIK", "DE K9QRS 73]EE ", "K9AIT", "K9SDI", "K9ITS",
+    "K9ID", "DE K9KTI 73]EE ", "K0TSD", "KA2TSQ", "KA2IRT",
+    "CQ DE KA4AQE + ", "KC1ETS", "KC4QTK", "KC7EST", "DE KC7KRQ 73]EE ",
+    "KC9TQS", "KD1TRC", "KD4EQT", "DE KD5EQC 73]EE ", "KD7DTQ",
+    "KE7SQT", "KE9QIS", "KE0TQE", "KE0RTS", "KI2RSQ",
+    "KI3ITD", "CQ DE KI3SQE + ", "KI3EDS", "KI3QTK", "DE KI7TSK 73]EE ",
+    "KI7STQ", "KS1IRC", "KS7TQI", "DE KS9ETC 73]EE ", "KS9DIT",
+    "KS9SQI", "KS9QIT", "DE KS0IQ 73]EE ", "KT3AQE", "KT3ETS",
+    "KT3QTK", "CQ DE KT4EST + ", "KT5SRQ", "KQ1S", "KQ3R",
+    "DE KQ7TQ 73]EE ", "KQ7I", "KQ1STD", "KQ0KRI", "R1ST",
+    "DE R2AK 73]EE ", "R3QS", "R7TIS", "R7IS", "RA1RCT",
+    "RA3EQ", "RA7TCE", "DE RA7IKT 73]EE ", "RC3AES", "RC3TCA",
+    "RC4ASE", "CQ DE RC7QKT + ", "RC7Q", "RC9I", "RC9ITD",
+    "DE RD3EQ 73]EE ", "RD3KTQ", "RD9IAQ", "RD7DTK", "RD7KAQ",
+    "RT1RCT", "RT3T", "DE RT3A 73]EE ", "RT7D", "RT3EQ",
+    "RT3TCE", "RT3IKT", "RT3AES", "RT3TCA", "CQ DE RT7ASE + ",
+    "RT7Q", "RT7A", "RT9S", "DE RT9QKT 73]EE ", "RT0AQE",
+    "TA1ESQ", "TA2IRC", "TA3SQT", "DE TA3DKR 73]EE ", "TA3ERS",
+    "TA7RQC", "TA7ESQ", "TA7ASE", "TA9ISR", "TA0EQ"
     ];
 
     loopCount = 1
