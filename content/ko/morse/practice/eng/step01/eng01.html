@@ -1094,8 +1094,7 @@ function getRepeatCount() {
 
 SubMenu1.onclick = function() {
     stop.click();
-    loopCount = 5
-    //sliceNumber = 5
+
     var slicedWORDS = [];
     var repeatedWORDS = [];
     var addedWORDS = [];
@@ -1105,14 +1104,16 @@ SubMenu1.onclick = function() {
     "EE", "EEE", "EEEE", "EEEEE",
     ];
 
+    loopCount = 5
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
+        for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    doc.setValue(addedWORDS.join(" ")
+
+    FinalSliceNumber = 20
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" ")
     + "\n" 
     + "                                                                                                         \n"
     //+ "-----------------------------------------------------------------------------------------------------------\n"
@@ -1125,10 +1126,9 @@ SubMenu1.onclick = function() {
     );
 }
 
+
 SubMenu2.onclick = function() {
     stop.click();
-    loopCount = 5
-    //sliceNumber = 5
 
     var slicedWORDS = [];
     var repeatedWORDS = [];
@@ -1139,14 +1139,16 @@ SubMenu2.onclick = function() {
     "DD", "DDD", "DDDD", "DDDDD",
     ];
 
+    loopCount = 5
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
+        for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    doc.setValue(addedWORDS.join(" ")
+
+    FinalSliceNumber = 15
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" ")
     + "\n" 
     //+ "                                                                                                         \n"
     //+ "-----------------------------------------------------------------------------------------------------------"
@@ -1157,8 +1159,6 @@ SubMenu2.onclick = function() {
 
 SubMenu3.onclick = function() {
     stop.click();
-    loopCount = 4
-    //sliceNumber = 5
 
     var slicedWORDS = [];
     var repeatedWORDS = [];
@@ -1169,14 +1169,16 @@ SubMenu3.onclick = function() {
     "DE", "ED", "DE", "ED", "DED", "EDE", "DDE", "DEE", "EDD", "EED"
     ];
 
+    loopCount = 4
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice();   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
+        for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    doc.setValue(addedWORDS.join(" ")
+
+    FinalSliceNumber = 36
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" ")
     + "\n" 
     + "                                                                                                         \n"
     //+ "-----------------------------------------------------------------------------------------------------------\n"
@@ -1189,8 +1191,6 @@ SubMenu3.onclick = function() {
 
 SubMenu4.onclick = function() {
     stop.click();
-    loopCount = 1
-    //sliceNumber = 5
 
     var slicedWORDS = [];
     var repeatedWORDS = [];
@@ -1204,14 +1204,16 @@ SubMenu4.onclick = function() {
     "DEDED", "DDEDE", "EDDED", "EDDED", "EDEED"
     ];
 
+    loopCount = 1
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
-        slicedWORDS = WORDS.slice(0, 25);   // slice(0, sliceNumber)
-        slicedWORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of slicedWORDS)
+        for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    doc.setValue(addedWORDS.join(" "));
+
+    FinalSliceNumber = 25
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "))
 }
 
 </script>
