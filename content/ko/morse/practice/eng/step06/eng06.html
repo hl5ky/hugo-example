@@ -258,10 +258,12 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 I, S, 9 (11/2)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호  &lt;SK&gt; (11/2)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합 (11/2)</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 호출부호 (11/2)</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 I, S, 9 (10/2)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호  &lt;SK&gt; (10/2)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합 (10/2)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 단어/문장 (11/2)</button>
+<button id="sub_menu_5" style="background-color:rgb(240, 250, 200);">5 호출부호 + (12/2)</button>
+<!--button id="sub_menu_6" style="background-color:rgb(240, 250, 200);">6 호출부호 (10/2)</button-->
 
 
 <!--  hangul_txt_1         -->
@@ -1113,7 +1115,7 @@ SubMenu1.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 25
+    FinalSliceNumber = 20
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1133,7 +1135,7 @@ SubMenu2.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "]"
+    "<SK>"
     ];
 
     loopCount = 30
@@ -1146,11 +1148,11 @@ SubMenu2.onclick = function() {
     FinalSliceNumber = 30
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    + "                                                                                                         \n"
-    + "\n"
+    //+ "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 적을때는, sk 위에 선을 긋습니다"
+    //+ "\n"
     );
 }
 
@@ -1164,16 +1166,16 @@ SubMenu3.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "E2R", "IK+", "2]S", "E5+", "I9R",
-    "IR2", "I]Q", "A+S", "I]9", "A2S",
-    "RES", "RI9", "A+K", "9]S", "EK+",
-    "9AI", "S9Q", "SI9", "I]A", "A+R",
-    "9+S", "EA9", "29I", "94+", "2]6",
-    "ES2", "I+R", "4]S", "K+9", "SER",
-    "IA2", "]QS", "E+S", "]E9", "2SA",
-    "RSI", "9RS", "+QK", "S]9", "IE+",
-    "I9A", "RS9", "S9I", "]9I", "I+6",
-    "9]I", "E9S", "29A", "9]4", "E2+"
+    "E2R", "IKA", "2SK", "E5R", "I9R",
+    "IR2", "ISQ", "AIS", "IS9", "A2S",
+    "RES", "RI9", "A2K", "9IS", "EKA",
+    "9AI", "S9Q", "SI9", "IRA", "A9R",
+    "9RS", "EA9", "29I", "942", "2S6",
+    "ES2", "IAR", "4SS", "KA9", "SER",
+    "IA2", "SQS", "EAS", "KE9", "2SA",
+    "RSI", "9RS", "AQK", "SK9", "IER",
+    "I9A", "RS9", "S9I", "S9I", "IA6",
+    "9SI", "E9S", "29A", "9R4", "E2R"
      ];
 
     loopCount = 1
@@ -1187,7 +1189,7 @@ SubMenu3.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 36
+    FinalSliceNumber = 30
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }
@@ -1201,25 +1203,14 @@ SubMenu4.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "2E0RED", "2E0RQK", "CQ DE 2E0RAD + ", "6K2DCE", "CQ DE 6K2CRD + ",
-    "6K2EQR", "6K2KCQ", "6K2EKC", "CQ DE 6K2QDR K ", "6K2KRC",
-    "6K2DKQ", "6K2DAQ", "CQ DE 6K5KCQ + ", "6K5ERA", "6K5RQE",
-    "6K5KAC", "CQ DE 6K5DKQ + ", "6K5KAQ", "AC1RKC", "AC1AQR",
-    "AC2RKQ", "CQ DE AC2EKA K ", "AC2DRQ", "AC2ER", "AC2RAQ",
-    "CQ DE AC2AR + ", "AC2DRK", "AC4ARQ", "CQ DE AC4CKR + ", "AC4QKD",
-    "AC5EAC", "AC5DRQ", "AC5EQ", "CQ DE AC6RAQ K ", "AC6AR",
-    "AC6DRK", "AC0KAQ", "AC0DAC", "AC0CRQ", "AD2DKQ",
-    "AD2DKC", "CQ DE AD2RKQ + ", "AD2QE", "AD2ERC", "AD2RQ",
-    "AD2KRA", "AD6AR", "CQ DE AD6DRK + ", "AD0KAQ", "AD0DKC",
-    "AD0CRQ", "AE1QRD", "AE1RAC", "AE1DKQ", "CQ DE AE2ARQ + ",
-    "AE2CKR", "AE2QKD", "AE2KRC", "AE2DRQ", "AE2EQ",
-    "CQ DE AE2RAQ K ", "DK5EQD", "AE4DKC", "AE4RKQ", "AE4QE",
-    "CQ DE AE5EKC + ", "AE5RQ", "AE5KRA", "CA1RQD", "CQ DE CD1ERC + ",
-    "CD2AQ", "CA2EKQ", "CD2ADQ", "CD2CKE", "CQ DE CD4QKA K ",
-    "CD5EKC", "CD5AKQ", "CD5EQ", "CA6KAQ", "CD6AQ",
-    "CQ DE CD6DRK + ", "CD0KAQ", "CD0DKC", "CD0CAQ", "DA1QKD",
-    "CQ DE DA2AC + ", "DA2DKQ", "DA2DKC"
-    ];
+    "AKI", "ED", "RICK", "DICK", "ERIC",
+    "DR DICK", "DR RICK", "DR ED", "DR ERIC", "DR AKI",
+    "IC120S", "IC124", "IC126D",
+    "IC129", "IC145E", "IC140", "IC214S", "IC215",
+    "IC219D", "IC240S", "IC425D", "IC429", "IC950S",
+    "DR DICK", "DR RICK", "DR ED", "DR ERIC", "DR AKI",
+    "IC124"    
+     ];
 
     loopCount = 1
     for (var n = 0; n < loopCount; n++) {
@@ -1229,6 +1220,88 @@ SubMenu4.onclick = function() {
         WORDS.sort(() => Math.random() - 0.5);
         WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 22
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" ")
+    + "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "- 내용\n"
+    + "1. 이름, DR 이름, 무전기명\n"
+    );
+}
+
+var CALLSIGNS = [
+    "2E0RED", "2E0RQK", "2E0RAD", "6K2DCE", "6K2CRD",
+    "6K2EQR", "6K2KCQ", "6K2EKC", "6K2QDR", "6K2KRC",
+    "6K2DKQ", "6K2DAQ", "6K5KCQ", "6K5ERA", "6K5RQE",
+    "6K5KAC", "6K5DKQ", "6K5KAQ", "AC1RKC", "AC1AQR",
+    "AC2RKQ", "AC2EKA", "AC2DRQ", "AC2ER", "AC2RAQ",
+    "AC2AR", "AC2DRK", "AC4ARQ", "AC4CKR", "AC4QKD",
+    "AC5EAC", "AC5DRQ", "AC5EQ", "AC6RAQ", "AC6AR",
+    "AC6DRK", "AC0KAQ", "AC0DAC", "AC0CRQ", "AD2DKQ",
+    "AD2DKC", "AD2RKQ", "AD2QE", "AD2ERC", "AD2RQ",
+    "AD2KRA", "AD6AR", "AD6DRK", "AD0KAQ", "AD0DKC",
+    "AD0CRQ", "AE1QRD", "AE1RAC", "AE1DKQ", "AE2ARQ",
+    "AE2CKR", "AE2QKD", "AE2KRC", "AE2DRQ", "AE2EQ",
+    "AE2RAQ", "DK5EQD", "AE4DKC", "AE4RKQ", "AE4QE",
+    "AE5EKC", "AE5RQ", "AE5KRA", "CA1RQD", "CD1ERC",
+    "CD2AQ", "CA2EKQ", "CD2ADQ", "CD2CKE", "CD4QKA",
+    "CD5EKC", "CD5AKQ", "CD5EQ", "CA6KAQ", "CD6AQ",
+    "CD6DRK", "CD0KAQ", "CD0DKC", "CD0CAQ", "DA1QKD",
+    "DA2AC", "DA2DKQ", "DA2DKC"
+];
+
+SubMenu5.onclick = function() {
+    stop.click();
+
+    STANDINGBYS = [
+        "<AR>",
+        "K",
+        "<AR>",
+        "<AR>",            
+        "K",
+        "<AR>",                    
+    ];
+
+    loopCount = 8    
+    var cqs = [];
+    for (var n = 0; n < loopCount; n++) {
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+
+        var cq = "CQ DE " + callsign;
+        cq += " " + standingby;
+        cqs.push(cq);
+    }
+    doc.setValue(cqs.join(" ")
+    //+ "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ "- 목표속도 변경"
+    );       
+}
+
+// 아래는 사용하지 않음
+SubMenu6.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    loopCount = 1
+    for (var n = 0; n < loopCount; n++) {
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of CALLSIGNS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 

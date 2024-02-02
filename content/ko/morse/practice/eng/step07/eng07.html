@@ -260,7 +260,8 @@ audio {
 
 <button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 T, 3, 7 (11/2)</button>&nbsp;
 <button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (11/2)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 호출부호 (11/2)</button>
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 단어/문장 (11/2)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 호출부호 + (12/2)</button>
 
 
 <!--  hangul_txt_1         -->
@@ -1112,7 +1113,7 @@ SubMenu1.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 23
+    FinalSliceNumber = 18
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1133,21 +1134,21 @@ SubMenu2.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "T2+", "]7I", "3+R", "7]S", "+7T",
-    "ET9", "T7C", "37S", "CE3", "]7S",
-    "3T+", "K]T", "7E3", "3S+", "]3T",
-    "S+T", "SEI", "T57", "9+3", "S7E",
-    "D]3", "C3]", "E3T", "QT7", "7]S",
-    "T2S", "EI3", "39R", "7]T", "+3T",
-    "7T9", "E3C", "7TS", "Q79", "S]3",
-    "37T", "E6T", "593", "7T]", "+93",
-    "ST7", "SEI", "63T", "2+7", "E7T",
-    "E]3", "C7+", "9T3", "ITE", "3]R",
-    "79A", "4]T", "3+S", "ETR", "K3C",
-    "3ST", "K97", "T]7", "E3T", "56T",
-    "723", "7T]", "]93", "S+7", "S7I",
-    "2ET", "3+7", "S7T", "Q]3", "D7+",
-    "5T3", "ST7", "E]R",
+    "T23", "S7I", "3TR", "79S", "A7T",
+    "ET9", "T7C", "37S", "CE3", "R7S",
+    "3TR", "KAT", "7E3", "3SI", "K3T",
+    "SIT", "SEI", "T57", "9I3", "S7E",
+    "DC3", "C3I", "E3T", "QT7", "73S",
+    "T2S", "EI3", "39R", "7ST", "R3T",
+    "7T9", "E3C", "7TS", "Q79", "SD3",
+    "37T", "E6T", "593", "7TQ", "793",
+    "ST7", "SEI", "63T", "247", "E7T",
+    "ES3", "C7T", "9T3", "ITE", "3IR",
+    "79A", "43T", "3RS", "ETR", "K3C",
+    "3ST", "K97", "TI7", "E3T", "56T",
+    "723", "7TR", "S93", "ST7", "S7I",
+    "2ET", "3R7", "S7T", "QC3", "D7E",
+    "5T3", "ST7", "EAR", "7TR", "S2T"
      ];
 
     loopCount = 1
@@ -1161,7 +1162,7 @@ SubMenu2.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 36
+    FinalSliceNumber = 30
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }
@@ -1175,47 +1176,17 @@ SubMenu3.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "CQ DE 2E0IET + ", "2E0TQK", "3D2TQ", "3D2SRI", "DE 3D2ITR 73]EE ",
-    "3D2TS", "6K2SIT", "6K2STD", "CQ DE 6K2ETI + ", "6K2TIQ",
-    "6K2EIT", "6K2QSI", "DE 6K2KTI 73]EE ", "6K2DIQ", "6K5DSQ",
-    "6K5KTS", "6K5TRS", "DE 6K5TQE  73]EE ", "6K5KIC", "6K5SKT",
-    "6K5IET", "CQ DE AC1TSC + ", "AC1IQR", "AC2TSQ", "AC2ETS",
-    "DE AC2ITQ 73]EE ", "AC3ESQ", "AC5DTI", "AC6ISQ", "DE AC7DTC 73]EE ",
-    "AC0ITQ", "AC7QKS", "AD1EKS", "AD2TI", "CQ DE AD3KTA + ",
-    "AD4ITR", "AD5DTS", "DE AD6TKQ 73]EE ", "AD7QIT", "AD9EKS",
-    "AD0ITI", "AE1RIC", "DE AE2SKQ 73]EE ", "AE2T", "AE6R",
-    "AE7S", "DE AE2TRQ 73]EE ", "AE7QS", "AE9RTI", "CT1ERS",
-    "DE CT2IDS 73]EE ", "CT3QSI", "CT3CTS", "CT9SKT", "CQ DE DK3EIQ + ",
-    "DK3TIE", "DK7STD", "DK7ETI", "DE DK4TSQ 73]EE ", "DS1TIR",
-    "DS2ART", "DS3ITS", "DS4KRT", "DE DS5CTI 73]EE ", "DS0ST",
-    "DS0IR", "DS0AQ", "EA1TSQ", "EA2TCS", "CQ DE EA3CKQ + ",
-    "EA3EQ", "EA3QIS", "DE EA4EQT 73]EE ", "EA5STQ", "EA7KIQ",
-    "EA7TQ", "EA9DTI", "DE EA0STD 73]EE ", "I1IQR", "I2EST",
-    "I7SCD", "DE I7STR 73]EE ", "I9KQS", "IS0AEI", "IS0KST",
-    "CQ DE IT1SQS + ", "IT7DQS", "IT3RQS", "DE IT3STI 73]EE ", "IT9SRQ",
-    "IT9CQS", "IT9SRI", "DE K1ER 73]EE ", "K2ST", "K3IS",
-    "K9QS", "K1ESD", "K2QTK", "CQ DE K2QRS + ", "K3AIT",
-    "K3ISD", "DE K3ITS 73]EE ", "K5TDC", "K7SIT", "K7STD",
-    "K7QIK", "DE K9QRS 73]EE ", "K9AIT", "K9SDI", "K9ITS",
-    "K9ID", "DE K9KTI 73]EE ", "K0TSD", "KA2TSQ", "KA2IRT",
-    "CQ DE KA4AQE + ", "KC1ETS", "KC4QTK", "KC7EST", "DE KC7KRQ 73]EE ",
-    "KC9TQS", "KD1TRC", "KD4EQT", "DE KD5EQC 73]EE ", "KD7DTQ",
-    "KE7SQT", "KE9QIS", "KE0TQE", "KE0RTS", "KI2RSQ",
-    "KI3ITD", "CQ DE KI3SQE + ", "KI3EDS", "KI3QTK", "DE KI7TSK 73]EE ",
-    "KI7STQ", "KS1IRC", "KS7TQI", "DE KS9ETC 73]EE ", "KS9DIT",
-    "KS9SQI", "KS9QIT", "DE KS0IQ 73]EE ", "KT3AQE", "KT3ETS",
-    "KT3QTK", "CQ DE KT4EST + ", "KT5SRQ", "KQ1S", "KQ3R",
-    "DE KQ7TQ 73]EE ", "KQ7I", "KQ1STD", "KQ0KRI", "R1ST",
-    "DE R2AK 73]EE ", "R3QS", "R7TIS", "R7IS", "RA1RCT",
-    "RA3EQ", "RA7TCE", "DE RA7IKT 73]EE ", "RC3AES", "RC3TCA",
-    "RC4ASE", "CQ DE RC7QKT + ", "RC7Q", "RC9I", "RC9ITD",
-    "DE RD3EQ 73]EE ", "RD3KTQ", "RD9IAQ", "RD7DTK", "RD7KAQ",
-    "RT1RCT", "RT3T", "DE RT3A 73]EE ", "RT7D", "RT3EQ",
-    "RT3TCE", "RT3IKT", "RT3AES", "RT3TCA", "CQ DE RT7ASE + ",
-    "RT7Q", "RT7A", "RT9S", "DE RT9QKT 73]EE ", "RT0AQE",
-    "TA1ESQ", "TA2IRC", "TA3SQT", "DE TA3DKR 73]EE ", "TA3ERS",
-    "TA7RQC", "TA7ESQ", "TA7ASE", "TA9ISR", "TA0EQ"
-    ];
+    "AKI", "ED", "RICK", "ERIC",
+    "DR TED", "DR RICK", "DR ED", "DR ERIC", "DR AKI",
+    "ES", "QRT", "QRA", "DIRECT", "73",
+    "TEST", "IC7300", "IC7610", "IC240S", "TS440",
+    "TS450S", "TS590SG", "TS120", "TS140D", "IC120S",
+    "IC519", "IC609S", "IC910D", "RST IS 599", "RST IS 579",
+    "RST IS 559", "RST IS 569", "RST IS 549", "RST IS 459", "RST IS 469",
+    "TKS ED ", "TKS AKI", "TKS TED",
+    "TKS ERIC", "TKS DR TED", "TKS DR RICK", "TKS DR ED", "TKS  DR AKI", "TKS DR ERIC",
+    "73", "ES"
+     ];
 
     loopCount = 1
     for (var n = 0; n < loopCount; n++) {
@@ -1228,9 +1199,251 @@ SubMenu3.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 16
+    FinalSliceNumber = 21
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
+    doc.setValue(slicedWORDS.join(" ")
+    + "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "- 내용\n"
+    + "1. Q부호, 73 ...\n"    
+    + "2. RST IS 리포트\n"
+    + "3. TKS 이름, TKS DR 이름\n"
+    );      
+}
+
+
+
+SubMenu4.onclick = function() {
+    stop.click();
+
+    var CALLSIGNS = [
+    "2E0IET", "2E0TQK", "3D2TQ", "3D2SRI", "3D2ITR",
+    "3D2TS", "6K2SIT", "6K2STD", "6K2ETI", "6K2TIQ",
+    "6K2EIT", "6K2QSI", "6K2KTI", "6K2DIQ", "6K5DSQ",
+    "6K5KTS", "6K5TRS", "6K5TQE", "6K5KIC", "6K5SKT",
+    "6K5IET", "AC1TSC", "AC1IQR", "AC2TSQ", "AC2ETS",
+    "AC2ITQ", "AC3ESQ", "AC5DTI", "AC6ISQ", "AC7DTC",
+    "AC0ITQ", "AC7QKS", "AD1EKS", "AD2TI", "AD3KTA",
+    "AD4ITR", "AD5DTS", "AD6TKQ", "AD7QIT", "AD9EKS",
+    "AD0ITI", "AE1RIC", "AE2SKQ", "AE2T", "AE6R",
+    "AE7S", "AE2TRQ", "AE7QS", "AE9RTI", "CT1ERS",
+    "CT2IDS", "CT3QSI", "CT3CTS", "CT9SKT", "DK3EIQ",
+    "DK3TIE", "DK7STD", "DK7ETI", "DK4TSQ", "DS1TIR",
+    "DS2ART", "DS3ITS", "DS4KRT", "DS5CTI", "DS0ST",
+    "DS0IR", "DS0AQ", "EA1TSQ", "EA2TCS", "EA3CKQ",
+    "EA3EQ", "EA3QIS", "EA4EQT", "EA5STQ", "EA7KIQ",
+    "EA7TQ", "EA9DTI", "EA0STD", "I1IQR", "I2EST",
+    "I7SCD", "I7STR", "I9KQS", "IS0AEI", "IS0KST",
+    "IT1SQS", "IT7DQS", "IT3RQS", "IT3STI", "IT9SRQ",
+    "IT9CQS", "IT9SRI", "K1ER", "K2ST", "K3IS",
+    "K9QS", "K1ESD", "K2QTK", "K2QRS", "K3AIT",
+    "K3ISD", "K3ITS", "K5TDC", "K7SIT", "K7STD",
+    "K7QIK", "K9QRS", "K9AIT", "K9SDI", "K9ITS",
+    "K9ID", "K9KTI", "K0TSD", "KA2TSQ", "KA2IRT",
+    "KA4AQE", "KC1ETS", "KC4QTK", "KC7EST", "KC7KRQ",
+    "KC9TQS", "KD1TRC", "KD4EQT", "KD5EQC", "KD7DTQ",
+    "KE7SQT", "KE9QIS", "KE0TQE", "KE0RTS", "KI2RSQ",
+    "KI3ITD", "KI3SQE", "KI3EDS", "KI3QTK", "KI7TSK",
+    "KI7STQ", "KS1IRC", "KS7TQI", "KS9ETC", "KS9DIT",
+    "KS9SQI", "KS9QIT", "KS0IQ", "KT3AQE", "KT3ETS",
+    "KT3QTK", "KT4EST", "KT5SRQ", "KQ1S", "KQ3R",
+    "KQ7TQ", "KQ7I", "KQ1STD", "KQ0KRI", "R1ST",
+    "R2AK", "R3QS", "R7TIS", "R7IS", "RA1RCT",
+    "RA3EQ", "RA7TCE", "RA7IKT", "RC3AES", "RC3TCA",
+    "RC4ASE", "RC7QKT", "RC7Q", "RC9I", "RC9ITD",
+    "RD3EQ", "RD3KTQ", "RD9IAQ", "RD7DTK", "RD7KAQ",
+    "RT1RCT", "RT3T", "RT3A", "RT7D", "RT3EQ",
+    "RT3TCE", "RT3IKT", "RT3AES", "RT3TCA", "RT7ASE",
+    "RT7Q", "RT7A", "RT9S", "RT9QKT", "RT0AQE",
+    "TA1ESQ", "TA2IRC", "TA3SQT", "TA3DKR", "TA3ERS",
+    "TA7RQC", "TA7ESQ", "TA7ASE", "TA9ISR", "TA0EQ"
+    ];
+
+//    var CALLSIGNS = generateHLCallsigns(200, 1);
+//        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
+//        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
+//        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
+//        CALLSIGNS.sort(() => Math.random() - 0.5);
+//        CALLSIGNS.sort(() => Math.random() - 0.5);
+//        CALLSIGNS.sort(() => Math.random() - 0.5);
+//        CALLSIGNS.sort(() => Math.random() - 0.5);
+//        CALLSIGNS.sort(() => Math.random() - 0.5);  
+
+    STANDINGBYS = [ "<AR>", "K", "<AR>", "<AR>", "K", "<AR>" ];
+
+    loopCount = 8    
+    var cqs = [];
+    for (var n = 0; n < loopCount; n++) {
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+        var cq = (Math.random() > 0.5 ? "CQ DE " : "DE ") + callsign;
+
+        if (cq.startsWith("CQ")) {
+            cq += " " + standingby;
+        }else if (cq.startsWith("DE")) {
+            cq += " " + "73<SK>EE";            
+        };
+        cqs.push(cq);
+    }
+    doc.setValue(cqs.join("  ")
+    + "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "- 패턴\n"
+    + "1. CQ DE 호출부호 (K 또는 <AR>)\n"
+    + "2. DE 호출부호 73<SK>EE\n"
+    );
+}
+
+//===============================================================================================
+var NUM_RANDOM_CALLSIGNS = 100;
+
+function generateSuffix(length) {
+    var ALPHABET = "ACDEIIKQRSSTTT";
+    var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    for (var i = 1; i < length; i++)
+        result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    return result;
+}
+
+function getRepeatCount() {
+    return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
+}
+function generateHLCallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PREFIX = [
+        //"HL1", "HL2", "HL3", "HL4", "HL5",
+        "DS1", "DS2", "DS3", "DS4", "DS5", "DS0",
+        "6K2", "6K5" //"6L5"
+        ];
+    for (var i = 0; i < count; i++) {
+        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
+        var suffixLength = (prefix.startsWith("HL") || prefix.startsWith("DS0") ? (Math.random() > 0.2 ? 3 : 2) : 3);
+        var callsign = prefix + generateSuffix(suffixLength);
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+// randomHLCallsigns.onclick = function() {
+//     stop.click();
+//    doc.setValue(generateHLCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+// }
+
+function generateJACallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PREFIX = [];
+    //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
+    var PRE_PREFIX = ["A", "E", "I", "K","Q", "R", "S"].map(x => "J" + x);
+    //PRE_PREFIX.push("7J", "8J", "8N");
+    for (var i = 0; i < 10; i++)
+        for (var pre of PRE_PREFIX)
+            PREFIX.push(pre + i);
+    for (var i = 0; i < count; i++) {
+        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
+        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3); 
+        var callsign = prefix + generateSuffix(suffixLength);
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+// randomJACallsigns.onclick = function() {
+//     stop.click();
+//     doc.setValue(generateJACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+// }
+
+function generateASIACallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PRE_PREFIXS = ["JT1","3D2"];
+    var NUMBERS = ["1","2","2","3","3","3","4","5","6","7","7","7","9","0"];
+
+    for (var i = 0; i < count; i++) {
+        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+        if (pre_prefix.length === 1) {
+            var SUFFIXLENGTH = [2, 3];
+        }else if (pre_prefix.length === 2) {
+            var SUFFIXLENGTH = [1, 2, 3];            
+        }else if (pre_prefix.length === 3) {
+            var number = "";
+            var SUFFIXLENGTH = [1, 2, 3];
+        };
+        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
+        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+// randomASIACallsigns.onclick = function() {
+//     stop.click();
+//     doc.setValue(generateASIACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+// }
+
+function generateDXCallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT","CT","CT","DK","EA","I","I","IT","IT","IT",
+    "K","KA","KC","KD","KE","KS","KS","KT","KT","KT","KQ","R","RA","RC","RD","RT","TA","TA","TA"];
+    var NUMBERS = ["1","2","2","3","3","3","4","5","6","7","7","7","9","0"];
+
+    for (var i = 0; i < count; i++) {
+        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+        if (pre_prefix.length === 1) {
+            var SUFFIXLENGTH = [2, 3];
+        }else if (pre_prefix.length === 2) {
+            var SUFFIXLENGTH = [1, 2, 3];            
+        }else if (pre_prefix.length === 3) {
+            var number = "";
+            var SUFFIXLENGTH = [1, 2, 3];
+        };
+        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
+        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+
+
+// randomDXCallsigns.onclick = function() {
+//     stop.click();
+//     doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+// }
+
+
+randomWORLDCallsigns.onclick = function() {
+    stop.click();
+
+        var CALLSIGNS = generateHLCallsigns(200, 1);
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);                
+
+        STANDINGBYS = ["<AR>","K","<AR>","<AR>","K","<AR>"];
+
+    loopCount = 8    
+    var cqs = [];
+    for (var n = 0; n < loopCount; n++) {
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+        var cq = (Math.random() > 0.5 ? "CQ DE " : "DE ") + callsign;
+
+        if (cq.startsWith("CQ")) {
+            cq += " " + standingby;
+        }else if (cq.startsWith("DE")) {
+            cq += " " + "73<SK>EE";            
+        };
+        cqs.push(cq);
+    }
+    doc.setValue(cqs.join(" "));
 }
 
 </script>

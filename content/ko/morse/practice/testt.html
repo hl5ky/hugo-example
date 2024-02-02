@@ -250,6 +250,12 @@ audio {
 <button id="user_qso">User Text</button>
 <button id="random_qso">Random Text</button>
 <button id="hangul_syllable">Hangul Letter Training</button>
+<button id="random_hl_callsigns">Random HL Callsigns</button>
+<button id="random_ja_callsigns">JA</button>
+<button id="random_asia_callsigns">ASIA</button>
+<button id="random_dx_callsigns">DX</button>
+<button id="random_world_callsigns">WORLD</button>
+<button id="random_element">ELEMENT</button>
 </span>
 </div>
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
@@ -1423,8 +1429,10 @@ var hangulSyllable = document.querySelector("#hangul_syllable");
 
 var randomHLCallsigns = document.querySelector("#random_hl_callsigns");
 var randomJACallsigns = document.querySelector("#random_ja_callsigns");
-var randomBABVCallsigns = document.querySelector("#random_babv_callsigns");
-var randomHLJABABVCallsigns = document.querySelector("#random_hljababv_callsigns");
+var randomASIACallsigns = document.querySelector("#random_asia_callsigns");
+var randomDXCallsigns = document.querySelector("#random_dx_callsigns");
+var randomWORLDCallsigns = document.querySelector("#random_world_callsigns");
+var randomELEMENTS = document.querySelector("#random_element");
 var randomQSOElements = document.querySelector("#random_qso_elements");
 var randomQSOBasicElements = document.querySelector("#random_qso_basic_elements");
 var randomStampQSO = document.querySelector("#random_stamp_qso");
@@ -1499,7 +1507,8 @@ hangulSyllable.onclick = function() {
     changeQsoSample("hangul_txt");
 }
 
-var NUM_RANDOM_CALLSIGNS = 200;
+var NUM_RANDOM_CALLSIGNS = 100;
+
 function generateSuffix(length) {
     var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1507,6 +1516,37 @@ function generateSuffix(length) {
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     return result;
 }
+
+//=====================================================
+var ELEMENTS = ["A", "B", "C", "D", "E", "F" ];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    return ELEMENTS[j];
+}
+}
+
+randomELEMENTS.onclick = function() {    
+    stop.click();
+    //var ELEMENTS = "ABCDE";
+    var practice_elements = [];
+
+   loopCount = 8
+    for (var i = 0; i < loopCount; i++) {
+        var len = Math.floor(Math.random() * 2 + 2); // 4+4->2~5  3+2->2~4   2+2->2~3
+        ELEMENTS.sort(() => Math.random() - 0.5); shuffle(ELEMENTS);
+        var element = ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
+        for (var j = 1; j < len; j++)
+        element += ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
+        practice_elements.push(element);
+    }
+    doc.setValue(practice_elements.join(" "));
+}
+//=====================================================
+
+
 function getRepeatCount() {
     return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
 }
@@ -1514,20 +1554,22 @@ function generateHLCallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [
         "HL1", "HL2", "HL3", "HL4", "HL5",
-        "DS1", "DS2", "DS3", "DS4", "DS5",
+        "DS1", "DS2", "DS3", "DS4", "DS5", "DS0",
         "6K2", "6K5", "6L5"
         ];
     for (var i = 0; i < count; i++) {
         var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("HL") ? (Math.random() > 0.2 ? 3 : 2) : 3);
+        var suffixLength = (prefix.startsWith("HL") || prefix.startsWith("DS0") ? (Math.random() > 0.2 ? 3 : 2) : 3);
         var callsign = prefix + generateSuffix(suffixLength);
         callsigns.push(Array(repeatCount).fill(callsign).join(" "));
     }
     return callsigns;
 }
+
 randomHLCallsigns.onclick = function() {
     stop.click();
-    doc.setValue(generateHLCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("   "));
+    doc.setValue(generateHLCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+
 }
 function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
@@ -1539,45 +1581,111 @@ function generateJACallsigns(count, repeatCount) {
             PREFIX.push(pre + i);
     for (var i = 0; i < count; i++) {
         var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var callsign = prefix + generateSuffix(3);
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
-randomJACallsigns.onclick = function() {
-    stop.click();
-    doc.setValue(generateJACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("   "));
-}
-function generateBABVCallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PREFIX = [];
-    var PRE_PREFIX = ["A", "D", "G", "T", "Y", "Z", "V"].map(x => "B" + x);
-    for (var i = 0; i < 10; i++)
-        for (var pre of PRE_PREFIX)
-            PREFIX.push(pre + i);
-    for (var i = 0; i < count; i++) {
-        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var callsign = prefix + generateSuffix(3);
+        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3); 
+        var callsign = prefix + generateSuffix(suffixLength);
         callsigns.push(Array(repeatCount).fill(callsign).join(" "));
     }
     return callsigns;
 }
 
-randomBABVCallsigns.onclick = function() {
+randomJACallsigns.onclick = function() {
     stop.click();
-    doc.setValue(generateBABVCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("   "));
+    doc.setValue(generateJACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
 }
-randomHLJABABVCallsigns.onclick = function() {
+
+function generateASIACallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PREFIX = [];
+    var PRE_PREFIX = ["A", "D", "G", "T", "Y", "Z", "V"].map(x => "B" + x);
+    var SUFFIXLENGTH = [2, 3, 3, 3];
+    for (var i = 0; i < 10; i++)
+        for (var pre of PRE_PREFIX)
+            PREFIX.push(pre + i);
+    for (var i = 0; i < count; i++) {
+        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
+        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
+        var callsign = prefix + generateSuffix(suffixLength);
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+randomASIACallsigns.onclick = function() {
     stop.click();
-    var callsigns = generateHLCallsigns(NUM_RANDOM_CALLSIGNS / 2, 1);
-    callsigns = callsigns.concat(generateJACallsigns(NUM_RANDOM_CALLSIGNS / 4, 1));
-    callsigns = callsigns.concat(generateBABVCallsigns(NUM_RANDOM_CALLSIGNS / 4, 1));
-    callsigns.sort(() => Math.random() - 0.5);
-    var repeated = [], repeatCount = getRepeatCount();
-    for (var callsign of callsigns)
-        repeated.push(Array(repeatCount).fill(callsign).join(" "));
-    doc.setValue(repeated.join("   "));
+    doc.setValue(generateASIACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
 }
+
+function generateDXCallsigns(count, repeatCount) {
+    var callsigns = [];
+    //var PREFIX = [];
+    var PRE_PREFIXS = ["W", "K", "KA", "WA", "WB", "OH8"];
+    var NUMBERS = ["2", "3", "7"];
+
+    for (var i = 0; i < count; i++) {
+        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+        if (pre_prefix.length === 1) {
+            var SUFFIXLENGTH = [2, 3];
+        }else if (pre_prefix.length === 2) {
+            var SUFFIXLENGTH = [1, 2, 3];            
+        }else if (pre_prefix.length === 3) {
+            var number = "";
+            var SUFFIXLENGTH = [1, 2, 3];
+        };
+        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
+        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
+
+
+randomDXCallsigns.onclick = function() {
+    stop.click();
+    doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
+}
+
+
+randomWORLDCallsigns.onclick = function() {
+    stop.click();
+
+        var CALLSIGNS = generateHLCallsigns(200, 1);
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);                
+
+        STANDINGBYS = [
+        "<AR>",
+        "K",
+        "<AR>",
+        "<AR>",            
+        "K",
+        "<AR>",                    
+    ];
+
+    loopCount = 8    
+    var cqs = [];
+    for (var n = 0; n < loopCount; n++) {
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+        var cq = (Math.random() > 0.5 ? "CQ DE " : "DE ") + callsign;
+
+        if (cq.startsWith("CQ")) {
+            cq += " " + standingby;
+        }else if (cq.startsWith("DE")) {
+            cq += " " + "73";            
+        };
+        cqs.push(cq);
+    }
+    doc.setValue(cqs.join(" "));
+}
+
 
 randomQSOElements.onclick = function() {
     stop.click();
