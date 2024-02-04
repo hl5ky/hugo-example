@@ -549,8 +549,8 @@ MorseNode.prototype.dotfac = function(t) {
             if (t=='s') return Math.random()*0.85+0.4;
             return Math.random()*0.8+0.6;
         case 'space_1':
-			if (t=='s') return 1.4;
-            if (t=='l') return 1.4;
+			if (t=='s') return 1.6;
+            if (t=='l') return 1.6;
         case 'space_2':
 			if (t=='s') return 2.2;
             if (t=='l') return 2.2;
@@ -1135,19 +1135,19 @@ SubMenu2.onclick = function() {
 
     var WORDS = [
     "T23", "S7I", "3TR", "79S", "A7T",
-    "ET9", "T7C", "37S", "CE3", "R7S",
-    "3TR", "KAT", "7E3", "3SI", "K3T",
-    "SIT", "SEI", "T57", "9I3", "S7E",
-    "DC3", "C3I", "E3T", "QT7", "73S",
+    "ET9", "T7C", "3CS", "E3", "R7S",
+    "3TR", "KAT", "7EI3", "3S", "K3T",
+    "SIT", "SEI", "57", "9I3T", "S7E",
+    "DC3", "C3IQ", "E3T", "T7", "73S",
     "T2S", "EI3", "39R", "7ST", "R3T",
-    "7T9", "E3C", "7TS", "Q79", "SD3",
-    "37T", "E6T", "593", "7TQ", "793",
+    "7T9", "E3C", "7S", "QT79", "SD3",
+    "37T", "E6T9", "53", "7TQ", "793",
     "ST7", "SEI", "63T", "247", "E7T",
-    "ES3", "C7T", "9T3", "ITE", "3IR",
-    "79A", "43T", "3RS", "ETR", "K3C",
-    "3ST", "K97", "TI7", "E3T", "56T",
+    "ES3", "7T", "9TC3", "ITE", "3IR",
+    "79A", "S43T", "3R", "ETR", "K3C",
+    "3ST", "K97", "TI7", "E63T", "5T",
     "723", "7TR", "S93", "ST7", "S7I",
-    "2ET", "3R7", "S7T", "QC3", "D7E",
+    "2ET", "3R7", "S7CT", "Q3", "D7E",
     "5T3", "ST7", "EAR", "7TR", "S2T"
      ];
 
@@ -1162,7 +1162,7 @@ SubMenu2.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 30
+    FinalSliceNumber = 32
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }

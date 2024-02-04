@@ -552,8 +552,8 @@ MorseNode.prototype.dotfac = function(t) {
             if (t=='s') return Math.random()*0.85+0.4;
             return Math.random()*0.8+0.6;
         case 'space_1':
-			if (t=='s') return 1.4;
-            if (t=='l') return 1.4;
+			if (t=='s') return 1.6;
+            if (t=='l') return 1.6;
         case 'space_2':
 			if (t=='s') return 2.2;
             if (t=='l') return 2.2;
@@ -1247,16 +1247,17 @@ SubMenu5.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "E2A", "2AR", "K2R", "RE2", "QA5",
-    "AR5", "2EQ", "ER2", "K26", "C5R",
-    "E62", "CR2", "EA4", "Q2R", "4KA",
-    "ER5", "AKR", "E5Q", "AKC", "E4R",
-    "R2C", "ARQ", "RE2", "46R", "E5R",
-    "65C", "K0A", "R6A", "5KD", "E4A",
-    "RAC", "AQ0", "DR2", "2RK", "ERA",
-    "A5R", "6CR", "Q2R", "EAR", "65K",
-    "A2K", "E2A", "2DA", "4AR", "R2A",
-    "6DA", "DER", "EKQ", "2QD", "4R5"
+    "2A", "E2AR", "K2R", "E2", "QA5R",
+    "A5", "2ER", "ER2", "QK2", "C5R6",
+    "E2", "C6R2", "E4R", "QA2", "4KA",
+    "R5", "AEKR", "E5Q", "ARK", "E4C",
+    "R2C", "AQ", "RE2R", "E6R", "54R",
+    "6C", "K50A", "6KA", "R5D", "E4A",
+    "RAC", "Q0A", "DR2", "2REK", "RA",
+    "5RA", "6CR", "Q2ER", "AR", "65K",
+    "A2", "E2KA", "2RA", "4AD", "R2A",
+    "6DA", "DEQR", "EK", "2QR", "4D5",
+    "KA4", "R2", "E56", "CK4", "EKR2"
      ];
 
      loopCount = 1
@@ -1270,7 +1271,7 @@ SubMenu5.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 30
+    FinalSliceNumber = 32
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }
