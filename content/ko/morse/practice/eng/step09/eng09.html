@@ -262,7 +262,7 @@ audio {
 <button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호  < , 쉼표 > (12/2)</button>&nbsp;
 <button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합 (12/2)</button>&nbsp;
 <button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 단어/문장 (13/2)</button>&nbsp;
-<button id="sub_menu_5" style="background-color:rgb(240, 250, 200);">5 호출부호 + (14/2)</button>
+<button id="sub_menu_5" style="background-color:rgb(240, 250, 200);">5 호출부호 + (13/2)</button>
 
 
 <!--  hangul_txt_1         -->
@@ -1107,14 +1107,14 @@ SubMenu1.onclick = function() {
     "X"
     ];
 
-    loopCount = 25
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 18
+    FinalSliceNumber = 45
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1155,7 +1155,7 @@ SubMenu2.onclick = function() {
     );
 }
 
-var ELEMENTS = ["A","C","D","E","I","K","M","N","N","Q","R","S","T","X",
+var ELEMENTS = ["A","C","D","E","I","K","M","M","N","N","Q","R","S","T","X","X","X",
 "1","2","3","4","5","6","7","8","8","9","0"];
 
 function shuffle(array) {
@@ -1214,7 +1214,7 @@ SubMenu4.onclick = function() {
     + "                                                                                                         \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 내용\n"
+    + "- 새로운 내용\n"
     + "RST IS 5NN (ES 또는 ,) NAME IS KIM.\n"
     );       
 }
@@ -1252,7 +1252,7 @@ SubMenu5.onclick = function() {
     + "                                                                                                         \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 패턴\n"
+    + "- 새로운 패턴\n"
     + "CQ DX DE 호출부호 (K 또는 <AR>)\n"
     );   
 }
@@ -1261,7 +1261,7 @@ SubMenu5.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ACDEIKMNMNQRST";
+    var ALPHABET = "ACDEIKMNMNQRSTXX";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++)
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1297,7 +1297,7 @@ function generateJACallsigns(count, repeatCount) {
     var PREFIX = [];
     //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
     var PRE_PREFIX = ["A", "E", "I", "K", "M", "N","Q", "R", "S"].map(x => "J" + x);
-    //PRE_PREFIX.push("7J", "8J", "8N");
+    PRE_PREFIX.push("8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
             PREFIX.push(pre + i);
@@ -1346,7 +1346,7 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "CX", "DK","EA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","R","RA","RC","RD","RT","SM","SM","TA", "XE", "XE"];
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","N","N","R","RA","RC","RD","RT","SM","SM","TA", "XE", "XE"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {

@@ -14,6 +14,6 @@ weight: 60
 * 전체 학습 부호<br>
 알파벳 : A, C, D, E, I, K, Q, R, S<br>
 숫자 : 1, 2, 4, 5, 6, 9, 0<br>
-ProSign : AR&gt;, &lt;SK&gt;
+ProSign : &lt;AR&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 

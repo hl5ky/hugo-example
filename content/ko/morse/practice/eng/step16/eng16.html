@@ -194,7 +194,7 @@ audio {
 <div class="page">
 
 <p><span style="font-size:200%"><b>QSO 코흐법</b></span>
-    <span style="font-size:150%">&nbsp;(영문 7단계)</span>
+    <span style="font-size:150%">&nbsp;(영문 16단계)</span>
 </p>
 
 <div class="setting">
@@ -258,10 +258,10 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 T, 3, 7 (11/2)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (11/2)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 단어/문장 (11/2)</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 호출부호 + (12/2)</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 F, V (15/1)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (15/1)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 단어/문장 (15/1)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 호출부호 + (15/1)</button>
 
 
 <!--  hangul_txt_1         -->
@@ -1103,17 +1103,17 @@ SubMenu1.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "T37"
+    "FV"
     ];
 
-    loopCount = 25
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 18
+    FinalSliceNumber = 26
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1125,174 +1125,130 @@ SubMenu1.onclick = function() {
 }
 
 
-SubMenu2.onclick = function() {
+var ELEMENTS = ["A","B","C","D","E","F","F","F","G","H","I","J","K","M","N","L","O","P","Q","R","S","T","U","U","V","V","V","W","W","X","Z",
+"1","2","3","4","5","6","7","8","8","9","0"];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    return ELEMENTS[j];
+}
+}
+
+SubMenu2.onclick = function() {    
     stop.click();
+    //var ELEMENTS = "ABCDE";
+    var practice_elements = [];
 
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "T23", "S7I", "3TR", "79S", "A7T",
-    "ET9", "T7C", "37S", "CE3", "R7S",
-    "3TR", "KAT", "7E3", "3SI", "K3T",
-    "SIT", "SEI", "T57", "9I3", "S7E",
-    "DC3", "C3I", "E3T", "QT7", "73S",
-    "T2S", "EI3", "39R", "7ST", "R3T",
-    "7T9", "E3C", "7TS", "Q79", "SD3",
-    "37T", "E6T", "593", "7TQ", "793",
-    "ST7", "SEI", "63T", "247", "E7T",
-    "ES3", "C7T", "9T3", "ITE", "3IR",
-    "79A", "43T", "3RS", "ETR", "K3C",
-    "3ST", "K97", "TI7", "E3T", "56T",
-    "723", "7TR", "S93", "ST7", "S7I",
-    "2ET", "3R7", "S7T", "QC3", "D7E",
-    "5T3", "ST7", "EAR", "7TR", "S2T"
-     ];
-
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+   loopCount = 30
+    for (var i = 0; i < loopCount; i++) {
+        var len = Math.floor(Math.random() * 0 + 3); // 4+4->2~5  3+2->2~4   2+2->2~3  0+3->3
+        ELEMENTS.sort(() => Math.random() - 0.5); shuffle(ELEMENTS);
+        var element = ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
+        for (var j = 1; j < len; j++)
+        element += ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
+        practice_elements.push(element);
     }
-
-    FinalSliceNumber = 30
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
+    doc.setValue(practice_elements.join(" "));
 }
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
+    var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "DAN", 
+               "STAN", "KIM", "JIM", "JOE","JOHN","BOB","GARY", "WALT" ];
+    var RSTS = ["449","44N","559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
+    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03","B19"];
+    var QTHS = ["KOBE", "OSAKA", "DAEJEON", "INCHEON", "DOKDO", "MOKPO", "SAPPORO", "SEJONG", "DAEGU", "WONJU",
+               "JINJU", "JEJU", "SEOUL", "GUMI", "ULSAN", "BUSAN"];
+    var TEMPS = ["MINUS 2C", "MINUS 7C", "ABT 13C", "MINUS 14C", "MINUS 16C", "MINUS 4C"];
+    var PSES = ["QSL VIA BURO", "QRX", "CALL AGN", "RST AGN"];
+    var ANTS = ["DP", "LOOP", "HEXBEAM", "GP", "QUAD", "INV", "VERT"];
+    var RIGS = ["IC219D", "IC240S", "IC425D", "TS590SG", "TS120", "TS140D",
+        "TS690S", "TS480SAT", "TS820", "TS530D", "TS830", "TS130",
+        "FT101", "FT920", "FT950", "FT450", "FT2000", "FT5000MP", "FT9000MP"];
 
-    var WORDS = [
-    "AKI", "ED", "RICK", "ERIC",
-    "DR TED", "DR RICK", "DR ED", "DR ERIC", "DR AKI",
-    "ES", "QRT", "QRA", "DIRECT", "73",
-    "TEST", "IC7300", "IC7610", "IC240S", "TS440",
-    "TS450S", "TS590SG", "TS120", "TS140D", "IC120S",
-    "IC519", "IC609S", "IC910D", "RST IS 599", "RST IS 579",
-    "RST IS 559", "RST IS 569", "RST IS 549", "RST IS 459", "RST IS 469",
-    "TKS ED ", "TKS AKI", "TKS TED",
-    "TKS ERIC", "TKS DR TED", "TKS DR RICK", "TKS DR ED", "TKS  DR AKI", "TKS DR ERIC",
-    "73", "ES"
-     ];
+var phrases = ["QRZ? ", "TNX FER QSO ", "TNX FER RPRT ", "GM ",  ];
 
     loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+         for (var n = 0; n < loopCount; n++) {
+        var name = NAMES[Math.floor(Math.random() * NAMES.length)];
+        var rst = RSTS[Math.floor(Math.random() * RSTS.length)];
+        var kdn = KDNS[Math.floor(Math.random() * KDNS.length)];
+        var qth = QTHS[Math.floor(Math.random() * QTHS.length)];
+
+        var phrase = "OP IS " + name +  (Math.random() > 0.5 ? " ES " : " <BT> ") + "QTH IS " + qth + "."; phrases.push(phrase);
     }
 
-    FinalSliceNumber = 21
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "                                                                                                         \n"
+        loopCount = 2
+         for (var n = 0; n < loopCount; n++) {
+        var temp = TEMPS[Math.floor(Math.random() * TEMPS.length)];        
+        var pse = PSES[Math.floor(Math.random() * PSES.length)];
+        var ant = ANTS[Math.floor(Math.random() * ANTS.length)];
+        var rig = RIGS[Math.floor(Math.random() * RIGS.length)];
+
+        var phrase = "TEMP IS " + temp +  " "; phrases.push(phrase);
+        var phrase = "PSE " + pse +  " "; phrases.push(phrase);
+        var phrase = "ANT IS " + ant +  " "; phrases.push(phrase);
+        var phrase = "RIG IS " + rig +  " "; phrases.push(phrase);
+    }
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);     
+
+    FinalSliceNumber = 12
+    phrases = phrases.slice(0, FinalSliceNumber);
+
+    doc.setValue(phrases.join(" ")
+    + "                                                                                    \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
     + "- 새로운 내용\n"
-    + "1. Q부호, 73 ...\n"    
-    + "2. RST IS 리포트\n"
-    + "3. TKS 이름, TKS DR 이름\n"
-    );      
+    + "1. TNX FER QSO\n"
+    + "2. PSE QSL VIA BURO\n"
+    );       
 }
-
-
 
 SubMenu4.onclick = function() {
     stop.click();
 
-    var CALLSIGNS = [
-    "2E0IET", "2E0TQK", "3D2TQ", "3D2SRI", "3D2ITR",
-    "3D2TS", "6K2SIT", "6K2STD", "6K2ETI", "6K2TIQ",
-    "6K2EIT", "6K2QSI", "6K2KTI", "6K2DIQ", "6K5DSQ",
-    "6K5KTS", "6K5TRS", "6K5TQE", "6K5KIC", "6K5SKT",
-    "6K5IET", "AC1TSC", "AC1IQR", "AC2TSQ", "AC2ETS",
-    "AC2ITQ", "AC3ESQ", "AC5DTI", "AC6ISQ", "AC7DTC",
-    "AC0ITQ", "AC7QKS", "AD1EKS", "AD2TI", "AD3KTA",
-    "AD4ITR", "AD5DTS", "AD6TKQ", "AD7QIT", "AD9EKS",
-    "AD0ITI", "AE1RIC", "AE2SKQ", "AE2T", "AE6R",
-    "AE7S", "AE2TRQ", "AE7QS", "AE9RTI", "CT1ERS",
-    "CT2IDS", "CT3QSI", "CT3CTS", "CT9SKT", "DK3EIQ",
-    "DK3TIE", "DK7STD", "DK7ETI", "DK4TSQ", "DS1TIR",
-    "DS2ART", "DS3ITS", "DS4KRT", "DS5CTI", "DS0ST",
-    "DS0IR", "DS0AQ", "EA1TSQ", "EA2TCS", "EA3CKQ",
-    "EA3EQ", "EA3QIS", "EA4EQT", "EA5STQ", "EA7KIQ",
-    "EA7TQ", "EA9DTI", "EA0STD", "I1IQR", "I2EST",
-    "I7SCD", "I7STR", "I9KQS", "IS0AEI", "IS0KST",
-    "IT1SQS", "IT7DQS", "IT3RQS", "IT3STI", "IT9SRQ",
-    "IT9CQS", "IT9SRI", "K1ER", "K2ST", "K3IS",
-    "K9QS", "K1ESD", "K2QTK", "K2QRS", "K3AIT",
-    "K3ISD", "K3ITS", "K5TDC", "K7SIT", "K7STD",
-    "K7QIK", "K9QRS", "K9AIT", "K9SDI", "K9ITS",
-    "K9ID", "K9KTI", "K0TSD", "KA2TSQ", "KA2IRT",
-    "KA4AQE", "KC1ETS", "KC4QTK", "KC7EST", "KC7KRQ",
-    "KC9TQS", "KD1TRC", "KD4EQT", "KD5EQC", "KD7DTQ",
-    "KE7SQT", "KE9QIS", "KE0TQE", "KE0RTS", "KI2RSQ",
-    "KI3ITD", "KI3SQE", "KI3EDS", "KI3QTK", "KI7TSK",
-    "KI7STQ", "KS1IRC", "KS7TQI", "KS9ETC", "KS9DIT",
-    "KS9SQI", "KS9QIT", "KS0IQ", "KT3AQE", "KT3ETS",
-    "KT3QTK", "KT4EST", "KT5SRQ", "KQ1S", "KQ3R",
-    "KQ7TQ", "KQ7I", "KQ1STD", "KQ0KRI", "R1ST",
-    "R2AK", "R3QS", "R7TIS", "R7IS", "RA1RCT",
-    "RA3EQ", "RA7TCE", "RA7IKT", "RC3AES", "RC3TCA",
-    "RC4ASE", "RC7QKT", "RC7Q", "RC9I", "RC9ITD",
-    "RD3EQ", "RD3KTQ", "RD9IAQ", "RD7DTK", "RD7KAQ",
-    "RT1RCT", "RT3T", "RT3A", "RT7D", "RT3EQ",
-    "RT3TCE", "RT3IKT", "RT3AES", "RT3TCA", "RT7ASE",
-    "RT7Q", "RT7A", "RT9S", "RT9QKT", "RT0AQE",
-    "TA1ESQ", "TA2IRC", "TA3SQT", "TA3DKR", "TA3ERS",
-    "TA7RQC", "TA7ESQ", "TA7ASE", "TA9ISR", "TA0EQ"
-    ];
+    var CALLSIGNS = generateHLCallsigns(150, 1); var HL_CALLSIGNS = CALLSIGNS;
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(100, 1));    
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);
+        CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-//    var CALLSIGNS = generateHLCallsigns(200, 1);
-//        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
-//        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
-//        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
-//        CALLSIGNS.sort(() => Math.random() - 0.5);
-//        CALLSIGNS.sort(() => Math.random() - 0.5);
-//        CALLSIGNS.sort(() => Math.random() - 0.5);
-//        CALLSIGNS.sort(() => Math.random() - 0.5);
-//        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    //STANDINGBYS = ["<AR>", "K", "<AR>", "<AR>"];
 
-    STANDINGBYS = [ "<AR>", "K", "<AR>", "<AR>", "K", "<AR>" ];
-
-    loopCount = 8    
-    var cqs = [];
+        var cqs = [];
+    var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+    var cq = "CQ DE " + callsign + (Math.random() > 0.5 ? " /QRP" : "") + " PSE K";
+    cqs.push(cq);
+    loopCount = 3    
     for (var n = 0; n < loopCount; n++) {
         var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
-        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
-        var cq = (Math.random() > 0.5 ? "CQ DE " : "DE ") + callsign;
+        //var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+        var cq = "DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + " TU<SK>EE"; cqs.push(cq);
 
-        if (cq.startsWith("CQ")) {
-            cq += " " + standingby;
-        }else if (cq.startsWith("DE")) {
-            cq += " " + "73<SK>EE";            
-        };
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];            
+        var HL_callsign = HL_CALLSIGNS[Math.floor(Math.random() * HL_CALLSIGNS.length)];
+        cq = HL_callsign + (Math.random() > 0.5 ? "/QRP" : "") + " DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + 
+            (Math.random() > 0.5 ? " K" : " KN");
         cqs.push(cq);
     }
     doc.setValue(cqs.join("  ")
-    + "                                                                                                         \n"
-    + "\n"     
+    //+ "                                                                                      \n"
+    //+ "\n"
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 새로운 패턴\n"
-    + "1. CQ DE 호출부호 (K 또는 <AR>)\n"
-    + "2. DE 호출부호 73<SK>EE\n"
+    //+ "- 새로운 패턴\n"
+    //+ "호출부호/QRP\n"
     );
 }
 
@@ -1300,10 +1256,12 @@ SubMenu4.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ACDEIIKQRSSTTT";
+    var ALPHABET = "ABCDEFFFGHIJKMNLOPQRSTUUVVVWWXZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    for (var i = 1; i < length; i++)
+    for (var i = 1; i < length; i++) {
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    }
+    //result += (Math.random() > 0.5 ? "/QRP" : "");
     return result;
 }
 
@@ -1313,9 +1271,9 @@ function getRepeatCount() {
 function generateHLCallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [
-        //"HL1", "HL2", "HL3", "HL4", "HL5",
+        "HL1", "HL2", "HL3", "HL4", "HL5",
         "DS1", "DS2", "DS3", "DS4", "DS5", "DS0",
-        "6K2", "6K5" //"6L5"
+        "6K2", "6K5", "6L5"
         ];
     for (var i = 0; i < count; i++) {
         var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
@@ -1334,15 +1292,14 @@ function generateHLCallsigns(count, repeatCount) {
 function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
-    //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
-    var PRE_PREFIX = ["A", "E", "I", "K","Q", "R", "S"].map(x => "J" + x);
-    //PRE_PREFIX.push("7J", "8J", "8N");
+    var PRE_PREFIX = ["A", "E", "F", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
+    PRE_PREFIX.push("7J", "8J", "8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
             PREFIX.push(pre + i);
     for (var i = 0; i < count; i++) {
         var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3); 
+        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3);
         var callsign = prefix + generateSuffix(suffixLength);
         callsigns.push(Array(repeatCount).fill(callsign).join(" "));
     }
@@ -1356,8 +1313,8 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2"];
-    var NUMBERS = ["1","2","2","3","3","3","4","5","6","7","7","7","9","0"];
+    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BZ"];
+    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
         var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
@@ -1384,9 +1341,10 @@ function generateASIACallsigns(count, repeatCount) {
 
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT","CT","CT","DK","EA","I","I","IT","IT","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KT","KT","KQ","R","RA","RC","RD","RT","TA","TA","TA"];
-    var NUMBERS = ["1","2","2","3","3","3","4","5","6","7","7","7","9","0"];
+    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","G","HA","I","IT",
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","R","RA","RC","RD","RT",
+    "SM","SM","SP","TA","VE","VK","VU","W","WA","WB","XE","ZS","ZL"];
+    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
         var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
@@ -1412,39 +1370,6 @@ function generateDXCallsigns(count, repeatCount) {
 //     stop.click();
 //     doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
 // }
-
-
-randomWORLDCallsigns.onclick = function() {
-    stop.click();
-
-        var CALLSIGNS = generateHLCallsigns(200, 1);
-        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);                
-
-        STANDINGBYS = ["<AR>","K","<AR>","<AR>","K","<AR>"];
-
-    loopCount = 8    
-    var cqs = [];
-    for (var n = 0; n < loopCount; n++) {
-        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
-        var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
-        var cq = (Math.random() > 0.5 ? "CQ DE " : "DE ") + callsign;
-
-        if (cq.startsWith("CQ")) {
-            cq += " " + standingby;
-        }else if (cq.startsWith("DE")) {
-            cq += " " + "73<SK>EE";            
-        };
-        cqs.push(cq);
-    }
-    doc.setValue(cqs.join(" "));
-}
 
 </script>
 </html>

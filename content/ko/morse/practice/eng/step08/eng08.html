@@ -1155,7 +1155,7 @@ SubMenu2.onclick = function() {
     );
 }
 
-var ELEMENTS = ["A","C","D","E","I","K","M","N","N","Q","R","S","T","T",
+var ELEMENTS = ["A","C","D","E","I","K","M","M","M","N","N","N","Q","R","S","T","T",
 "1","2","3","3","4","5","6","7","7","8","8","8","9","0"];
 
 function shuffle(array) {
@@ -1214,7 +1214,7 @@ SubMenu4.onclick = function() {
     + "                                                                                                         \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 내용\n"
+    + "- 새로운 내용\n"
     + "1. RST IS 5NN.\n"
     + "2. NAME IS KIM.\n"
     + "3. KDN IS A11.\n"
@@ -1254,7 +1254,7 @@ SubMenu5.onclick = function() {
     + "                                                                                                         \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 패턴\n"
+    + "- 새로운 패턴\n"
     + "1. CQ DE 호출부호 (K 또는 <AR>)\n"
     + "2. DE 호출부호 (73<SK>EE 또는 88<SK>EE)\n"
     );
@@ -1300,7 +1300,7 @@ function generateJACallsigns(count, repeatCount) {
     var PREFIX = [];
     //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
     var PRE_PREFIX = ["A", "E", "I", "K", "M", "N","Q", "R", "S"].map(x => "J" + x);
-    //PRE_PREFIX.push("7J", "8J", "8N");
+    PRE_PREFIX.push("8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
             PREFIX.push(pre + i);
@@ -1349,7 +1349,7 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT","CT","DK","EA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","R","RA","RC","RD","RT","SM","SM","TA"];
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","N","N","R","RA","RC","RD","RT","SM","SM","TA"];
     var NUMBERS = ["1","2","3","3","4","5","6","7","7","8","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
