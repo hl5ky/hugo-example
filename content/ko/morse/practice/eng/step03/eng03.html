@@ -1213,15 +1213,7 @@ SubMenu4.onclick = function() {
     "C0", "EC", "ED", "EQ", "E1",
     "E4", "E0", "DC", "DE", "DQ",
     "D1", "D4", "D0", "QC", "QE",
-    "QD", "Q1", "Q4", "Q0", "1C",
-    "1E", "1D", "1Q", "14", "10",
-    "4C", "4E", "4D", "4Q", "41",
-    "40", "0C", "0E", "0D", "0Q",
-    "01", "04", "C1", "4D", "0Q",
-    "E0", "D1", "D4", "Q4", "0C",
-    "1Q", "4E", "4C", "0D", "1C",
-    "1E", "CD", "CQ", "C1", "C4",
-    "C0", "EC", "ED"
+    "QD", "Q1", "Q4", "Q0"
     ];
 
     loopCount = 1
@@ -1235,7 +1227,7 @@ SubMenu4.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 42
+    FinalSliceNumber = 47
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1255,48 +1247,23 @@ SubMenu5.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "CED", "CQ", "CE1Q", "CE4Q", "CE0",
-    "C0DE", "CDQ", "C4D1", "CD4", "C0",
-    "CQ", "CQ4D", "0CQ1", "CQ4", "CQ0",
-    "C1E", "CQ1D", "C1", "C14Q", "C10",
-    "C4E", "4D", "CE4Q", "C41", "CD40",
-    "C0E", "C0", "C0QD", "C01", "C0Q4",
-    "EC1D", "ECQ", "E1D", "EC4", "QEC0",
-    "EDC", "EDCQ", "D1", "EDQ4", "ED0",
-    "EC", "EQ4D", "EQ11", "EQ4", "EQ0",
-    "E1C", "1D", "ED1Q", "E1C4", "E10",
-    "E4C", "EQ4D", "4Q", "EC41", "E40",
-    "0C", "E0D", "DE0Q", "E01", "EC04",
-    "DC4E", "DCQ", "D1", "DC4Q", "DC0",
-    "DEC0", "DEQ", "DE1", "E4", "DE0Q",
-    "DQ4C", "DQE", "D0Q1", "DQ4", "DQ0",
-    "D1C", "4D1E", "D1Q", "14", "D1Q0",
-    "D4C", "D4EQ", "DC4Q", "D41", "40",
-    "D0", "D0E", "DE0Q", "D0C1", "D04",
-    "QC4E", "QD", "QC1", "QC4", "QDC0",
-    "QEC", "QE0D", "QE1", "CQE4", "QE",
-    "QC", "Q4DE", "QD1", "QD4C", "QD0",
-    "Q10C", "Q1E", "Q41D", "Q1", "Q10",
-    "Q4", "Q4E", "Q04D", "Q41", "Q140",
-    "0C", "Q0DE", "Q01D", "Q01", "Q04",
-    "1CE", "1C", "1C4Q", "1C40", "1C0",
-    "1EC", "14ED", "1EQ", "1E", "C1E0",
-    "10DC", "1D4E", "1DQ", "Q1D4", "1D0",
-    "1QC", "1Q4E", "1QD", "01Q4", "1Q0",
-    "14CQ", "14CE", "14D", "14Q", "140",
-    "10C1", "140E", "10D", "C10Q", "104",
-    "4CE", "4CQD", "4CQ", "4C", "4DC0",
-    "4EC", "4E0D", "41EQ", "4E1", "4E0",
-    "41DC", "4D0E", "4DQ", "14D1", "4D0",
-    "4QC", "4Q0E", "4QD", "4QD1", "4Q0",
-    "41DC", "4Q1E", "1D", "41Q", "410",
-    "40C", "40E1", "40", "D40Q", "401",
-    "0CQE", "0C", "0CQ", "04C1", "0C4",
-    "0C", "0ED", "0E4Q", "0E01", "0E4",
-    "04DC", "0DE", "10DQ", "D1", "0D4",
-    "0QC", "10QE", "0QD", "0Q", "40Q4",
-    "041C", "01E", "01DD", "01Q", "C014",
-    "04C", "04", "04DC", "04Q", "0Q41"
+    "CED", "CQ0", "CE1", "CD4", "CE0",
+    "CDE", "CDQ", "CD1", "CD4", "C0",
+    "CQ", "QC4", "CQ1", "CQ", "Q0",
+    "CE", "QD", "C1", "CQ0", "CD0",
+    "CE", "DQ", "CE", "EC", "CD",
+    "ED", "C0", "Q4", "C0", "Q4",
+    "CD", "CQ", "ED", "EC", "EC0",
+    "ED", "EC", "D1", "Q4", "ED0",
+    "EC", "EQ4", "EQ", "QE", "EQ",
+    "EC4", "D1", "D4", "C4", "E0",
+    "EC", "E4", "Q4", "C4", "D0",
+    "C0", "E0", "DEQ", "E0", "EC",
+    "DC", "DCQ", "D1", "CDQ", "DC",
+    "DE", "DQ", "DE", "E4", "Q0",
+    "DQC", "DQE", "D1", "DQ4", "DQ0",
+    "D1", "D0", "DQ", "EQ", "D1",
+    "D4", "QD", "DC4", "D4",
      ];
 
      loopCount = 1

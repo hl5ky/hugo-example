@@ -1097,66 +1097,74 @@ function getRepeatCount() {
 SubMenu1.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
     var repeatedWORDS = [];
-    var addedWORDS = [];
+    var addedWORDS = ["H","H","H","H","H","Z","Z","Z","Z","Z","H","H","H","Z","Z","Z","H","H","Z","Z"];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "HZ"
+    "H Z"
     ];
 
-    loopCount = 50
+    loopCount = 26
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 27
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
     //+ "                                                                                                         \n"
     //+ "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
+    //+ "\n"
     );
 }
 
 
-var ELEMENTS = ["A","C","D","E","H","H","H","I","K","M","N","L","L","Q","R","S","T","X","Z","Z","Z",
-"1","2","3","4","5","6","7","8","8","9","0"];
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-    return ELEMENTS[j];
-}
-}
-
-SubMenu2.onclick = function() {    
+SubMenu2.onclick = function() {
     stop.click();
-    //var ELEMENTS = "ABCDE";
-    var practice_elements = [];
+    var ELEMENTS = [];    
 
-   loopCount = 32
-    for (var i = 0; i < loopCount; i++) {
-        var len = Math.floor(Math.random() > 0.5 ? ((Math.random() * 3 + 2)) : 3); // 4+4->2~5  3+2->2~4   2+2->2~3  0+3->3
-        ELEMENTS.sort(() => Math.random() - 0.5); shuffle(ELEMENTS);
-        var element = ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
-        for (var j = 1; j < len; j++)
-        element += ELEMENTS[Math.floor(Math.random() * ELEMENTS.length)];
-        practice_elements.push(element);
-    }
-    doc.setValue(practice_elements.join(" "));
+    var ALPHABET = "ACDEHIKLMNQRSTXZLHZHZ";
+    var NUMBERS = "1234567890"
+
+	var word_count = 100;
+    for (var i = 0; i < word_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() * 3 + 2)) : 3);
+        var word = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    	for (var j = 1; j < length; j++) {
+        	word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    	}
+		word += " "
+		ELEMENTS.push(word); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
+
+	var number_count = 50;
+    for (var i = 0; i < number_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *2 + 2)) : 2);
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    	for (var j = 1; j < length; j++) {
+        	number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    	}
+    	number += " "
+		ELEMENTS.push(number); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
+
+    ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+
+    FinalSliceNumber = 32
+    ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
+    doc.setValue(ELEMENTS.join(""));
 }
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "DAN", "STAN", "KIM"];
+    var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "DAN", "STAN", "KIM",
+                 "KEN", "MARK", "LEE", "LIM", "AHN", "HAN", "SHIN", "HIDE", "CHRIS", "HANS"];
     var RSTS = ["559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
     var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03"];
 
@@ -1207,7 +1215,7 @@ SubMenu4.onclick = function() {
 
         var cqs = [];
     var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
-    var cq = "CQ DX DE " + callsign + "<AR>";
+    var cq = "CQ DX DE " + callsign + " <AR>";
     cqs.push(cq);
     loopCount = 7    
     for (var n = 0; n < loopCount; n++) {
@@ -1216,7 +1224,7 @@ SubMenu4.onclick = function() {
         var cq = (Math.random() > 0.5 ? "CQ DX DE " : "") + callsign;
 
         if (cq.startsWith("CQ")) {
-            cq += " " + " <AR>";
+            cq += " " + "<AR>";
         }else {
             var HL_callsign = HL_CALLSIGNS[Math.floor(Math.random() * HL_CALLSIGNS.length)];
             cq = HL_callsign + " DE " + callsign + " K";

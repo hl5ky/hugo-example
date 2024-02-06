@@ -1246,19 +1246,29 @@ SubMenu5.onclick = function() {
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
+    1,2,4,5,6,0
+
+    56
+    2
+
     var WORDS = [
-    "2A", "E2AR", "K2R", "E2", "QA5R",
-    "A5", "2ER", "ER2", "QK2", "C5R6",
-    "E2", "C6R2", "E4R", "QA2", "4KA",
-    "R5", "AEKR", "E5Q", "ARK", "E4C",
-    "R2C", "AQ", "RE2R", "E6R", "54R",
-    "6C", "K50A", "6KA", "R5D", "E4A",
-    "RAC", "Q0A", "DR2", "2REK", "RA",
-    "5RA", "6CR", "Q2ER", "AR", "65K",
-    "A2", "E2KA", "2RA", "4AD", "R2A",
-    "6DA", "DEQR", "EK", "2QR", "4D5",
-    "KA4", "R2", "E56", "CK4", "EKR2"
-     ];
+    "AR", "EAR", "KR", "ER", "QAR",
+    "12", "56", "25", "26", "15",
+    "CA", "ER", "ER", "QEK", "CKR",
+    "RE", "CR", "ER", "QA", "KA",
+    "46", "45", "02", "52", "62",    
+    "DR", "AEKR", "EQ", "ARK", "EC",
+    "RC", "AQ", "RER", "ER", "CR",
+    "21", "42", "02", "20", "62",     
+    "CE", "KD", "KA", "RD", "EA",
+    "RAC", "QA", "DR", "REK", "RA",
+    "52", "20", "42", "45", "46",    
+    "RA", "CR", "QER", "AKR", "CK",
+    "AK", "EKA", "RA", "AD", "RA",
+    "DA", "DEQR", "EK", "QR", "RD",
+    "KAE", "R", "E5", "CK", "EKR",
+    "16", "25", "40", "16", "54"
+    ];
 
      loopCount = 1
     for (var n = 0; n < loopCount; n++) {
@@ -1271,7 +1281,7 @@ SubMenu5.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 32
+    FinalSliceNumber = 34
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }

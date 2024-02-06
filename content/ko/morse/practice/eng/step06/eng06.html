@@ -1101,23 +1101,49 @@ SubMenu1.onclick = function() {
 
     var slicedWORDS = [];
     var repeatedWORDS = [];
-    var addedWORDS = [];
+    var addedWORDS = ["L", "L", "L", "L", "L", "L", "L", "L", "L", "L", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?" ];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "IS9"
+    "L ?"
     ];
 
-    loopCount = 25
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 20
+    FinalSliceNumber = 30
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
+    + "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ ""
+    );
+}
+
+SubMenu1.onclick = function() {
+    stop.click();
+
+    var repeatedWORDS = [];
+    var addedWORDS = ["I","I","I","I","I","S","S","S","S","S","9","9","9","9","9","I","I","S","S","9","9"];
+    repeatCount = getRepeatCount();
+
+    var WORDS = [
+    "I S 9"
+    ];
+
+    loopCount = 18
+    for (var n = 0; n < loopCount; n++) {
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    doc.setValue(addedWORDS.join(" ")
     + "\n" 
     + "                                                                                                         \n"
     + "\n"     
@@ -1166,16 +1192,26 @@ SubMenu3.onclick = function() {
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "E2R", "IKA", "2SK", "E5R", "I9R",
-    "IR2", "ISQ", "IS", "IAS9", "A2S",
-    "RES", "RI9", "AS2K", "9I", "EKA",
-    "9AI", "S9QI", "S9", "IRA", "A9R",
-    "9RS", "EA9", "294I", "92", "2S6",
-    "ES2", "IAR", "4S", "KAS9", "SER",
-    "IA2", "SQS", "EA9S", "KE", "2SA",
-    "RSI", "9RS", "QK", "SK9A", "IER",
-    "I9A", "RSI9", "S9", "S9I", "IA6",
-    "9SI", "E9S", "29A", "9R4", "E2R"
+    "ER", "IKAE", "SK", "ER", "IR",
+    "IR", "ISQ", "IS", "IAS", "AI",
+    "26", "29", "16", "15", "42", "41",
+    "RES", "RI", "ASKC", "SI", "EKA",
+    "AI", "SQI", "SQID", "IRA", "AR",
+    "RS", "EASD", "IK", "92", "25", "KQS",
+    "ES", "IAR", "CSK", "KAS", "SERI",
+    "01", "54", "59", "14", "61", "94",
+    "IA", "SQSR", "EA", "KE", "SA",
+    "RSI", "RS", "QK", "SKA", "IER",
+    "95", "96", "46", "29", "92", "94",
+    "IA", "RSIC", "ESR", "SI", "IAS",
+    "SI", "ES", "ARI", "CRI", "RE",
+    "45", "69", "12", "90", "65", "52",
+    "DIS", "ACS", "ISD", "RSEI", "KIQD",
+    "ESC", "CIA", "AKI", "RAC", "SDA",
+    "QSA", "QDI", "KASI", "ESC", "DIAS",
+    "QIE", "RDS", "IDS", "QCD", "CKS",
+     "49", "59", "69", "19", "90",
+     "QAS", "DQI", "KSAI", "ECS", "IDAS",     
      ];
 
     loopCount = 1
@@ -1189,7 +1225,7 @@ SubMenu3.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 33
+    FinalSliceNumber = 36
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }

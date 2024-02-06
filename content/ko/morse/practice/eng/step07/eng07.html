@@ -1094,77 +1094,77 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    return ELEMENTS[j];
+}
+}
+
 SubMenu1.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
     var repeatedWORDS = [];
-    var addedWORDS = [];
+    var addedWORDS = ["T","T","T","T","T","3","3","3","3","3","7","7","7","7","7","T","T","3","3","7","7"];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "T37"
+    "T 3 7"
     ];
 
-    loopCount = 25
+    loopCount = 18
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 18
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
     //+ "                                                                                                         \n"
     //+ "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
+    //+ "\n"
     );
 }
 
-
 SubMenu2.onclick = function() {
     stop.click();
+    var ELEMENTS = [];    
 
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
+    var ALPHABET = "ACDEIKQRSTT";
+    var NUMBERS = "12345679037"
 
-    var WORDS = [
-    "T23", "S7I", "3TR", "79S", "A7T",
-    "ET9", "T7C", "3CS", "E3", "R7S",
-    "3TR", "KAT", "7EI3", "3S", "K3T",
-    "SIT", "SEI", "57", "9I3T", "S7E",
-    "DC3", "C3IQ", "E3T", "T7", "73S",
-    "T2S", "EI3", "39R", "7ST", "R3T",
-    "7T9", "E3C", "7S", "QT79", "SD3",
-    "37T", "E6T9", "53", "7TQ", "793",
-    "ST7", "SEI", "63T", "247", "E7T",
-    "ES3", "7T", "9TC3", "ITE", "3IR",
-    "79A", "S43T", "3R", "ETR", "K3C",
-    "3ST", "K97", "TI7", "E63T", "5T",
-    "723", "7TR", "S93", "ST7", "S7I",
-    "2ET", "3R7", "S7CT", "Q3", "D7E",
-    "5T3", "ST7", "EAR", "7TR", "S2T"
-     ];
+	var word_count = 100;
+    for (var i = 0; i < word_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() * 3 + 2)) : 3);
+        var word = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    	for (var j = 1; j < length; j++) {
+        	word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    	}
+		word += " "
+		ELEMENTS.push(word); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
 
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
+	var number_count = 50;
+    for (var i = 0; i < number_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *2 + 2)) : 2);
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    	for (var j = 1; j < length; j++) {
+        	number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    	}
+    	number += " "
+		ELEMENTS.push(number); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
+
+    ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
 
     FinalSliceNumber = 32
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
+    ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
+    doc.setValue(ELEMENTS.join(""));
 }
 
 SubMenu3.onclick = function() {
