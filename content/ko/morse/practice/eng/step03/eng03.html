@@ -1101,33 +1101,24 @@ function getRepeatCount() {
 SubMenu1.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
     var repeatedWORDS = [];
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "11", "111", "1111", "11111",
+    "1"
     ];
 
-    loopCount = 5
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 12
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
+    doc.setValue(addedWORDS.join(" ")
     //+ "\n" 
     //+ "                                                                                                         \n"
-    //+ "\n"     
-    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ "-----------------------------------------------------------------------------------------------------------\n"
     //+ "\n"
     );
 }
@@ -1135,68 +1126,50 @@ SubMenu1.onclick = function() {
 SubMenu2.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
     var repeatedWORDS = [];
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "44", "444", "4444", "44444",
+    "4"
     ];
 
-    loopCount = 5
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 14
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
     //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-      
+    //+ "-----------------------------------------------------------------------------------------------------------\n"
+    //+ "\n"
     );
 }
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var slicedWORDS = [];
     var repeatedWORDS = [];
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
     var WORDS = [
-    "00", "000", "0000", "00000",
+    "0"
     ];
 
-    loopCount = 5
+    loopCount = 50
     for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
         for (repeatedWORDS of WORDS)
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 11
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
     //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-      
+    //+ "-----------------------------------------------------------------------------------------------------------\n"
+    //+ "\n"
     );
 }
 
@@ -1216,7 +1189,7 @@ SubMenu4.onclick = function() {
     "QD", "Q1", "Q4", "Q0"
     ];
 
-    loopCount = 1
+    loopCount = 2
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         WORDS.sort(() => Math.random() - 0.5);
@@ -1227,7 +1200,7 @@ SubMenu4.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 47
+    FinalSliceNumber = 38
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" ")
     + "\n" 
@@ -1277,7 +1250,7 @@ SubMenu5.onclick = function() {
         addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
 
-    FinalSliceNumber = 29
+    FinalSliceNumber = 34
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
 }
