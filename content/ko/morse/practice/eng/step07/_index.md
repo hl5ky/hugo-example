@@ -17,3 +17,17 @@ weight: 70
 ProSign : &lt;AR&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step07/eng07.html" title="영문 7단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- QRA : Q부호. 무선국명. 아마추어무선에서 '이름'이라는 뜻으로 사용하기도 함.
+- QRT : Q부호. 송신 중단.
+- RST : 신호리포트. Readability/Strength/Tone (해독도/강도/음색)
+- TKS : Thanks의 약자. 감사. TNX를 사용하기도 함.
+- 73 : Best regards. 교신의 마지막에 하는 인사. 주로 남자무선사가 사용함.
+- &lt;SK&gt; : 교신종료. &lt;VA&gt;로 표기하기도 하며 같은 뜻임.
+- E : Bye. 안녕. 보통 두 번 송신하는 경우가 많음. 마지막에 한 번씩 더 송신하여 아쉬움을 표현하기도 함.

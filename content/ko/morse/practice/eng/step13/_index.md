@@ -18,3 +18,24 @@ weight: 130
 ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step13/eng13.html" title="영문 13단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- QTH : Q부호. 위치.
+- QSB : Q부호. 페이딩.
+- QSL : Q부호. 수신을 확인하다의 뜻으로, 교신 후에 교환하는 QSL카드를 의미함.
+- OP : Operator의 약어. 운용자. 운용자의 이름을 말할 때, 'NAME IS'를 'OP IS'라고 하기도 함.
+- TEMP : Temerature의 약어. 온도.
+- C : Centigrade 또는 Celsius의 약어. 섭씨 온도.
+- ABT : About의 약어. 약.
+- PSE : Please의 약어.
+- RPRT : Report의 약어. 상대가 나에게 보낸 리포트.
+- DP : Dipole의 약어. 다이폴 안테나.
+- LOOP : LOOP 안테나.
+- HEXBEAM : 헥사빔 안테나.
+
+

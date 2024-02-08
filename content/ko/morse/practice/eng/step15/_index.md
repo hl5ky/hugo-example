@@ -18,3 +18,15 @@ weight: 150
 ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step15/eng15.html" title="영문 15단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- MINUS : 마이너스.
+- HPE CUAGN : Hope to see you again의 약어. 다시 만나기 바랍니다.
+- TU - Thank you (for the QSO). 교신에 감사하다는 뜻으로 교신의 마지막에 주로 사용함.<br>
+  교신에 대해서 감사하다는 뜻이 내포되어 있으므로 'TU QSO' 라고 하지 않고 그냥 TU 만 송신함.
+

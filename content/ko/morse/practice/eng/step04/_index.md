@@ -17,22 +17,15 @@ weight: 40
 
 {{% /pageinfo %}}
 
+<br>
 
-
-아래를 클릭하면 새로운 창에서 연습프로그램이 열립니다.
-
-
-
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step04/eng04.html" title="영문 4단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
 
-## 연습 방법 및 해설
-<br>
-
-### 호출부호+의 연습
-- '6K5'의 호출부호 연습을 시작합니다.
-- 'CQ DE 호출부호 K'의 패턴 연습합니다.<br>
-- K : over라는 뜻으로 송신이 끝났음을 알림. CQ를 마지막에 사용.<br>
-  (CQ를 낼 때는 &lt;AR&gt;로 끝나야 한다는 의견도 있으나 K의 사용도 큰 문제 없음)
+▷ <b><span style="font-size:130%">약어</span></b>
+- 'CQ DE 호출부호 K'의 형식에서 K : over라는 뜻으로 송신이 끝났음을 알림.<br>
+  CQ를 낸 다음 마지막에 송신이 끝났음을 알림.<br>
+  (참고: CQ를 낼 때는 &lt;AR&gt;로 끝나야 한다는 의견도 있으나 실제로 K의 사용도 많이 하고 있음)
 
 

@@ -1,6 +1,6 @@
 ---
-linkTitle: 영문 15단계
-title: 영문 15단계 연습
+linkTitle: 영문 16단계
+title: 영문 16단계 연습
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
@@ -17,4 +17,14 @@ weight: 160
 문장부호 : < . 마침표>, < , 쉼표>, < ? 물음표>, < / 빗금><br>
 ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
+
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step16/eng16.html" title="영문 16단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- FER : For의 간단약어. FOR라고 송신하여도 됨. 'TNX FER QSO'등의 형식으로 사용함.
+- BURO : Bureau의 약어. 단체. 'PSE QSL VIA BURO'라고 하면, QSL카드를 협회를 통하여 보내 달라는 뜻임.
 

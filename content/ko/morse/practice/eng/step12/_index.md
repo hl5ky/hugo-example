@@ -18,3 +18,12 @@ weight: 120
 ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step12/eng12.html" title="영문 12단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- QTH : Q부호. 위치.
+

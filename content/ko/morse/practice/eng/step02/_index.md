@@ -15,14 +15,6 @@ weight: 20
 
 {{% /pageinfo %}}
 
-
-아래를 클릭하면 새로운 창에서 연습프로그램이 열립니다.
-
-
-
-
 <br>
 
-## 연습 방법 및 해설
-<br>
-- 1단계와 같은 방법으로 연습합니다.
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step02/eng02.html" title="영문 2단계 연습 프로그램" >}} 새창에서 열기</span></b>

@@ -17,21 +17,13 @@ weight: 30
 
 {{% /pageinfo %}}
 
+<br>
 
-
-아래를 클릭하면 새로운 창에서 연습프로그램이 열립니다.
-
-
-
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step03/eng03.html" title="영문 3단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
 
-## 연습 방법 및 해설
-<br>
-
-### 호출부호+의 연습
-- 호출부호는 임의로 만든 호출부호입니다.
-- 'CQ DE'는 굳이 적지 않아도 됩니다.<br>
+▷ <b><span style="font-size:130%">약어</span></b>
 - DE : This is 의 약어. "여기는"이라는 뜻.<br>
 
 

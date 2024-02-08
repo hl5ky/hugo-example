@@ -17,3 +17,17 @@ weight: 60
 ProSign : &lt;AR&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
+<br>
+
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step06/eng06.html" title="영문 6단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">약어/용어</span></b>
+- DR : Dear의 약자. '친애하는'의 뜻임. 'DR KIM'등으로 이름의 앞에 사용함.
+- &lt;SK&gt; : 교신종료. &lt;VA&gt;로 표기하기도 하며 같은 뜻임.
+
+
+
+
+

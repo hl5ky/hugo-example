@@ -17,15 +17,16 @@ weight: 50
 ProSign : &lt;AR&gt;
 {{% /pageinfo %}}
 
-### {{< newtabref href="/morse/practice/eng/step05/eng05.html" title="영문 5단계 연습 프로그램" >}} 새창에서 열기
+<br>
 
-## 5단계 연습 방법 및 해설
-### - 부호  &lt;AR&gt;의 연습
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step05/eng05.html" title="영문 5단계 연습 프로그램" >}} 새창에서 열기</span></b>
+
+<br>
+
+▷ <b><span style="font-size:130%">[부호  &lt;AR&gt;]의 설명</span></b>
 - A와 R을 붙여서 송신합니다.
 - 이런 부호를 프로사인(ProSign)이라고 합니다.
 - 적을 때는, AR 위에 선을 그어서 표시합니다.
-- 실제 교신에서는 프로사인을 적을 필요는 없으며, 연습할 때도 굳이 적지 않아도 됩니다.
+- &lt;AR&gt; : end of message. 송신의 끝을 나타냄. 'CQ DE 호출부호 &lt;AR&gt;'의 형식으로 사용함.
+- 실제 교신에서는 프로사인을 적을 필요가 없으며, 연습할 때도 굳이 적지 않아도 됩니다.
 
-### - 호출부호+의 연습
-- "CQ DE 호출부호 K" 또는 "CQ DE 호출부호 &lt;AR&gt;"의 연습.
-- &lt;AR&gt; : end of message 송신의 끝을 나타냄.
