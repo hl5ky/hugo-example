@@ -27,4 +27,10 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - FER : For의 간단약어. FOR라고 송신하여도 됨. 'TNX FER QSO'등의 형식으로 사용함.
 - BURO : Bureau의 약어. 단체. 'PSE QSL VIA BURO'라고 하면, QSL카드를 협회를 통하여 보내 달라는 뜻임.
+<br><br>
 
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- F : 프랑스.
+- VE : 캐나다.
+- VK : 호주.
+- VU : 인도.

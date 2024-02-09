@@ -1155,7 +1155,7 @@ SubMenu2.onclick = function() {
     //ELEMENTS.sort(() => Math.random() - 0.5);
     //ELEMENTS.sort(() => Math.random() - 0.5);
 
-    FinalSliceNumber = 33
+    FinalSliceNumber = 38
     ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
     doc.setValue(ELEMENTS.join(""));
 }
@@ -1208,7 +1208,7 @@ var phrases = ["QRZ? ", "TNX RPRT ", "GM ", "GA ", "GE ", "GB " ];
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);     
 
-    FinalSliceNumber = 12
+    FinalSliceNumber = 15
     phrases = phrases.slice(0, FinalSliceNumber);
 
     doc.setValue(phrases.join(" ")
@@ -1240,7 +1240,7 @@ SubMenu4.onclick = function() {
     var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
     var cq = "CQ DE " + callsign + " PSE K";
     cqs.push(cq);
-    loopCount = 6    
+    loopCount = 7    
     for (var n = 0; n < loopCount; n++) {
         var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
         //var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];

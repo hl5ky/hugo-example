@@ -33,3 +33,10 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - ES : And의 약어.
 - KDN : 한국아마추어무선연맹에서 정한 지역 번호. Korean District Number.
 - 88 : Love and kisses. 교신의 마지막에 하는 인사. 주로 여자무선사가 사용함.
+<br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- 3D2 : 피지.
+- JA, JE, JI, JK, JM, JN, JQ, JR, JS : 일본.
+- JT : 몽골리아.
+- N : 미국.

@@ -26,3 +26,11 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - QRZ : Q부호. 누가 나를 호출합니까. 보통 뒤에 ?를 함께 사용함. QRZ?
+<br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- HL, 6L : 한국.
+- HA : 헝가리.
+- HS : 타일랜드.
+- ZL : 뉴질랜드.
+- ZS : 남아프리카공화국.

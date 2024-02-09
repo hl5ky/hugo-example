@@ -29,4 +29,8 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 - HPE CUAGN : Hope to see you again의 약어. 다시 만나기 바랍니다.
 - TU - Thank you (for the QSO). 교신에 감사하다는 뜻으로 교신의 마지막에 주로 사용함.<br>
   교신에 대해서 감사하다는 뜻이 내포되어 있으므로 'TU QSO' 라고 하지 않고 그냥 TU 만 송신함.
+<br><br>
 
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- DU : 필리핀.
+- W로 시작하는 WA, WB, WC, WD는 전부 미국.

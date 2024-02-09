@@ -29,4 +29,7 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 - RIG : 무전기, 장비.
 - AGN : Again의 약어. 다시.
 - GM, GA, GE, GB : Good Morning, Good Afternoon, Good Evening, Good Bye.
+<br><br>
 
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- G : 영국. 2E0, M 도 영국.

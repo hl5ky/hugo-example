@@ -31,3 +31,14 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - 73 : Best regards. 교신의 마지막에 하는 인사. 주로 남자무선사가 사용함.
 - &lt;SK&gt; : 교신종료. &lt;VA&gt;로 표기하기도 하며 같은 뜻임.
 - E : Bye. 안녕. 보통 두 번 송신하는 경우가 많음. 마지막에 한 번씩 더 송신하여 아쉬움을 표현하기도 함.
+<br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- CT : 포르투칼.
+- DS : 한국.
+- EA : 스페인.
+- I, IT : 이태리.
+- K로 시작하는 KA, KC, KD, KE, KI, KS, KT, KQ는 전부 미국.
+- R로 시작하는 R, RA, RC, RD, RT는 전부 러시아.
+- TA : 튀르키예 (터키)
+

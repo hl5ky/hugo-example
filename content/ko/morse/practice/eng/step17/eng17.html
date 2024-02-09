@@ -1155,7 +1155,7 @@ SubMenu2.onclick = function() {
     //ELEMENTS.sort(() => Math.random() - 0.5);
     //ELEMENTS.sort(() => Math.random() - 0.5);
 
-    FinalSliceNumber = 34
+    FinalSliceNumber = 44
     ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
     doc.setValue(ELEMENTS.join(""));
 }
@@ -1214,7 +1214,7 @@ var phrases = ["QRZ? ", "TNX FER QSO ", "TNX FER RPRT ", "GM ", "QSY UP3 ", "QSY
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);     
 
-    FinalSliceNumber = 12
+    FinalSliceNumber = 16
     phrases = phrases.slice(0, FinalSliceNumber);
 
     doc.setValue(phrases.join(" ")
@@ -1246,7 +1246,7 @@ SubMenu4.onclick = function() {
     var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
     var cq = "CQ DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + " PSE K";
     cqs.push(cq);
-    loopCount = 3    
+    loopCount = 4    
     for (var n = 0; n < loopCount; n++) {
         var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
         //var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
@@ -1328,7 +1328,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ"];
+    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD","VU"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1356,9 +1356,9 @@ function generateASIACallsigns(count, repeatCount) {
 
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","G","HA","I","IT",
+    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","F","G","HA","I","IT",
     "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","PY","R","RA","RC","RD","RT",
-    "SM","SM","SP","TA","VE","VK","VU","W","WA","WB","XE","YB","YC","YD","YU","ZS","ZL"];
+    "SM","SM","SP","TA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {

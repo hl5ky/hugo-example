@@ -1,5 +1,5 @@
 ---
-linkTitle: 송신연습은
+linkTitle: 송신연습관련
 title: 송신 연습시 고려할 내용
 # description: 
 type: docs

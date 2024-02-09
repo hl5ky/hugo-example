@@ -25,5 +25,9 @@ weight: 30
 
 ▷ <b><span style="font-size:130%">약어</span></b>
 - DE : This is 의 약어. "여기는"이라는 뜻.<br>
+<br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- 3단계에서의 프리픽스는 대부분 임의로 만든 것임.
 
 

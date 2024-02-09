@@ -28,5 +28,14 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - QRX : Q부호. 기다리시오. 기다리겠다.
 - ES : And의 약어. 두 문장의 중간에 사용하는 경우가 많음.
 - DX : Distance의 약자로 원거리 또는 원거리교신을 뜻함.
+<br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- 4X4 : 이스라엘.
+- 8N : 일본.
+- CX : 우루구아이.
+- DK : 독일.
+- XE : 멕시코.
+- XX9 : 마카오.
 
 

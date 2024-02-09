@@ -26,4 +26,9 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - QTH : Q부호. 위치.
+<br><br>
 
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- 7J, 8J : 일본.
+- OH : 핀란드.
+- OK : 체코공화국.

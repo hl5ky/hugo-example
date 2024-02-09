@@ -25,7 +25,12 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 <br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
+- WX : Weather의 약어. 날씨.
 - QSY : Q부호. 이동. 주로 주파수의 변경이란 뜻으로 사용.
 - DN : Down의 약어. 'QSY DN2'라고 하면, 2kHz 아래쪽 주파수로 이동하자는 뜻임.
-- WX : Weather의 약어. 날씨.
- 
+ <br><br>
+
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- PY : 브라질.
+- YB, YC, YD : 인도네시아.
+- YU : 세르비아 (구.유고슬라비아)

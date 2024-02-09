@@ -30,7 +30,7 @@ title: Amateur Radio
 {{% /blocks/feature %}}
 
 <!-- 전등아이콘 fa-lightbulb-->
-{{% blocks/feature icon="fa-solid fa-ear-listen" title="CW 연습" url="https://github.com/google/docsy" %}}
+{{% blocks/feature icon="fa-solid fa-ear-listen" title="CW 연습" url="/morse/" %}}
 코흐법은 전신 학습을 위해 개발한 과학적인 학습법이다. 이것을 개량한 QSO 코흐법으로 효과적인 전신 학습을 할 수 있으며, 약 700여개의 녹음 파일로 연습이 가능하다.
 {{% /blocks/feature %}}
 

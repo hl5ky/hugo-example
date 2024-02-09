@@ -37,5 +37,8 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 - DP : Dipole의 약어. 다이폴 안테나.
 - LOOP : LOOP 안테나.
 - HEXBEAM : 헥사빔 안테나.
+<br><br>
 
-
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- BA, BD, BT, BZ : 중국.
+- SP : 폴란드.
