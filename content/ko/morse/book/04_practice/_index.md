@@ -5,7 +5,7 @@ title: 연습 방법
 type: docs
 # icon: fa-solid fa-angle-down
 # icon: fa-solid fa-asterisk
-weight: 40
+weight: 50
 ---
 
 {{% pageinfo %}}
