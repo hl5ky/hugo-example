@@ -20,7 +20,7 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 
 <br>
 
-<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step40/eng14.html" title="영문 14단계 연습 프로그램" >}} 새창에서 열기</span></b>
+<b><span style="font-size:130%">{{< newtabref href="/morse/practice/eng/step14/eng14.html" title="영문 14단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
 

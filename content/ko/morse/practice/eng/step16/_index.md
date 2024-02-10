@@ -30,6 +30,7 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 <br><br>
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+- BV : 대만.
 - F : 프랑스.
 - VE : 캐나다.
 - VK : 호주.
