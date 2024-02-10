@@ -25,6 +25,7 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 <br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
+- &lt;BT&gt; : Start new section of message. 새로운 문장의 시작. 문장과 문장을 이어주는 역할도 함.
 - QTH : Q부호. 위치.
 - QSB : Q부호. 페이딩.
 - QSL : Q부호. 수신을 확인하다의 뜻으로, 교신 후에 교환하는 QSL카드를 의미함.
