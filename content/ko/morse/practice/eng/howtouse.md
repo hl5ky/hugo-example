@@ -24,18 +24,18 @@ weight: 5
 {{< newtabref href="/morse/practice/eng/step06/eng06.html" title="영문 6단계 연습 프로그램" >}}을 열고 5개의 메뉴를 여러 번 눌러본 다음, 설명을 보면 이해가 쉽습니다. (새로운 창에서 열림)
 <br><br>
 
-▷ <b><span style="font-size:130%">기본 사용 방법</span></b>
+▶ <b><span style="font-size:130%">기본 사용 방법</span></b>
 
 <img src="/morse/img/menu_1.png" border="1" >
 <br><br>
 
 - 메뉴를 선택하면 아래쪽 창에 글자가 나타납니다.
 - PLAY를 누르면 시작됩니다.
-- 속도가 빠르면 속도와 간격을 조절하고 다시 PLAY 해야 합니다.
+- <u>속도와 간격을 조절하면 다시 PLAY 해야 합니다.</u>
 - [조합], [단어/문장], [호출부호] 메뉴는 누를 때마다 내용이 바뀝니다. 지금 눌러 보십시오.
 <br><br>
 
-▷ <b><span style="font-size:130%">[부호] 연습 방법</span></b>
+▶ <b><span style="font-size:130%">[부호] 연습 방법</span></b>
 
 <img src="/morse/img/menu_2.png" border="1" >
 <br><br>
@@ -48,7 +48,7 @@ weight: 5
 - 1회에 대략 2~3분 정도의 시간이 걸립니다. 최소 2~3회 듣습니다. 익숙해지지 않으면 더 듣습니다.
 <br><br>
 
-▷ <b><span style="font-size:130%">[조합] 연습 방법</span></b>
+▶ <b><span style="font-size:130%">[조합] 연습 방법</span></b>
 
 <img src="/morse/img/menu_3.png" border="1" >
 <br><br>
@@ -65,7 +65,7 @@ weight: 5
 - 숫자를 셀 필요없이 대략 90% 정도면 됩니다.
 <br><br>
 
-▷ <b><span style="font-size:130%">[단어/문장] 연습 방법</span></b>
+▶ <b><span style="font-size:130%">[단어/문장] 연습 방법</span></b>
 
 <img src="/morse/img/menu_4.png" border="1" >
 <br><br>
@@ -80,7 +80,7 @@ weight: 5
 - 목표속도로, 세 차례를 연속해서 90% 이상 수신이 되면, [호출부호+]로 진행합니다.
 <br><br>
 
-▷ <b><span style="font-size:130%">[호출부호+] 연습 방법</span></b>
+▶ <b><span style="font-size:130%">[호출부호+] 연습 방법</span></b>
 
 <img src="/morse/img/menu_5.png" border="1" >
 <br><br>
