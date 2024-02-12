@@ -4,10 +4,12 @@ title: 송신 연습 방법
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
-weight: 20
+weight: 60
 ---
 
 {{% pageinfo %}}
 2024년 1월 25일 작성<br>
 글. HL5KY.
 {{% /pageinfo %}}
+
+
