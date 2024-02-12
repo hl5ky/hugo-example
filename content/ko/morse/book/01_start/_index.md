@@ -1,6 +1,6 @@
 ---
 linkTitle: 시작하기
-title: 학습에 앞서...
+title: 전신을 시작하기 위한 기본 내용
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
