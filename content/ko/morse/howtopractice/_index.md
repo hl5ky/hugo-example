@@ -22,16 +22,18 @@ weight: 5
 1. 전신 학습 안내서 읽기
 
 2. {{< newtabref href="/morse/practice/eng" title="부호연습(QSO코흐법)영문" >}}의 연습. 부호를 외울 필요는 없습니다.<br>
-   (전신학습안내서-수신연습관련-{{< newtabref href="/morse/book/01_start/02_memorize/" title="부호의암기" >}}. 참조)
+   (전신학습안내서-수신연습관련-{{< newtabref href="/morse/book/01_start/02_memorize/" title="부호의암기" >}} 참조)
 
-3. QSO코흐법.영문의 4~13단계 정도에서 송신 연습 시작.
+3. QSO코흐법.영문의 4~13단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/tx_practice" title="송신연습방법" >}} 참조)
 
 4. QSO코흐법.영문의 10단계 정도에서 수신기로 전신 밴드 수신 시작.
 
 5. QSO코흐법.영문 17단계를 모두 마친 후에 <실제 교신 연습>의 {{< newtabref href="/morse/qso/eng_1" title="영문 예문 1" >}}, {{< newtabref href="/morse/qso/eng_2" title="영문 예문 2" >}} 연습.<br>
    (여러 번 반복 수신하여 외울 정도가 되면 더욱 좋습니다)
 
-6. 토, 일요일에 HL0CW, DS0AHQ에서 진행하는 스케쥴 교신의 수신 및 참여.
+6. 영문 예문의 송신 연습.
+
+7. 토, 일요일에 HL0CW, DS0AHQ에서 진행하는 스케쥴 교신의 수신 및 참여.
 
    (4, 5, 6 과정은 상황에 따라 순서를 변경/혼합해도 됩니다)
 <br><br>
