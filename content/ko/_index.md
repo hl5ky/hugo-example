@@ -16,6 +16,14 @@ title: Amateur Radio
 
 {{% blocks/lead color="primary" %}}
 
+<div style="text-align: left;">
+  <a href="https://hits.seeyoufarm.com">
+    <img
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhl5ky.github.io&count_bg=%230DC276&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=+%EB%B0%A9%EB%AC%B8%EC%9E%90+%EC%88%98+&edge_flat=false"
+    />
+  </a>
+</div>
+
 아마추어무선을 통한 전세계와의 우정, QSO 코흐법을 이용한 전신 학습<br>
 
 디지털통신(DMR, DSTAR)에 대한 안내, 실제 교신 녹음과 해설.
@@ -30,7 +38,7 @@ title: Amateur Radio
 {{% /blocks/feature %}}
 
 <!-- 전등아이콘 fa-lightbulb-->
-{{% blocks/feature icon="fa-solid fa-ear-listen" title="CW 연습" url="/morse/" %}}
+{{% blocks/feature icon="fa-solid fa-ear-listen" title="CW 연습" url="/morse" %}}
 코흐법은 전신 학습을 위해 개발한 과학적인 학습법이다. 이것을 개량한 QSO 코흐법으로 효과적인 전신 학습을 할 수 있으며, 약 700여개의 녹음 파일로 연습이 가능하다.
 {{% /blocks/feature %}}
 
