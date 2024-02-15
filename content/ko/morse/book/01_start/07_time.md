@@ -1,5 +1,5 @@
 ---
-linkTitle: 학습시간
+linkTitle: 학습시간및방법
 title: 얼마나 학습해야 하는가
 # description: 
 type: docs
