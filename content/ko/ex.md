@@ -2,6 +2,19 @@
 title: Example Page
 type: docs
 ---
+부호의 기준
+
+평문연습 파일
+
+English난에 영어로 변경
+
+일본어 추가
+
+교류활동 사진 추가
+
+햄과네트워크 정리
+
+
 
 {{< newtabref href="/morse/practice/eng/step01/eng01.html" title="eng01.html" >}}
 {{< newtabref href="/morse/practice/eng/step02/eng02.html" title="eng02.html" >}}

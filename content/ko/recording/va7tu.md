@@ -1,5 +1,5 @@
 ---
-linkTitle: YL과의 교신
+linkTitle: 캐나다 YL과의 교신
 title: VA7TU, 캐나다의 YL
 # description:
 type: docs

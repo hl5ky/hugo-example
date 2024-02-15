@@ -24,7 +24,8 @@ footer_about_disable = false
 -->
 {{% pageinfo %}}
 관리자에 대한 간단한 소개 및 에피소드.
-{{% /pageinfo %}} 
+{{% /pageinfo %}}
+
 
 
 
