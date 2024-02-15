@@ -51,7 +51,7 @@ weight: 30
 
 - <b><span style="color:red">한글의 기준은 1:3:5의 비율입니다.<br>
   (단점 : 장점/부호간격 : 음절및띄어쓰기 = 1 : 3 : 5)</span></b><br>
-- 한글은 음절 및 띄어쓰기는 단점 5개입니다.<br>
+- 한글의 음절 및 띄어쓰기는 단점 5개입니다.<br>
 
 <img src="/morse/img/dot_dash_kor_2.png" style="width:500px;height:256"><br><br>
 
