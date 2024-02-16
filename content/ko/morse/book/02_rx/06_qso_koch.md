@@ -10,6 +10,8 @@ weight: 60
 
 2023년 11월 5일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 ### 전통 학습 방법과 코흐법
 
@@ -38,5 +40,5 @@ weight: 60
 3. 아마추어 무선의 교신에 맞도록 변형한 것이어라서 'QSO 코흐법'이라는 이름을 붙였습니다.
 
 
-
+</div>
 

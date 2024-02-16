@@ -2,7 +2,8 @@
 title: Example Page
 type: docs
 ---
-부호의 기준
+
+한글 코흐법
 
 평문연습 파일
 

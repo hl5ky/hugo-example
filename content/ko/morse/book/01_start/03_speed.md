@@ -12,7 +12,7 @@ weight: 35
 
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 ### 1. CPM 또는 WPM
 
@@ -66,5 +66,5 @@ PARIS와 단어간격(7단점)을 하나의 단위라 하면, 한 단위에 포�
 
 PARIS 방식으로 송신하면 부호가 일정하게 들리지만 내용에 따라서 1분당 보내는 단어의 수가 약간씩 달라질 수 있습니다. 하지만 장시간 송신하면 평균은 PARIS방식의 속도에 수렴하게 된다고 합니다.
 
-
+</div>
 

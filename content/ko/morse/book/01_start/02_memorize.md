@@ -8,7 +8,7 @@ weight: 20
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 전신 학습을 시작할 때 가장 먼저 하는 것은 부호의 암기입니다. 저도 그렇게 했습니다. 그런데 부호를 굳이 암기할 필요는 없습니다.
 
@@ -30,4 +30,4 @@ weight: 20
 
 그리고 현실적으로 부호의 암기가 필요한 경우가 있습니다. 국내의 아마추어무선사 시험에서는 필기시험에 전신 부호의 장단점 표시를 묻는 문제가 있습니다. 이 시험을 준비해야 하는 경우에는 하는 수 없이 부호를 암기해야 합니다.
 
-
+</div>

@@ -8,6 +8,8 @@ weight: 30
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 영미권의 햄들이 전신을 배울 때 일반적으로 적용하는 방법으로, 부호와 부호 사이의 간격을 조절하여 학습 효과를 올리는 방법입니다.<br>
 
@@ -39,3 +41,7 @@ QSO코흐법을 연습하는 프로그램에서도 판쓰워쓰를 적용하여 
 > Farnsworth Method 에서 간격을 얼마로 하라는 지침은 없지만, Farnsworth Method 를 적용한 다른 자료를 보면, 제가 만든 자료보다는 간격이 더 넓습니다.
 >
 > 일반적인 Farnsworth Method 보다 부호간 간격을 짧게 만든 이유는, 실제 교신에서 느리게 송신을 하는 사람들이 Farnsworth 시간을 적용해서 송신하지 않기 때문입니다. 그래서 실제 교신과 Farnsworth Method 의 중간쯤으로 자료를 작성하였습니다.
+
+
+
+</div>

@@ -13,7 +13,7 @@ weight: 10
 
 <b>내용</b> : <u>전신 교신을 시작하기 위한 과정</u>.
 {{% /pageinfo %}}
-
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 
@@ -35,3 +35,6 @@ weight: 10
 
    (4, 5, 6 과정은 상황에 따라 순서를 변경/혼합해도 됩니다)
 <br><br>
+
+
+</div>

@@ -8,6 +8,8 @@ weight: 20
 {{% pageinfo %}}
 2023년 12월 17일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 패들과 스트레이트키의 사용은 그렇게 민감한 내용은 아니지만 많은 사람들이 질문을 하는 내용이므로 한 번은 다룰 필요가 있다고 생각합니다.
 
@@ -20,7 +22,4 @@ weight: 20
 하지만 서두에서도 얘기했듯이, 스트레이트키와 패들의 사용은, 어느쪽으로 선택하더라도 대부분 잘 적응하는 편이기 때문에 너무 민감하게 생각하지 않아도 됩니다.
 
 
-
-
-
-
+</div>

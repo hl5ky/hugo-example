@@ -10,6 +10,8 @@ weight: 80
 
 2024년 1월 5일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 결론부터 말씀드리면, 디코더만 사용해서 교신을 하는 것은 상당히 힘듭니다. 교신을 하기 위한 목적이라면 대부분 중도에 포기하게 됩니다.
 
@@ -27,3 +29,4 @@ FT-8이나 Olivia모드와 같은 디지털모드에서는 송신 신호에 에�
 
 {{< newtabref href="https://shingiru.github.io/hangul_cw_decoder.html" title="DS1TZE님의 CW 디코더" >}} 바로가기
 
+</div>

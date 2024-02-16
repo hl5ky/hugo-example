@@ -13,6 +13,7 @@ weight: 20
 
 <b>내용</b> : 영문의 일반적인 교신을 <u>좀 더 익숙하고 자연스럽게</u> 하기 위한 과정.
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 1. 수신기로 전신 밴드 수신.
@@ -20,3 +21,6 @@ weight: 20
 2. 실제 교신 연습의 {{< newtabref href="/morse/qso/eng_3" title="영문 예문 3" >}}~7을 여러 번 반복하여 외울 정도로 연습.
 
 3. 실제 교신 시작.
+
+
+</div>

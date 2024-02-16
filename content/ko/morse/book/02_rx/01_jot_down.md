@@ -8,6 +8,8 @@ weight: 10
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 적는 것이 습관화되면 수신 실력이 향상되지 않는다고 말합니다. 매일 시험치듯이 수신하는 것이 아니라면, 모든 것을 따라 적을 일도 없고 습관화될 일도 없습니다. 전신 수신시 적는 것은 문제 없습니다. 다음과 같이 순서없이 설명합니다.
 
@@ -20,3 +22,4 @@ weight: 10
 적는 것과 실력 향상과는 별로 상관이 없습니다. 교신에서 펜과 종이를 적절히 이용하는 것은 단점은 거의 없고, 장점만 있는 좋은 방법입니다.
 
 
+</div>

@@ -8,6 +8,8 @@ weight: 30
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 수신을 먼저 연습하고 어느 정도 박자감이 생긴 다음에 송신 연습을 시작하는 것이 좋습니다. (시작하기-{{< newtabref href="/morse/book/01_start/06_rx_tx" title="송신/수신 먼저" >}}. 참조) 한편, 수신만 잘 되면 송신은 그냥 되는 것이라고 말하는 것을 자주 듣는데, 이것도 모든 사람에게 적용하기는 곤란한 말입니다. 특히 성인들은 송신도 제대로 된 연습이 필요합니다.
 
@@ -26,3 +28,4 @@ QSO코흐볍 13단계까지 부호 X(-..-)와 B(-...)가 나오는데, 13단계�
 위의 기준을 참고로 하여, {{< newtabref href="/morse/tx_practice" title="송신연습방법" >}}의 내용대로 송신연습을 시작해 보시기 바랍니다.
 
 
+</div>

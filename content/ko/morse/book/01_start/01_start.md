@@ -8,7 +8,7 @@ weight: 10
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-
+<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 본 학습서는 혼자 전신을 연습하는 사람들을 위하여 작성하였습니다. 독학자의 어려움이 무엇이고 이것에 대한 대책은 무엇인지 알아보겠습니다. 특히 성인 학습자의 어려움에 대해 많이 고려하였습니다. 
 
@@ -44,3 +44,4 @@ weight: 10
 
 운전 면허 시험에서 100점을 받는다고 운전을 더 잘 하는 것은 아니지 않습니까?
 
+</div>
