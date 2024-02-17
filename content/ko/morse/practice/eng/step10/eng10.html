@@ -1369,10 +1369,13 @@ function generateDXCallsigns(count, repeatCount) {
         if (pre_prefix.length === 1) {
             var SUFFIXLENGTH = [2, 3];
         }else if (pre_prefix.length === 2) {
-            var SUFFIXLENGTH = [1, 2, 3];            
+            if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
+            var SUFFIXLENGTH = [1, 2, 3];}
+            else {
+            var SUFFIXLENGTH = [2, 3];}           
         }else if (pre_prefix.length === 3) {
             var number = "";
-            var SUFFIXLENGTH = [1, 2, 3];
+            var SUFFIXLENGTH = [2, 3];
         };
         var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
         var callsign = (pre_prefix + number + generateSuffix(suffixLength));
