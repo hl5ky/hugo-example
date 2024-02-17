@@ -1,5 +1,5 @@
 ---
-linkTitle: 시간및마음가짐
+linkTitle: 방법순서마음가짐
 title: 방법보다 순서, 순서보다 마음가짐이 중요하다
 # description: 
 type: docs
@@ -10,8 +10,6 @@ weight: 75
 
 2024년 2월 12일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-
 
 CW 학습은 기능을 익히는 것으로 상당한 인내를 필요로 합니다. 특히 나이가 들어서 기능을 익히는 것은 쉽지 않은 일입니다. 20/20 학습법은 오랫동안 CW를 가르쳐 온 영미권의 OM들이 추천하는 학습법입니다. 한 번에 20분씩, 하루에 두 번 그리고 20일은 하루도 빠지지 않고 학습하는 것입니다.
 
@@ -30,4 +28,3 @@ CW 학습은 기능을 익히는 것으로 상당한 인내를 필요로 합니�
 <span style="font-size:140%">"천천히 조금씩 꾸준히"</span>
 
 
-</div>
