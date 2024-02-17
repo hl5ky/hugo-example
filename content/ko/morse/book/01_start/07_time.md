@@ -1,6 +1,6 @@
 ---
 linkTitle: 시간및마음가짐
-title: 얼마나 학습해야 하는지를 아는 것보다 마음가짐이 중요하다
+title: 방법보다 순서, 순서보다 마음가짐이 중요하다
 # description: 
 type: docs
 weight: 75
