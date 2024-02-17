@@ -1246,7 +1246,7 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","DF","EA","F","G","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","PY","R","RA","RC","RD","RT",
+    "K","KA","KC","KD","KE","KS","KT","KQ","LA","N","OK","OH","PY","R","RA","RC","RD","RT",
     "SM","SP","TA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
@@ -1256,10 +1256,13 @@ function generateDXCallsigns(count, repeatCount) {
         if (pre_prefix.length === 1) {
             var SUFFIXLENGTH = [2, 3];
         }else if (pre_prefix.length === 2) {
-            var SUFFIXLENGTH = [1, 2, 3];            
+            if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
+            var SUFFIXLENGTH = [1, 2, 3];}
+            else {
+            var SUFFIXLENGTH = [2, 3];}            
         }else if (pre_prefix.length === 3) {
             var number = "";
-            var SUFFIXLENGTH = [1, 2, 3];
+            var SUFFIXLENGTH = [2, 3];
         };
         var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
         var callsign = (pre_prefix + number + generateSuffix(suffixLength));
