@@ -8,7 +8,6 @@ weight: 40
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 <b><span style="font-size:150%">1. 속도보다는 정확하게 송신</span></b>
@@ -84,7 +83,7 @@ weight: 40
 굳이 잡지의 내용을 보고 연습해야 한다면, 잡지의 내용을 그대로 연습할 것이 아니라, 나의 생각으로 다시 정리하여 송신하는 연습을 해야 합니다.
 
 
-</div>
+
 
 
 

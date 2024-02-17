@@ -10,8 +10,6 @@ weight: 10
 {{% /pageinfo %}}
 
 
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-
 부호연습(QSO코흐법)을 마치면 교신을 시도해 볼 수 있습니다. 특히 한국 A1 클럽과 KARL 전신위원회에서 진행하는 토,일요일 스케쥴 교신은 초보자를 위한 좋은 서비스입니다.
 
 일단 스케쥴 교신 시간에 수신을 해 보는 것으로 시작하는 것이 좋습니다. 교신 예문에도 있으니 내용을 참조하면서 수신해 보면 금방 자신감이 생깁니다.
@@ -37,4 +35,3 @@ weight: 10
 - CQ를 내는 속도에 상관없이 천천히 부르면 천천히 응답해 줌.
 - 한글 교신 날짜에 영문으로만 시도하여도 응답을 해 줌.
 
-</div>

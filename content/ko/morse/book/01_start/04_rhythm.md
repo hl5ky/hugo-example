@@ -6,7 +6,6 @@ type: docs
 weight: 40
 ---
 
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 <전신 학습 안내서>에서는 계속해서 "박자감"이라는 단어를 사용합니다. 박자감의 기본은 {{< newtabref href="/morse/book/01_start/03_dot_dash" title="<부호의 기준>" >}}에서 얘기했던 장단점의 비율 그리고 음절 및 단어간의 간격을 말합니다. 영문은 1:3:7, 한글은 1:3:5의 비율을 말합니다.
 
@@ -26,5 +25,5 @@ weight: 40
 
 나이가 들수록 박자감을 혼자 익히기는 어렵기 때문에 제대로 송신하는 음을 계속 들으면서 익히는 것이 좋습니다. 그래서 수신을 먼저 하는 것이 좋다는 것입니다. 이것이 잘 되면, 송신을 시작할 때 훨씬 편하게 적응할 수 있고 수신 연습에도 도움이 됩니다.
 
-</div>
+
 

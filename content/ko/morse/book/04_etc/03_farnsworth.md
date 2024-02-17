@@ -8,7 +8,6 @@ weight: 30
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 영미권의 햄들이 전신을 배울 때 일반적으로 적용하는 방법으로, 부호와 부호 사이의 간격을 조절하여 학습 효과를 올리는 방법입니다.<br>
@@ -44,4 +43,3 @@ QSO코흐법을 연습하는 프로그램에서도 판쓰워쓰를 적용하여 
 
 
 
-</div>

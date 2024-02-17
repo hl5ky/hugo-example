@@ -8,7 +8,6 @@ weight: 20
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 한글에서 영문, 또는 영문에서 한글로 변경할 때 사용하는 전환 부호로 <span style="color: blue;">&lt;KA&gt;</span>를 사용합니다. <span style="color: blue;">&lt;CT&gt;</span>라고도 하는데 Prosign으로 보면 어차피 같은 부호입니다.
@@ -23,4 +22,3 @@ ITU의 통신규정에 의하면 <span style="color: blue;">&lt;KA&gt;</span>와
 
 
 
-</div>

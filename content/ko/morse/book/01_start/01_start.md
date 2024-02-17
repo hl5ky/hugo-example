@@ -5,7 +5,6 @@ title: 전신 독학자의 어려움
 type: docs
 weight: 10
 ---
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
@@ -45,4 +44,3 @@ weight: 10
 
 운전 면허 시험에서 100점을 받는다고 운전을 더 잘 하는 것은 아니지 않습니까?
 
-</div>

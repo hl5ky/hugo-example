@@ -8,7 +8,6 @@ weight: 30
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 완전히 새로운 문장을 연습하더라도 중간 중간에 상상이 가능한 단어가 나옵니다. 영문에서 "the, have, want, next, just" 등은 앞 부호를 들으면 나머지는 짐작이 가능합니다. 한글의 "입니다, 습니다" 등도 뒷 부분이 쉽게 짐작이 되는 단어입니다.
@@ -25,4 +24,3 @@ weight: 30
 수신 연습 도중에, 내용이 이해되고 그래서 다음에 나올 부호가 상상이 되는 것은 자연스러운 연습의 일부분입니다. 잘 하고 계시다는 증거입니다. 걱정하실 필요가 없습니다.
 
 
-</div>

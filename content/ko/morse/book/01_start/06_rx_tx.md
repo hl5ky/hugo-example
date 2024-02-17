@@ -10,7 +10,6 @@ weight: 60
 
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 전신의 멋이나 재미는 수신보다는 송신입니다. 스트레이트키나 패들로 멋지게 타전하는 것에 끌려서 전신을 시작한 분들도 많을겁니다. 그런데 "수신 연습이 끝날 때까지는 키를 잡지 말라"라는 말이 있을 정도로, 충분한 수신 연습이 없이 송신을 시작하는 것은 주의가 필요합니다.
@@ -44,5 +43,5 @@ weight: 60
 어린 학생들의 경우에는 어느 쪽을 먼저 시작해도 큰 무리가 없습니다.
 
 
-</div>
+
 

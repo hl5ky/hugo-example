@@ -8,7 +8,6 @@ weight: 20
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 요즘은 전신 실기 시험이 없기 때문에 수신 답안을 작성할 일이 없지만, 실기 시험이 있을 때는 답안 작성을 영문의 대문자로 기입했어야 했습니다. 그래서 수신 연습을 할 때부터 대문자로 연습을 하도록 하였습니다. 그런데 대문자는 소문자보다 필기 속도가 느립니다.
@@ -20,4 +19,3 @@ weight: 20
 하지만 이미 대문자가 손에 익은 분들은 소문자로 바꾸기가 쉽지 않습니다. 굳이 바꾸려는 노력을 할 필요는 없습니다.
 
 
-</div>

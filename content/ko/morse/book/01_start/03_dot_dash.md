@@ -14,7 +14,6 @@ weight: 30
 
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
 ▶ <b><span style="font-size:140%">공통 기준</span></b>
@@ -58,4 +57,3 @@ weight: 30
 <img src="/morse/img/dot_dash_kor_2.png" style="width:500px;height:256"><br><br>
 
 ----------------------------------------
-</div>

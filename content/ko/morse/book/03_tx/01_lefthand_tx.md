@@ -8,7 +8,7 @@ weight: 10
 {{% pageinfo %}}
 2022년 4월 25일 작성<br>
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
 
 스트레이트키는 좀 어렵지만, 패들을 사용할 때 왼손으로 하는 것이 좋다는 말을 많이 들으셨을 겁니다. 왜 그럴까요?
 
@@ -26,4 +26,3 @@ weight: 10
 - 패들의 장단 방향이 반대가 될 수 있어서 타인의 패들을 사용시 변경이 필요합니다.
 
 
-</div>
