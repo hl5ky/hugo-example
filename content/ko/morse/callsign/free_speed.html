@@ -1103,20 +1103,31 @@ function getRepeatCount() {
 SubMenu1.onclick = function() {
     stop.click();
 
-    var CALLSIGNS = generateHLCallsigns(150, 1);
+    var Callsign = [];
+
+    var CALLSIGNS = generateHLCallsigns(100, 1);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-        doc.setValue(CALLSIGNS.join("  "));
+        for (var n = 0; n < 100; n += 10) {
+            Callsign[n] = CALLSIGNS.slice(n, n + 10);
+        }
+
+        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
+        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
+        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
+        + " \n" + Callsign[90].join(" "));
 }
 
 
 
 SubMenu2.onclick = function() {
     stop.click();
+
+    var Callsign = [];
 
     var CALLSIGNS = generateJACallsigns(150, 1);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1125,12 +1136,21 @@ SubMenu2.onclick = function() {
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-        doc.setValue(CALLSIGNS.join("  "));
+        for (var n = 0; n < 100; n += 10) {
+            Callsign[n] = CALLSIGNS.slice(n, n + 10);
+        }
+
+        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
+        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
+        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
+        + " \n" + Callsign[90].join(" "));
 }
 
 
 SubMenu3.onclick = function() {
     stop.click();
+
+    var Callsign = [];
 
     var CALLSIGNS = generateASIACallsigns(150, 1);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1139,12 +1159,21 @@ SubMenu3.onclick = function() {
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-        doc.setValue(CALLSIGNS.join("  "));
+        for (var n = 0; n < 100; n += 10) {
+            Callsign[n] = CALLSIGNS.slice(n, n + 10);
+        }
+
+        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
+        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
+        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
+        + " \n" + Callsign[90].join(" "));
       
 }
 
 SubMenu4.onclick = function() {
     stop.click();
+
+    var Callsign = [];
 
     var CALLSIGNS = generateDXCallsigns(150, 1);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1153,7 +1182,14 @@ SubMenu4.onclick = function() {
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-        doc.setValue(CALLSIGNS.join("  "));
+        for (var n = 0; n < 100; n += 10) {
+            Callsign[n] = CALLSIGNS.slice(n, n + 10);
+        }
+
+        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
+        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
+        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
+        + " \n" + Callsign[90].join(" "));
 }
 
 //===============================================================================================
@@ -1226,7 +1262,7 @@ function generateASIACallsigns(count, repeatCount) {
         if (pre_prefix.length === 1) {
             var SUFFIXLENGTH = [2, 3];
         }else if (pre_prefix.length === 2) {
-            var SUFFIXLENGTH = [1, 2, 3];            
+            var SUFFIXLENGTH = [2, 3];            
         }else if (pre_prefix.length === 3) {
             var number = "";
             var SUFFIXLENGTH = [1, 2, 3];
