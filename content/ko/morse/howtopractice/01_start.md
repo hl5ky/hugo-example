@@ -19,7 +19,7 @@ weight: 10
 
 1. <b><u>전신 학습 안내서</u></b> 읽기
 
-2. <b><u>부호 연습</u></b> - {{< newtabref href="/morse/practice/eng" title="부호연습(QSO코흐법).영문" >}}의 연습. 부호를 외울 필요는 없습니다.
+2. <b><u>부호 연습</u></b> - {{< newtabref href="/morse/koch/eng" title="부호연습(QSO코흐법).영문" >}}의 연습. 부호를 외울 필요는 없습니다.
  ({{< newtabref href="/morse/book/01_start/02_memorize/" title="부호의암기" >}} 참조)
 
 3. <b><u>송신 연습 시작</u></b> - QSO코흐법.영문의 4~13단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/tx_practice" title="송신연습방법" >}} 참조)

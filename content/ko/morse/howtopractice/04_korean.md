@@ -16,7 +16,7 @@ weight: 40
 <div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
 
-1. {{< newtabref href="/morse/practice/kor" title="부호연습(QSO코흐법).한글" >}} 연습.
+1. {{< newtabref href="/morse/koch/kor" title="부호연습(QSO코흐법).한글" >}} 연습.
 
 2. 한글QSO코흐법을 모두 마친 후에 <실제 교신 연습>의 {{< newtabref href="/morse/qso/kor_1" title="한글 예문 1" >}}~3 연습.
 
