@@ -244,7 +244,7 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 교신 문장 듣기 (15/2)</button>&nbsp;
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">한글 교신 문장 만들기 (15/2)</button>&nbsp;
 
 
 
@@ -1087,18 +1087,17 @@ function shuffle(array) {
 }
 
     
-    SubMenu1.onclick = function() {
-    stop.click();
+
 
     var GREETINGS = [
-        "그동안 안녕하셨습니까?",
-        "그동안 잘 지내셨습니까?",
-        "그동안 잘 지냈는지요?",
-        "안녕하십니까, 정말 오랜만에 뵙습니다.",
-        "반갑습니다. 처음 뵙겠습니다.",
-        "안녕하십니까? 이렇게 불러주셔서 감사합니다.",
-        "오엠님 불러주셔서 감사합니다.",
-        "오엠님 안녕하십니까?",
+        "그동안 안녕하셨습니까? ",
+        "그동안 잘 지내셨습니까? ",
+        "그동안 잘 지냈는지요? ",
+        "안녕하십니까, 정말 오랜만에 뵙습니다. ",
+        "반갑습니다. 처음 뵙겠습니다. ",
+        "안녕하십니까? 이렇게 불러주셔서 감사합니다. ",
+        "오엠님 불러주셔서 감사합니다. ",
+        "오엠님 안녕하십니까? ",
         ];
     var NAMES = ["김종민", "신수아", "조윤재", "이도현", "임선우", "박현준", "성재윤", "강지안", "오윤호", "서시원", "홍윤성", 
                "구태양", "성도율", "황현수", "윤시율","한승빈","태유현", "차승찬", "안수영", "허규빈", "도윤후", "서도겸", "송윤찬",
@@ -1116,25 +1115,26 @@ function shuffle(array) {
         "신호 리포트는 ",
 
         ];
-        var RST12S = [
+        var RST1S = [
         "리포트 감사합니다. 오엠님의 신호도 ",
-        "예 오엠님 리포트 감사합니다. 오엠님의 선호는 ",
+        "예 오엠님 리포트 감사합니다. 오엠님의 신호는 ",
         "예 잘 들었습니다. 귀국의 신호는 ",
         ];
 
-    var RST21S = ["449","44N","559", "55N"];
-    var RST31S = [
+    var RST21S = ["559 559","559 55N"];
+    var RST22S = [
         " 으로 좀 약하게 수신됩니다.",
         " 으로 약하게 들어옵니다.",
         
         ];
-    var RST22S = ["569", "56N", "579", "57N", "589", "58N"];
+    var RST31S = ["569 56N", "56N 56N", "579 57N", "57N 57N", "589", "58N"];
     var RST32S = [
         " 으로 잘 수신됩니다.",
         " 으로 잘 들어옵니다.",
         " 으로 충분히 수신됩니다.",
+        "으로 깨끗하게 수신됩니다.",
         ];
-    var RST23S = [
+    var RST41S = [
         "5NN 5NN 이상으로 아주 강력하게 수신됩니다.",
         "599 5NN 으로 수신됩니다.",
         "5NN 5NN 으로 잘 들어옵니다.",
@@ -1214,51 +1214,109 @@ function shuffle(array) {
         ];
 
 
+SubMenu1.onclick = function() {
+    stop.click();        
 
-var phrases = ["QRZ? ", "TNX FER QSO ", "TNX FER RPRT ", "GM ", "QSY UP3 ", "QSY DN2 " ];
+    var Callsign1 = generateHLCallsigns(1, 1);
+    var Callsign2 = generateHLCallsigns(1, 1);
 
-    loopCount = 1
-         for (var n = 0; n < loopCount; n++) {
-        var name = NAMES[Math.floor(Math.random() * NAMES.length)];
-        var rst = RSTS[Math.floor(Math.random() * RSTS.length)];
-        var kdn = KDNS[Math.floor(Math.random() * KDNS.length)];
-        var qth = QTHS[Math.floor(Math.random() * QTHS.length)];
+    var greeting = GREETINGS[Math.floor(Math.random() * GREETINGS.length)];
 
-        var phrase = "OP IS " + name +  (Math.random() > 0.5 ? " ES " : " <BT> ") + "QTH IS " + qth + "."; phrases.push(phrase);
-    }
+    var rst1 = RST1S[Math.floor(Math.random() * RST1S.length)];
+    rst = generateRST();
 
-        loopCount = 2
-         for (var n = 0; n < loopCount; n++) {
-        var temp = TEMPS[Math.floor(Math.random() * TEMPS.length)];        
-        var pse = PSES[Math.floor(Math.random() * PSES.length)];
-        var ant = ANTS[Math.floor(Math.random() * ANTS.length)];
-        var rig = RIGS[Math.floor(Math.random() * RIGS.length)];
-        var wx = WXS[Math.floor(Math.random() * WXS.length)];
+    var TXS = ["START", "MID", "FINAL"];
+        TXS.sort(() => Math.random() - 0.5);    
+        TXS.sort(() => Math.random() - 0.2);
+        TXS.sort(() => Math.random() - 0.7);
+ 
+    var TX = TXS[Math.floor(Math.random() * TXS.length)];
 
-        var phrase = "TEMP IS " + temp +  " "; phrases.push(phrase);
-        var phrase = "PSE " + pse +  " "; phrases.push(phrase);
-        var phrase = "ANT IS " + ant +  " "; phrases.push(phrase);
-        var phrase = "RIG IS " + rig +  " "; phrases.push(phrase);
-        var phrase = "WX IS " + wx +  " "; phrases.push(phrase);
-    }
-    phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);     
+    var phrase = [];
+    var phrases = [];
+ 
+   phrase = Callsign1 + " DE " + Callsign2 + " <KA> " + greeting + rst1 + rst; phrases.push(phrase);
 
-    FinalSliceNumber = 16
-    phrases = phrases.slice(0, FinalSliceNumber);
+
+    if (TX === "START") {
+
+    
+   //     var phrases = ["START"];       
+        
+        
+        
+    }else if (TX === "MID") {
+           
+
+     //   var phrases = ["MID"]; 
+
+
+
+    }else if (TX === "FINAL") {
+
+
+       // var phrases = ["FINAL"]; 
+
+};
+
+
+
 
     doc.setValue(phrases.join(" ")
-    + "                                                                                    \n"
-    + "\n"     
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 새로운 내용\n"
-    + "1. WX IS FINE\n"
-    + "2. QSY UP2\n"
+//    + "                                                                                    \n"
+//    + "\n"     
+//    + "- 새로운 내용\n"
+//    + "1. WX IS FINE\n"
+//    + "2. QSY UP2\n"
     );       
 }
-     
+
+function generateRST() {
+
+    var RSTS = [];
+    var rst21 = RST21S[Math.floor(Math.random() * RST21S.length)];
+    var rst22 = RST22S[Math.floor(Math.random() * RST22S.length)];
+    var rst2 = rst21 + rst22;
+    RSTS.push(rst2);
+    var rst31 = RST31S[Math.floor(Math.random() * RST31S.length)];
+    var rst32 = RST32S[Math.floor(Math.random() * RST32S.length)];
+    var rst3 = rst31 + rst32;
+    RSTS.push(rst3);
+    var rst4 = RST41S[Math.floor(Math.random() * RST41S.length)];
+    RSTS.push(rst4);
+
+    var rst = RSTS[Math.floor(Math.random() * RSTS.length)];
+    return rst;
+}
+
+function generateSuffix(length) {
+    var ALPHABET = "ABCDEFFFGHIJKMNLOPQRSTUUVVVWWXZ";
+    var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    for (var i = 1; i < length; i++) {
+        result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    }
+    //result += (Math.random() > 0.5 ? "/QRP" : "");
+    return result;
+}
+
+function getRepeatCount() {
+    return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
+}
+function generateHLCallsigns(count, repeatCount) {
+    var callsigns = [];
+    var PREFIX = [
+        "HL1", "HL2", "HL3", "HL4", "HL5",
+        "DS1", "DS2", "DS3", "DS4", "DS5", //"DS0",
+        "6K2", "6K5", "6L5"
+        ];
+    for (var i = 0; i < count; i++) {
+        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
+        var suffixLength = (prefix.startsWith("HL") || prefix.startsWith("DS0") ? (Math.random() > 0.2 ? 3 : 2) : 3);
+        var callsign = prefix + generateSuffix(suffixLength);
+        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
+    }
+    return callsigns;
+}
+
 </script>
 </html>
