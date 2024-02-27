@@ -1229,8 +1229,6 @@ var pre_RSTS = [
         ];
 
 
-
-
         var ANSWERS = ["잘 수신하였습니다. 리포트 감사합니다.", "잘 수신하였습니다. 리포트 감사합니다.", "잘 들었습니다. 리포트 감사합니다.",]
 
         var pre_RIG1S = ["저는 ", "저는 현재 ", "저는 지금 ",];
@@ -1284,7 +1282,7 @@ SubMenu1.onclick = function() {
         TXS.sort(() => Math.random() - 0.7);
  
     var TX = TXS[Math.floor(Math.random() * TXS.length)];
-    //var TX = TXS[2];
+    //var TX = TXS[0];
 
     if (TX === "START_1st") {  // 첫 교신의 시작 부분
         phrases = generateSTART_1st();
@@ -1360,7 +1358,7 @@ function generateSTART_1st() {
             phrase = (Math.random() > 0.5 ? phrase : "");
             phrases.push(phrase);
 
-            phrase = (Math.random() > 0.5 ? " <KA> " : " <AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
+            phrase = (Math.random() > 0.5 ? "<KA> " : "<AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
             phrases.push(phrase);
             return phrases;    
 }
@@ -1382,7 +1380,7 @@ function generateSTART_2nd() {
             phrase = talk;
             phrases.push(phrase);
 
-            phrase = (Math.random() > 0.5 ? " <KA> " : " <AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
+            phrase = (Math.random() > 0.5 ? "<KA> " : "<AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
             phrases.push(phrase); 
             return phrases;
 }
@@ -1449,7 +1447,7 @@ function generateMID_1st() {
             phrase = " 그리고 " + pre_ant + ant + post_ant;
             phrases.push(phrase);
 
-            phrase = (Math.random() > 0.5 ? " <KA> " : " <AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
+            phrase = (Math.random() > 0.5 ? "<KA> " : "<AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " K" : " KN" );
             phrases.push(phrase);
             return phrases;            
 }
@@ -1471,7 +1469,7 @@ function generateFINAL_1st() {
             phrase = (Math.random() > 0.5 ? "<BT> " : "" ) + familyname + tnx + (Math.random() > 0.5 ? " <BT> " : "  " ) + qsl;
             phrases.push(phrase);
 
-            phrase = (Math.random() > 0.5 ? " <KA> " : " <AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " 73 <SK> E E" : " 73 TU <SK> E E" );
+            phrase = (Math.random() > 0.5 ? "<KA> " : "<AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " 73 <SK> E E" : " 73 TU <SK> E E" );
             phrases.push(phrase);
             return phrases;            
 }
@@ -1495,7 +1493,7 @@ function generateFINAL_2nd() {
             phrase = (Math.random() > 0.5 ? "<BT> " : " " ) + familyname + final2;
             phrases.push(phrase);
 
-            phrase = (Math.random() > 0.5 ? " <KA> " : " <AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " 73 <SK> E E" : " 73 TU <SK> E E" );
+            phrase = (Math.random() > 0.5 ? "<KA> " : "<AR> " ) + Callsign1 + " DE " + Callsign2 + (Math.random() > 0.5 ? " 73 <SK> E E" : " 73 TU <SK> E E" );
             phrases.push(phrase);
             return phrases;            
 }
