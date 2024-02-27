@@ -34,7 +34,8 @@ Chemainus는 원주민 이름에서 따왔다고 합니다. 1970년대에 목재
 
 <br>
 
-<img src="/recording/img/chemainus.JPG" style="width:850px;height:256"><br> 
+<img src="/recording/img/chemainus.JPG" style="width:850px;height:256"><br>
+HL5BTF
 <br>
 
 
