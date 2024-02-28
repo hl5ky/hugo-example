@@ -28,7 +28,8 @@ weight: 40
   (참고: CQ를 낼 때는 &lt;AR&gt;로 끝나야 한다는 의견도 있으나 실제로 K의 사용도 많이 하고 있음)
 <br><br>
 
-▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
+▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b><br>
+- <b><span style="font-size:115%">DX교신에서 프리픽스를 알면 큰 도움이 됩니다. 전신 연습시에 익혀두면 좋습니다.</span></b>
 - 6K5 : 한국.
 - K로 시작하는 K, KC, KD, KK는 전부 미국.
 - 나머지 프리픽스는 임의로 만든 것임.

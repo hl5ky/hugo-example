@@ -8,7 +8,6 @@ weight: 90
 ---
 
 {{% pageinfo %}}
-<span style="color:red">**한글은 작성중이라 연습을 하기에는 부족합니다.**</span>
 
 * 새로운 부호 : ㅋ, ㅠ
 

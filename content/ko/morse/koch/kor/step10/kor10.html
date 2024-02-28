@@ -194,7 +194,7 @@ audio {
 <div class="page">
 
 <p><span style="font-size:200%"><b>QSO 코흐법</b></span>
-    <span style="font-size:150%">&nbsp;(한글 10단계)</span>
+    <span style="font-size:150%">&nbsp;(한글 10단계 - 교신 예문 만들기)</span>
 </p>
 
 <div class="setting">
@@ -244,7 +244,7 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">한글 교신 문장 만들기 (15/2)</button>&nbsp;
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">한글 교신 예문 만들기 (15/2)</button>&nbsp;
 
 
 
@@ -1259,7 +1259,7 @@ var pre_RSTS = [
         "오늘 교신 대단히 감사합니다.",
         "첫교신 대단히 감사합니다.",
         "처음 뵙게되어 반가웠습니다. 교신 감사합니다.",
-        "이렇게 뵙게되어 반가웠습니다. 감사합니다."
+        "이렇게 뵙게되어 반가웠습니다. 교신 감사합니다."
         ];
 
         var QSLS = [
@@ -1270,7 +1270,7 @@ var pre_RSTS = [
         "저는 아직 카드가 없습니다. 준비되는대로 보내드리겠습니다.",
         "곧 카드를 인쇄하는데요, 제작이 완료되면 우편으로 보내드리겠습니다.",
         "보잘것없는 카드이지만 한장 보내드리겠습니다.",
-        "카드가 모두 소진되었네요, 다음에 보내드리겠습니다.",
+        "현재 카드가 모두 소진되어 다음에 보내드리겠습니다.",
         ];
 
 SubMenu1.onclick = function() {
@@ -1336,7 +1336,8 @@ function generateSTART_1st() {
             var pre_qth1 = pre_QTH1S[Math.floor(Math.random() * pre_QTH1S.length)];
             var pre_qth2 = pre_QTH2S[Math.floor(Math.random() * pre_QTH2S.length)];
             var pre_qth = (Math.random() > 0.5 ? pre_qth1 : pre_qth2);
-            var qth = QTHS[Math.floor(Math.random() * QTHS.length)];
+            var random_no = Math.floor(Math.random() * 225)
+            var qth = QTHS[random_no];
             var post_qth1 = post_QTH1S[Math.floor(Math.random() * post_QTH1S.length)];
             var post_qth2 = post_QTH2S[Math.floor(Math.random() * post_QTH2S.length)];
             if (pre_qth === pre_qth1) {
@@ -1344,7 +1345,7 @@ function generateSTART_1st() {
             }else {
                 var post_qth = post_qth2;
             }
-            var kdn = KDNS[Math.floor(Math.random() * KDNS.length)];
+            var kdn = KDNS[random_no];
 
             phrase = Callsign1 + " DE " + Callsign2 + " <KA> " + greeting_1st + (Math.random() > 0.5 ? "<BT> " : " " ) + pre_rst + rst;
             phrases.push(phrase);

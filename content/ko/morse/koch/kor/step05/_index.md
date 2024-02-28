@@ -6,7 +6,6 @@ type: docs
 # icon: fa-solid fa-angle-down
 weight: 50
 ---
-<span style="color:red">**한글은 작성중이라 연습을 하기에는 부족합니다.**</span>
 
 {{% pageinfo %}}
 
