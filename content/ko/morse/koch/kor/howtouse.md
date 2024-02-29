@@ -10,7 +10,7 @@ weight: 5
 
 <br>
 
-{{< newtabref href="/morse/practice/eng/step06/eng06.html" title="연습 프로그램" >}}을 열고 5개의 메뉴를 여러 번 눌러본 다음, 설명을 보면 이해가 쉽습니다. (새로운 창에서 열림)
+{{< newtabref href="/morse/koch/kor/step09/kor09.html" title="연습 프로그램" >}}을 열고 메뉴를 여러 번 눌러본 다음, 설명을 보면 이해가 쉽습니다. (새로운 창에서 열림)
 <br><br>
 
 

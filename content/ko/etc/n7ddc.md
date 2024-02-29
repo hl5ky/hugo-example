@@ -23,7 +23,7 @@ weight: 21
 
 
 
-간단 사용 설명서도 작성하였습니다. <br><br>
+간단 사용 설명서도 작성하였습니다. <br>
 
 {{< newtabref href="/etc/img/N7DDC AuoTuner 간단 사용설명서.jpg" title="N7DDC AuoTuner 간단 사용설명서" >}} 새창에서 보기
 
