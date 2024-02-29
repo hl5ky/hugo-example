@@ -17,7 +17,7 @@ Patti는 햄생활이 거의 50년 정도되는 베테랑햄입니다. 이렇게
 <center><audio src="https://blog.kakaocdn.net/dn/BmnkN/btsFjKJoUGg/HllNxx3s3kUIYISl68IZz1/tfile.mp3" controls="controls"></audio></center><br>
 
 
-자연히 저의 XYL에 대한 얘기가 나왔고 교신을 통해서 만났다는 얘기를 했더니, Patti도 남편과는 무선을 통해서 만났다고 합니다.
+저의 XYL도 햄이며 교신을 통해서 만났다는 얘기를 했더니, Patti도 남편과는 무선을 통해서 만났다고 합니다.
 
 처음에 CB를 통해서 만났다가 차후에 함께 아마추어무선을 시작했다고 하는군요. 실제 무선은 남편보다 Patti가 먼저 시작했다고 합니다. 남편과의 Love Story는 지역 햄클럽지에 기고했는데, 교신 후에 email로 파일을 보내왔습니다.
 <br>
@@ -25,7 +25,7 @@ Patti는 햄생활이 거의 50년 정도되는 베테랑햄입니다. 이렇게
 {{< newtabref href="/recording/img/A Ham Radio Love Story by Patti Donahue KE7IR.pdf" title="남편과의 Love Story" >}}(영어) 새창에서 보기
 <br><br>
 
-> CB : 서양에서 부르는 생활무전기(Citizens Band)의 약자입니다. 자격증이 없어도 약한 출력으로 사용이 가능합니다. 주로 27MHz를 사용하며 취미로 운용하기도 하지만 국토가 넓은 나라에서는 트럭을 운전하는 사람들도 많이 사용한다고 합니다.
+> CB : 서양에서 부르는 생활무전기(Citizens Band)의 약자입니다. 자격증이 없어도 약한 출력으로 사용이 가능합니다. 주로 27MHz를 사용하며 취미로 운용하기도 하지만 국토가 넓은 나라에서는 트럭을 운전하는 사람들도 많이 사용합니다.
 <br>
 
 {{< newtabref href="https://www.qrz.com/db/KE7IR" title="KE7IR의 QRZ.COM 페이지" >}} 새창에서 보기
