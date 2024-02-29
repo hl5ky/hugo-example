@@ -3,9 +3,9 @@ title: Example Page
 type: docs
 ---
 
-한글 코흐법
+한글 예문 - 마침표, 쉼표 확인
 
-평문연습 파일langu
+
 
 English난에 영어로 변경
 
