@@ -11,7 +11,7 @@ weight: 10
 {{% pageinfo %}}
 <b>대상</b> : 전신을 처음으로 시작하는 분.<br>
 
-<b>내용</b> : 영문 부호 연습과 기본적인 교신을 위한 준비 단계.
+<b>내용</b> : 영문 부호 연습과 기본적인 영문 교신을 위한 준비 단계.
 {{% /pageinfo %}}
 <div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
