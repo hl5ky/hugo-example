@@ -63,7 +63,15 @@ English난에 영어로 변경
 
 {{% detail summary="Code 영상 링크" %}}
 ```go
-<iframe src="https://play-tv.kakao.com/embed/player/cliplink/429534357?service=daum_tistory" width="860" height="484" frameborder="0" allowfullscreen="true"></iframe>
+<iframe src="파일 링크" width="860" height="484" frameborder="0" allowfullscreen="true"></iframe>
+```
+{{% /detail %}}
+
+---------------------------------------------
+
+{{% detail summary="Code 오디오 파일 링크" %}}
+```go
+<center><audio src="파일 링크" controls="controls"></audio></center><br>
 ```
 {{% /detail %}}
 
@@ -71,13 +79,14 @@ English난에 영어로 변경
 
 {{% detail summary="Code 새로운 탭에서 외부링크" %}}
 ```go
-{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}
-
 {{}} 필요함
+{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}
+{< newtabref href="/recording/img/A Ham Radio Love Story by Patti Donahue KE7IR.pdf" title="PDF 파일" >} 새창에서 보기
 ```
 {{% /detail %}}
 
-{{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}
+{{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}<br>
+{{< newtabref href="/recording/img/A Ham Radio Love Story by Patti Donahue KE7IR.pdf" title="PDF 파일" >}} 새창에서 보기
 
 ----------------------------------
 
