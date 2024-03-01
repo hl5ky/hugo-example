@@ -3,8 +3,6 @@ title: Example Page
 type: docs
 ---
 
-한글 예문 - 마침표, 쉼표 확인
-
 
 
 English난에 영어로 변경
@@ -36,7 +34,7 @@ English난에 영어로 변경
 {{< newtabref href="/morse/koch/eng/step17/eng17.html" title="eng17.html" >}}
 {{< newtabref href="/morse/koch/eng/step18/eng18.html" title="eng18.html" >}}
 
-{{< newtabref href="/morse/koch/testt.html" title="testt.html" >}}
+
 
 <br>
 <br>
@@ -73,7 +71,9 @@ English난에 영어로 변경
 
 {{% detail summary="Code 새로운 탭에서 외부링크" %}}
 ```go
-{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}}
+{< newtabref href="https://www.qrz.com/lookup/jo1dza" title="JO1DZA QRZ.COM Page" >}
+
+{{}} 필요함
 ```
 {{% /detail %}}
 
@@ -103,18 +103,41 @@ English난에 영어로 변경
 
 {{% detail summary="Code 글자 부분 배경" %}}
 ```go
-Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
+`var foo = "bar";`      ~~`with this`~~     ~~and this~~.
 ```
 {{% /detail %}}
 
-Code snippets like `var foo = "bar";` Also,  ~~`with this`~~ ~~and this~~.
+ `var foo = "bar";`      ~~`with this`~~      ~~and this~~.
 
 ----------------------------------
+{{% detail summary="Code 글자 크기,강조,밑줄" %}}
+```go
+■  ▶ ▷  <u><b><span style="font-size:120%">기본 사용 방법</span></b></u>
+```
+{{% /detail %}}
+
+■  ▶ ▷  <u><b><span style="font-size:120%">기본 사용 방법</span></b></u>
+
+----------------------------------
+{{% detail summary="Code 글자-강조,이태릭체,취소선" %}}
+```go
+**bold**, _italic_ *italic*, or ~~strikethrough~~
+[Links_name](https://gohugo.io)
+```
+{{% /detail %}}
+
+**bold**, _italic_ *italic*, or ~~strikethrough~~
+
+[Links_name](https://gohugo.io)
+
+--------------------------------------
 {{% detail summary="Code 사각 설명문" %}}
 ```go
 {% pageinfo %}
 This is a placeholder page. Replace it with your own content.
 {% /pageinfo %}
+
+{{}} 필요함
 ```
 {{% /detail %}}
 
@@ -142,7 +165,7 @@ bar := "foo";
 
 {{% detail summary="Code 문장 펼침" %}}
 ```go
-{를 하나씩 더 추가해야 함.
+{{}} 필요함
 
 {% detail summary="5단계단어연습" %}
 ---go
@@ -169,18 +192,6 @@ CUAGN
 {{% /detail %}}
 
 ---------------------------------
-{{% detail summary="Code 글자-강조,이태릭체,취소선" %}}
-```go
-**bold**, _italic_ *italic*, or ~~strikethrough~~
-[Links_name](https://gohugo.io)
-```
-{{% /detail %}}
-
-**bold**, _italic_ *italic*, or ~~strikethrough~~
-
-[Links_name](https://gohugo.io)
-
---------------------------------------
 {{% detail summary="Code " %}}
 ```go
 > There should be no margin above this first sentence.
