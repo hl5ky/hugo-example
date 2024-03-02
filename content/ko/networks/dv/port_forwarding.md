@@ -3,7 +3,7 @@ linkTitle: 포트포워딩 설정방법
 title: 포트포워딩 설정 방법
 # description:
 type: docs
-weight: 20
+weight: 220
 ---
 
 {{% pageinfo %}}

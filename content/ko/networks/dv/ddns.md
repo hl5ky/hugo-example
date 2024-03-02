@@ -3,7 +3,7 @@ linkTitle: DDNS 설정방법
 title: DDNS 설정 방법
 # description:
 type: docs
-weight: 10
+weight: 210
 ---
 
 {{% pageinfo %}}

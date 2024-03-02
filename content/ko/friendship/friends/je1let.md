@@ -3,7 +3,7 @@ linkTitle: JE1LET
 title: JE1LET
 # description: 
 type: docs
-weight: 60
+weight: 62
 ---
 {{% pageinfo %}}
 name : Otokozawa Masahiko<br>

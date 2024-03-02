@@ -13,8 +13,6 @@ weight: 10
 
 <b>내용</b> : 영문 부호 연습과 기본적인 영문 교신을 위한 준비 단계.
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-
 
 
 1. <b><u>전신 학습 안내서</u></b> 읽기
@@ -36,5 +34,9 @@ weight: 10
    (4, 5, 6 과정은 상황에 따라 순서를 변경/혼합해도 됩니다)
 <br><br>
 
+> 입문 과정의 성공을 위해서 <u>학습의 지속성</u>이 가장 중요합니다.<br>
+> 지속하기 위해서는 그에 맞는 <u>마음 자세</u>가 필요합니다. ({{< newtabref href="/morse/book/01_start/07_time" title="방법,순서,마음가짐" >}} 참조)<br>
+> QSO코흐법 17단계 중, <u>5단계를 목표</u>로 시작하시기 바랍니다.<br>
+> 5단계까지는 무슨 일이 있더라도 마치겠다는 의지가 있어야 합니다. 하지만 서두르지는 않아야 합니다.<br>
+> 어렵더라도 5단계까지만 마치면 나머지는 훨씬 수월하게 마칠 수 있습니다.<br>
 
-</div>
