@@ -20,6 +20,7 @@ Bob은 2014년 경에 대우조선의 전기 감독관으로 근무했으며, �
 무선실은 농장의 창고에 설치하였는데, 집에서 창고까지도 인터넷 라인의 설치가 필요했습니다. 지상에 설치하면 코카투라는 새의 공격이 염려되고, 지하로 설치하면 토끼나 두더쥐가 많아서 어렵다고 합니다. 결국 네트워크용 마이크로웨이브 장비로 연결했습니다.
 
 아래의 영상을 보시면 창고 옆에 설치한 접시형 안테나가 그것입니다.
+<br><br>
 
 
 <iframe title="20160730_091439" width="750" height="430" src="https://play-tv.kakao.com/embed/player/cliplink/444993287?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe><br>
