@@ -42,7 +42,7 @@ XYL(Anika), HL5BTF, DJ6EA - 대학 도시로 유명한 튀빙겐.
 <br><br>
 
 <img src="/friendship/img/dj6ea_07.jpg" style="width:600px;height:500"><br>
-미국 호출부호를 사용해서 DJ6/N2KY로 운용하여 유럽의 여러 무선국과 교신.
+미국 호출부호를 사용해서 DJ6/N2KY로 운용해 보았는데, 금방 10여개 국가와 교신이 이루어졌습니다.
 <br>
 
 <img src="/friendship/img/dj6ea_08.jpg" style="width:600px;height:500"><br>
