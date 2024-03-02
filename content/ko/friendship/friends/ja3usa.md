@@ -18,7 +18,7 @@ QTH   : Nara, JAPAN<br>
 
 <img src="/friendship/img/ja3usa_03.jpg" style="width:600px;height:500"><br><br>
 
-<img src="/friendship/img/ja3usa_04.jpg" style="width:600px;height:500"><br><br>
+<!--<img src="/friendship/img/ja3usa_04.jpg" style="width:600px;height:500"><br><br>-->
 
 <img src="/friendship/img/ja3usa_05.jpg" style="width:600px;height:500"><br><br>
 
