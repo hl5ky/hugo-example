@@ -54,7 +54,7 @@ XYL(Anika), HL5BTF, DJ6EA - 대학 도시로 유명한 튀빙겐.
 <br>
 
 <img src="/friendship/img/dj6ea_10.jpg" style="width:600px;height:500"><br>
-외식을 하자고 해서 나갔더니, 햄들의 모임에 깜짝 초대.
+외식을 하자고 해서 나갔더니, 로컬햄들이 모여있더군요. 모두들 나이가 지긋하십니다.
 <br>
 
 <img src="/friendship/img/dj6ea_11.jpg" style="width:600px;height:500"><br>
