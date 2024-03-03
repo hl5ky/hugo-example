@@ -34,7 +34,7 @@ VK3MO, HL5KY.
 <br><br>
 
 <img src="/friendship/img/vk3mo_2.jpg" style="width:550px;height:500"><br>
-Ian의 무선실.
+Ian의 무선실. 안테나에 비해서 설비는 간단합니다.
 <br><br>
 
 <img src="/friendship/img/vk3mo_4.jpg" style="width:550px;height:500"><br>

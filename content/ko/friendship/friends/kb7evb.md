@@ -13,7 +13,9 @@ QTH : Malad City, ID USA<br>
 {{% /pageinfo %}}
 
 
-
+<img src="/friendship/img/kb7evb_02.jpg" style="width:600px;height:500"><br>
+낚시를 즐기는 Fred.
+<br><br>
 
 <img src="/friendship/img/kb7evb_01.jpg" style="width:600px;height:500"><br>
 HL5KY, HL5BHH, KB7EVB (ex-HL9EE)

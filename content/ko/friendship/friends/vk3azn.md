@@ -29,6 +29,8 @@ Bob은 2014년 경에 대우조선의 전기 감독관으로 근무했으며, �
 
 <!-- <img src="/friendship/img/vk3azn_02.jpg" style="width:700px;height:500"><br><br>-->
 
+<!-- <img src="/friendship/img/vk3azn_07.jpg" style="width:700px;height:500"><br><br>-->
+
 <img src="/friendship/img/vk3azn_04.jpg" style="width:600px;height:500"><br>
 HL5KY, VK3AZN
 <br><br>
