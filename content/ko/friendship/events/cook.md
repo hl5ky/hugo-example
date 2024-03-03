@@ -70,11 +70,11 @@ holiday 스타일 운용으로 주로 유럽국과 약 300여국 교신했습니
 <br><br>
 
 <img src="/friendship/img/cook_19.JPG" style="width:600px;height:500"><br>
-노는데도 휴식이 필요합니다.
+노는 것도 힘드네요.
 <br><br>
 
 <img src="/friendship/img/cook_06.JPG" style="width:600px;height:500"><br>
-쿡섬은 석양도 멋진 섬입니다.
+쿡섬은 석양도 아름답습니다.
 <br><br>
 
 <!--<img src="/friendship/img/cook_15.JPG" style="width:600px;height:500"><br>
