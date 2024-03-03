@@ -18,7 +18,7 @@ QTH   : Moessingen, Germany<br>
 
 
 <img src="/friendship/img/dj6ea_02.jpg" style="width:600px;height:500"><br>
-XYL(Anika), HL5BTF, DJ6EA - 대학 도시로 유명한 튀빙겐.
+XYL(Anita), HL5BTF, DJ6EA - 대학 도시로 유명한 튀빙겐.
 <br>
 
 <img src="/friendship/img/dj6ea_03.jpg" style="width:600px;height:500"><br>
