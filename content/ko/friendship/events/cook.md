@@ -24,7 +24,7 @@ weight: 10
 
 <img src="/friendship/img/cook_03.JPG" style="width:600px;height:500"><br>
 ZL1SN, HL5KY, ZL1CYK<br>
-ZL1CYK는 엘렉키어를 빌려준 분으로 ZL1SN과는 남아프리카에서 함께 이민 왔습니다.<br>
+ZL1CYK는 엘렉키어를 빌려준 분으로, ZL1SN과 마찬가지로 남아프리카에서 이민 왔습니다.<br>
 ZL1CYK를 통해서 ZL1SN을 알게 되었습니다.
 <br>
 
