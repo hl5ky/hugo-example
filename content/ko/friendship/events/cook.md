@@ -44,6 +44,10 @@ ZL1SN, HL5KY - 숙소 뒷편에 안테나 설치.
 holiday 스타일 운용으로 주로 유럽국과 약 300여국 교신했습니다.
 <br><br>
 
+<img src="/friendship/img/cook_21.jpg" style="width:600px;height:500"><br>
+대중 교통이 불편해서 스쿠터를 빌려서 돌아다녔습니다.
+<br><br>
+
 <img src="/friendship/img/cook_18.JPG" style="width:600px;height:500"><br>
 라군 크루즈.
 <br><br>
