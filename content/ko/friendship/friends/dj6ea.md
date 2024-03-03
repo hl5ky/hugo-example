@@ -29,13 +29,13 @@ XYL(Anita), HL5BTF, DJ6EA - 대학 도시로 유명한 튀빙겐.
 손자 Lukas가 이렇게 어릴 때부터 스케쥴 교신을 시작했습니다.
 <br>
 
-<img src="/friendship/img/dj6ea_15.jpg" style="width:600px;height:500"><br>
+<!--<img src="/friendship/img/dj6ea_15.jpg" style="width:600px;height:500"><br>
 손자 Lukas가 이렇게 어릴 때부터 스케쥴 교신을 시작했습니다.
-<br>
-
-<!--<img src="/friendship/img/dj6ea_05.jpg" style="width:600px;height:500"><br>
-그 손자가 지금은 결혼해서 아이도 둘이나 있습니다.
 <br>-->
+
+<img src="/friendship/img/dj6ea_05.jpg" style="width:600px;height:500"><br>
+그 손자가 지금은 결혼해서 아이도 둘이나 있습니다.
+<br>
 
 <img src="/friendship/img/dj6ea_06.jpg" style="width:600px;height:500"><br>
 우간다에서 근무했을 때 모았던 아프리카 토속품으로 장식된 거실.
