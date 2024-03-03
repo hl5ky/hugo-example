@@ -26,7 +26,7 @@ Ian은 아주 높은 타워에 14MHz 안테나만 스택으로 사용하고 있�
 <br><br>
 
 <iframe title="20160728_111701" width="700" height="400" src="https://play-tv.kakao.com/embed/player/cliplink/444993251?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe><br>
-직접 찍은 동영상.
+여러 개의 타워와 주변 환경.
 <br><br>
 
 <img src="/friendship/img/vk3mo_3.jpg" style="width:550px;height:500"><br>
