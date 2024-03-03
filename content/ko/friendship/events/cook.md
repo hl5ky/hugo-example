@@ -61,7 +61,7 @@ holiday 스타일 운용으로 주로 유럽국과 약 300여국 교신했습니
 <br>
 
 <img src="/friendship/img/cook_19.JPG" style="width:600px;height:500"><br>
-휴식 중.
+노는데도 휴식이 필요합니다.
 <br>
 
 <img src="/friendship/img/cook_06.JPG" style="width:600px;height:500"><br>
