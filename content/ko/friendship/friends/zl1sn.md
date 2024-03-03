@@ -53,7 +53,7 @@ Tauranga의 Mount Maunganui와 Papamoa 해변.
 <br><br>
 
 <img src="/friendship/img/zl1sn_10.jpg" style="width:600px;height:500"><br>
-200마일 해변 투어.
+90마일 해변 투어.
 <br><br>
 
 <img src="/friendship/img/zl1sn_07.jpg" style="width:600px;height:500"><br>
