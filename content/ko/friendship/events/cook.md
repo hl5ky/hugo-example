@@ -45,7 +45,9 @@ holiday 스타일 운용으로 주로 유럽국과 약 300여국 교신했습니
 <br><br>
 
 <img src="/friendship/img/cook_21.jpg" style="width:600px;height:500"><br>
-대중 교통이 불편해서 스쿠터를 빌려서 돌아다녔습니다.
+대중 교통이 불편해서 스쿠터를 빌려서 돌아다녔습니다.<br>
+경찰서에 가서 면허증도 새로 따야 하는데, 스쿠터로 실기 시험을 봅니다.<br>
+재미있는 것은 면허를 따기 전에 도로 연습은 허용합니다. ^
 <br><br>
 
 <img src="/friendship/img/cook_18.JPG" style="width:600px;height:500"><br>
