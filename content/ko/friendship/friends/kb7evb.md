@@ -1,5 +1,5 @@
 ---
-linkTitle: KB7EVB (작성중)
+linkTitle: KB7EVB
 title: KB7EVB
 # description: 
 type: docs
@@ -11,3 +11,10 @@ QTH : Malad City, ID USA<br>
 작성 중<br>
 글. HL5KY.
 {{% /pageinfo %}}
+
+
+
+
+<img src="/friendship/img/kb7evb_01.jpg" style="width:600px;height:500"><br>
+HL5KY, HL5BHH, KB7EVB (ex-HL9EE)
+<br><br>

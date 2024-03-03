@@ -20,6 +20,10 @@ HL5KY
 
 <img src="/friendship/img/zl1ken_02.jpg" style="width:600px;height:500"><br><br>
 
+<!--<img src="/friendship/img/zl1ken_06.jpg" style="width:600px;height:500"><br>
+
+<br><br>-->
+
 <img src="/friendship/img/zl1ken_03.jpg" style="width:600px;height:500"><br><br>
 
 <img src="/friendship/img/zl1ken_04.jpg" style="width:600px;height:500"><br>
