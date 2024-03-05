@@ -24,6 +24,11 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 
 <br>
 
+▷ <b><span style="font-size:130%">송신 연습 시작</span></b>
+- 영문 10단계의 수신 연습이 끝났다면 송신 연습의 시작을 고려하시기 바랍니다. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신은 언제부터" >}} 참조)
+- 연습은 {{< newtabref href="/morse/tx_practice" title="송신연습방법" >}}을 참고하시기 바랍니다.
+<br><br>
+
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - QRZ : Q부호. 누가 나를 호출합니까. 보통 뒤에 ?를 함께 사용함. QRZ?
 <br><br>
