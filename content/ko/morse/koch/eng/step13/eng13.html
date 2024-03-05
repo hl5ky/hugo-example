@@ -1220,14 +1220,14 @@ var phrases = ["QRZ? ", "TNX RPRT " ];
     phrases = phrases.slice(0, FinalSliceNumber);
 
     doc.setValue(phrases.join(" ")
-    + "                                                                                                         \n"
+    + "                                                                                               \n"
     + "\n"     
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 새로운 내용\n"
-    + "1. OP IS KIM <BT> QTH IS 위치.\n"
-    + "2. TEMP IS ABT 10C\n"
-    + "3. ANT IS DP\n"
-    + "4. PSE QSL, PSE QRX"
+    + "[[ 새로운 내용 ]]\n"
+    + "- OP IS KIM <BT> QTH IS 위치.\n"
+    + "- TEMP IS ABT 10C\n"
+    + "- ANT IS DP\n"
+    + "- PSE QSL, PSE QRX"
     );       
 }
 
@@ -1265,12 +1265,12 @@ SubMenu5.onclick = function() {
         cqs.push(cq);
     }
     doc.setValue(cqs.join("  ")
-    + "                                                                                      \n"
+    + "                                                                            \n"
     + "\n"
     //+ "-----------------------------------------------------------------------------------------------------------"
-    + "- 새로운 형식\n"
-    + "1. CQ DE 호출부호 PSE K\n"
-    + "2. 한국호출부호 DE 호출부호 (K 또는 KN)"
+    + "[[ 새로운 형식 ]]\n"
+    + "- CQ DE 호출부호 PSE K\n"
+    + "- 한국호출부호 DE 호출부호 (K 또는 KN)"
     );
 }
 
