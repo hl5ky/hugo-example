@@ -21,6 +21,6 @@ weight: 40
 <br>
 
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/kor/step04/kor04.html" title="한글 4단계 연습 프로그램" >}} 새창에서 열기</span></b>
+<br><br>
 
-
-마침표가 나옵니다.
+문장의 연습이 시작되면서, 쉼표, 마침표, 물음표가 나옵니다.

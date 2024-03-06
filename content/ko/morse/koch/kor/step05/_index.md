@@ -16,9 +16,8 @@ weight: 50
 모음 : ㅏ, ㅗ, ㅛ, ㅡ, ㅣ, ㅐ, ㅔ<br>
 
 {{% /pageinfo %}}
+
 <br>
 
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/kor/step05/kor05.html" title="한글 5단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
-
-쉼표, 마침표, 물음표가 나옵니다.
