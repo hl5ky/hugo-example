@@ -24,9 +24,10 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 
 <br>
 
-▷ <b><span style="font-size:130%">송신 연습 시작</span></b>
-- 영문 10단계의 수신 연습이 끝났다면 송신 연습의 시작을 고려하시기 바랍니다. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신은 언제부터" >}} 참조)
-- 연습은 {{< newtabref href="/morse/tx_practice" title="송신연습방법" >}}을 참고하시기 바랍니다.
+▶ <b><span style="font-size:130%">송신 연습 시작 및 수신기로 수신</span></b>
+- 영문 10단계의 수신 연습이 끝났다면 송신 연습의 시작을 고려하시기 바랍니다. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신은 언제부터" >}} 및 {{< newtabref href="/morse/tx_practice" title="송신연습방법" >}} 참조)
+
+- 아울러 수신기로 직접 교신을 들어보는 것도 좋습니다. 아직 모든 부호의 연습이 되지는 않았지만, 그 전보다는 많이 들리므로 연습에 도움이 되기도 하고, 학습에 좋은 동기부여가 됩니다. 특히 토,일요일에 진행하는 {{< newtabref href="/morse/book/04_etc/01_hl0cw" title="스케쥴 교신" >}}은 수신 연습을 하기에 아주 적당합니다.
 <br><br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
