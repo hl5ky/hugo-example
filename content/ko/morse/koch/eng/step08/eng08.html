@@ -1142,8 +1142,8 @@ SubMenu3.onclick = function() {
     stop.click();
     var ELEMENTS = [];    
 
-    var ALPHABET = "ACDEIKMNQRSTMN";
-    var NUMBERS = "12345678908"
+    var ALPHABET = "ANMCDEIKMNQRSTMN";
+    var NUMBERS = "12834956978908"
 
 	var word_count = 100;
     for (var i = 0; i < word_count; i++) {
@@ -1182,7 +1182,10 @@ SubMenu4.onclick = function() {
 
     var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "SAM", "DAN", "STAN", "KIM", "KEN", "MARK"];
     var RSTS = ["559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
-    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "D07"];
+    var KDNS = ["C02", "E15", "IS02", "R18", "S05", "A11", "A13", "K03", "D07", "M011", "M02", "M03", "M04", 
+    "M05", "M06", "M07", "M08", "M09", "M11", "M12", "M013", "M014", "M015", "M016", "M017", "M018",
+    "N01", "N02", "N03", "N04", "N05", "N14", "N15", "N16", "N17", "N011", "N18", "N011", "N19", 
+];
 
     loopCount = 3    
     var phrases = ["ES ", "QRT ", "QRA ", "QRM ", "QRN ", "QRS ", "ANT ", "88 ", "73 "];
@@ -1259,7 +1262,7 @@ SubMenu5.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ACDEIKMNMNQRSTT";
+    var ALPHABET = "ACDEIKMNMNMNQRSTT";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++)
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1294,7 +1297,7 @@ function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
     //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
-    var PRE_PREFIX = ["A", "E", "I", "K", "M", "N","Q", "R", "S"].map(x => "J" + x);
+    var PRE_PREFIX = ["A", "E", "I", "K", "M", "N",  "M", "N",  "M", "N","Q", "R", "S"].map(x => "J" + x);
     PRE_PREFIX.push("8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
@@ -1316,7 +1319,7 @@ function generateJACallsigns(count, repeatCount) {
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["JT1","3D2"];
-    var NUMBERS = ["1","2","3","3","4","5","6","7","7","8","8","8","9","0"];
+    var NUMBERS = ["1","2","3","3","4","5","6","7","7","8","8","8", "8", "9","0"];
 
     for (var i = 0; i < count; i++) {
         var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];

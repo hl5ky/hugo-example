@@ -1113,7 +1113,7 @@ SubMenu2.onclick = function() {
     stop.click();
     var ELEMENTS = [];    
 
-    var ALPHABET = "ABCDEGHIJKLMNOPQRSTXZBPGG";
+    var ALPHABET = "AGBBCGDEGHIGJKMGNLOGPPQRGSTXZ";
     var NUMBERS = "1234567890"
 
 	var word_count = 100;
@@ -1156,7 +1156,8 @@ SubMenu3.onclick = function() {
     "JEON", "CHO", "CHOI", "SEO", "OH", "HIRO", "TOSHI", "DON", "JIM", "JOHN", "JOE", "TOM", "JACK", "PARK", "SON",
     "NAM", "BILL", "BOB", "PHIL", "PETER", "JANG", "HONG", "SONG", "GEORGE", "IGOR" ];
     var RSTS = ["449","44N","559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
-    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03","B19"];
+    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03","B19",
+                "G01","G02","G03","G04","G05","G06","G07","G08","G09","G00","G10","G11","G12","G13","G14",];
     var QTHS = ["KOBE", "OSAKA", "DAEJEON", "INCHEON", "DOKDO", "MOKPO", "SAPPORO", "SEJONG", "SENDAI",
     "DALLAS", "MANILA ", "LONDON", "PARIS", "TAIPEI", "POHANG", "HYOGO", "BEIJING", "SANGHAI", "HONGKONG"];
     var TEMPS = ["ABT 2C", "7C", "ABT 13C", "14C", "ABT 16C", "21C", "ABT 27C"];
@@ -1214,8 +1215,8 @@ SubMenu4.onclick = function() {
     stop.click();
 
     var CALLSIGNS = generateHLCallsigns(150, 1); var HL_CALLSIGNS = CALLSIGNS;
-        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(70, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(80, 1));
         CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(100, 1));    
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1257,7 +1258,7 @@ SubMenu4.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ABBCDEGGGHIJKMNLOPPQRSTXZ";
+    var ALPHABET = "AGBBCGDEGHIGJKMGNLOGPPQRGSTXZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++) {
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1294,7 +1295,7 @@ function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
     //var PRE_PREFIX = ["F"].map(x => "J" + x);
-    var PRE_PREFIX = ["A", "E", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
+    var PRE_PREFIX = ["A", "E", "H", "G","G","G","G","G","G","G","G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
     PRE_PREFIX.push("7J", "8J", "8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
@@ -1315,7 +1316,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "HS","BA","BD","BG","BT","BZ"];
+    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "HS","BA","BD","BG","BG","BG","BG","BG","BG","BG","BT","BZ"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1343,7 +1344,7 @@ function generateASIACallsigns(count, repeatCount) {
 
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","G","HA","I","IT",
+    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","G","G","G","G","G","G","G","G","G","G","G","G","G","HA","I","IT",
     "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","R","RA","RC","RD","RT","SM","SP","TA","XE","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 

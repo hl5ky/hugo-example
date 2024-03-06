@@ -33,4 +33,5 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
 - DU : 필리핀.
+- LU : 아르헨티나.
 - W로 시작하는 WA, WB, WC, WD는 전부 미국.

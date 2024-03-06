@@ -34,5 +34,6 @@ ProSign : &lt;AR&gt;
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
 - 2E0 : 영국. G, M 등도 영국.
 - A로 시작하는 AC, AD, AE는 전부 미국.
+- RA, RC, RD : 러시아.
 - 나머지 프리픽스는 임의로 만든 것임.
 

@@ -1112,7 +1112,7 @@ SubMenu2.onclick = function() {
     stop.click();
     var ELEMENTS = [];    
 
-    var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZFVYYY";
+    var ALPHABET = "AYBCDYEFGYHIJKYLMNOPYQRSTYUVYWXYZFVY";
     var NUMBERS = "1234567890"
 
 	var word_count = 100;
@@ -1218,8 +1218,8 @@ SubMenu4.onclick = function() {
     stop.click();
 
     var CALLSIGNS = generateHLCallsigns(150, 1); var HL_CALLSIGNS = CALLSIGNS;
-        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(50, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(60, 1));
         CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(100, 1));    
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1258,7 +1258,7 @@ SubMenu4.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ABCDEFFFGHIJKMNLOPQRSTUUVVVWWXZ";
+    var ALPHABET = "AYBCDYEFGYHIJKYLMNOPYQRSTYUYVWYXYZFVY";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++) {
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1315,7 +1315,8 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD","VU"];
+    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD"
+    ,"YB","YC","YD","YB","YC","YD","YB","YC","YD","YB","YC","YD","YB","YC","YD","YB","YC","YD","YB","YC","YD","VU"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1344,8 +1345,9 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","F","G","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","PY","R","RA","RC","RD","RT",
-    "SM","SP","TA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","LU","N","OK","OH","PY","PY","PY","PY","PY","PY",
+    "PY","PY","PY","R","RA","RC","RD","RT","YU","YU","YU","YU","YU",
+    "SM","SP","TA","VE","VK","W","WA","WB","XE","YU","YU","YU","YU","YU","YU","YU","YU","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {

@@ -1238,7 +1238,7 @@ SubMenu4.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ACDEHHIJJKMNLOOQRSTXZZ";
+    var ALPHABET = "AJOCDEOJHHOIJKOMJNLOJOJQRJOSTXZZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++)
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1273,8 +1273,8 @@ function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
     //var PRE_PREFIX = ["F", "G",  "P"].map(x => "J" + x);
-    var PRE_PREFIX = ["A", "E", "H", "I","J","O", "K", "M", "N","L","Q", "R", "S"].map(x => "J" + x);
-    PRE_PREFIX.push("7J", "8J", "8N");
+    var PRE_PREFIX = ["A", "E", "H", "I","J","J","J","J","J","O","O","O","O","O","O", "K", "M", "N","L","Q", "R", "S"].map(x => "J" + x);
+    PRE_PREFIX.push("7J", "8J","7J", "8J","7J", "8J","7J", "8J", "8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
             PREFIX.push(pre + i);
@@ -1294,7 +1294,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "HS"];
+    var PRE_PREFIXS = ["JT1","JT1","JT1","JT1","JT1","JT1","3D2", "XX9", "4X4", "HS"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1323,7 +1323,8 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","R","RA","RC","RD","RT","SM","TA", "XE", "ZS", "ZL"];
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","OK","OH","OK","OH","OK","OH","OK","OH","OK","OH","OK","OH","OK","OH","OK","OH",
+    "R","RA","RC","RD","RT","SM","TA", "XE", "ZS", "ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {

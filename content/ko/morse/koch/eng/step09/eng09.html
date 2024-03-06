@@ -1155,7 +1155,7 @@ SubMenu3.onclick = function() {
     var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "D07"];
 
     loopCount = 3    
-    var phrases = ["QRT ", "QRA ", "QRM ", "QRN ", "QRS ", "QRX ", "ANT ", "DX "];
+    var phrases = ["QRT ", "QRA ", "QRM ", "QRN ", "QRS ", "QRX ", "DX " , "QRX ", "DX ", "QRX ", "DX ", "ANT "];
     for (var n = 0; n < loopCount; n++) {
         var name = NAMES[Math.floor(Math.random() * NAMES.length)];
         var rst = RSTS[Math.floor(Math.random() * RSTS.length)];
@@ -1228,7 +1228,7 @@ SubMenu4.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ACDEIKMNMNQRSTXX";
+    var ALPHABET = "AXCDXEIXKMXNMNXQRSTX";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++)
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1284,7 +1284,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4"];
+    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "XX9", "4X5", "XX9", "4X4"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {

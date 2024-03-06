@@ -1143,7 +1143,7 @@ SubMenu3.onclick = function() {
     stop.click();
     var ELEMENTS = [];    
 
-    var ALPHABET = "ABCDEHIJKLMNOPQRSTXZJOBPBP";
+    var ALPHABET ="ABCDPEBHIJPJBKMNPLBOOPBQPRSTPXBZ";
     var NUMBERS = "1234567890"
 
 	var word_count = 100;
@@ -1184,9 +1184,10 @@ SubMenu4.onclick = function() {
     var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "DAN", "STAN",
      "KIM", "JIM", "JOE","JOHN","BOB", "KEN", "MARK", "LEE", "LIM", "AHN", "HAN", "SHIN", "HIDE", "CHRIS", "HANS",
      "JEON", "CHO", "CHOI", "SEO", "OH", "HIRO", "TOSHI", "DON", "JIM", "JOHN", "JOE", "TOM", "JACK", "PARK", "SON",
-     "NAM", "BILL", "BOB", "PHIL", "PETER"];
+     "NAM", "BILL", "BOB", "PHIL", "PETER","BILL", "BOB", "PHIL", "PETER","BILL", "BOB", "PHIL", "PETER","BILL", "BOB", "PHIL", "PETER"];
     var RSTS = ["449","44N","559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
-    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03","B19"];
+    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03",
+            "B01","B02","B03","B04","B05","B06","B07","B08","B09","B10","B11","B12","B13","B14","B15","B19",];
     var QTHS = ["KOBE", "OSAKA", "DAEJEON", "INCHEON", "DOKDO", "MOKPO", "SAPPORO", "SENDAI",
     "DALLAS", "MANILA ", "LONDON", "PARIS", "TAIPEI"];
     var TEMPS = ["ABT 3C", "5C", "ABT 12C", "15C", "ABT 18C", "23C", "ABT 29C"];
@@ -1235,8 +1236,8 @@ SubMenu5.onclick = function() {
     stop.click();
 
     var CALLSIGNS = generateHLCallsigns(150, 1); var HL_CALLSIGNS = CALLSIGNS;
-        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(100, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(80, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(90, 1));
         CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(100, 1));    
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
@@ -1278,7 +1279,7 @@ SubMenu5.onclick = function() {
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ABBBCDEHIJJKMNLOOPPPQRSTXZ";
+    var ALPHABET = "ABCDPEBHIJPJBKMNPLBOOPBQPRSTPXBZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
     for (var i = 1; i < length; i++)
         result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
@@ -1334,7 +1335,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "HS","BA","BD","BT","BZ"];
+    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "HS","BA","BD","BT","BZ","BA","BD","BT","BZ","BA","BD","BT","BZ","BA","BD","BT","BZ"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1363,7 +1364,8 @@ function generateASIACallsigns(count, repeatCount) {
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
     var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","R","RA","RC","RD","RT","SM","SP","TA","XE","ZS","ZL"];
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","N","OK","OH","R","RA","RC","RD","RT","SM",
+    "SP","SP","SP","SP","SP","SP","SP","SP","SP","SP","SP","SP","TA","XE","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
