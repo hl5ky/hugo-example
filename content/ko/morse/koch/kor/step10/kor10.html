@@ -1283,11 +1283,11 @@ SubMenu1.onclick = function() {
         TXS.sort(() => Math.random() - 0.7);
  
     var TX = TXS[Math.floor(Math.random() * TXS.length)];
-    //var TX = TXS[0];
+    //var TX = "START_1st";
 
     if (TX === "START_1st") {  // 첫 교신의 시작 부분
         phrases = generateSTART_1st();
-      
+
     }else if (TX === "START_2nd") {  // 두,세번째 교신의 시작 부분
         phrases = generateSTART_2nd();     
         
@@ -1519,11 +1519,38 @@ function generateRST() {
 }
 
 function generateSuffix(length) {
-    var ALPHABET = "ABCDEFFFGHIJKMNLOPQRSTUUVVVWWXZ";
+    var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    for (var i = 1; i < length; i++) {
-        result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+
+    for (var i = 2; i < (length+1); i++) {
+
+            if (i === 2) { 
+                var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var j=0;
+                while (temp_2 === result)
+                {
+                    temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                j++;
+                }
+                result += temp_2
+            }
+
+            if (i === 3) { 
+                var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var j=0;
+                while (temp_3 === temp_2)
+                {
+                    temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                j++;
+                }
+                result += temp_3
+            }
+
+            if (i > 3) {
+                result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+            }
     }
+
     //result += (Math.random() > 0.5 ? "/QRP" : "");
     return result;
 }

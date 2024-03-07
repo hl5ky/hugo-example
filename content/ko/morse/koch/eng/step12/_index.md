@@ -30,5 +30,7 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
 - 7J, 8J : 일본.
+- JA, JE, JI, JK, JM, JN, JQ, JR, JS : 일본.
+- JT : 몽골리아.
 - OH : 핀란드.
 - OK : 체코공화국.

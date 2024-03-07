@@ -37,6 +37,4 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
 - 3D2 : 피지.
-- JA, JE, JI, JK, JM, JN, JQ, JR, JS : 일본.
-- JT : 몽골리아.
 - N : 미국.

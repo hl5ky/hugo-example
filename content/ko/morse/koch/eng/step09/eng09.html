@@ -1111,17 +1111,65 @@ SubMenu1.onclick = function() {
 SubMenu2.onclick = function() {
     stop.click();
     var ELEMENTS = [];    
-
-    var ALPHABET = "ACDEIKMNQRSTXMNXX";
+    
+    var ALPHABET = "AXCDXEIXKMXNMNXQRSTX";
     var NUMBERS = "1234567890"
 
 	var word_count = 100;
     for (var i = 0; i < word_count; i++) {
         var length = Math.floor(Math.random() > 0.5 ? ((Math.random() * 3 + 2)) : 3);
         var word = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    	for (var j = 1; j < length; j++) {
-        	word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    	}
+
+        for (var j = 2; j < (length+1); j++) {
+                if (j === 2) { 
+                    var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_2 === word)
+                    {
+                        temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_2
+                }
+
+                if (j === 3) { 
+                    var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_3 === temp_2)
+                    {
+                        temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_3
+                }
+
+                if (j === 4) { 
+                    var temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_4 === temp_3)
+                    {
+                        temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_4
+                }
+
+                if (j === 5) { 
+                    var temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_5 === temp_4)
+                    {
+                        temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_5
+                }
+
+                if (j > 5) {
+                    word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                }
+        }
+
 		word += " "
 		ELEMENTS.push(word); ELEMENTS.sort(() => Math.random() - 0.5);
 	}
@@ -1130,9 +1178,36 @@ SubMenu2.onclick = function() {
     for (var i = 0; i < number_count; i++) {
         var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *2 + 2)) : 2);
         var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-    	for (var j = 1; j < length; j++) {
-        	number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-    	}
+
+        for (var j = 2; j < (length+1); j++) {
+
+                if (j === 2) { 
+                    var temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    var k=0;
+                    while (temp_2 === number)
+                    {
+                        temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    k++;
+                    }
+                    number += temp_2
+                }
+
+                if (j === 3) { 
+                    var temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    var k=0;
+                    while (temp_3 === temp_2)
+                    {
+                        temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    k++;
+                    }
+                    number += temp_3
+                }
+
+                if (j > 3) {
+                    number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                }
+        }
+
     	number += " "
 		ELEMENTS.push(number); ELEMENTS.sort(() => Math.random() - 0.5);
 	}
@@ -1230,8 +1305,36 @@ var NUM_RANDOM_CALLSIGNS = 100;
 function generateSuffix(length) {
     var ALPHABET = "AXCDXEIXKMXNMNXQRSTX";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    for (var i = 1; i < length; i++)
-        result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+
+    for (var i = 2; i < (length+1); i++) {
+
+            if (i === 2) { 
+                var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var j=0;
+                while (temp_2 === result)
+                {
+                    temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                j++;
+                }
+                result += temp_2
+            }
+
+            if (i === 3) { 
+                var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var j=0;
+                while (temp_3 === temp_2)
+                {
+                    temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                j++;
+                }
+                result += temp_3
+            }
+
+            if (i > 3) {
+                result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+            }
+    }
+
     return result;
 }
 
@@ -1263,7 +1366,8 @@ function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
     //var PRE_PREFIX = ["A", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S"].map(x => "J" + x);
-    var PRE_PREFIX = ["A", "E", "I", "K", "M", "N","Q", "R", "S"].map(x => "J" + x);
+    //var PRE_PREFIX = ["A", "E", "I", "K", "M", "N","Q", "R", "S"].map(x => "J" + x);
+    var PRE_PREFIX = [];
     PRE_PREFIX.push("8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
@@ -1284,7 +1388,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "XX9", "4X4", "XX9", "4X5", "XX9", "4X4"];
+    var PRE_PREFIXS = ["3D2", "XX9", "4X4", "XX9", "4X5", "XX9", "4X4"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
