@@ -9,9 +9,10 @@ weight: 40
 ---
 
 {{% pageinfo %}}
-<b>대상</b> : 영문의 기본적인 교신이 가능한 분. (입문과정을 마친 분)<br>
+<b>대상</b> : 영문의 기본적인 교신이 가능한 분.<br>
+<b>유의</b> : 영문의 기본기가 어느 정도 갖추어져야 영문과 한글의 혼동을 극복하기 수월합니다.<br>
 
-<b>내용</b> : 한글로 래그츄를 하기 위한 과정.
+<b>내용</b> : 한글로 래그츄를 하기 위한 준비 과정.
 {{% /pageinfo %}}
 <div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
