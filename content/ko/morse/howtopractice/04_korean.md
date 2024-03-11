@@ -14,7 +14,8 @@ weight: 40
 
 <b>내용</b> : 한글로 래그츄를 하기 위한 준비 과정.
 {{% /pageinfo %}}
-<div oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+
+<br>
 
 
 <!--{{< newtabref href="/morse/koch/kor" title="부호연습(QSO코흐법).한글" >}}-->
@@ -23,4 +24,3 @@ weight: 40
 2. 한글QSO코흐법을 모두 마친 후에 <u><실제 교신 연습></u>의 <u><한글 예문 1~3></u> 연습.
 
 
-</div>
