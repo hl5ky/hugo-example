@@ -25,7 +25,7 @@ weight: 90
 
 -----------------------------------
 
-13일에는 아침부터 북미의 동부부터 서부까지 한꺼번에 열렸습니다. 게다가 중간 중간에 자메이카(6Y5CB, 17분), 파라구아이 등 중남미의 많은 나라에서도 불러왔습니다.
+13일에는 아침부터 북미의 동부부터 서부까지 한꺼번에 열렸습니다. 중간 중간에 자메이카(6Y5CB, 17분), 파라구아이, 푸에르토리코 등 중남미의 많은 나라에서도 불러왔습니다.
 
 <center><audio src="https://blog.kakaocdn.net/dn/eWweoH/btsFP3aUr4t/cqcKfdm5bGXrftLxdu97m1/tfile.mp3" controls="controls"></audio></center><br>
 
