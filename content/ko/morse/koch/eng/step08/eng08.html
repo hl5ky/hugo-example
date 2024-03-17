@@ -221,11 +221,11 @@ audio {
 </span>&nbsp;&nbsp;&nbsp;
 
 <span class="setting_group">
-<span class="setting_bold">옵션</span> : 
+<span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
 <label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_text" checked="checked" /> 글자숨기기</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="repeat" /> 연속반복</label>
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>&nbsp;&nbsp;
+<label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
@@ -849,37 +849,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    if (ac.currentTime > timestamp[0]) {
-        timestamp.shift();
-        
-        highlightStart = highlightEnd;
-        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-        
-        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-            highlightEnd = highlightStart + 4;
-            cursorTempTo.ch = cursorTempFrom.ch + 4;
-        } else if (txtValue.length > highlightStart) {
-            highlightEnd = highlightStart + 1;
-            if (txtValue[highlightStart] == '\n') {
-                cursorTempTo.line++;
-                cursorTempTo.ch = 0;
-            } else {
-                cursorTempTo.ch = cursorTempFrom.ch + 1;
-            }
-        }
-
-        if (!stopped && cursorTempTo.ch != 0) {
-            cm.focus();
-            doc.setSelection(cursorTempFrom, cursorTempTo);
-                
-            if (hideText.checked) {
-                setMarker(cursorTempTo, cursorTempEnd);
-            }
-            
-            cm.refresh();
-        }
-    }
+    //if (ac.currentTime > timestamp[0]) {
+    //    timestamp.shift();
+    //    
+    //    highlightStart = highlightEnd;
+    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+    //    
+    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+    //        highlightEnd = highlightStart + 4;
+    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
+    //    } else if (txtValue.length > highlightStart) {
+    //        highlightEnd = highlightStart + 1;
+    //        if (txtValue[highlightStart] == '\n') {
+    //            cursorTempTo.line++;
+    //            cursorTempTo.ch = 0;
+    //        } else {
+    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
+    //        }
+    //    }
+    //
+    //    if (!stopped && cursorTempTo.ch != 0) {
+    //        cm.focus();
+    //        doc.setSelection(cursorTempFrom, cursorTempTo);
+    //            
+    //        if (hideText.checked) {
+    //            setMarker(cursorTempTo, cursorTempEnd);
+    //        }
+    //        
+    //        cm.refresh();
+    //    }
+    //}
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
