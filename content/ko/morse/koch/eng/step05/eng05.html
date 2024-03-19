@@ -224,7 +224,8 @@ audio {
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
 <label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>
 <label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
@@ -1015,6 +1016,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
+            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_text").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1113,6 +1116,9 @@ SubMenu1.onclick = function() {
     //+ "-----------------------------------------------------------------------------------------------------------\n"
     //+ "\n"
     );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1139,6 +1145,9 @@ SubMenu2.onclick = function() {
     //+ "-----------------------------------------------------------------------------------------------------------\n"
     //+ "\n"
     );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1165,6 +1174,9 @@ SubMenu3.onclick = function() {
     //+ "-----------------------------------------------------------------------------------------------------------\n"
     //+ "\n"
     );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1202,6 +1214,9 @@ SubMenu4.onclick = function() {
     //+ "- 정확히 적을 필요없이 간단히 표시만 해도 됩니다\n"
     //+ "- 실제 교신시에는 ProSign을 적을 필요가 없습니다\n"
     );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1251,6 +1266,9 @@ SubMenu5.onclick = function() {
     FinalSliceNumber = 36
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "))
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 var CALLSIGNS = [
@@ -1309,7 +1327,10 @@ SubMenu6.onclick = function() {
     //+ "[[ 형식 ]]\n"
     //+ "- CQ DE 호출부호 (K 또는 <AR>)\n"
     //+ "- [AR]등의 프로사인은, 집중은 하지만 적지 않아도 됨."
-    );    
+    );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 // 아래는 사용하지 않음
@@ -1335,7 +1356,39 @@ SubMenu7.onclick = function() {
     FinalSliceNumber = 16
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
     doc.setValue(slicedWORDS.join(" "));
-     
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}     
+}
+
+function onChangeHideNow(){
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){
+        document.getElementById("hide_text").checked = true;
+        setMarker(cursorTempFrom, cursorTempEnd);
+    } else{
+        clearMarker();
+    }
+}
+
+function setMarket_short_after() {
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    setTimeout(function() {
+        setMarker(cursorTempFrom, cursorTempEnd);
+}, 100);
 }
 
 </script>

@@ -224,7 +224,8 @@ audio {
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
 <label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>
 <label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
@@ -1007,6 +1008,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
+            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_text").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1111,6 +1114,9 @@ SubMenu1.onclick = function() {
     //+ "\n"     
     //+ "\n"
     );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1171,7 +1177,9 @@ SubMenu2.onclick = function() {
     //+ "- 새로운 형식\n"
     //+ "DE 호출부호 73<SK>EE\n"
     );  
-     
+    
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
@@ -1239,7 +1247,39 @@ SubMenu3.onclick = function() {
     //+ "- 새로운 형식\n"
     //+ "DE 호출부호 73<SK>EE\n"
     );  
-     
+    
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
+}
+
+function onChangeHideNow(){
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){
+        document.getElementById("hide_text").checked = true;
+        setMarker(cursorTempFrom, cursorTempEnd);
+    } else{
+        clearMarker();
+    }
+}
+
+function setMarket_short_after() {
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    setTimeout(function() {
+        setMarker(cursorTempFrom, cursorTempEnd);
+}, 100);
 }
 
 </script>
