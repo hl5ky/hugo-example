@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>QSO코흐법</title>
+<title>영문 평문 연습</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -191,9 +191,10 @@ audio {
 </style>
 </head>
 <body>
+
 <div class="page">
 
-<p><span style="font-size:200%"><b>송신 연습</b></span>
+<p><span style="font-size:200%"><b>영문 평문 연습 (속도 조절)</b></span>
     <span style="font-size:150%">&nbsp;</span>
 </p>
 
@@ -224,15 +225,15 @@ audio {
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
 <label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>
+<label><input type="checkbox" id="hide_text" checked="checked" /> PLAY할때</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 지금</label>
 <label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
 </span>
 </div>
-<br>
+
 
 <div>
 <span class="sample_group">
@@ -259,12 +260,23 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 한 문장</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 두 문장</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 세 문장</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 네 문장</button>&nbsp;
+<button id="sub_menu_5" style="background-color:rgb(240, 250, 200);">5 다섯 문장</button>&nbsp;
+<button id="sub_menu_6" style="background-color:rgb(240, 250, 200);">6 여섯 문장</button>
+<!--button id="sub_menu_7" style="background-color:rgb(240, 250, 200);">7 호출부호 (10/3)</button-->
+
 
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
-AAA  AAA  AAA  AAA
 
-내용을 모두 지우고 연습할 부호를 입력하십시오.
+- 사각 메뉴 ( 한 문장, 두 문장...)를 클릭하면 문장이 만들어짐.
+
+- 누를 때마다 내용이 바뀜.
+
+- 속도와 부호간격을 조절한 후, PLAY.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -276,7 +288,7 @@ AAA  AAA  AAA  AAA
 </div>
 
 <br>
-<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/practice/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
+<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
 <button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
 
 <h3> ◆ 프로그램 정보</h3>
@@ -285,7 +297,7 @@ AAA  AAA  AAA  AAA
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한글 CW Decoder - <a href="http://shingiru.github.io/hangul_cw_decoder.html" target="_blank">http://shingiru.github.io/hangul_cw_decoder.html</a><br />
 <br />
-▶ QSO코흐법을 위한 재구성 : HL5KY<br />
+▶ 영문 평문 연습을 위한 재구성 : HL5KY<br />
 <br>
 ❤ 프로그램의 사용을 허용해 주신 DS1TZE님께 감사드립니다.
 <br /><br />
@@ -293,6 +305,7 @@ AAA  AAA  AAA  AAA
 
 </div>
 </body>
+
 
 <!--script>Mp3LameEncoderConfig = { memoryInitializerPrefixURL: "" };</script-->
 <script src="Mp3LameEncoder.min.js"></script>
@@ -733,6 +746,8 @@ stop.onclick = function() {
     addDitdah(false, 1); // this also manage cw port
 	
 	clearMarker();
+    document.getElementById("always").checked = false;
+
 	cm.setOption("extraKeys", {});
     cm.focus();
     if (cursorFrom != null) {
@@ -861,6 +876,8 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
+    // <글자숨기기>를 했을때 송신하면서 highlight되는 루틴
+
     //if (ac.currentTime > timestamp[0]) {
     //    timestamp.shift();
     //    
@@ -895,6 +912,7 @@ function highlight() {
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
+
 function setMarker(start, end) {
     clearMarker();
     marker = cm.markText(start, end, {className: "hide_markText"});
@@ -998,7 +1016,8 @@ highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
 }
 hideText.onchange = function() {
-    window.localStorage.setItem('hide_text', hideText.checked);
+    setMarker(cursorTempFrom, cursorTempEnd);
+    // window.localStorage.setItem('hide_text', hideText.checked);
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1021,8 +1040,6 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-                document.getElementById("hide_text").checked = false;
-                document.getElementById("hide_text").checked = false;        
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1053,6 +1070,7 @@ var SubMenu3 = document.querySelector("#sub_menu_3");
 var SubMenu4 = document.querySelector("#sub_menu_4");
 var SubMenu5 = document.querySelector("#sub_menu_5");
 var SubMenu6 = document.querySelector("#sub_menu_6");
+var SubMenu7 = document.querySelector("#sub_menu_7");
 //var randomSB = document.querySelector("#sub_menu_4");
 
 function changeQsoSample(newTxtId) {
@@ -1096,6 +1114,239 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
+var Phrases = [
+"The Hill Country Amateur Radio Club will conduct its annual Winter Field Day this weekend at the Club Radio.",
+"The worldwide event will take place for 24 hours on Saturday and Sunday with members practicing Emergency Radio operations.",
+"While social media makes global communication possible, there is another way to develop international friendships.",
+"We are going to use batteries, generators, solar panels, and establish communications with others around the world.",
+"Ham radios are two way radios that operate on non commercial wavelengths and are capable of reaching other hobbyists.",
+"Winter Field Day attendees will get a chance to see how ham radio operators work and communicate off the grid.",
+"The event will be held from 11 am to 11 pm January 27 at the Kern River Campground near Lake Ming.",
+"The club is stationed at City Park and is working to communicate with thousands of stations across the country.",
+"Club president Larry Dale said the goal is to show how they can accurately pass information in the event of an emergency.",
+"As if we would have to be called out and set up a back up communication if all other communication fails.",
+"In this area we are lucky because we dont have the hurricanes or tornadoes that tear down the infrastructure.",
+"if you dont count smoke signals and signal flags, the worlds first form of wireless communication was radio.",
+"As a middle schooler, I enjoyed building crystal radio kits that allowed me to hear distant radio stations.",
+"Shortwave radio stations allowed me to hear news and music from faraway places like London through the BBC.",
+"Radio scanners that gave me the ability to listen to our police, fire, airport traffic, and much more.",
+"My first exposure to two way radio was probably a set of GI Joe walkie talkies that I got for Christmas one year.",
+"While I was in the Army, as a amateur radio operator, I helped relay information using radio and phone patches.",
+"I saw how many people in New York were literally cut off from the world, even as they were in the middle of the action.",
+"Becoming a ham radio operator requires taking an FCC multiple choice test administered by a group of VECs.",
+"Most of the FCC multiple choice test questions pertain to some basic rules and knowledge about radio communication.",
+"Maintaining contact with each other and friends on hiking trips, where cellphone coverage is spotty.",
+"Providing weather spotting assistance to the National Weather Service through their Skywarn program.",
+"If the grid goes down, we know what to do and how to stay in touch with each other and members of our community.",
+"The ARRL Foundation is now accepting grant applications from ham radio organizations for amateur radio related projects.",
+"Charlie had been secretly studying for his license. After passing his test, he revealed his call sign to his grandpa.",
+"Ham radio is alive and well in the heartland of America, and it was encouraging to meet with so many members.",
+"Several major manufacturers exhibited at the event which was held at the Gateway Convention Center in Illinois.",
+"Sunspot numbers and solar flux rose and geomagnetic numbers were quieter and average daily planetary A index decreased.",
+"Amateurs who have received mentoring from a nominee must be under 30 years of age during the calendar year.",
+"Targeting this age group is meant to keep such amateurs engaged in the hobby after they achieve DXCC award.",
+"Staten Island Technical High School is the first New York City school to include amateur radio in its curriculum.",
+"Steve visited the school several weeks ago to help administer amateur radio license tests and there are 32 ham operators.",
+"World Radio Day was first celebrated in 2012 following its declaration by the United Nations Educational Organization.",
+"ARRL Audio News is a summary of the weeks top news stories in the world of amateur radio and along other features.",
+"ARISS is a cooperative venture of international amateur radio societies and the space agencies that support the ISS.",
+"Be patient, Operate slowly and patiently when requested. Be friendly, Offer friendly advice and counsel to beginners.",
+"Be considerate, Consider the interests of others and never knowingly operate in a way that lessens their pleasure.",
+"Offer loyalty, encouragement, and support to other amateurs, local clubs, and the American Radio Relay League.",
+"Keep your station and skills ready to serve your country and community. Be progressive with knowledge and abreast of science.",
+"Be comprehensive, Understand that not everyone is as smart, professional, or an expert as you.",
+"Act positively, Act positively if you want to do something about something, rather than negatively.",
+"Be equal, Treat everyone involved in Amateur Radio equally. Be equal, Treat everyone involved in Amateur Radio equally.",
+"Be an avocation, Radio is an avocation, never interfering with the duties owed to family, job, school, or community.",
+"Listen before calling. Only call if you can copy the DX station properly. Be sure of the DX stations call sign before calling.",
+"Over the past decades, concerns have grown about a relatively small number of radio amateurs on the bands.",
+"Amateur radio licences could sometimes bypass the traditional ways of passing on operating skills from generation to generation.",
+"A document aiming to become a universal guide for newcomers and old timers alike on the subject of operating ethics and procedures.",
+"large numbers of us are all playing radio on the same airwaves, our playing field. We are never alone.",
+"All other hams are our colleagues, our brothers and sisters, our friends. Act accordingly. Always be considerate.",
+"You shall understand there are other people with different opinions on a given subject. This world is not for you exclusively.",
+"Be tolerant. Not all hams necessarily share your opinions, and your opinions may also not be the best ones.",
+"Never use rude language or abusive words on the bands. Such behavior says nothing about the person it is addressed to.",
+"please understand that not everyone is as smart, as professional or as much an expert as you. Act positively.",
+"If you want to do something about it, act positively. How can I help, how can I correct, how can I teach rather than negatively.",
+"They offer loyalty, encouragement and support to other amateurs, local clubs, the IARU Radio Society in their country.",
+"they keep their station up to date. It is well-built and efficient. Their operating practice is above reproach.",
+"Be balanced. radio is a hobby, never interfering with duties owed to family, job, school or community.",
+"PROGRESSIVE with knowledge abreast of science, a well built and efficient station, and operation beyond reproach.",
+"FRIENDLY with slow and patient operation when requested, friendly advice and counsel to the beginner, kindly assistance.",
+"The Rag Chew Crew is a great way to kick off an evening on HF. It starts with a handful of stations throughout the night.",
+"There is no net control station on The Rag Chew Crew. just an opportunity to pass it around, swap stories, get signal reports.",
+"A great way to enhance your Rag Chew Crew experience is to get on our Facebook page during the net.",
+"One of my ham friends recently wrote me that he remembers the days when hams would have to dig out a calculator.",
+"Today with as many plugnplay operators as we have out there, you are more likely to find that all you need for your antenna is a credit card.",
+"It is just a sign of changing times that we have so many people buying rather than stringing up their own wire antennas.",
+"At my parents home in Cleveland Heights Ohio, It was easy to get on the air with zip cord or speaker wire and wire clippers.",
+"While I remember some hassles with Mom and Dad about getting wires out of my bedroom and into the front yard.",
+"We had enough big Oak trees to get all the height and camouflage that I needed for the wire antennas.",
+"The hassle came because I used a hammer and pipe on the window surround to make nice little channels for cables to pass through.",
+"Now the antenna market seems to be about compromise antennas, easy of use and low SWR across as many bands as possible.",
+"I love my three tuners but I am honestly embarrassed that I spend as much money and time with them as I do.",
+"Will there be any radical new developments in the antenna tuner category that truly make a difference in our ability to get out?",
+"Of course, tuners will continue to be big sellers as convenience often drives the modern consumer.",
+"I dont see anything innovative coming in the tuner space, except for new and better algorithms to speed our tune and perhaps eliminate the crutch.",
+"Sometimes marketing departments make it look like there is a heck of a lot more innovation than there really is inside a little box.",
+"We have a local group of hams and that group of people will sometimes pass around a show and tell item to get the conversation started.",
+"Yesterday I took along what has to be the worlds smallest paddle and it was a hit and caused quite a lot of discussion.",
+"It is a fun little product, not really meant to be used as the main key because you can not hit your top speed with it.",
+"I love it when this happens and please tell your ham friends the opportunity is here if they have something to say.",
+
+
+]
+
+
+
+SubMenu1.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 1
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   "));
+    
+    setMarket_short_after()
+}
+
+SubMenu2.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 2
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   \n\n"));
+}
+
+SubMenu3.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 3
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   \n\n"));
+}
+
+SubMenu4.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 4
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   \n\n"));
+}
+
+
+SubMenu5.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 5
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   \n\n"));
+}
+
+SubMenu6.onclick = function() {
+    stop.click();
+
+    var slicedPhrases = [];
+    var repeatedPhrases = [];
+    var addedPhrases = [];
+    repeatCount = getRepeatCount();
+
+    //loopCount = 2
+    //for (var n = 0; n < loopCount; n++) {
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        Phrases.sort(() => Math.random() - 0.5);
+        for (repeatedPhrases of Phrases)
+        addedPhrases.push(Array(repeatCount).fill(repeatedPhrases).join(""));
+    //}
+
+    FinalSliceNumber = 6
+    slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
+    doc.setValue(slicedPhrases.join("   \n\n"));
+}
+
 function onChangeHideNow(){
     var lastLine = doc.lastLine();
     var lastLineLength = doc.getLine(lastLine).length;
@@ -1106,7 +1357,6 @@ function onChangeHideNow(){
 
     var checkbox = document.getElementById('hide_now');
     if (checkbox.checked == true){
-        document.getElementById("hide_text").checked = true;
         setMarker(cursorTempFrom, cursorTempEnd);
     } else{
         clearMarker();
@@ -1125,8 +1375,6 @@ function setMarket_short_after() {
         setMarker(cursorTempFrom, cursorTempEnd);
 }, 100);
 }
-
-
 
 </script>
 </html>
