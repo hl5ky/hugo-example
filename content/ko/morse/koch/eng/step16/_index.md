@@ -19,6 +19,8 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;BT&gt;, &lt;SK&gt;
 {{% /pageinfo %}}
 
 <br>
+▶ <b><span style="font-size:130%">영문 16단계 예습</span></b>
+<br><br>
 
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step16/eng16.html" title="영문 16단계 연습 프로그램" >}} 새창에서 열기</span></b>
 

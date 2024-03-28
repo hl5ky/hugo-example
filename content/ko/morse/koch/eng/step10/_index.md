@@ -23,6 +23,8 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step10/eng10.html" title="영문 10단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 10단계 예습</span></b>
+<br><br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - &lt;AS&gt; : 기다리시오. 교신 도중에 누군가가 'QRL?'이라고 송신하면, 이에 대해서 &lt;AS&gt;를 송신하여 교신 중임을 알림.

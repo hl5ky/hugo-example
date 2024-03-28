@@ -22,6 +22,8 @@ weight: 40
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step04/eng04.html" title="영문 4단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 4단계 예습</span></b>
+<br><br>
 
 ▷ <b><span style="font-size:130%">약어</span></b>
 - K : 'CQ DE 호출부호 K'의 형식에서 K는 over라는 뜻으로 송신이 끝났음을 알림.<br>

@@ -22,6 +22,8 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step07/eng07.html" title="영문 7단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 7단계 예습</span></b>
+<br><br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - &lt;SK&gt; : 교신종료. &lt;VA&gt;로 표기하기도 하며 같은 뜻임.

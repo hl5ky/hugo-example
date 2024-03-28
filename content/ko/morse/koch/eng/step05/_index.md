@@ -22,6 +22,8 @@ ProSign : &lt;AR&gt;
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step05/eng05.html" title="영문 5단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 5단계 예습</span></b>
+<br><br>
 
 ▷ <b><span style="font-size:130%">[부호  &lt;AR&gt;]의 설명</span></b>
 - A와 R을 붙여서 송신합니다.

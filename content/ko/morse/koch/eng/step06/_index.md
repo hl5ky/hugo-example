@@ -23,6 +23,9 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 
 <br>
 
+▶ <b><span style="font-size:130%">영문 6단계 예습</span></b>
+<br><br>
+
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - DR : Dear의 약자. '친애하는'의 뜻임. 'DR KIM'등으로 이름의 앞에 사용함.
 - &lt;SK&gt; : 교신종료. &lt;VA&gt;로 표기하기도 하며 같은 뜻임.

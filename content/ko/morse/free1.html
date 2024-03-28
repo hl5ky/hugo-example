@@ -223,9 +223,9 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideAlways();"> 항상</label>&nbsp;
+<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
+<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
 <label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
@@ -732,6 +732,7 @@ function renewMorse() {
 var stopped = true, paused = false;
 var cm, doc, txtValue, cursorFrom = null, cursorTo, cursorTempFrom, cursorTempTo, cursorTempEnd, highlightStart, hightlightEnd, repeatId = -1, marker = null;
 var DELAY_AMOUNT = 1; // seconds
+
 stop.onclick = function() {
     try { clearTimeout(repeatId); repeatId = -1;}
     catch (e) {}
@@ -756,6 +757,7 @@ stop.onclick = function() {
     paused = false;
 }
 var bufferSource = noiseNode = noiseGain = null;
+
 play.onclick = function() {
     if (paused) {
         play.replaceChild(document.createTextNode("PAUSE"), play.firstChild);
@@ -847,7 +849,27 @@ play.onclick = function() {
     
     cm.focus();
     if (highlightSlowly.checked) doc.setSelection(cursorTempFrom, cursorTempFrom);
-    if (hideText.checked) setMarker(cursorTempFrom, cursorTempEnd);
+    //if (hideText.checked) setMarker(cursorTempFrom, cursorTempEnd);
+
+    //var checkbox = document.getElementById('hide_now');
+
+    if (hideText.checked == true){
+        if (slicedPhrases == ""){
+            setMarket_short_after();
+        } else{
+            doc.setValue(slicedPhrases.join("   \n\n"));
+            setMarket_short_after();
+            doc.setValue(slicedPhrases.join("   \n\n") + addedText);
+        }
+    } else{
+        if (slicedPhrases == ""){
+            clearMarker();
+        } else{        
+            clearMarker();
+            doc.setValue(slicedPhrases.join("   \n\n") + addedText);
+        }
+    }
+
 	cm.setOption("extraKeys", { Left: function() {rollback(true);}, Right: function() {rollback(false);} });
     cm.focus();
     
@@ -872,37 +894,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    //if (ac.currentTime > timestamp[0]) {
-    //    timestamp.shift();
-    //    
-    //    highlightStart = highlightEnd;
-    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-    //    
-    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-    //        highlightEnd = highlightStart + 4;
-    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
-    //    } else if (txtValue.length > highlightStart) {
-    //        highlightEnd = highlightStart + 1;
-    //        if (txtValue[highlightStart] == '\n') {
-    //            cursorTempTo.line++;
-    //            cursorTempTo.ch = 0;
-    //        } else {
-    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
-    //        }
-    //    }
-    //
-    //    if (!stopped && cursorTempTo.ch != 0) {
-    //        cm.focus();
-    //        doc.setSelection(cursorTempFrom, cursorTempTo);
-    //            
-    //        if (hideText.checked) {
-    //            setMarker(cursorTempTo, cursorTempEnd);
-    //        }
-    //        
-    //        cm.refresh();
-    //    }
-    //}
+    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
+        timestamp.shift();
+        
+        highlightStart = highlightEnd;
+        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+        
+        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+            highlightEnd = highlightStart + 4;
+            cursorTempTo.ch = cursorTempFrom.ch + 4;
+        } else if (txtValue.length > highlightStart) {
+            highlightEnd = highlightStart + 1;
+            if (txtValue[highlightStart] == '\n') {
+                cursorTempTo.line++;
+                cursorTempTo.ch = 0;
+            } else {
+                cursorTempTo.ch = cursorTempFrom.ch + 1;
+            }
+        }
+    
+        if (!stopped && cursorTempTo.ch != 0) {
+            cm.focus();
+            doc.setSelection(cursorTempFrom, cursorTempTo);
+                
+            if (hideText.checked) {
+                setMarker(cursorTempTo, cursorTempEnd);
+            }
+            
+            cm.refresh();
+        }
+    }
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -1008,9 +1030,20 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
+    if (highlightSlowly.checked == false){
+        document.getElementById("highlight_slowly").checked = false;
+    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
+
+    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할떼' 버튼이 작동하지 않도록 하기 위한 루틴
+        if (hideText.checked == true){
+            document.getElementById("hide_text").checked = false;
+        } else {
+            document.getElementById("hide_text").checked = true;
+        }
+    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1035,6 +1068,7 @@ window.addEventListener('DOMContentLoaded', function() {
         else changeQsoSample("hangul_txt_1");
             document.getElementById("hide_text").checked = false;
             document.getElementById("hide_text").checked = true;
+            document.getElementById("highlight_slowly").checked = true;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1193,12 +1227,13 @@ var Phrases = [
 
 ]
 
-
+var slicedPhrases = [];
+var addedText;
+var hideAlways = document.getElementById('hide_now');
 
 SubMenu1.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1218,17 +1253,26 @@ SubMenu1.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   "));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+    addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 11111]]\n"
+    + "- QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
 
 SubMenu2.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1248,16 +1292,25 @@ SubMenu2.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   \n\n"));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+    addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 22222]]\n"
+    + "- QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1277,16 +1330,25 @@ SubMenu3.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   \n\n"));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+    addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 3333]]\n"
+    + "- QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
 SubMenu4.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1306,17 +1368,26 @@ SubMenu4.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   \n\n"));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+    addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 44444]]\n"
+    + "- QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
 
 SubMenu5.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1336,16 +1407,26 @@ SubMenu5.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   \n\n"));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+
+    addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 55555 ]]\n"
+    + "- 55555QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
 SubMenu6.onclick = function() {
     stop.click();
 
-    var slicedPhrases = [];
+    //var slicedPhrases = [];
     var repeatedPhrases = [];
     var addedPhrases = [];
     repeatCount = getRepeatCount();
@@ -1365,40 +1446,67 @@ SubMenu6.onclick = function() {
     slicedPhrases = addedPhrases.slice(0, FinalSliceNumber);
     doc.setValue(slicedPhrases.join("   \n\n"));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        setMarket_short_after();
+    if (hideAlways.checked == true){
+        setMarket_short_after(100);
     }
+
+   addedText = 
+    "                                                                                                         \n"
+    + "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    + "\n"
+    + "[[ 새로운 내용 66666]]\n"
+    + "- QRL? <AS>\n"
+    + "- TNX CALL\n";
+    
+
+    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
 }
 
-function onChangeHideNow(){
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
-    cursorTempFrom = {line: 0, ch: 0};
-    cursorTempTo = {line: 0, ch: 0};
-    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+function onChangeHideAlways(){
+    //var hideAlways = document.getElementById('hide_now');
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        document.getElementById("hide_text").checked = true;
-        setMarker(cursorTempFrom, cursorTempEnd);
-    } else{
-        clearMarker();
-    }
+    if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
+        if (hideAlways.checked == true){
+            document.getElementById("hide_now").checked = false;
+        } else {
+            document.getElementById("hide_now").checked = true;
+        }
+    }else {
+            if (hideAlways.checked == true){
+                if (slicedPhrases == ""){
+                    setMarket_short_after(0);
+                    document.getElementById("hide_text").checked = true;
+                } else{
+                    doc.setValue(slicedPhrases.join("   \n\n"));
+                    document.getElementById("hide_text").checked = true;
+                    setMarket_short_after(0);
+                    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
+                }
+            } else{
+                if (slicedPhrases == ""){
+                    clearMarker();
+                    document.getElementById("hide_text").checked = false;
+                } else{        
+                    clearMarker();
+                    doc.setValue(slicedPhrases.join("   \n\n") + addedText);
+                    document.getElementById("hide_text").checked = false;
+                }
+            }
+    }        
 }
 
-function setMarket_short_after() {
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
+function setMarket_short_after(timeout) {
+    lastLine = doc.lastLine();
+    lastLineLength = doc.getLine(lastLine).length;
+
     cursorTempFrom = {line: 0, ch: 0};
     cursorTempTo = {line: 0, ch: 0};
     cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
     setTimeout(function() {
         setMarker(cursorTempFrom, cursorTempEnd);
-}, 50);
+    }, timeout);
 }
 
 </script>

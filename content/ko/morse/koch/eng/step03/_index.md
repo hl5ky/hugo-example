@@ -23,6 +23,9 @@ weight: 30
 
 <br>
 
+▶ <b><span style="font-size:130%">영문 3단계 예습</span></b>
+<br><br>
+
 ▷ <b><span style="font-size:130%">약어</span></b>
 - DE : This is 의 약어. "여기는"이라는 뜻.<br>
 <br><br>

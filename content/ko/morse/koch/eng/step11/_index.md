@@ -23,6 +23,8 @@ ProSign : &lt;AR&gt;, &lt;AS&gt;, &lt;SK&gt;
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step11/eng11.html" title="영문 11단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 11단계 예습</span></b>
+<br><br>
 
 ▶ <b><span style="font-size:130%">송신 연습 시작 및 수신기로 수신</span></b>
 - 영문 10단계의 수신 연습이 끝났다면 송신 연습의 시작을 고려하시기 바랍니다. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신은 언제부터" >}} 및 {{< newtabref href="/morse/tx_practice" title="송신연습방법" >}} 참조)

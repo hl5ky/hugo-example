@@ -23,6 +23,8 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 <b><span style="font-size:130%">{{< newtabref href="/morse/koch/eng/step08/eng08.html" title="영문 8단계 연습 프로그램" >}} 새창에서 열기</span></b>
 
 <br>
+▶ <b><span style="font-size:130%">영문 8단계 예습</span></b>
+<br><br>
 
 ▷ <b><span style="font-size:130%">약어/용어</span></b>
 - QRM : Q부호. 혼신.
