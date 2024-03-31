@@ -207,8 +207,8 @@ audio {
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
-&nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
+<!--&nbsp;
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %-->
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -223,13 +223,16 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>
-<label id="repeat" ></label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 항상</label>&nbsp;
+<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
+<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
+</span>&nbsp;&nbsp;
+
+<span class="setting_group">
+<label><input type="checkbox" id="repeat" > 연속 반복</label>&nbsp;&nbsp;
 </span>
 </div>
 
@@ -670,7 +673,7 @@ var isMobile = (isIOS || isAndroid);
 
 var freq = document.querySelector("#freq")
 var wpm = document.querySelector("#speed");
-var volume = document.querySelector("#volume");
+//var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
@@ -853,37 +856,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    //if (ac.currentTime > timestamp[0]) {
-    //    timestamp.shift();
-    //    
-    //    highlightStart = highlightEnd;
-    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-    //    
-    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-    //        highlightEnd = highlightStart + 4;
-    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
-    //    } else if (txtValue.length > highlightStart) {
-    //        highlightEnd = highlightStart + 1;
-    //        if (txtValue[highlightStart] == '\n') {
-    //            cursorTempTo.line++;
-    //            cursorTempTo.ch = 0;
-    //        } else {
-    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
-    //        }
-    //    }
-    //
-    //    if (!stopped && cursorTempTo.ch != 0) {
-    //        cm.focus();
-    //        doc.setSelection(cursorTempFrom, cursorTempTo);
-    //            
-    //        if (hideText.checked) {
-    //            setMarker(cursorTempTo, cursorTempEnd);
-    //        }
-    //        
-    //        cm.refresh();
-    //    }
-    //}
+    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
+        timestamp.shift();
+        
+        highlightStart = highlightEnd;
+        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+        
+        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+            highlightEnd = highlightStart + 4;
+            cursorTempTo.ch = cursorTempFrom.ch + 4;
+        } else if (txtValue.length > highlightStart) {
+            highlightEnd = highlightStart + 1;
+            if (txtValue[highlightStart] == '\n') {
+                cursorTempTo.line++;
+                cursorTempTo.ch = 0;
+            } else {
+                cursorTempTo.ch = cursorTempFrom.ch + 1;
+            }
+        }
+    
+        if (!stopped && cursorTempTo.ch != 0) {
+            cm.focus();
+            doc.setSelection(cursorTempFrom, cursorTempTo);
+                
+            if (hideText.checked) {
+                setMarker(cursorTempTo, cursorTempEnd);
+            }
+            
+            cm.refresh();
+        }
+    }
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -936,10 +939,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-volume.onchange = function() {
-    vol = volume.value / 100.0;
-    window.localStorage.setItem('volume', volume.value);
-}
+//volume.onchange = function() {
+//    vol = volume.value / 100.0;
+//    window.localStorage.setItem('volume', volume.value);
+//}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -988,9 +991,20 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
+    if (highlightSlowly.checked == false){
+        document.getElementById("highlight_slowly").checked = false;
+    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
+
+    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할때' 버튼이 작동하지 않도록 하기 위한 루틴
+        if (hideText.checked == true){
+            document.getElementById("hide_text").checked = false;
+        } else {
+            document.getElementById("hide_text").checked = true;
+        }
+    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -999,8 +1013,8 @@ window.addEventListener('DOMContentLoaded', function() {
     try {
         if (window.localStorage.getItem('freq')) freq.value = parseInt(window.localStorage.getItem('freq'));
         if (window.localStorage.getItem('wpm')) wpm.value = parseInt(window.localStorage.getItem('wpm'));
-        if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
-        vol = volume.value / 100.0;
+        //if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
+        //vol = volume.value / 100.0;
         if (window.localStorage.getItem('flute')) flute.checked = window.localStorage.getItem('flute') == 'true';
 		smoothingDuration = flute.checked ? 0.02 : 0.004;
         if (window.localStorage.getItem('noise')) noise.checked = window.localStorage.getItem('noise') == 'true';
@@ -1013,8 +1027,10 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-            document.getElementById("hide_text").checked = false;
-            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_now").checked = false;
+            document.getElementById("hide_text").checked = true;
+            document.getElementById("highlight_slowly").checked = true;
+            document.getElementById("repeat").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1088,6 +1104,8 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
+var hideNow = document.getElementById('hide_now');
+
 SubMenu1.onclick = function() {
     stop.click();
 
@@ -1114,8 +1132,7 @@ SubMenu1.onclick = function() {
     //+ "- 부호간격 1로 조절\n"
     );
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 
@@ -1232,8 +1249,7 @@ SubMenu2.onclick = function() {
     ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
     doc.setValue(ELEMENTS.join(""));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 SubMenu3.onclick = function() {
@@ -1298,8 +1314,7 @@ var phrases = ["QRZ? ", "TNX RPRT ", "GM ", "GA ", "GE ", "GB " ];
     //+ "- RIG IS TS-440\n"
     );
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 SubMenu4.onclick = function() {
@@ -1344,8 +1359,7 @@ SubMenu4.onclick = function() {
     //+ "- 호출부호/QRP\n"
     );
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 //===============================================================================================
@@ -1496,34 +1510,42 @@ function generateDXCallsigns(count, repeatCount) {
 // }
 
 function onChangeHideNow(){
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
-    cursorTempFrom = {line: 0, ch: 0};
-    cursorTempTo = {line: 0, ch: 0};
-    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        document.getElementById("hide_text").checked = true;
-        setMarker(cursorTempFrom, cursorTempEnd);
-    } else{
-        clearMarker();
+if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
+    if (hideNow.checked == true){
+        document.getElementById("hide_now").checked = false;
+    } else {
+        document.getElementById("hide_now").checked = true;
     }
+}else {
+        var lastLine = doc.lastLine();
+        var lastLineLength = doc.getLine(lastLine).length;
+        
+        cursorTempFrom = {line: 0, ch: 0};
+        cursorTempTo = {line: 0, ch: 0};
+        cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+        var checkbox = document.getElementById('hide_now');
+        if (checkbox.checked == true){
+            document.getElementById("hide_text").checked = true;
+            setMarker(cursorTempFrom, cursorTempEnd);
+        } else{
+            clearMarker();
+        }
+}        
 }
 
-function setMarket_short_after() {
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
-    cursorTempFrom = {line: 0, ch: 0};
-    cursorTempTo = {line: 0, ch: 0};
-    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+function setMarker_short_after() {
+var lastLine = doc.lastLine();
+var lastLineLength = doc.getLine(lastLine).length;
 
-    setTimeout(function() {
-        setMarker(cursorTempFrom, cursorTempEnd);
+cursorTempFrom = {line: 0, ch: 0};
+cursorTempTo = {line: 0, ch: 0};
+cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+setTimeout(function() {
+    setMarker(cursorTempFrom, cursorTempEnd);
 }, 100);
 }
-
 </script>
 </html>

@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>호출부호연습</title>
+<title>QSO코흐법</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -193,8 +193,8 @@ audio {
 <body>
 <div class="page">
 
-<p><span style="font-size:200%"><b>호출부호 연습</b></span>
-    <span style="font-size:150%">&nbsp;</span>
+<p><span style="font-size:200%"><b>QSO 코흐법</b></span>
+    <span style="font-size:150%">&nbsp;(한글 1단계)</span>
 </p>
 
 <div class="setting">
@@ -207,8 +207,8 @@ audio {
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
-<!--&nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %-->
+&nbsp;
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -223,36 +223,19 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 항상</label>&nbsp;
-<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
-<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
+<label id="highlight_slowly" ></label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>
+<label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
-</span>&nbsp;&nbsp;
-
-<span class="setting_group">
-<label><input type="checkbox" id="repeat" > 연속 반복</label>&nbsp;&nbsp;
 </span>
 </div>
 
 
 <div>
 <span class="sample_group">
-<!--button style="background-color:rgb(240, 250, 200);" onClick="location.href='/morse/practice/eng-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-2.html'">&nbsp;2단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-3.html'">&nbsp;3단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-4.html'">&nbsp;4단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-5.html'">&nbsp;5단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-6.html'">&nbsp;6단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-7.html'">&nbsp;7단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-8.html'">&nbsp;8단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-9.html'">&nbsp;9단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-10.html'">&nbsp;10단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-11.html'">&nbsp;11단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-12.html'">&nbsp;12단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-13.html'">&nbsp;13단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button-->
 
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
@@ -262,20 +245,19 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 한국</button>&nbsp;&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 일본</button>&nbsp;&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 아시아</button>&nbsp;&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 전세계</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 ㄱ, ㄴ, ㅏ (11/2)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 1 (11/2)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합 2 (11/2)</button>&nbsp;
 
 
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
 
-- 사각 메뉴 ( 한국, 일본, 아시아, 전세계)를 클릭하면 호출부호가 만들어짐.
+    [[ 간단 사용 설명서 ]]
 
-- 누를 때마다 내용이 바뀜.
-    
-- 속도와 부호간격을 조절한 후, PLAY.
+- [부호]를 누르고 PLAY를 누르면 모오스 송신 시작.
+- [조합 1] 과 [조합 2]는 누를 때마다 내용이 바뀜.
+- 속도/부호간격을 바꾸면 다시 PLAY해야 적용됨.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -287,7 +269,7 @@ audio {
 </div>
 
 <br>
-<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/callsign'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
+<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/kor'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
 <button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
 
 <h3> ◆ 프로그램 정보</h3>
@@ -296,7 +278,7 @@ audio {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한글 CW Decoder - <a href="http://shingiru.github.io/hangul_cw_decoder.html" target="_blank">http://shingiru.github.io/hangul_cw_decoder.html</a><br />
 <br />
-▶ 호출부호 연습을 위한 재구성 : HL5KY<br />
+▶ QSO코흐법을 위한 재구성 : HL5KY<br />
 <br>
 ❤ 프로그램의 사용을 허용해 주신 DS1TZE님께 감사드립니다.
 <br /><br />
@@ -689,7 +671,7 @@ var isMobile = (isIOS || isAndroid);
 
 var freq = document.querySelector("#freq")
 var wpm = document.querySelector("#speed");
-//var volume = document.querySelector("#volume");
+var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
@@ -872,37 +854,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
-        timestamp.shift();
-        
-        highlightStart = highlightEnd;
-        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-        
-        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-            highlightEnd = highlightStart + 4;
-            cursorTempTo.ch = cursorTempFrom.ch + 4;
-        } else if (txtValue.length > highlightStart) {
-            highlightEnd = highlightStart + 1;
-            if (txtValue[highlightStart] == '\n') {
-                cursorTempTo.line++;
-                cursorTempTo.ch = 0;
-            } else {
-                cursorTempTo.ch = cursorTempFrom.ch + 1;
-            }
-        }
-    
-        if (!stopped && cursorTempTo.ch != 0) {
-            cm.focus();
-            doc.setSelection(cursorTempFrom, cursorTempTo);
-                
-            if (hideText.checked) {
-                setMarker(cursorTempTo, cursorTempEnd);
-            }
-            
-            cm.refresh();
-        }
-    }
+    //if (ac.currentTime > timestamp[0]) {
+    //    timestamp.shift();
+    //    
+    //    highlightStart = highlightEnd;
+    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+    //    
+    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+    //        highlightEnd = highlightStart + 4;
+    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
+    //    } else if (txtValue.length > highlightStart) {
+    //        highlightEnd = highlightStart + 1;
+    //        if (txtValue[highlightStart] == '\n') {
+    //            cursorTempTo.line++;
+    //            cursorTempTo.ch = 0;
+    //        } else {
+    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
+    //        }
+    //    }
+    //
+    //    if (!stopped && cursorTempTo.ch != 0) {
+    //        cm.focus();
+    //        doc.setSelection(cursorTempFrom, cursorTempTo);
+    //            
+    //        if (hideText.checked) {
+    //            setMarker(cursorTempTo, cursorTempEnd);
+    //        }
+    //        
+    //        cm.refresh();
+    //    }
+    //}
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -955,10 +937,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1007,20 +989,9 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
-    if (highlightSlowly.checked == false){
-        document.getElementById("highlight_slowly").checked = false;
-    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
-
-    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할때' 버튼이 작동하지 않도록 하기 위한 루틴
-        if (hideText.checked == true){
-            document.getElementById("hide_text").checked = false;
-        } else {
-            document.getElementById("hide_text").checked = true;
-        }
-    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1029,8 +1000,8 @@ window.addEventListener('DOMContentLoaded', function() {
     try {
         if (window.localStorage.getItem('freq')) freq.value = parseInt(window.localStorage.getItem('freq'));
         if (window.localStorage.getItem('wpm')) wpm.value = parseInt(window.localStorage.getItem('wpm'));
-        //if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
-        //vol = volume.value / 100.0;
+        if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
+        vol = volume.value / 100.0;
         if (window.localStorage.getItem('flute')) flute.checked = window.localStorage.getItem('flute') == 'true';
 		smoothingDuration = flute.checked ? 0.02 : 0.004;
         if (window.localStorage.getItem('noise')) noise.checked = window.localStorage.getItem('noise') == 'true';
@@ -1043,10 +1014,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-            document.getElementById("hide_now").checked = false;
-            document.getElementById("hide_text").checked = true;
-            document.getElementById("highlight_slowly").checked = true;
-            document.getElementById("repeat").checked = false;
+            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_text").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1120,290 +1089,155 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
-var hideNow = document.getElementById('hide_now');
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    return ELEMENTS[j];
+}
+}
 
 SubMenu1.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var repeatedWORDS = [];
+    var addedWORDS = ["ㄱ","ㄱ","ㄱ","ㄴ","ㄴ","ㄴ","ㅏ","ㅏ","ㅏ","ㄱ","ㄱ","ㄴ","ㄴ","ㅏ","ㅏ"];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateHLCallsigns(100, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "ㄱ ㄴ ㅏ"
+    ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 18
+    for (var n = 0; n < loopCount; n++) {
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"
+    //+ "[[ 연습시 참고사항 ]]\n"
+    //+ "- 장단 표시 그림 인지후, 그림을 보지 않고 귀로만 듣기\n"
+    //+ "- 부호연습은 적을 필요 없음."    
+    );
 
-        if (hideNow.checked == true){setMarker_short_after();}
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
-
-
 
 SubMenu2.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateJACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "가", "나", "간", "각", "난",
+    "낙","까","깍","깐","낚","깎",
+     ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 3
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+    FinalSliceNumber = 32
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join("  ")
+    //+ "\n" 
+    //+ "\n"
+    //+ "                                                                                                         \n"
+    //+ "[[ 연습시 참고사항 ]]\n"
+    //+ "- [조합]을 누를 때마다 내용이 바뀜.\n"
+    //+ "- [조합]부터 적으면서 수신\n"
+    //+ "- 공백 띄우기\n"
+    //+ "- 수신이 힘들면, 속도/간격 늦추어서 연습후 점점 목표속도로"
+    );
 
-        if (hideNow.checked == true){setMarker_short_after();}
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateASIACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "가나", "가간", "가각", "가난", "가낙",
+    "나가", "나간", "나각", "나난", "나낙",
+    "간가", "간나", "간각", "간난", "간낙",
+    "각가", "각각", "각나", "각간", "각난", "각낙",
+    "난가", "난나", "난간", "난각", "난낙",
+    "낙가", "낙나", "낙간", "낙각", "낙난",
+    "까난","깍나","깎나","깐나","깐난","깍난",
+    "깐간","깐깐","나깎","난깎","가깎","간깎","각깎",
+    "깍가","깍각","가까","각까","각깍",
+    "나까","낙까","나깍","난깍",
+     ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
-
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
-
-        if (hideNow.checked == true){setMarker_short_after();}
-      
-}
-
-SubMenu4.onclick = function() {
-    stop.click();
-
-    var Callsign = [];
-
-    var CALLSIGNS = generateDXCallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
-
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
-
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
-
-        if (hideNow.checked == true){setMarker_short_after();}
-}
-
-//===============================================================================================
-var NUM_RANDOM_CALLSIGNS = 100;
-
-function generateSuffix(length) {
-    var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    for (var i = 2; i < (length+1); i++) {
-
-            if (i === 2) { 
-                var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                var j=0;
-                while (temp_2 === result)
-                {
-                    temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                j++;
-                }
-                result += temp_2
-            }
-
-            if (i === 3) { 
-                var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                var j=0;
-                while (temp_3 === temp_2)
-                {
-                    temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                j++;
-                }
-                result += temp_3
-            }
-
-            if (i > 3) {
-                result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-            }
+    loopCount = 1
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    //result += (Math.random() > 0.5 ? "/QRP" : "");
-    return result;
-}
 
-function getRepeatCount() {
-    return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
-}
-function generateHLCallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PREFIX = [
-        "HL1", "HL2", "HL3", "HL4", "HL5",
-        "DS1", "DS2", "DS3", "DS4", "DS5", "DS0",
-        "6K2", "6K5", "6L5"
-        ];
-    for (var i = 0; i < count; i++) {
-        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("HL") || prefix.startsWith("DS0") ? (Math.random() > 0.2 ? 3 : 2) : 3);
-        var callsign = prefix + generateSuffix(suffixLength);
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
+    FinalSliceNumber = 20
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join("  "));
 
-// randomHLCallsigns.onclick = function() {
-//     stop.click();
-//    doc.setValue(generateHLCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateJACallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PREFIX = [];
-    var PRE_PREFIX = ["A", "E", "F", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
-    PRE_PREFIX.push("7J", "8J", "8N");
-    for (var i = 0; i < 10; i++)
-        for (var pre of PRE_PREFIX)
-            PREFIX.push(pre + i);
-    for (var i = 0; i < count; i++) {
-        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3);
-        var callsign = prefix + generateSuffix(suffixLength);
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
-
-// randomJACallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateJACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateASIACallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD","VU","XV9"];
-    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
-
-    for (var i = 0; i < count; i++) {
-        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
-        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-        if (pre_prefix.length === 1) {
-            var SUFFIXLENGTH = [2, 3];
-        }else if (pre_prefix.length === 2) {
-            var SUFFIXLENGTH = [2, 3];            
-        }else if (pre_prefix.length === 3) {
-            var number = "";
-            var SUFFIXLENGTH = [1, 2, 3];
-        };
-        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
-        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
-
-// randomASIACallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateASIACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateDXCallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","DF","EA","F","G","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KT","KQ","LA","LU","N","OK","OH","PY","R","RA","RC","RD","RT",
-    "SM","SP","TA","UA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
-    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
-
-    for (var i = 0; i < count; i++) {
-        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
-        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-        if (pre_prefix.length === 1) {
-            var SUFFIXLENGTH = [2, 3];
-        }else if (pre_prefix.length === 2) {
-            if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
-            var SUFFIXLENGTH = [1, 2, 3];}
-            else {
-            var SUFFIXLENGTH = [2, 3];}
-        }else if (pre_prefix.length === 3) {
-            var number = "";
-            var SUFFIXLENGTH = [2, 3];
-        };
-        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
-        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 function onChangeHideNow(){
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
-    if (hideNow.checked == true){
-        document.getElementById("hide_now").checked = false;
-    } else {
-        document.getElementById("hide_now").checked = true;
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){
+        document.getElementById("hide_text").checked = true;
+        setMarker(cursorTempFrom, cursorTempEnd);
+    } else{
+        clearMarker();
     }
-}else {
-        var lastLine = doc.lastLine();
-        var lastLineLength = doc.getLine(lastLine).length;
-        
-        cursorTempFrom = {line: 0, ch: 0};
-        cursorTempTo = {line: 0, ch: 0};
-        cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-        var checkbox = document.getElementById('hide_now');
-        if (checkbox.checked == true){
-            document.getElementById("hide_text").checked = true;
-            setMarker(cursorTempFrom, cursorTempEnd);
-        } else{
-            clearMarker();
-        }
-}        
 }
 
-function setMarker_short_after() {
-var lastLine = doc.lastLine();
-var lastLineLength = doc.getLine(lastLine).length;
+function setMarket_short_after() {
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-cursorTempFrom = {line: 0, ch: 0};
-cursorTempTo = {line: 0, ch: 0};
-cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-setTimeout(function() {
-    setMarker(cursorTempFrom, cursorTempEnd);
+    setTimeout(function() {
+        setMarker(cursorTempFrom, cursorTempEnd);
 }, 100);
 }
-// randomDXCallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
 
 </script>
 </html>

@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>호출부호연습</title>
+<title>QSO코흐법</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -193,8 +193,8 @@ audio {
 <body>
 <div class="page">
 
-<p><span style="font-size:200%"><b>호출부호 연습</b></span>
-    <span style="font-size:150%">&nbsp;</span>
+<p><span style="font-size:200%"><b>QSO 코흐법</b></span>
+    <span style="font-size:150%">&nbsp;(한글 6단계)</span>
 </p>
 
 <div class="setting">
@@ -207,8 +207,8 @@ audio {
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
-<!--&nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %-->
+&nbsp;
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -223,36 +223,19 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 항상</label>&nbsp;
-<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
-<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
+<label id="highlight_slowly" ></label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>
+<label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
-</span>&nbsp;&nbsp;
-
-<span class="setting_group">
-<label><input type="checkbox" id="repeat" > 연속 반복</label>&nbsp;&nbsp;
 </span>
 </div>
 
 
 <div>
 <span class="sample_group">
-<!--button style="background-color:rgb(240, 250, 200);" onClick="location.href='/morse/practice/eng-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-2.html'">&nbsp;2단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-3.html'">&nbsp;3단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-4.html'">&nbsp;4단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-5.html'">&nbsp;5단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-6.html'">&nbsp;6단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-7.html'">&nbsp;7단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-8.html'">&nbsp;8단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-9.html'">&nbsp;9단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-10.html'">&nbsp;10단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-11.html'">&nbsp;11단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-12.html'">&nbsp;12단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-13.html'">&nbsp;13단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button-->
 
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
@@ -262,20 +245,13 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 한국</button>&nbsp;&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 일본</button>&nbsp;&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 아시아</button>&nbsp;&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 전세계</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 ㄹ, ㅈ, ㅓ (13/2)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (13/2)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">2 단어/문장 (13/2)</button>&nbsp;
 
 
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
-
-- 사각 메뉴 ( 한국, 일본, 아시아, 전세계)를 클릭하면 호출부호가 만들어짐.
-
-- 누를 때마다 내용이 바뀜.
-    
-- 속도와 부호간격을 조절한 후, PLAY.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -287,7 +263,7 @@ audio {
 </div>
 
 <br>
-<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/callsign'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
+<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/kor'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
 <button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
 
 <h3> ◆ 프로그램 정보</h3>
@@ -296,7 +272,7 @@ audio {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한글 CW Decoder - <a href="http://shingiru.github.io/hangul_cw_decoder.html" target="_blank">http://shingiru.github.io/hangul_cw_decoder.html</a><br />
 <br />
-▶ 호출부호 연습을 위한 재구성 : HL5KY<br />
+▶ QSO코흐법을 위한 재구성 : HL5KY<br />
 <br>
 ❤ 프로그램의 사용을 허용해 주신 DS1TZE님께 감사드립니다.
 <br /><br />
@@ -689,7 +665,7 @@ var isMobile = (isIOS || isAndroid);
 
 var freq = document.querySelector("#freq")
 var wpm = document.querySelector("#speed");
-//var volume = document.querySelector("#volume");
+var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
@@ -872,37 +848,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
-        timestamp.shift();
-        
-        highlightStart = highlightEnd;
-        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-        
-        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-            highlightEnd = highlightStart + 4;
-            cursorTempTo.ch = cursorTempFrom.ch + 4;
-        } else if (txtValue.length > highlightStart) {
-            highlightEnd = highlightStart + 1;
-            if (txtValue[highlightStart] == '\n') {
-                cursorTempTo.line++;
-                cursorTempTo.ch = 0;
-            } else {
-                cursorTempTo.ch = cursorTempFrom.ch + 1;
-            }
-        }
-    
-        if (!stopped && cursorTempTo.ch != 0) {
-            cm.focus();
-            doc.setSelection(cursorTempFrom, cursorTempTo);
-                
-            if (hideText.checked) {
-                setMarker(cursorTempTo, cursorTempEnd);
-            }
-            
-            cm.refresh();
-        }
-    }
+    //if (ac.currentTime > timestamp[0]) {
+    //    timestamp.shift();
+    //    
+    //    highlightStart = highlightEnd;
+    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+    //    
+    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+    //        highlightEnd = highlightStart + 4;
+    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
+    //    } else if (txtValue.length > highlightStart) {
+    //        highlightEnd = highlightStart + 1;
+    //        if (txtValue[highlightStart] == '\n') {
+    //            cursorTempTo.line++;
+    //            cursorTempTo.ch = 0;
+    //        } else {
+    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
+    //        }
+    //    }
+    //
+    //    if (!stopped && cursorTempTo.ch != 0) {
+    //        cm.focus();
+    //        doc.setSelection(cursorTempFrom, cursorTempTo);
+    //            
+    //        if (hideText.checked) {
+    //            setMarker(cursorTempTo, cursorTempEnd);
+    //        }
+    //        
+    //        cm.refresh();
+    //    }
+    //}
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -955,10 +931,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1007,20 +983,9 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
-    if (highlightSlowly.checked == false){
-        document.getElementById("highlight_slowly").checked = false;
-    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
-
-    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할때' 버튼이 작동하지 않도록 하기 위한 루틴
-        if (hideText.checked == true){
-            document.getElementById("hide_text").checked = false;
-        } else {
-            document.getElementById("hide_text").checked = true;
-        }
-    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1029,8 +994,8 @@ window.addEventListener('DOMContentLoaded', function() {
     try {
         if (window.localStorage.getItem('freq')) freq.value = parseInt(window.localStorage.getItem('freq'));
         if (window.localStorage.getItem('wpm')) wpm.value = parseInt(window.localStorage.getItem('wpm'));
-        //if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
-        //vol = volume.value / 100.0;
+        if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
+        vol = volume.value / 100.0;
         if (window.localStorage.getItem('flute')) flute.checked = window.localStorage.getItem('flute') == 'true';
 		smoothingDuration = flute.checked ? 0.02 : 0.004;
         if (window.localStorage.getItem('noise')) noise.checked = window.localStorage.getItem('noise') == 'true';
@@ -1043,10 +1008,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-            document.getElementById("hide_now").checked = false;
-            document.getElementById("hide_text").checked = true;
-            document.getElementById("highlight_slowly").checked = true;
-            document.getElementById("repeat").checked = false;
+            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_text").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1120,290 +1083,303 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
-var hideNow = document.getElementById('hide_now');
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+    return ELEMENTS[j];
+}
+}
 
 SubMenu1.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var repeatedWORDS = [];
+    var addedWORDS = ["ㄹ","ㄹ","ㄹ","ㅈ","ㅈ","ㅈ","ㅓ","ㅓ","ㅓ","ㄹ","ㄹ","ㅈ","ㅈ","ㅓ","ㅓ"];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateHLCallsigns(100, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "ㄹ ㅈ ㅓ"
+    ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 18
+    for (var n = 0; n < loopCount; n++) {
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "\n"
+    );
 
-        if (hideNow.checked == true){setMarker_short_after();}
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
-
 
 
 SubMenu2.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateJACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "라","락","란","랄","랍",
+    "랏","랑","랐","러","럭",
+    "런","럴","럽","럿","렁",
+    "렇","로","록","론","롤",
+    "롭","롯","롱","료","룡",
+    "르","륵","른","를","릅",
+    "릇","릉","리","릭","린",
+    "릴","립","릿","링","래",
+    "랙","랜","랠","랩","랫",
+    "랭","레","렉","렌","렐",
+    "렙","렛","렝","자","작",
+    "잔","잘","잡","잣","장",
+    "잦","잧","잖","저","적","전",
+    "젇","절","접","젓","정",
+    "젖","젗","젔","조","족",
+    "존","졸","좁","종","좋",
+    "죠","죤","즈","즉","즌",
+    "즐","즙","즛","증","지",
+    "직","진","질","집","짓",
+    "징","짖","짛","재","잭",
+    "잰","잴","잽","잿","쟁",
+    "제","젝","젠","젤","젭",
+    "젯","젱","짜","짝","짠",
+    "짤","짭","짯","짱","짞",
+    "짰","짧","쩌","쩍","쩐",
+    "쩔","쩝","쩟","쩡","쪼",
+    "쪽","쫀","쫄","쫍","쫑",
+    "쩌","쩍","쩔","쩝","쩟",
+    "쩡","쪼","쪽","쫀","쫄",
+    "쫍","쫑","쯔","쯥","쯩",
+    "찌","찍","찐","찔","찝",
+    "찟","찡","찎","째","짹",
+    "짼","쨀","쨉","쨋","쨍",
+    "쩨","쩩","쩬","쩰","쩹",
+    "쩽","거","걱","건","걷",
+    "걸","겁","것","겅","겆",
+    "겇","겄","꺼","꺽","껀",
+    "껃","껄","껍","껏","껑",
+    "꺾","너","넉","넏","널",
+    "넙","넛","넝","넞","넣",
+    "넓","넋","더","덕","던",
+    "덜","덥","덧","덩","덪",
+    "덫","덯","덖","덟","떠",
+    "떡","떤","떨","떱","떳",
+    "떵","떻","러","럭","런",
+    "럴","럽","럿","렁","렇",
+    "버","벅","번","벋","벌",
+    "법","벗","벙","벚","벛",
+    "벆","벘","뻐","뻑","뻔",
+    "뻗","뻘","뻡","뻣","뻥",
+    "서","석","선","섣","설",
+    "섭","섯","성","섲","섳",
+    "섞","섰","써","썩","썬",
+    "썰","썹","썻","썽","썼",
+    "썪","어","억","언","얻",
+    "얼","업","엇","엉","엊",
+    "엋","얹","었","저","적",
+    "전","절","접","젓","정",
+    "젔","처","척","천","철",
+    "첩","첫","청","첬","허",
+    "헉","헌","헐","헙","헛",
+    "헝","헞","갉","긁","낡",
+    "늙","밝","앓","닳","핧",
+    "밟","옳",
+    ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 1
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+    FinalSliceNumber = 35
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join("  ")
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "- 새로운 형식\n"
+    //+ "DE 호출부호 73<SK>EE\n"
+    );
 
-        if (hideNow.checked == true){setMarker_short_after();}
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}     
 }
 
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateASIACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "또 다시 교신합시다.","이곳의 날씨는 흐립니다,","기온은 15도 정도입니다.",
+    "이곳에는 비가 오고 있습니다.","교신은 언제나 환영입니다.","대단히 반갑습니다.","오늘도 즐거운 교신이었습니다.",
+    "언제나 환영합니다.","긴 교신을 하고 뻗었다,","교신을 길게 하지 않습니다.","교신은 짧게 합니다,",
+    "디엑스는 대개 짧은 교신,","전신교신의 즐거움은?","즐거운 교신을 합니다.","교신은 언제나 즐깁니다,",
+    "새장비는 설치했습니까?","아니오 아직입니다,","뻥이 대단하시네요,","왜요 섭섭합니까?","아니오 그렇지는 않지요,",
+    "종종 찾아주세요,","교신 기대하겠습니다.","교신은 종종 합니다,","끊이지 않고 찾아옵니다.","작정하고 시작해라,",
+    "항상 깨끗이 사용하세요.","정도가 있지 과하십니다.","아주 인생이 꼬입니다,","디엑스와 건강,","작정하고 찍어라.",
+    "디엑스는 건강에 나빠요.","인생이 교신인 인간,","흐린 날씨에도 대단하네,","바닷가에서의 교신,",
+    "비오는 날에는 교신,","전신이 그렇긴하죠,","제가 함께 가도 될까요?","옥상에 설치합니다.","전신을 전선으로,",
+    "장비는 좋지 않아요,","항상 로시가 좋아요,","송신이 나쁘지는 않아요,","오늘은 기온이 낮아요,",
+    "온도는 7도 정도입니다.","교신 내용은 뻔하죠.","교신의 반은 뻥이죠.","디엑스도 뻥일때가 있죠.",
+    "그래도 전신은 즐겁습니다.","왜요 송신이 나빠요?","그런대로 들을 정도입니다.","억지로 하면 안돼요.",
+    "차근차근 설치하세요,","교신을 할때는 바빠요,","송신은 정신 없어요.","그렇잖아도 갈 참이에요.",
+    "이래도 교신합니까?","이런 날에는 전신이 딱이죠,","사나이가 절절매다니,","자라가 절룩거리네,",
+    "건강을 헤치면 나빠요.","낯에는 디엑스가 좋지 않아요.","이곳은 거제입니다.",
+    "거창에도 설비가 있나요?","장비는 거치식인가요?","아니오 이동용입니다.","이동운용의 재미,","새가 짹짹거린다.",
+    "가을에는 이동운용,","밖에서의 운용이 기대된다.","정동진에 배가 없다고요?",
+    "그럴리가 없는데,","어떻게 이런 일이,","이렇게 늦은 시간에,","가는 날이 장날이라더니,","언쟁이 싫어요,",
+    "다 그런거죠,","그래도 그렇지 안돼요,","밖을 내다 보세요,","아직 하늘에 해가 있는데,","하늘을 보고 빕니다.",
+    "어떻게 해도 할일이니까요,","벗이 찾아와도 좋고,","언제나 즐겁죠.","제대로 교신 한번 하자.",
+    "전신학습 하고 있나요?","제대로 연습하세요.","정신 차리고 하세요,","전신을 한다고요,","이것도 연습입니까?",
+    "이번해는 그렇잖아요,","교신은 어떻습니까?","기대한대로 되었나요?","아니오 기대치와 달라요.","기회를 노리세요.",
+    "기회는 종종 옵니다,","제도가 제대로 돼야,","아주 잘 보이네,","좌측방에 비행기,","갈지자로 걷는 게,",
+    "거대한 설비가 거창에,","한다고 한것이 이겁니까?","어떻게 이것밖에 없나요?","밖에 나가서 사세요.",
+    "교신은 밖에서 해야죠.","아니요 교신은 실내에서,","비가 오는데 실내로 들어와,","저의 신호가 좋지 않나요?",
+    "강도가 세도 잘 못 듣네,","집에 강도가 들었어요.","대단히 뻔뻔하시네요,","어쩔수가 없었다.","교신도 호작질?",
+    "이러지도 저러지도,","이리도 내속을 긁어놓다니,","아주 화가 났네요.","회신이 없으니 걱정이다.",
+    "회로가 고장났나봐,","화랑이 화살을 쏘다.","언제적 뻥이냐,","뻥도 대단해라,","뻥과자를 좋아해,",
+    "그대를 좋아해,","벛꽃이 보이기 시작,","곧 개나리의 개화시기,","따뜻할때 꽃이 한창,","다들 어디 갔나요?",
+    "이쪽으로 와봐요,","당근에서 샀나요?","당근 당근에서 사야죠.","당근을 채썰다.","아리랑 교신,",
+    "좋아요 아라리요,","이것은 어떨까요?","다시는 교신 안합니다.","왜 교신을 안해요?","전신이라도 하시죠.",
+    "이런 기회가 또 오지는 않아요.","디엑스 하기 딱 좋아요.","이런 날은 디엑스죠.","비도 오는데 전신이라도,",
+    "전선을 설치하세요,","다시 전선을 깔아라,","아버지께서 교신을,","장비는 아버지께 드린다.","적적할때 호작질,",
+    "나도 전선을 설치했다.","복잡하다 저리가라.","저런 인간이 어디있나,","이제는 너도 가자.","잘 한다 철도 없이,",
+    "고기도 잡고 놀자,","러시아는 교신이 잘돼,","너는 롱런하겠다.",
+    "항상 정리를 잘 해야돼,","호러는 싫다.","호랑이를 봤다고?","호작질 그만해라.","전신은 호작질이 아니다.",
+    "낙동강 전선,","대동강 삿갓은?","시방 한글 연습,","한글 전신은 좋아,","한글로 전신을 한다꼬?","그게 제정신이냐?",
+    "네가 좋다니 됐지,","지도의 가로가 길다.","간다고 해 놓고서는,","서로 좋다니 어쩌지,","반찬이 아주 짜네,",
+    "그 인간 아주 짜네,","완전히 짠돌이네,","180도 반대네,","아이 셋을 낳고는,","이방은 질이 나빠,",
+    "시골에서 소똥을 밟았다.","이리저리 발에 채인다.","밟히는게 쇠똥이네,","인간들이 득실득실,","기와가 바닥에 떨어지다.",
+    "황제라도 밥은 세끼,","제발 정신차리세요.","제 자신을 안다,","연습은 착실히,","착하게 살아라,","종종 학교에 가다.",
+    "학교는 가끔 가는 곳,","제자리에서 달리기,","그래도 꽃이 좋아,","너 자신을 사랑해라,","사랑은 세상을 살린다.",
+    "교신은 사랑이다,","이러는 동안 가겠다.","더러 자신을 속이지,","교신이 그립다,",
+    "세상과는 단절,","사바세계에 떨어진 인간,","밖에서 쓰러지다.","어쩔수 없다.","전신을 착실히 학습,",
+    "교신은 베란다에서,","베란다의 차가움,","언제나 갈등이다,","제발 이렇게 해요,","제발 전신을 하세요,",
+    "제발 저린 강도,","복날에 개가 어디에,","인자한 아버지,","널찍한 베란다에서,","당신도 전선을 잡아라,",
+    "전선을 꼭 잡고 있어,","어디 가더라도 내 생각해,","사랑스런 아이,","자랑스러운 교신,","비에 다 젖었네,",
+    "비에 젖어도 꽃은,","젖지 않는 바다,","젖은 옷을 입어라,","비내리는 호남선,","거리에서 교신을,",
+    "오늘은 홀로 있다.","홀로 지내는 세월,","오늘은 비가 내리네,","걷는 지각대장,","자리돔이 비싸네,",
+    "저라도 갈까요?","저더러 가자고 하네요.","조용히 자고 있네,","용을 쓴다고 되는 건 아니다.","적적하니 전신을,",
+    "천천히 해라,","천사라도 화가 난다.","강가에 들꽃이,","천번을 생각해도,","덩그러니 혼자 서 있다.",
+    "혼자 덩그러니 앉았다.","넓은 공간에 혼자,","쓸쓸히 홀로 서서,","공간이 비어서 쓸쓸해,","실내가 꽤 넓네,",
+    "밖에 혼자 덩그러니,","거리가 넓다.","어디라도 가보자,","넓은 공간이 싫다.","이렇게라도 해야지,",
+    "걸어서 가는 거리,","절대로 학교는 안가,","절로 신이 난다.","저는 절에 다닙니다.","조용한 절간에서 산다.",
+    "혼자 조용히 와라,","간다고 될 일이 아니다.","건강이 좋아야 된다.","건대는 가깝지 않다.","사실 이제는 조용히 산다.",
+    "나도 내 생활을 한다.","광활한 대지에 꽃 한송이,","곽씨가 걱정이다.","시간이 걸리는 일,","아직 소식이 없네,",
+    "또 다시 나오십니까?","서로 동의된 일,","또 이런걸 사오시다니,","꽃이 이렇게 곱습니다.","거지가 다가오네,",
+    "어떤 것을 좋아하니?","소리도 없이 다가오다.","싸가지없는 인간,","송신기에서 소리가 나네,","신호가 하늘로 날아간다.",
+    "장비전시회에 간다.","전신에 전전긍긍,","사진을 올리세요,","길조 소리가 나네,","바닥까지 닦아라,","종이에 빽빽하게 쓰다.",
+    "갑자기 전화를 끊다.","급하게 어딜 가니?","급전을 빌린다고","급전의 이자가 대박,","시골의 대박사건,",
+    "호박이 과자된다.","과거지사는 잊어라,","한자의 의미를 안다.","이미 지나간 때의 일,","사자성어를 읽어라,",
+    "읽지도 않고 간다고,","어찌하나요 어찌할까요?","나쁜 신호로 교신,","대가리가 없는 고기,","혼자서 서럽게시리,",
+    "시럽을 넣을까요?","화살이 너희쪽으로,","희소식은 꽃이 되어,","절로 신나는 교신,","왠지 나를 그런쪽에,",
+    "어쩌다가 헤어지다.","그렇게도 그대에게 사랑을,","살생은 절대 안돼,","절에는 노이즈가 없을까?",
+    "도시에는 항상 노이즈가,","조용한 절에도 노이즈가,","강한 노이즈로 인해,","알고 있는게 다가 아니다.",
+    "러시아로 이동운용,","활발하게 운용,","교신은 조용히 해라.","전신은 조용한 교신.","아주 신났네,",
+    "저절로 이동한다.","강제로 제어한다.","운용을 강제로 저지.","성질 나쁜 인간,","화를 안내고 참자,",
+    "화를 입을까 겁난다.","화촉을 밝히다의 뜻은?.","촛농이 떨어지다.","용빼는 방법이 있나?",
+    "헛것을 보고 달린다.","화재로 재산을 날리다.","재화는 개인의 자유다.","더 이상 잃을게 없다.","전쟁이 이제 정전,",
+    "전건을 어떻게 사지?","전건이 없어도 돼.","좋은 전건이 있다.","혼자서는 재간이 없다.","사실 전건이 없어졌다.",
+    "전라도에 전화해라.","저는 전라도에 삽니다.","집에 장식장이 있다.",
+    "어찌할 도리가 없다.","도리도리 짝짜꿍,","조찬회의에 나오세요?","글쎄 어떨지 알수 없네요.","글썽글썽합니다.",
+    "갈수 없을지도,","잘 알아서 해라.","그래 일은 네가 해라.","나는 알수 없어,","될대로 되라지,",
+    "한번 본다고 알수 있나,","그러게 게으른 인간아,","일찍 간다고 되니?","일찍 서둘러라.","찌질한 인간아,",
+    "생활이 찌들었네,","교신은 랄랄라,","나는 날라리 신자.","달에 도착했다고?","초승달이 이쁘네,",
+    "때로는 전신도 해야죠,","때때로 지각해요,","화살이 홱 지나갔네,","실내를 확장하자,","돼지에게 찬밥을,",
+    "꼭두각시 노릇도 이제,","노릇노릇 잘 됐네,","이제 학교가자.","학생이 소주를,","설비가 대박이다.",
+    "슬슬 일어납시다.","생활이 착실해요,","작작 징징대라,","에이 이걸 가지고,","애인도 없니?","작작 떠들어,",
+    "삶이 괴롭다고?","그렇다고 전선을 잘라?","언젠가는 씹을거다,","잘근잘근 씹어서,","네도 길치지?",
+    "난 길을 잘 찾아,","어느길로 갈까?","아빠 찾아 십리,","라일락 꽃이 보인다.","엘도라도로 돌아가자,",
+    "나도 엘리제가 좋아,","얼씨구 절씨구,","얼싸안고 좋아하네,","악바리 인간,","바리바리 싸들고,",
+    "바들바들 떨고있다.","네 하나 건사하기도,","서로 어깨가 부딪히다.","그렇다고 꾸짖어요?","작전회의를 전달,",
+    "설레발이 대단하네,","어처구니가 없어서,","그래서 어쩔건데?","어디 갈데라도 있니?","엘리제는 어디있어?",
+    "똑바로 대답안해?","로구로의 뜻을 알아?","오랑대가 어디있지?","오랑대는 송정에 있지,","시랑대는 어디있지?",
+    "시랑대도 송정에,","그래서 오시리아라고 해,","오시리아의 뜻은?","인간이 갈지자로 걷네,","어디가 엘도라도지?",
+    "저쪽에 엘도라도가 보인다.","그쪽에서 교신해,","신호가 잘 들어오네,","바닷가는 신호가 좋아,","작정하고 나가라,",
+    "디엑스도 잘 되겠네,","글쎄 교신이 잘 될까?","초란이 그렇게 좋다는데,","그런뜻인지 알수 없다.","전기신호가 작네,",
+    "왜 자라보고 놀란다고?","전체가 전전긍긍","강진은 전라도에 있다.","거지로 전락하다.","전장에서 어디로?",
+    "잘 보고 장전하세요,","절간에 정적이 흐르네,","적장은 적이다.","반찬이 질린다.","정전되어도 교신,",
+    "적어서 보관해요.","장전하고 쏘세요.","작천정에 왠 라일락이,","기회가 오니 작전개시,","넓어서 널찍하네,",
+    "빨리 전건을 치세요.","전건 에러를 적게해야,","전신은 정확성,","확정이 되고 송신,","정식으로 교신한다.",
+    "정적이 흘러요,","절간에 정적이,","전선에 정적이,","총소리가 없으니 정적이,","청산가리는 안돼,",
+    "천한 인간이 어디있어?","절로 흥이 난다.","교신은 절로 신나.","전신에 절절매다.","전건이 절룩절룩,",
+    "허리가 잘록하네,","잘록한 청자,","절절매는 교신,","구구절절 옳다.","자리를 옮기는게 나아,",
+    
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    ];
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
-
-        if (hideNow.checked == true){setMarker_short_after();}
-      
-}
-
-SubMenu4.onclick = function() {
-    stop.click();
-
-    var Callsign = [];
-
-    var CALLSIGNS = generateDXCallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
-
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
-
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
-
-        if (hideNow.checked == true){setMarker_short_after();}
-}
-
-//===============================================================================================
-var NUM_RANDOM_CALLSIGNS = 100;
-
-function generateSuffix(length) {
-    var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-    for (var i = 2; i < (length+1); i++) {
-
-            if (i === 2) { 
-                var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                var j=0;
-                while (temp_2 === result)
-                {
-                    temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                j++;
-                }
-                result += temp_2
-            }
-
-            if (i === 3) { 
-                var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                var j=0;
-                while (temp_3 === temp_2)
-                {
-                    temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-                j++;
-                }
-                result += temp_3
-            }
-
-            if (i > 3) {
-                result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
-            }
+    loopCount = 1
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
     }
-    //result += (Math.random() > 0.5 ? "/QRP" : "");
-    return result;
-}
 
-function getRepeatCount() {
-    return parseInt(document.querySelector('input[name="repeat_count"]:checked').value);
-}
-function generateHLCallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PREFIX = [
-        "HL1", "HL2", "HL3", "HL4", "HL5",
-        "DS1", "DS2", "DS3", "DS4", "DS5", "DS0",
-        "6K2", "6K5", "6L5"
-        ];
-    for (var i = 0; i < count; i++) {
-        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("HL") || prefix.startsWith("DS0") ? (Math.random() > 0.2 ? 3 : 2) : 3);
-        var callsign = prefix + generateSuffix(suffixLength);
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
+    FinalSliceNumber = 9
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join("  ")
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "- 새로운 형식\n"
+    //+ "DE 호출부호 73<SK>EE\n"
+    );
 
-// randomHLCallsigns.onclick = function() {
-//     stop.click();
-//    doc.setValue(generateHLCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateJACallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PREFIX = [];
-    var PRE_PREFIX = ["A", "E", "F", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
-    PRE_PREFIX.push("7J", "8J", "8N");
-    for (var i = 0; i < 10; i++)
-        for (var pre of PRE_PREFIX)
-            PREFIX.push(pre + i);
-    for (var i = 0; i < count; i++) {
-        var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3);
-        var callsign = prefix + generateSuffix(suffixLength);
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
-
-// randomJACallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateJACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateASIACallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD","VU","XV9"];
-    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
-
-    for (var i = 0; i < count; i++) {
-        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
-        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-        if (pre_prefix.length === 1) {
-            var SUFFIXLENGTH = [2, 3];
-        }else if (pre_prefix.length === 2) {
-            var SUFFIXLENGTH = [2, 3];            
-        }else if (pre_prefix.length === 3) {
-            var number = "";
-            var SUFFIXLENGTH = [1, 2, 3];
-        };
-        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
-        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
-}
-
-// randomASIACallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateASIACallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
-
-function generateDXCallsigns(count, repeatCount) {
-    var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","DF","EA","F","G","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KT","KQ","LA","LU","N","OK","OH","PY","R","RA","RC","RD","RT",
-    "SM","SP","TA","UA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
-    var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
-
-    for (var i = 0; i < count; i++) {
-        var pre_prefix = PRE_PREFIXS[Math.floor(Math.random() * PRE_PREFIXS.length)];
-        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
-        if (pre_prefix.length === 1) {
-            var SUFFIXLENGTH = [2, 3];
-        }else if (pre_prefix.length === 2) {
-            if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
-            var SUFFIXLENGTH = [1, 2, 3];}
-            else {
-            var SUFFIXLENGTH = [2, 3];}
-        }else if (pre_prefix.length === 3) {
-            var number = "";
-            var SUFFIXLENGTH = [2, 3];
-        };
-        var suffixLength = SUFFIXLENGTH[Math.floor(Math.random() * SUFFIXLENGTH.length)];
-        var callsign = (pre_prefix + number + generateSuffix(suffixLength));
-        callsigns.push(Array(repeatCount).fill(callsign).join(" "));
-    }
-    return callsigns;
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}     
 }
 
 function onChangeHideNow(){
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
-    if (hideNow.checked == true){
-        document.getElementById("hide_now").checked = false;
-    } else {
-        document.getElementById("hide_now").checked = true;
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){
+        document.getElementById("hide_text").checked = true;
+        setMarker(cursorTempFrom, cursorTempEnd);
+    } else{
+        clearMarker();
     }
-}else {
-        var lastLine = doc.lastLine();
-        var lastLineLength = doc.getLine(lastLine).length;
-        
-        cursorTempFrom = {line: 0, ch: 0};
-        cursorTempTo = {line: 0, ch: 0};
-        cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-        var checkbox = document.getElementById('hide_now');
-        if (checkbox.checked == true){
-            document.getElementById("hide_text").checked = true;
-            setMarker(cursorTempFrom, cursorTempEnd);
-        } else{
-            clearMarker();
-        }
-}        
 }
 
-function setMarker_short_after() {
-var lastLine = doc.lastLine();
-var lastLineLength = doc.getLine(lastLine).length;
+function setMarket_short_after() {
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-cursorTempFrom = {line: 0, ch: 0};
-cursorTempTo = {line: 0, ch: 0};
-cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-setTimeout(function() {
-    setMarker(cursorTempFrom, cursorTempEnd);
+    setTimeout(function() {
+        setMarker(cursorTempFrom, cursorTempEnd);
 }, 100);
 }
-// randomDXCallsigns.onclick = function() {
-//     stop.click();
-//     doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
-// }
 
 </script>
 </html>

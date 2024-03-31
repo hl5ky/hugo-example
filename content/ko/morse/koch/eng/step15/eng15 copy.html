@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>호출부호연습</title>
+<title>QSO코흐법</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -193,8 +193,8 @@ audio {
 <body>
 <div class="page">
 
-<p><span style="font-size:200%"><b>호출부호 연습</b></span>
-    <span style="font-size:150%">&nbsp;</span>
+<p><span style="font-size:200%"><b>QSO 코흐법</b></span>
+    <span style="font-size:150%">&nbsp;(영문 15단계)</span>
 </p>
 
 <div class="setting">
@@ -207,8 +207,8 @@ audio {
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
-<!--&nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %-->
+&nbsp;
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -223,36 +223,19 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 항상</label>&nbsp;
-<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
-<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
+<label id="highlight_slowly" ></label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
+<label><input type="checkbox" id="hide_text" > PLAY할때</label>
+<label id="repeat" ></label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
-</span>&nbsp;&nbsp;
-
-<span class="setting_group">
-<label><input type="checkbox" id="repeat" > 연속 반복</label>&nbsp;&nbsp;
 </span>
 </div>
 
 
 <div>
 <span class="sample_group">
-<!--button style="background-color:rgb(240, 250, 200);" onClick="location.href='/morse/practice/eng-1.html'">&nbsp;1단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-2.html'">&nbsp;2단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-3.html'">&nbsp;3단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-4.html'">&nbsp;4단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-5.html'">&nbsp;5단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-6.html'">&nbsp;6단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-7.html'">&nbsp;7단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-8.html'">&nbsp;8단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-9.html'">&nbsp;9단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-10.html'">&nbsp;10단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-11.html'">&nbsp;11단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-12.html'">&nbsp;12단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-13.html'">&nbsp;13단계&nbsp;</button>&nbsp;
-<button style="color:rgb(80, 80, 80);" onClick="location.href='/morse/practice/eng-14.html'">&nbsp;14단계&nbsp;</button-->
 
 <label id="hangul_qso_1"></label>
 <label id="user_qso"></label>
@@ -262,20 +245,14 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 한국</button>&nbsp;&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 일본</button>&nbsp;&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 아시아</button>&nbsp;&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 전세계</button>
+<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 U, W (14/1)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 조합 (14/1)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 단어/문장 (14/1)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 호출부호 + (14/1)</button>
 
 
 <!--  hangul_txt_1         -->
 <textarea id="hangul_txt_1" rows="10">
-
-- 사각 메뉴 ( 한국, 일본, 아시아, 전세계)를 클릭하면 호출부호가 만들어짐.
-
-- 누를 때마다 내용이 바뀜.
-    
-- 속도와 부호간격을 조절한 후, PLAY.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -287,7 +264,7 @@ audio {
 </div>
 
 <br>
-<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/callsign'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
+<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
 <button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
 
 <h3> ◆ 프로그램 정보</h3>
@@ -296,7 +273,7 @@ audio {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한글 CW Decoder - <a href="http://shingiru.github.io/hangul_cw_decoder.html" target="_blank">http://shingiru.github.io/hangul_cw_decoder.html</a><br />
 <br />
-▶ 호출부호 연습을 위한 재구성 : HL5KY<br />
+▶ QSO코흐법을 위한 재구성 : HL5KY<br />
 <br>
 ❤ 프로그램의 사용을 허용해 주신 DS1TZE님께 감사드립니다.
 <br /><br />
@@ -689,7 +666,7 @@ var isMobile = (isIOS || isAndroid);
 
 var freq = document.querySelector("#freq")
 var wpm = document.querySelector("#speed");
-//var volume = document.querySelector("#volume");
+var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
@@ -872,37 +849,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
-        timestamp.shift();
-        
-        highlightStart = highlightEnd;
-        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-        
-        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-            highlightEnd = highlightStart + 4;
-            cursorTempTo.ch = cursorTempFrom.ch + 4;
-        } else if (txtValue.length > highlightStart) {
-            highlightEnd = highlightStart + 1;
-            if (txtValue[highlightStart] == '\n') {
-                cursorTempTo.line++;
-                cursorTempTo.ch = 0;
-            } else {
-                cursorTempTo.ch = cursorTempFrom.ch + 1;
-            }
-        }
-    
-        if (!stopped && cursorTempTo.ch != 0) {
-            cm.focus();
-            doc.setSelection(cursorTempFrom, cursorTempTo);
-                
-            if (hideText.checked) {
-                setMarker(cursorTempTo, cursorTempEnd);
-            }
-            
-            cm.refresh();
-        }
-    }
+    //if (ac.currentTime > timestamp[0]) {
+    //    timestamp.shift();
+    //    
+    //    highlightStart = highlightEnd;
+    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+    //    
+    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+    //        highlightEnd = highlightStart + 4;
+    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
+    //    } else if (txtValue.length > highlightStart) {
+    //        highlightEnd = highlightStart + 1;
+    //        if (txtValue[highlightStart] == '\n') {
+    //            cursorTempTo.line++;
+    //            cursorTempTo.ch = 0;
+    //        } else {
+    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
+    //        }
+    //    }
+    //
+    //    if (!stopped && cursorTempTo.ch != 0) {
+    //        cm.focus();
+    //        doc.setSelection(cursorTempFrom, cursorTempTo);
+    //            
+    //        if (hideText.checked) {
+    //            setMarker(cursorTempTo, cursorTempEnd);
+    //        }
+    //        
+    //        cm.refresh();
+    //    }
+    //}
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -955,10 +932,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1007,20 +984,9 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
-    if (highlightSlowly.checked == false){
-        document.getElementById("highlight_slowly").checked = false;
-    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
-
-    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할때' 버튼이 작동하지 않도록 하기 위한 루틴
-        if (hideText.checked == true){
-            document.getElementById("hide_text").checked = false;
-        } else {
-            document.getElementById("hide_text").checked = true;
-        }
-    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1029,8 +995,8 @@ window.addEventListener('DOMContentLoaded', function() {
     try {
         if (window.localStorage.getItem('freq')) freq.value = parseInt(window.localStorage.getItem('freq'));
         if (window.localStorage.getItem('wpm')) wpm.value = parseInt(window.localStorage.getItem('wpm'));
-        //if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
-        //vol = volume.value / 100.0;
+        if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
+        vol = volume.value / 100.0;
         if (window.localStorage.getItem('flute')) flute.checked = window.localStorage.getItem('flute') == 'true';
 		smoothingDuration = flute.checked ? 0.02 : 0.004;
         if (window.localStorage.getItem('noise')) noise.checked = window.localStorage.getItem('noise') == 'true';
@@ -1043,10 +1009,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-            document.getElementById("hide_now").checked = false;
-            document.getElementById("hide_text").checked = true;
-            document.getElementById("highlight_slowly").checked = true;
-            document.getElementById("repeat").checked = false;
+            document.getElementById("hide_text").checked = false;
+            document.getElementById("hide_text").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1120,114 +1084,271 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
-var hideNow = document.getElementById('hide_now');
-
 SubMenu1.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var repeatedWORDS = [];
+    var addedWORDS = ["U","U","U","U","U","W","W","W","W","W","U","U","U","W","W","W","U","U","W","W"];
+    repeatCount = getRepeatCount();
 
-    var CALLSIGNS = generateHLCallsigns(100, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+    var WORDS = [
+    "U W"
+    ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 26
+    for (var n = 0; n < loopCount; n++) {
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+    doc.setValue(addedWORDS.join(" ")
+    //+ "\n" 
+    //+ "                                                                                                         \n"
+    //+ "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ "\n"
+    );
 
-        if (hideNow.checked == true){setMarker_short_after();}
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
-
-
 
 SubMenu2.onclick = function() {
     stop.click();
+    var ELEMENTS = [];    
 
-    var Callsign = [];
+    var ALPHABET = "ABCDEGHIJKLMNOPQRSTUWXZGUUUUUUUUUUUWWWWWWWWWW";
+    var NUMBERS = "1234567890"
 
-    var CALLSIGNS = generateJACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+	var word_count = 100;
+    for (var i = 0; i < word_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() * 3 + 2)) : 3);
+        var word = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
+        for (var j = 2; j < (length+1); j++) {
+                if (j === 2) { 
+                    var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_2 === word)
+                    {
+                        temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_2
+                }
+
+                if (j === 3) { 
+                    var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_3 === temp_2)
+                    {
+                        temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_3
+                }
+
+                if (j === 4) { 
+                    var temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_4 === temp_3)
+                    {
+                        temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_4
+                }
+
+                if (j === 5) { 
+                    var temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    var k=0;
+                    while (temp_5 === temp_4)
+                    {
+                        temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                    k++;
+                    }
+                    word += temp_5
+                }
+
+                if (j > 5) {
+                    word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                }
         }
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+		word += " "
+		ELEMENTS.push(word); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
 
-        if (hideNow.checked == true){setMarker_short_after();}
+	var number_count = 25;
+    for (var i = 0; i < number_count; i++) {
+        var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *2 + 2)) : 2);
+        var number = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+
+        for (var j = 2; j < (length+1); j++) {
+
+                if (j === 2) { 
+                    var temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    var k=0;
+                    while (temp_2 === number)
+                    {
+                        temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    k++;
+                    }
+                    number += temp_2
+                }
+
+                if (j === 3) { 
+                    var temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    var k=0;
+                    while (temp_3 === temp_2)
+                    {
+                        temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                    k++;
+                    }
+                    number += temp_3
+                }
+
+                if (j > 3) {
+                    number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                }
+        }
+
+
+    	number += " "
+		ELEMENTS.push(number); ELEMENTS.sort(() => Math.random() - 0.5);
+	}
+
+    ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+    //ELEMENTS.sort(() => Math.random() - 0.5);
+
+    FinalSliceNumber = 40
+    ELEMENTS = ELEMENTS.slice(0, FinalSliceNumber);
+    doc.setValue(ELEMENTS.join(""));
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
-
 
 SubMenu3.onclick = function() {
     stop.click();
 
-    var Callsign = [];
+    var NAMES = ["AKI", "ED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "DAN", 
+               "STAN", "KIM", "JIM", "JOE","JOHN","BOB","WALT", "KEN", "MARK", "LEE", "LIM", "AHN", "HAN",
+               "SHIN", "HIDE", "CHRIS", "HANS", "JEON", "CHO", "CHOI", "SEO", "OH", "HIRO", "TOSHI", "DON",
+               "JIM", "JOHN", "JOE", "TOM", "JACK", "PARK", "SON", "NAM", "BILL", "BOB", "PHIL", "PETER",
+               "JANG", "HONG", "SONG", "GEORGE", "IGOR", "JUNG", "KAZU", "PAUL"  ];
+    var RSTS = ["449","44N","559", "55N", "569", "56N", "579", "57N", "589", "58N", "599", "5NN"];
+    var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "L06", "D07", "H03","B19"];
+    var QTHS = ["KOBE", "OSAKA", "DAEJEON", "INCHEON", "DOKDO", "MOKPO", "SAPPORO", "SEJONG", "DAEGU", "WONJU",
+               "JINJU", "JEJU", "SEOUL", "GUMI", "ULSAN", "BUSAN", "SENDAI", "DALLAS", "MANILA ", "LONDON",
+               "PARIS", "TAIPEI", "POHANG", "HYOGO", "BEIJING", "SANGHAI", "HONGKONG", "HAWAII", "MOSCOW"];
+    var TEMPS = ["MINUS 2C", "MINUS 7C", "ABT 13C", "MINUS 14C", "MINUS 16C", "MINUS 4C"];
+    var PSES = ["QSL", "QRX", "CALL AGN", "RST AGN"];
+    var ANTS = ["DP", "LOOP", "HEXBEAM", "GP", "QUAD"];
+    var RIGS = ["IC120S", "IC124", "IC126D", "IC129", "IC145E", "IC140", "IC214S", "IC215",
+           "IC219D", "IC240S", "IC425D", "IC429", "IC950S", "TS440", "TS450S", "TS590SG", "TS120", "TS140D",
+        "TS690S", "TS480SAT", "TS820", "TS530D", "TS830", "TS130"];
 
-    var CALLSIGNS = generateASIACallsigns(150, 1);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+var phrases = ["QRZ? ", "TNX RPRT ", "GM ", "GA ", "GE ", "HPE CUAGN " ];
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    loopCount = 1
+         for (var n = 0; n < loopCount; n++) {
+        var name = NAMES[Math.floor(Math.random() * NAMES.length)];
+        var rst = RSTS[Math.floor(Math.random() * RSTS.length)];
+        var kdn = KDNS[Math.floor(Math.random() * KDNS.length)];
+        var qth = QTHS[Math.floor(Math.random() * QTHS.length)];
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+        var phrase = "OP IS " + name +  (Math.random() > 0.5 ? " ES " : " <BT> ") + "QTH IS " + qth + "."; phrases.push(phrase);
+    }
 
-        if (hideNow.checked == true){setMarker_short_after();}
-      
+        loopCount = 2
+         for (var n = 0; n < loopCount; n++) {
+        var temp = TEMPS[Math.floor(Math.random() * TEMPS.length)];        
+        var pse = PSES[Math.floor(Math.random() * PSES.length)];
+        var ant = ANTS[Math.floor(Math.random() * ANTS.length)];
+        var rig = RIGS[Math.floor(Math.random() * RIGS.length)];
+
+        var phrase = "TEMP IS " + temp +  " "; phrases.push(phrase);
+        var phrase = "PSE " + pse +  " "; phrases.push(phrase);
+        var phrase = "ANT IS " + ant +  " "; phrases.push(phrase);
+        var phrase = "RIG IS " + rig +  " "; phrases.push(phrase);
+    }
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);
+    phrases.sort(() => Math.random() - 0.5);     
+
+    FinalSliceNumber = 15
+    phrases = phrases.slice(0, FinalSliceNumber);
+
+    doc.setValue(phrases.join(" ")
+    //+ "                                                                              \n"
+    //+ "\n"     
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ "\n"
+    //+ "[[ 새로운 내용 ]]\n"
+    //+ "- TEMP IS MINUS 10C\n"
+    //+ "- HPE CUAGN\n"
+    );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 SubMenu4.onclick = function() {
     stop.click();
 
-    var Callsign = [];
-
-    var CALLSIGNS = generateDXCallsigns(150, 1);
+    var CALLSIGNS = generateHLCallsigns(120, 1); var HL_CALLSIGNS = CALLSIGNS;
+        CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(60, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(70, 1));
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(100, 1));    
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);  
 
-        for (var n = 0; n < 100; n += 10) {
-            Callsign[n] = CALLSIGNS.slice(n, n + 10);
-        }
+    //STANDINGBYS = ["<AR>", "K", "<AR>", "<AR>"];
 
-        doc.setValue(Callsign[0].join(" ") + " \n" + Callsign[10].join(" ") + " \n" + Callsign[20].join(" ")
-        + " \n" + Callsign[30].join(" ") + " \n" + Callsign[40].join(" ") + " \n" + Callsign[50].join(" ")
-        + " \n" + Callsign[60].join(" ") + " \n" + Callsign[70].join(" ") + " \n" + Callsign[80].join(" ")
-        + " \n" + Callsign[90].join(" "));
+        var cqs = [];
+    var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+    var cq = "CQ DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + " PSE K";
+    cqs.push(cq);
+    loopCount = 4    
+    for (var n = 0; n < loopCount; n++) {
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
+        //var standingby = STANDINGBYS[Math.floor(Math.random() * STANDINGBYS.length)];
+        var cq = "DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + " TU<SK>EE";
+        cqs.push(cq);
 
-        if (hideNow.checked == true){setMarker_short_after();}
+        var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];            
+        var HL_callsign = HL_CALLSIGNS[Math.floor(Math.random() * HL_CALLSIGNS.length)];
+        cq = HL_callsign + (Math.random() > 0.5 ? "/QRP" : "") + " DE " + callsign + (Math.random() > 0.5 ? "/QRP" : "") + 
+            (Math.random() > 0.5 ? " K" : " KN");
+        cqs.push(cq);
+    }
+    doc.setValue(cqs.join("  ")
+    //+ "                                                                 \n"
+    //+ "\n"
+    //+ "-----------------------------------------------------------------------------------------------------------"
+    //+ "[[ 새로운 형식  ]]\n"
+    //+ "- DE 호출부호 TU<SK>EE\n"
+    );
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 //===============================================================================================
 var NUM_RANDOM_CALLSIGNS = 100;
 
 function generateSuffix(length) {
-    var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var ALPHABET = "AUBWCUDWEUWGWHUIWJUKWLUMWNUOPWUQRUWSTUUWUXZG";
     var result = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+
     for (var i = 2; i < (length+1); i++) {
 
             if (i === 2) { 
@@ -1256,6 +1377,8 @@ function generateSuffix(length) {
                 result += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
             }
     }
+
+
     //result += (Math.random() > 0.5 ? "/QRP" : "");
     return result;
 }
@@ -1287,7 +1410,8 @@ function generateHLCallsigns(count, repeatCount) {
 function generateJACallsigns(count, repeatCount) {
     var callsigns = [];
     var PREFIX = [];
-    var PRE_PREFIX = ["A", "E", "F", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
+    //var PRE_PREFIX = ["F"].map(x => "J" + x);
+    var PRE_PREFIX = ["A", "E", "H", "G", "I","J","O", "K", "M", "N","L","P","Q", "R", "S"].map(x => "J" + x);
     PRE_PREFIX.push("7J", "8J", "8N");
     for (var i = 0; i < 10; i++)
         for (var pre of PRE_PREFIX)
@@ -1308,7 +1432,7 @@ function generateJACallsigns(count, repeatCount) {
 
 function generateASIACallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BV","BY","BZ","DU","YB","YC","YD","VU","XV9"];
+    var PRE_PREFIXS = ["JT1","3D2", "3W2", "XX9", "4X4", "HS","BA","BD","BG","BT","BZ", "DU", "DU", "DU", "DU", "DU", "DU", "DU", "DU", "DU", "DU"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1336,9 +1460,10 @@ function generateASIACallsigns(count, repeatCount) {
 
 function generateDXCallsigns(count, repeatCount) {
     var callsigns = [];
-    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","DF","EA","F","G","HA","I","IT",
-    "K","KA","KC","KD","KE","KS","KT","KQ","LA","LU","N","OK","OH","PY","R","RA","RC","RD","RT",
-    "SM","SP","TA","UA","VE","VK","W","WA","WB","XE","YU","ZS","ZL"];
+    var PRE_PREFIXS = ["2E0","AC","AD","AE","CT", "CX", "DK","DL","EA","G","HA","I","IT",
+    "K","KA","KC","KD","KE","KS","KS","KT","KQ","LA","LU","LU","LU","LU","LU","LU","N","OK","OH",
+    "R","RA","RC","RD","RT","SM","SP","TA","UA","UA","UA","UA","UA","UA","UA","W","WA","WB",
+    "W","WA","WB","W","WA","WB","W","WA","WB","W","WA","WB","W","WA","WB","W","WA","WB","XE","ZS","ZL"];
     var NUMBERS = ["1","2","3","4","5","6","7","8","8","9","0"];
 
     for (var i = 0; i < count; i++) {
@@ -1350,7 +1475,7 @@ function generateDXCallsigns(count, repeatCount) {
             if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
             var SUFFIXLENGTH = [1, 2, 3];}
             else {
-            var SUFFIXLENGTH = [2, 3];}
+            var SUFFIXLENGTH = [2, 3];}            
         }else if (pre_prefix.length === 3) {
             var number = "";
             var SUFFIXLENGTH = [2, 3];
@@ -1362,48 +1487,40 @@ function generateDXCallsigns(count, repeatCount) {
     return callsigns;
 }
 
-function onChangeHideNow(){
-
-if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
-    if (hideNow.checked == true){
-        document.getElementById("hide_now").checked = false;
-    } else {
-        document.getElementById("hide_now").checked = true;
-    }
-}else {
-        var lastLine = doc.lastLine();
-        var lastLineLength = doc.getLine(lastLine).length;
-        
-        cursorTempFrom = {line: 0, ch: 0};
-        cursorTempTo = {line: 0, ch: 0};
-        cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-        var checkbox = document.getElementById('hide_now');
-        if (checkbox.checked == true){
-            document.getElementById("hide_text").checked = true;
-            setMarker(cursorTempFrom, cursorTempEnd);
-        } else{
-            clearMarker();
-        }
-}        
-}
-
-function setMarker_short_after() {
-var lastLine = doc.lastLine();
-var lastLineLength = doc.getLine(lastLine).length;
-
-cursorTempFrom = {line: 0, ch: 0};
-cursorTempTo = {line: 0, ch: 0};
-cursorTempEnd = {line: lastLine, ch: lastLineLength};
-
-setTimeout(function() {
-    setMarker(cursorTempFrom, cursorTempEnd);
-}, 100);
-}
 // randomDXCallsigns.onclick = function() {
 //     stop.click();
 //     doc.setValue(generateDXCallsigns(NUM_RANDOM_CALLSIGNS, getRepeatCount()).join("  "));
 // }
+
+function onChangeHideNow(){
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    var checkbox = document.getElementById('hide_now');
+    if (checkbox.checked == true){
+        document.getElementById("hide_text").checked = true;
+        setMarker(cursorTempFrom, cursorTempEnd);
+    } else{
+        clearMarker();
+    }
+}
+
+function setMarket_short_after() {
+    var lastLine = doc.lastLine();
+    var lastLineLength = doc.getLine(lastLine).length;
+    
+    cursorTempFrom = {line: 0, ch: 0};
+    cursorTempTo = {line: 0, ch: 0};
+    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+    setTimeout(function() {
+        setMarker(cursorTempFrom, cursorTempEnd);
+}, 100);
+}
 
 </script>
 </html>

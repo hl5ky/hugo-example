@@ -22,7 +22,7 @@ weight: 60
 
 <span style="font-size:140%">연습 방법</span>
 
-{{< newtabref href="/morse/tx_practice.html" title="송신 연습 프로그램" >}} 새창에서 열기
+<b><span style="font-size:130%">{{< newtabref href="/morse/tx_practice.html" title="송신 연습 프로그램" >}} 새창에서 열기</span></b>
 
 연습 방법은, 정확한 부호를 듣고 그대로 송신하는 것입니다. 즉, 송신 연습 프로그램을 열고 컴퓨터가 들려주는 부호를 듣고 나서 바로 송신하는 것입니다. 방금 들었던 것을 송신하기 때문에 크게 어렵지 않습니다. 한 번 듣는 것이 부족하면 두 번 세 번 듣고 송신합니다. 순서를 정리하면 아래와 같습니다.
 
