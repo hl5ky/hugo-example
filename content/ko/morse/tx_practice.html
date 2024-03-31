@@ -1035,7 +1035,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
             document.getElementById("hide_now").checked = false;
-            document.getElementById("hide_text").checked = true;
+            document.getElementById("hide_text").checked = false;
             document.getElementById("highlight_slowly").checked = true;
             document.getElementById("repeat").checked = false;    
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
