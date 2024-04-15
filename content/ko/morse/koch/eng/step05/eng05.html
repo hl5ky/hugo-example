@@ -207,8 +207,9 @@ audio {
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
 <span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
-<!--&nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %-->
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="50" size="3" min="1" max="100" step="1" /> %
+</span>
+<br>
 </span>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
@@ -676,7 +677,7 @@ var isMobile = (isIOS || isAndroid);
 
 var freq = document.querySelector("#freq")
 var wpm = document.querySelector("#speed");
-//var volume = document.querySelector("#volume");
+var volume = document.querySelector("#volume");
 var play = document.querySelector("#play");
 var stop = document.querySelector("#stop");
 var keyComputer = document.querySelector('input[name="key"][value="computer"]');
@@ -943,10 +944,10 @@ freq.onchange = function() {
 wpm.onchange = function() {
     window.localStorage.setItem('wpm', wpm.value);
 }
-//volume.onchange = function() {
-//    vol = volume.value / 100.0;
-//    window.localStorage.setItem('volume', volume.value);
-//}
+volume.onchange = function() {
+    vol = volume.value / 100.0;
+    window.localStorage.setItem('volume', volume.value);
+}
 keyComputer.onchange = function() {
     window.localStorage.setItem('key', document.querySelector('input[name="key"]:checked').value);
 }
@@ -1017,8 +1018,8 @@ window.addEventListener('DOMContentLoaded', function() {
     try {
         if (window.localStorage.getItem('freq')) freq.value = parseInt(window.localStorage.getItem('freq'));
         if (window.localStorage.getItem('wpm')) wpm.value = parseInt(window.localStorage.getItem('wpm'));
-        //if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
-        //vol = volume.value / 100.0;
+        if (window.localStorage.getItem('volume')) volume.value = parseInt(window.localStorage.getItem('volume'));
+        vol = volume.value / 100.0;
         if (window.localStorage.getItem('flute')) flute.checked = window.localStorage.getItem('flute') == 'true';
 		smoothingDuration = flute.checked ? 0.02 : 0.004;
         if (window.localStorage.getItem('noise')) noise.checked = window.localStorage.getItem('noise') == 'true';
