@@ -206,10 +206,11 @@ audio {
 <span class="setting_group_2">
 <span class="setting_bold">음색</span> <input type="number" id="freq" value="650" step="10" size="4" min="200" max="1200" /> Hz
 &nbsp;
-<span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM
+<span class="setting_bold">속도</span> <input type="number" id="speed" value="10" size="2" min="5" max="50" /> WPM &nbsp;
 &nbsp;
-<span class="setting_bold">음량</span> <input type="number" id="volume" value="100" size="3" min="1" max="100" step="1" /> %
+<span class="setting_bold">음량</span> <input type="number" id="volume" value="50" size="3" min="1" max="100" step="1" /> %
 </span>
+<br>
 <span class="setting_group">
 <span class="setting_bold">부호간격</span> : 
 <label><input type="radio" name="key" value="computer" /> 정상</label>&nbsp;
@@ -223,13 +224,16 @@ audio {
 <span class="setting_group">
 <span class="setting_bold">글자숨기기</span> : 
 <label id="selection_only" ></label>
-<label id="highlight_slowly" ></label>
-<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 처음부터</label>&nbsp;&nbsp;
-<label><input type="checkbox" id="hide_text" > PLAY할때</label>
-<label id="repeat" ></label>
+<label><input type="checkbox" id="hide_now" onchange="onChangeHideNow();"> 항상</label>&nbsp;
+<label><input type="checkbox" id="hide_text"> PLAY할때</label>&nbsp;
+<label><input type="checkbox" id="highlight_slowly"> 한글자씩보기</label>
 <label id="flute"></label>
 <label id="noise"></label>
 <label id="fading"></label>&nbsp;
+</span>&nbsp;&nbsp;
+
+<span class="setting_group">
+<label><input type="checkbox" id="repeat" > 연속 반복</label>&nbsp;&nbsp;
 </span>
 </div>
 
@@ -245,18 +249,18 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 E (10/3)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호 D (10/3)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합1 (10/3)</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 조합2 (10/3)</button>
+<button id="sub_menu_1" style="background-color:rgb(236, 248, 168);">1 부호 E (10/3)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(236, 248, 168);">2 부호 D (10/3)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(199, 216, 252);">3 조합 2자리 (10/3)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(199, 216, 252);">4 조합 3자리 (10/3)</button>&nbsp;
+<button id="sub_menu_5" style="background-color:rgb(199, 216, 252);">5 조합 4자리 (10/3)</button>&nbsp;
+<button id="sub_menu_6" style="background-color:rgb(199, 216, 252);">6 조합 2+3자리 (10/3)</button>&nbsp;
+<button id="sub_menu_7" style="background-color:rgb(199, 216, 252);">7 조합 3+4자리 (10/3)</button>&nbsp;
+<button id="sub_menu_8" style="background-color:rgb(199, 216, 252);">8 조합 2+3+4자리 (10/3)</button>
 
 <!--  hangul_txt_1         -->
-<textarea id="hangul_txt_1" rows="10">
+<textarea id="hangul_txt_1" rows="5">
 
-    [[ 간단 사용 설명서 ]]
-
-- [부호]를 누르고 PLAY를 누르면 모오스 송신 시작.
-- [조합 1] 과 [조합 2]는 누를 때마다 내용이 바뀜.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -269,9 +273,18 @@ audio {
 
 <br>
 <!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
-<button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
+<button style="background-color:rgb(252, 185, 224);">&nbsp;도움말&nbsp;</button><br><br>
+<b><span style="font-size:110%">
+- [부호] 또는 [조합]을 누르고 PLAY를 누르면 전신음이 들림.<br>
+- [조합]은 누를 때마다 내용이 바뀜.<br>
+<br>
+- [10/3]은, 속도 10wpm, 부호간격 3을 목표로 연습한다는 뜻임.<br>
+- 수신이 어려우면, [부호간격]을 늘여서 연습한 후, 익숙해지면 간격을 줄여서 연습한다.<br>
+<br>
+상세한 내용은 <a href="/morse/koch/eng/howtouse" target="_blank">프로그램 사용 및 연습 방법</a> 참조.
+</b></span><br><br>
 
-<h3> ◆ 프로그램 정보</h3>
+<button style="color:rgb(70, 70, 70);">&nbsp;프로그램 정보&nbsp;</button><br><br>
 <span class="font_medium">
 ▶ 프로그램의 제작 : DS1TZE<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
@@ -853,37 +866,37 @@ function highlight() {
     if (previousTime != 0) addDitdah(morse._gain.gain.value > 0, parseInt((ac.currentTime - previousTime)*1000));
     previousTime = ac.currentTime;
     
-    //if (ac.currentTime > timestamp[0]) {
-    //    timestamp.shift();
-    //    
-    //    highlightStart = highlightEnd;
-    //    cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
-    //    
-    //    if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
-    //        && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
-    //        highlightEnd = highlightStart + 4;
-    //        cursorTempTo.ch = cursorTempFrom.ch + 4;
-    //    } else if (txtValue.length > highlightStart) {
-    //        highlightEnd = highlightStart + 1;
-    //        if (txtValue[highlightStart] == '\n') {
-    //            cursorTempTo.line++;
-    //            cursorTempTo.ch = 0;
-    //        } else {
-    //            cursorTempTo.ch = cursorTempFrom.ch + 1;
-    //        }
-    //    }
-    //
-    //    if (!stopped && cursorTempTo.ch != 0) {
-    //        cm.focus();
-    //        doc.setSelection(cursorTempFrom, cursorTempTo);
-    //            
-    //        if (hideText.checked) {
-    //            setMarker(cursorTempTo, cursorTempEnd);
-    //        }
-    //        
-    //        cm.refresh();
-    //    }
-    //}
+    if (ac.currentTime > timestamp[0] && highlightSlowly.checked) {
+        timestamp.shift();
+        
+        highlightStart = highlightEnd;
+        cursorTempFrom.line = cursorTempTo.line, cursorTempFrom.ch = cursorTempTo.ch;
+        
+        if (txtValue[highlightStart] == '<' && txtValue.length > highlightStart + 3 
+            && !!morse.PROSIGN[txtValue.substring(highlightStart, highlightStart + 4).toUpperCase()]) {
+            highlightEnd = highlightStart + 4;
+            cursorTempTo.ch = cursorTempFrom.ch + 4;
+        } else if (txtValue.length > highlightStart) {
+            highlightEnd = highlightStart + 1;
+            if (txtValue[highlightStart] == '\n') {
+                cursorTempTo.line++;
+                cursorTempTo.ch = 0;
+            } else {
+                cursorTempTo.ch = cursorTempFrom.ch + 1;
+            }
+        }
+    
+        if (!stopped && cursorTempTo.ch != 0) {
+            cm.focus();
+            doc.setSelection(cursorTempFrom, cursorTempTo);
+                
+            if (hideText.checked) {
+                setMarker(cursorTempTo, cursorTempEnd);
+            }
+            
+            cm.refresh();
+        }
+    }
     
     if (!stopped) setTimeout(highlight, 7); // 7ms is based on the sampling rate
 }
@@ -988,9 +1001,20 @@ selectionOnly.onchange = function() {
 }
 highlightSlowly.onchange = function() {
     window.localStorage.setItem('highlight_slowly', highlightSlowly.checked);
+    if (highlightSlowly.checked == false){
+        document.getElementById("highlight_slowly").checked = false;
+    }
 }
 hideText.onchange = function() {
     window.localStorage.setItem('hide_text', hideText.checked);
+
+    if (stopped == false){  // PLAY가 진행중일때는 'PLAY할때' 버튼이 작동하지 않도록 하기 위한 루틴
+        if (hideText.checked == true){
+            document.getElementById("hide_text").checked = false;
+        } else {
+            document.getElementById("hide_text").checked = true;
+        }
+    }
 }
 repeat.onchange = function() {
     window.localStorage.setItem('repeat', repeat.checked);
@@ -1013,8 +1037,10 @@ window.addEventListener('DOMContentLoaded', function() {
         if (window.localStorage.getItem('user_txt')) userTxt.CodeMirror.doc.setValue(window.localStorage.getItem('user_txt'));
         if (window.localStorage.getItem('qso_sample')) changeQsoSample(window.localStorage.getItem('qso_sample'));
         else changeQsoSample("hangul_txt_1");
-            document.getElementById("hide_text").checked = false;
-            document.getElementById("hide_text").checked = false;
+                document.getElementById("hide_now").checked = false;
+                document.getElementById("hide_text").checked = true;
+                document.getElementById("highlight_slowly").checked = true;
+                document.getElementById("repeat").checked = false;
 		if (!isAndroid && !isIOS) document.querySelector("#keyer_setting").style.display = "inline";
     } catch (e) {
     }
@@ -1043,6 +1069,10 @@ var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
 var SubMenu3 = document.querySelector("#sub_menu_3");
 var SubMenu4 = document.querySelector("#sub_menu_4");
+var SubMenu5 = document.querySelector("#sub_menu_5");
+var SubMenu6 = document.querySelector("#sub_menu_6");
+var SubMenu7 = document.querySelector("#sub_menu_7");
+var SubMenu8 = document.querySelector("#sub_menu_8");
 //var randomSB = document.querySelector("#sub_menu_4");
 
 function changeQsoSample(newTxtId) {
@@ -1086,6 +1116,8 @@ function getRepeatCount() {
 
 //<span class="setting_bold">속도</span> <input type="number" id="speed" value="20" size="2" min="5" max="50" /> WPM
 
+var hideNow = document.getElementById('hide_now');
+
 SubMenu1.onclick = function() {
     stop.click();
 
@@ -1113,8 +1145,7 @@ SubMenu1.onclick = function() {
     //+ "- 최소 3번 또는 익숙해질때까지 듣기"
     );
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 SubMenu2.onclick = function() {
@@ -1142,8 +1173,7 @@ SubMenu2.onclick = function() {
     //+ "- 장단 표시 그림 인지후, 그림을 보지 않고 귀로만 듣기\n"
     );
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
+    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 SubMenu3.onclick = function() {
@@ -1154,11 +1184,157 @@ SubMenu3.onclick = function() {
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
-    var WORDS = [
-    "DE", "ED", "DE", "ED", "DED", "EDE", "DDE", "DEE", "EDD", "EED"
-    ];
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",   "EE", "DD" ];
 
-    loopCount = 4
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 42
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu4.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDD","EDE","EED","DDE","DEE","DED"];
+
+    loopCount = 10
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 30
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu5.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 24
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu6.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",   "EE", "DD",    "EDD","EDE","EED","DDE","DEE","DED"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 36
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu7.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDD","EDE","EED","DDE","DEE","DED",   "EDD","EDE","EED","DDE","DEE","DED",
+    "EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 27
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu8.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",    "DE","ED",    "DE","ED",   "EE", "DD",
+    "EDD","EDE","EED","DDE","DEE","DED",   "EDD","EDE","EED","DDE","DEE","DED",
+    "EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         WORDS.sort(() => Math.random() - 0.5);
@@ -1171,89 +1347,49 @@ SubMenu3.onclick = function() {
 
     FinalSliceNumber = 32
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    //+ "\n"
-    //+ "                                                                                                         \n"
-    //+ "[[ 연습시 참고사항 ]]\n"
-    //+ "- [조합]을 누를 때마다 내용이 바뀜.\n"
-    //+ "- [조합]부터 적으면서 수신\n"
-    //+ "- 소문자로 적기, 공백 띄우기\n"
-    //+ "- 수신이 힘들면, 속도/간격 늦추어서 연습후 점점 목표속도로"
-    );
+    doc.setValue(slicedWORDS.join(" "));
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
-}
+    if (hideNow.checked == true){setMarker_short_after();}
 
-
-SubMenu4.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "DEDDE", "DEDEE", "DEDE", "EDEDE", "DED", "DEE", "EDE",
-    "EEDE", "DEDD", "EDED", "EEDD", "DDE", "EDEE", "EDD", "DE",
-    "EDEDD", "DEEDE","ED", "EED", "DDED", "EDDD", "DEED",
-    "DEDED", "DDEDE", "EDDED", "EDDED", "EDEED"
-    ];
-
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 22
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    //+ "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------\n"
-    //+ "- 알파벳 2~5개 조합. 약 3분\n"
-    );
-
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){setMarket_short_after();}
 }
 
 function onChangeHideNow(){
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
-    cursorTempFrom = {line: 0, ch: 0};
-    cursorTempTo = {line: 0, ch: 0};
-    cursorTempEnd = {line: lastLine, ch: lastLineLength};
 
-    var checkbox = document.getElementById('hide_now');
-    if (checkbox.checked == true){
-        document.getElementById("hide_text").checked = true;
-        setMarker(cursorTempFrom, cursorTempEnd);
-    } else{
-        clearMarker();
-    }
+        if (stopped == false){  // PLAY가 진행중일때는 '항상' 버튼이 작동하지 않도록 하기 위한 루틴
+            if (hideNow.checked == true){
+                document.getElementById("hide_now").checked = false;
+            } else {
+                document.getElementById("hide_now").checked = true;
+            }
+        }else {
+                var lastLine = doc.lastLine();
+                var lastLineLength = doc.getLine(lastLine).length;
+                
+                cursorTempFrom = {line: 0, ch: 0};
+                cursorTempTo = {line: 0, ch: 0};
+                cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+                var checkbox = document.getElementById('hide_now');
+                if (checkbox.checked == true){
+                    document.getElementById("hide_text").checked = true;
+                    setMarker(cursorTempFrom, cursorTempEnd);
+                } else{
+                    clearMarker();
+                }
+        }        
 }
 
-function setMarket_short_after() {
-    var lastLine = doc.lastLine();
-    var lastLineLength = doc.getLine(lastLine).length;
-    
-    cursorTempFrom = {line: 0, ch: 0};
-    cursorTempTo = {line: 0, ch: 0};
-    cursorTempEnd = {line: lastLine, ch: lastLineLength};
+function setMarker_short_after() {
+        var lastLine = doc.lastLine();
+        var lastLineLength = doc.getLine(lastLine).length;
 
-    setTimeout(function() {
-        setMarker(cursorTempFrom, cursorTempEnd);
-}, 100);
+        cursorTempFrom = {line: 0, ch: 0};
+        cursorTempTo = {line: 0, ch: 0};
+        cursorTempEnd = {line: lastLine, ch: lastLineLength};
+
+        setTimeout(function() {
+            setMarker(cursorTempFrom, cursorTempEnd);
+        }, 100);
 }
 
 </script>
