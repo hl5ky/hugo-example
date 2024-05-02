@@ -10,7 +10,7 @@ type: docs
 
 {{< newtabref href="/morse/koch/eng/step01/eng01 copy.html" title="영문1단계" >}} 작업완료<br>
 {{< newtabref href="/morse/koch/eng/step02/eng02 copy.html" title="영문2단계" >}} 작업완료<br>
-{{< newtabref href="/morse/koch/eng/step03/eng03 copy.html" title="영문3단계" >}}<br>
+{{< newtabref href="/morse/koch/eng/step03/eng03 copy.html" title="영문3단계" >}} 작업완료<br>
 {{< newtabref href="/morse/koch/eng/step04/eng04 copy.html" title="영문4단계" >}}<br>
 {{< newtabref href="/morse/koch/eng/step05/eng05 copy.html" title="영문5단계" >}}<br>
 {{< newtabref href="/morse/koch/eng/step06/eng06 copy.html" title="영문6단계" >}}<br>
