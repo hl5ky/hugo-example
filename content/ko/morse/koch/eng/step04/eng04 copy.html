@@ -1845,75 +1845,117 @@ SubMenu12.onclick = function() {
 }
 
 
-// 아래는 사용하지 않음
-SubMenu21.onclick = function() {
-    stop.click();
+//------ FUNCTION ----------------------------------------------------------------------------------------------
 
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
+function generatePractice(alpha, numb, words, words_1, words_2, words_3, num, num_1, num_2, num_3) {
 
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of CALLSIGNS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+var ELEMENTS = [];    
+
+var ALPHABET = alpha;
+var NUMBERS = numb;
+
+var word_count = words;
+for (var i = 0; i < word_count; i++) {
+    var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *words_1 + words_2)) : words_3);
+    var temp_1 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+    var word = temp_1;
+
+    for (var j = 2; j < (length+1); j++) {
+            if (j === 2) { 
+                var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var k=0;
+                while (temp_2 === temp_1)
+                {
+                    temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                k++;
+                }
+                word += temp_2
+            }
+
+            if (j === 3) { 
+                var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var k=0;
+                while (temp_3 === temp_2 || temp_3 === temp_1)
+                {
+                    temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                k++;
+                }
+                word += temp_3
+            }
+
+            if (j === 4) { 
+                var temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var k=0;
+                while (temp_4 === temp_3 || temp_4 === temp_2 || temp_4 === temp_1)
+                {
+                    temp_4 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                k++;
+                }
+                word += temp_4
+            }
+
+            if (j === 5) { 
+                var temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                var k=0;
+                while (temp_5 === temp_4 || temp_5 === temp_3 || temp_5 === temp_2 || temp_5 === temp_1)
+                {
+                    temp_5 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+                k++;
+                }
+                word += temp_5
+            }
+
+            if (j > 5) {
+                word += ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+            }
     }
 
-    FinalSliceNumber = 16
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
 
-    if (hideNow.checked == true){setMarker_short_after();}
+    word += " "
+    ELEMENTS.push(word); ELEMENTS.sort(() => Math.random() - 0.5);
 }
 
-SubMenu22.onclick = function() {
-    stop.click();
+var number_count = num;
+for (var i = 0; i < number_count; i++) {
+    var length = Math.floor(Math.random() > 0.5 ? ((Math.random() *num_1 + num_2)) : num_3);
+    var temp_1 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+    var number = temp_1;
 
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
+    for (var j = 2; j < (length+1); j++) {
 
-    var WORDS = [
-    "KC", "KD", "KE", "KQ", "KC",
-    "14", "10", "15", "16", "64",   
-    "QKD", "KD", "KE", "KQ",  "KDE", "CD", "CE",
-    "40", "45", "45", "46", "46", "05",    
-    "CK", "CK", "EKC","CQ", "DC", "DE",
-    "06", "51", "51", "54", "50", "54",   
-    "DK", "CKE", "DK", "DQ", "EC", "ED",
-    "50", "56", "56", "61", "61",     
-    "EK", "EK", "EQ", "EKD", "QC", "QD",
-    "QE", "QK", "QK",
-    "KC", "KD", "KE", "KQ", "CK",
-    "EK", "EK", "EQ", "EKD", "QC", "QD",    
-    "64", "60", "60", "65", "65", "41"
-    ];
+            if (j === 2) { 
+                var temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                var k=0;
+                while (temp_2 === temp_1)
+                {
+                    temp_2 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                k++;
+                }
+                number += temp_2
+            }
 
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+            if (j === 3) { 
+                var temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                var k=0;
+                while (temp_3 === temp_2 || temp_3 === temp_1)
+                {
+                    temp_3 = NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+                k++;
+                }
+                number += temp_3
+            }
+
+            if (j > 3) {
+                number += NUMBERS[Math.floor(Math.random() * NUMBERS.length)];
+            }
     }
 
-    FinalSliceNumber = 36
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "));
-
-    if (hideNow.checked == true){setMarker_short_after();}
+    number += " "
+    ELEMENTS.push(number); ELEMENTS.sort(() => Math.random() - 0.5);
 }
 
+return ELEMENTS;
+}
 
 
 function onChangeHideNow(){
@@ -1954,6 +1996,7 @@ setTimeout(function() {
     setMarker(cursorTempFrom, cursorTempEnd);
 }, 100);
 }
+
 
 </script>
 </html>
