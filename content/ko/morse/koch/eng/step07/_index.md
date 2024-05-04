@@ -34,6 +34,7 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - ES : AND (그리고)의 약어.
 - 73 : Best regards. 교신의 마지막에 하는 인사. 주로 남자무선사가 사용함.
 - E : Bye. 안녕. 보통 두 번 송신하는 경우가 많음. 마지막에 한 번씩 더 송신하여 아쉬움을 표현하기도 함.
+- 이름 : AKI, ED, RICK, DICK, ERIC, TED 는 교신에서 자주 접하는 사람 이름임.
 <br><br>
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>

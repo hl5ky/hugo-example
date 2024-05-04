@@ -258,8 +258,8 @@ audio {
 <button id="sub_menu_7" style="background-color:rgb(199, 216, 252);">7 조합 숫(2)+알(4)자리 (12/2)</button>&nbsp;
 <button id="sub_menu_8" style="background-color:rgb(199, 216, 252);">8 조합 숫(2)+알(2+3)자리 (12/2)</button>&nbsp;
 <button id="sub_menu_9" style="background-color:rgb(199, 216, 252);">9 조합 숫(2)+알(2+3+4)자리 (12/2)</button>&nbsp;
-<button id="sub_menu_10" style="background-color:rgb(252, 231, 174);">10 단어 (13/2)</button>&nbsp;
-<button id="sub_menu_11" style="background-color:rgb(252, 231, 174);">11 문장 (13/2)</button>&nbsp;
+<button id="sub_menu_10" style="background-color:rgb(252, 231, 174);">10 단어 (<span style="color:red">13/2</span>)</button>&nbsp;
+<button id="sub_menu_11" style="background-color:rgb(252, 231, 174);">11 문장 (<span style="color:red">13/2</span>)</button>&nbsp;
 <button id="sub_menu_12" style="background-color:rgb(186, 252, 166);">12 호출부호 + (<span style="color:red">13/2</span>)</button>
 
 
@@ -283,7 +283,7 @@ audio {
 <b><span style="font-size:110%">
 - 문장의 구성과 내용을 2, 3회 정도 읽고 뜻을 이해한 후 연습한다.<br>
 <br>
-상세한 내용은 <a href="/morse/koch/eng/howtouse" target="_blank">프로그램 사용 및 연습 방법</a> 참조.
+약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step09" target="_blank">영문 9단계 예습</a> 참조.
 </b></span><br><br>
 
 <button style="color:rgb(70, 70, 70);">&nbsp;프로그램 정보&nbsp;</button><br><br>
@@ -1353,7 +1353,7 @@ SubMenu11.onclick = function() {
     FinalSliceNumber = 8
     phrases = phrases.slice(0, FinalSliceNumber);
 
-    doc.setValue(phrases.join(" "));
+    doc.setValue(phrases.join("  "));
 
     var checkbox = document.getElementById('hide_now');
     if (checkbox.checked == true){setMarker_short_after();}

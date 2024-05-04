@@ -36,6 +36,7 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - ES : And의 약어.
 - KDN : 한국아마추어무선연맹에서 정한 지역 번호. Korean District Number.
 - 88 : Love and kisses. 교신의 마지막에 하는 인사. 주로 여자무선사가 사용함.
+- 이름 : NICK,MASA,KENT,MIKE,MARTIN,SAM,DAN,STAN,KIM,KEN,MARK 는 교신에서 자주 접하는 사람 이름임.
 <br><br>
 
 ▷ <b><span style="font-size:130%">호출부호의 프리픽스</span></b>
