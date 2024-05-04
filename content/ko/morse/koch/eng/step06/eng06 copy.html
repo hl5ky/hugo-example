@@ -1408,55 +1408,6 @@ SubMenu12.onclick = function() {
 }
 
 
-SubMenu23.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "ESR", "IKAE", "SK", "SR", "IR",
-    "ISR", "ISQ", "IS", "IAS", "AI",
-    "29", "29", "19", "15", "42", "49",
-    "RES", "RIS", "ASKI", "SI", "ESA",
-    "AI", "SQI", "SQID", "IRS", "AR",
-    "RS", "EASD", "IK", "92", "25", "KQS",
-    "ES", "IAR", "ISK", "KAS", "SERI",
-    "01", "54", "59", "19", "61", "94",
-    "IA", "SQSR", "IA", "KE", "SA",
-    "RSI", "RIS", "QI", "SKA", "IER",
-    "95", "96", "46", "29", "92", "94",
-    "IA", "RSIC", "ESR", "SI", "IAS",
-    "SI", "ES", "ARI", "CRI", "RSE",
-    "49", "69", "92", "90", "65", "52",
-    "DIS", "ACS", "ISD", "RSEI", "KIQS",
-    "ESC", "CIA", "AKI", "RIC", "SDA",
-    "QSA", "QDI", "KASI", "ESC", "DIAS",
-    "QIE", "RDS", "IDS", "QID", "CKS",
-     "49", "59", "69", "19", "90",
-     "QAS", "DQI", "KSAI", "ECS", "IDAS",     
-     ];
-
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 36
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
-
-    if (hideNow.checked == true){setMarker_short_after();}
-}
-
 //------ FUNCTION ----------------------------------------------------------------------------------------------
 
 function generateNumAlphabet(ary_1, ary_2) {
