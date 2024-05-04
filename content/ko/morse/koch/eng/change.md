@@ -14,9 +14,9 @@ weight: 7
 | 5 단계	| {{< newtabref href="/morse/koch/eng/step05" title="5단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step05/eng05 ori.html" title="5단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step05/eng05 copy.html" title="5단계 변경후" >}} |
 | 6 단계	| {{< newtabref href="/morse/koch/eng/step06" title="6단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step06/eng06 ori.html" title="6단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step06/eng06 copy.html" title="6단계 변경후" >}} |
 | 7 단계	| {{< newtabref href="/morse/koch/eng/step07" title="7단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step07/eng07 ori.html" title="7단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step07/eng07 copy.html" title="7단계 변경후" >}} |
-| 8 단계	| {{< newtabref href="/morse/koch/eng/step08" title="8단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step08/eng08 ori.html" title="8단계 변경전" >}} |  |
-| 9 단계	| {{< newtabref href="/morse/koch/eng/step09" title="9단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step09/eng09 ori.html" title="9단계 변경전" >}} |  |
-| 10 단계	| {{< newtabref href="/morse/koch/eng/step10" title="10단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step10/eng10 ori.html" title="10단계 변경전" >}} |  |
+| 8 단계	| {{< newtabref href="/morse/koch/eng/step08" title="8단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step08/eng08 ori.html" title="8단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step08/eng08 copy.html" title="8단계 변경후" >}} |
+| 9 단계	| {{< newtabref href="/morse/koch/eng/step09" title="9단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step09/eng09 ori.html" title="9단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step09/eng09 copy.html" title="9단계 변경후" >}} |
+| 10 단계	| {{< newtabref href="/morse/koch/eng/step10" title="10단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step10/eng10 ori.html" title="10단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step10/eng10 copy.html" title="10단계 변경후" >}} |
 | 11 단계	| {{< newtabref href="/morse/koch/eng/step11" title="11단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step11/eng11 ori.html" title="11단계 변경전" >}} |  |
 | 12 단계	| {{< newtabref href="/morse/koch/eng/step12" title="12단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step12/eng12 ori.html" title="12단계 변경전" >}} |  |
 | 13 단계	| {{< newtabref href="/morse/koch/eng/step13" title="13단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step13/eng13 ori.html" title="13단계 변경전" >}} |  |

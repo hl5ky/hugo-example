@@ -31,6 +31,7 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - QRN : Q부호. 공전잡음. 공간상태에 따라 달라지는 잡음.
 - QRS : Q부호. 천천히. 'PSE QRS'등의 표현으로 사용함.
 - 5NN : N은 숫자 9의 약부호임. 5NN은 599을 뜻함.
+- 숫자 약어 : 숫자 1, 9, 0은 약어를 많이 사용함. 1( . _ A와 같음 ) 9( _ . N과 같음 ) 0( _ T와 같음)
 - ANT : Antenna의 약어.
 - ES : And의 약어.
 - KDN : 한국아마추어무선연맹에서 정한 지역 번호. Korean District Number.
