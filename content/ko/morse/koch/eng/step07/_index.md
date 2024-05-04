@@ -31,6 +31,7 @@ ProSign : &lt;AR&gt;, &lt;SK&gt;
 - QRT : Q부호. 송신 중단.
 - RST : 신호리포트. Readability/Strength/Tone (해독도/강도/음색)
 - TKS : Thanks의 약자. 감사. TNX를 사용하기도 함.
+- ES : AND (그리고)의 약어.
 - 73 : Best regards. 교신의 마지막에 하는 인사. 주로 남자무선사가 사용함.
 - E : Bye. 안녕. 보통 두 번 송신하는 경우가 많음. 마지막에 한 번씩 더 송신하여 아쉬움을 표현하기도 함.
 <br><br>
