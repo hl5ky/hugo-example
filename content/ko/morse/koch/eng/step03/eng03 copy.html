@@ -1549,88 +1549,12 @@ SubMenu21.onclick = function() {
 
     FinalSliceNumber = 38
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    //+ "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------"
-    //+ ""
-    );
+    doc.setValue(slicedWORDS.join(" "));
 
     if (hideNow.checked == true){setMarker_short_after();}
 }
 
 
-SubMenu22.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "CED", "CQ0", "CE1", "CD4", "CE0",
-    "CDE", "CDQ", "CD1", "CD4", "C0",
-    "CQ", "QC4", "CQ1", "CQ", "Q0",
-    "CE", "QD", "C1", "CQ0", "CD0",
-    "CE", "DQ", "CE", "EC", "CD",
-    "ED", "C0", "Q4", "C0", "Q4",
-    "CD", "CQ", "ED", "EC", "EC0",
-    "ED", "EC", "D1", "Q4", "ED0",
-    "EC", "EQ4", "EQ", "QE", "EQ",
-    "EC4", "D1", "D4", "C4", "E0",
-    "EC", "E4", "Q4", "C4", "D0",
-    "C0", "E0", "DEQ", "E0", "EC",
-    "DC", "DCQ", "D1", "CDQ", "DC",
-    "DE", "DQ", "DE", "E4", "Q0",
-    "DQC", "DQE", "D1", "DQ4", "DQ0",
-    "D1", "D0", "DQ", "EQ", "D1",
-    "D4", "QD", "DC4", "D4",
-     ];
-
-     loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 34
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
-
-    if (hideNow.checked == true){setMarker_short_after();}
-}
-
-SubMenu23.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of CALLSIGNS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 18
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" "))
-
-    if (hideNow.checked == true){setMarker_short_after();}
-}
 
 function onChangeHideNow(){
 
