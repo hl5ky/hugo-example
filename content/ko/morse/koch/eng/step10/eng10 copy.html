@@ -284,7 +284,7 @@ audio {
 <b><span style="font-size:110%">
 - 문장의 구성과 내용을 2, 3회 정도 읽고 뜻을 이해한 후 연습한다.<br>
 <br>
-약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step10" target="_blank">영문 10단계 예습</a> 참조.
+약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step10" target="_blank">영문 10단계 예습</a> 및 이전 단계의 예습 참조.
 </b></span><br><br>
 
 <button style="color:rgb(70, 70, 70);">&nbsp;프로그램 정보&nbsp;</button><br><br>
@@ -1327,7 +1327,7 @@ SubMenu11.onclick = function() {
     "AKI", "TED", "ERIC", "DICK", "RICK", "NICK", "MASA", "KENT", "MARTIN", "MIKE", "SAM", "DAN", "STAN", "KIM", "KEN", "MARK",
     "LEE", "LIM" ,"LEE", "LIM","LEE", "LIM",
     "ES", "QRT", "QRA", "QRM", "QRN", "QRS", "ANT", "88", "73", "DIRECT", "TNX", "QRX", "DX" , "TNX", "QRX", "DX",
-    "QRL", "CALL", "QRL", "CALL", "QRL", "CALL",
+    "CALL","CALL", "CALL", "QRL? <AS>", "QRL? <AS>", "QRL? <AS>"
      ];
 
     loopCount = 1
@@ -1358,7 +1358,7 @@ SubMenu12.onclick = function() {
     var KDNS = ["C02", "E15", "IS02", "M011", "R18", "S05", "A11", "A13", "K03", "D07" ,"L01","L02","L03","L04","L05","L06","L06","L07", "L08", "L09",];
 
     loopCount = 6    
-    var phrases = [];
+    var phrases = ["QRL? <AS>", "QRL? <AS>"];
     for (var n = 0; n < loopCount; n++) {
         var name = NAMES[Math.floor(Math.random() * NAMES.length)];
         var rst = RSTS[Math.floor(Math.random() * RSTS.length)];

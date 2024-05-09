@@ -285,7 +285,7 @@ audio {
 - 문장 연습의 초기에는 2, 3회 정도 내용을 보고, 뜻을 이해한 후 연습한다.<br>
 - 단어/문장의 연습시, 무슨 뜻인지 생각하면서 연습한다.<br>
 <br>
-약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step08" target="_blank">영문 8단계 예습</a> 참조.
+약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step08" target="_blank">영문 8단계 예습</a> 및 이전 단계의 예습 참조.
 </b></span><br><br>
 
 <button style="color:rgb(70, 70, 70);">&nbsp;프로그램 정보&nbsp;</button><br><br>
@@ -1361,7 +1361,7 @@ SubMenu12.onclick = function() {
     "N01", "N02", "N03", "N04", "N05", "N14", "N15", "N16", "N17", "N011", "N18", "N011", "N19", 
 ];
 
-    loopCount = 4    
+    loopCount = 4
     var phrases = [];
     for (var n = 0; n < loopCount; n++) {
         var name = NAMES[Math.floor(Math.random() * NAMES.length)];
@@ -1376,7 +1376,7 @@ SubMenu12.onclick = function() {
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);   
+    phrases.sort(() => Math.random() - 0.5);
 
     FinalSliceNumber = 12
     phrases = phrases.slice(0, FinalSliceNumber);
@@ -1392,16 +1392,16 @@ SubMenu13.onclick = function() {
     var CALLSIGNS = generateHLCallsigns(200, 1);
         CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
         CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+        CALLSIGNS.sort(() => Math.random() - 0.5);
 
     STANDINGBYS = ["<AR>", "K", "<AR>", "<AR>"];
 
-    loopCount = 8    
+    loopCount = 8
     var cqs = [];
     for (var n = 0; n < loopCount; n++) {
         var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
@@ -1429,7 +1429,7 @@ function generateSuffix(length) {
 
     for (var i = 2; i < (length+1); i++) {
 
-            if (i === 2) { 
+            if (i === 2) {
                 var temp_2 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
                 var j=0;
                 while (temp_2 === result)
@@ -1440,7 +1440,7 @@ function generateSuffix(length) {
                 result += temp_2
             }
 
-            if (i === 3) { 
+            if (i === 3) {
                 var temp_3 = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
                 var j=0;
                 while (temp_3 === temp_2)
@@ -1491,7 +1491,7 @@ function generateJACallsigns(count, repeatCount) {
             PREFIX.push(pre + i);
     for (var i = 0; i < count; i++) {
         var prefix = PREFIX[Math.floor(Math.random() * PREFIX.length)];
-        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3); 
+        var suffixLength = (prefix.startsWith("JA") ? (Math.random() > 0.2 ? 3 : 2) : 3);
         var callsign = prefix + generateSuffix(suffixLength);
         callsigns.push(Array(repeatCount).fill(callsign).join(" "));
     }
@@ -1538,7 +1538,7 @@ function generateDXCallsigns(count, repeatCount) {
             if(pre_prefix === "AC" || pre_prefix === "AD" || pre_prefix === "AE" || pre_prefix === "KA" || pre_prefix === "KC" || pre_prefix === "KD" || pre_prefix === "KE" || pre_prefix === "KS" || pre_prefix === "KT" || pre_prefix === "KQ" || pre_prefix === "WA" || pre_prefix === "WB") {
             var SUFFIXLENGTH = [1, 2, 3];}
             else {
-            var SUFFIXLENGTH = [2, 3];}           
+            var SUFFIXLENGTH = [2, 3];}
         }else if (pre_prefix.length === 3) {
             var number = "";
             var SUFFIXLENGTH = [2, 3];
@@ -1556,7 +1556,7 @@ function generateDXCallsigns(count, repeatCount) {
 
 function generateNumAlphabet(ary_1, ary_2) {
 
-var ELEMENTS = [];    
+var ELEMENTS = [];
 
 var ARRAY_1 = ary_1;
 var ARRAY_2 = ary_2;
@@ -1575,7 +1575,7 @@ return ELEMENTS;
 
 function generatePractice(alpha, numb, words, words_1, words_2, words_3, num, num_1, num_2, num_3) {
 
-var ELEMENTS = [];    
+var ELEMENTS = [];
 
 var ALPHABET = alpha;
 var NUMBERS = numb;
