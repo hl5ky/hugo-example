@@ -282,6 +282,7 @@ audio {
 
 <button style="background-color:rgb(252, 185, 224);">&nbsp;도움말&nbsp;</button><br><br>
 <b><span style="font-size:110%">
+- &lt;BT&gt;  : 문장전치부호. 새로운 문장을 시작할 때 사용. 문장과 문장을 이어주는 역할도 함.<br>
 - 문장의 구성과 내용을 2, 3회 정도 읽고 뜻을 이해한 후 연습한다.<br>
 <br>
 약어/용어에 대한 상세한 내용은 <a href="/morse/koch/eng/step14" target="_blank">영문 14단계 예습</a> 및 이전 단계의 예습 참조.
@@ -1357,7 +1358,7 @@ var phrases = ["QRL? <AS>", "TNX RPRT.", "TNX NICE QSO.",];
         var kdn = KDNS[Math.floor(Math.random() * KDNS.length)];
         var qth = QTHS[Math.floor(Math.random() * QTHS.length)];
 
-        var phrase = "OP IS " + name +  (Math.random() > 0.5 ? " ES " : " <BT> ") + "QTH IS " + qth + "."; phrases.push(phrase);
+        var phrase = (Math.random() > 0.5 ? "" : "<BT> ") + "OP IS " + name +  (Math.random() > 0.5 ? " ES " : " <BT> ") + "QTH IS " + qth + "."; phrases.push(phrase);
     }
 
         loopCount = 2
@@ -1367,10 +1368,10 @@ var phrases = ["QRL? <AS>", "TNX RPRT.", "TNX NICE QSO.",];
         var ant = ANTS[Math.floor(Math.random() * ANTS.length)];
         var rig = RIGS[Math.floor(Math.random() * RIGS.length)];
 
-        var phrase = "TEMP IS " + temp +  "."; phrases.push(phrase);
+        var phrase = (Math.random() > 0.5 ? "" : "<BT> ") + "TEMP IS " + temp +  "."; phrases.push(phrase);
         var phrase = "PSE " + pse +  "."; phrases.push(phrase);
-        var phrase = "ANT IS " + ant +  "."; phrases.push(phrase);
-        var phrase = "RIG IS " + rig +  "."; phrases.push(phrase);
+        var phrase = (Math.random() > 0.5 ? "" : "<BT> ") + "ANT IS " + ant +  "."; phrases.push(phrase);
+        var phrase = (Math.random() > 0.5 ? "" : "<BT> ") + "RIG IS " + rig +  "."; phrases.push(phrase);
     }
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);
