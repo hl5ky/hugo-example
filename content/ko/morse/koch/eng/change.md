@@ -21,9 +21,9 @@ weight: 7
 | 12 단계	| {{< newtabref href="/morse/koch/eng/step12" title="12단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step12/eng12 ori.html" title="12단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step12/eng12 copy.html" title="12단계 변경후" >}} |
 | 13 단계	| {{< newtabref href="/morse/koch/eng/step13" title="13단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step13/eng13 ori.html" title="13단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step13/eng13 copy.html" title="13단계 변경후" >}} |
 | 14 단계	| {{< newtabref href="/morse/koch/eng/step14" title="14단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step14/eng14 ori.html" title="14단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step14/eng14 copy.html" title="14단계 변경후" >}} |
-| 15 단계	| {{< newtabref href="/morse/koch/eng/step15" title="15단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step15/eng15 ori.html" title="15단계 변경전" >}} |  |
-| 16 단계	| {{< newtabref href="/morse/koch/eng/step16" title="16단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step16/eng16 ori.html" title="16단계 변경전" >}} |  |
-| 17 단계	| {{< newtabref href="/morse/koch/eng/step17" title="17단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step17/eng17 ori.html" title="17단계 변경전" >}} |  |
+| 15 단계	| {{< newtabref href="/morse/koch/eng/step15" title="15단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step15/eng15 ori.html" title="15단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step15/eng15 copy.html" title="15단계 변경후" >}} |
+| 16 단계	| {{< newtabref href="/morse/koch/eng/step16" title="16단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step16/eng16 ori.html" title="16단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step16/eng16 copy.html" title="16단계 변경후" >}} |
+| 17 단계	| {{< newtabref href="/morse/koch/eng/step17" title="17단계 예습" >}} | {{< newtabref href="/morse/koch/eng/step17/eng17 ori.html" title="17단계 변경전" >}} | {{< newtabref href="/morse/koch/eng/step17/eng17 copy.html" title="17단계 변경후" >}} |
 
 <br>
 
