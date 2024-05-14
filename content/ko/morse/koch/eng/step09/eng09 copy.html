@@ -1345,7 +1345,7 @@ SubMenu11.onclick = function() {
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);
     phrases.sort(() => Math.random() - 0.5);
-    phrases.sort(() => Math.random() - 0.5);   
+    phrases.sort(() => Math.random() - 0.5);
 
     FinalSliceNumber = 8
     phrases = phrases.slice(0, FinalSliceNumber);
@@ -1362,16 +1362,16 @@ SubMenu12.onclick = function() {
     var CALLSIGNS = generateHLCallsigns(200, 1);
         CALLSIGNS = CALLSIGNS.concat(generateJACallsigns(100, 1));
         CALLSIGNS = CALLSIGNS.concat(generateASIACallsigns(50, 1));
-        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));    
+        CALLSIGNS = CALLSIGNS.concat(generateDXCallsigns(50, 1));
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
         CALLSIGNS.sort(() => Math.random() - 0.5);
-        CALLSIGNS.sort(() => Math.random() - 0.5);  
+        CALLSIGNS.sort(() => Math.random() - 0.5);
 
     STANDINGBYS = ["<AR>", "K", "<AR>", "<AR>"];
 
-    loopCount = 8    
+    loopCount = 8
     var cqs = [];
     for (var n = 0; n < loopCount; n++) {
         var callsign = CALLSIGNS[Math.floor(Math.random() * CALLSIGNS.length)];
