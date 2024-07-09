@@ -54,8 +54,11 @@ sudo ./setup<br>
 ### 오라클 클라우드에 설치시 필요한 추가 설정
 - 로칼 시간 설정 (자동리부팅 등의 시간 설정시 로칼시간으로 입력)  https://blog.buffashe.com/2020/02/changing-ubuntu-timezone
 - 디스크 SWAP 설정  https://yeon-kr.tistory.com/174
-- 추가사용자의 포트 개방  https://kibua20.tistory.com/124
-
+- 추가사용자의 포트 개방  https://kibua20.tistory.com/124<br>
+   > 보안 정책 확인 : sudo iptables - -list<br>
+   > 포트 개방 : sudo iptables -I INPUT 5 -i ens3 -p udp - -dport 50050 -m state - -state NEW,ESTABLISHED -j ACCEPT<br>
+   > 방화벽 정책 저장 : sudo netfilter-persistent save
+<br>
 
 DVSwitch에 대한 내용은 {{< newtabref href="/networks/dv/dvswitch" title="DVSwitch 서버 공식 릴리즈" >}}를 참조하시기 바랍니다.<br>
 

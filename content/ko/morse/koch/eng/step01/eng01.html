@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="viewport" content="width=device-width" />
-<title>QSO코흐법</title>
+<title>영문 1단계</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.8/codemirror.css'>
 <script>
 window.console = window.console || function(t) {};
@@ -249,18 +249,18 @@ audio {
 
 <div class="log_container_ditdah"><span id="ditdah"></span></div>
 
-<button id="sub_menu_1" style="background-color:rgb(240, 250, 200);">1 부호 E (10/3)</button>&nbsp;
-<button id="sub_menu_2" style="background-color:rgb(240, 250, 200);">2 부호 D (10/3)</button>&nbsp;
-<button id="sub_menu_3" style="background-color:rgb(240, 250, 200);">3 조합1 (10/3)</button>&nbsp;
-<button id="sub_menu_4" style="background-color:rgb(240, 250, 200);">4 조합2 (10/3)</button>
+<button id="sub_menu_1" style="background-color:rgb(236, 248, 168);">1 부호 E (10/3)</button>&nbsp;
+<button id="sub_menu_2" style="background-color:rgb(236, 248, 168);">2 부호 D (10/3)</button>&nbsp;
+<button id="sub_menu_3" style="background-color:rgb(199, 216, 252);">3 조합 2자리 (10/3)</button>&nbsp;
+<button id="sub_menu_4" style="background-color:rgb(199, 216, 252);">4 조합 3자리 (10/3)</button>&nbsp;
+<button id="sub_menu_5" style="background-color:rgb(199, 216, 252);">5 조합 4자리 (10/3)</button>&nbsp;
+<button id="sub_menu_6" style="background-color:rgb(199, 216, 252);">6 조합 2+3자리 (10/3)</button>&nbsp;
+<button id="sub_menu_7" style="background-color:rgb(199, 216, 252);">7 조합 3+4자리 (10/3)</button>&nbsp;
+<button id="sub_menu_8" style="background-color:rgb(199, 216, 252);">8 조합 2+3+4자리 (10/3)</button>
 
 <!--  hangul_txt_1         -->
-<textarea id="hangul_txt_1" rows="10">
+<textarea id="hangul_txt_1" rows="5">
 
-    [[ 간단 사용 설명서 ]]
-
-- [부호]를 누르고 PLAY를 누르면 모오스 송신 시작.
-- [조합 1] 과 [조합 2]는 누를 때마다 내용이 바뀜.
 </textarea>
 <div id="hangul_txt_1_caption"></div>
 
@@ -272,10 +272,24 @@ audio {
 </div>
 
 <br>
-<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>-->
-<button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>
+<!--<button style="color:rgb(70, 70, 70);" onClick="location.href='/morse/koch/eng'">&nbsp;홈페이지로 돌아가기&nbsp;</button>
+<button style="color:rgb(70, 70, 70);" onClick="window.close()">&nbsp;현재창 닫고 메뉴창으로 돌아가기&nbsp;</button>-->
+2024년 7월 10일부터 각 단계의 연습 내용 변경. 이전의 내용은 <a href="/morse/koch/eng/change" target="_blank">변경 작업 색인</a> 참조. 변경 내용은 8월 31일까지만 유지함.
+<br><br>
+<button style="background-color:rgb(252, 185, 224);">&nbsp;도움말&nbsp;</button><br><br>
+<b><span style="font-size:110%">
+- [부호] 또는 [조합]을 누르고 PLAY를 누르면 전신음이 들림.<br>
+- [조합]은 누를 때마다 내용이 바뀜.<br>
+<br>
+- [10/3]은, 속도 10wpm, 부호간격 3을 목표로 연습한다는 뜻임.<br>
+- 속도/부호간격을 변경하면 다시 PLAY해야 함.<br>
+- 수신이 어려우면, [부호간격]을 늘여서 연습한 후, 익숙해지면 간격을 줄여서 연습한다.<br>
+- 스페이스는 띄어서 적는다. 처음에는 어려우므로 띄우도록 노력하는 정도로 한다.<br>
+<br>
+- 상세한 내용은 <a href="/morse/koch/eng/howtouse" target="_blank">프로그램 사용 및 연습 방법</a> 참조.
+</b></span><br><br>
 
-<h3> ◆ 프로그램 정보</h3>
+<button style="color:rgb(70, 70, 70);">&nbsp;프로그램 정보&nbsp;</button><br><br>
 <span class="font_medium">
 ▶ 프로그램의 제작 : DS1TZE<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW Trainer - <a href="https://shingiru.github.io/hangul_cw_trainer.html" target="_blank">https://shingiru.github.io/hangul_cw_trainer.html</a><br />
@@ -1060,6 +1074,10 @@ var SubMenu1 = document.querySelector("#sub_menu_1");
 var SubMenu2 = document.querySelector("#sub_menu_2");
 var SubMenu3 = document.querySelector("#sub_menu_3");
 var SubMenu4 = document.querySelector("#sub_menu_4");
+var SubMenu5 = document.querySelector("#sub_menu_5");
+var SubMenu6 = document.querySelector("#sub_menu_6");
+var SubMenu7 = document.querySelector("#sub_menu_7");
+var SubMenu8 = document.querySelector("#sub_menu_8");
 //var randomSB = document.querySelector("#sub_menu_4");
 
 function changeQsoSample(newTxtId) {
@@ -1171,11 +1189,157 @@ SubMenu3.onclick = function() {
     var addedWORDS = [];
     repeatCount = getRepeatCount();
 
-    var WORDS = [
-    "DE", "ED", "DE", "ED", "DED", "EDE", "DDE", "DEE", "EDD", "EED"
-    ];
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",   "EE", "DD" ];
 
-    loopCount = 4
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 43
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu4.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDD","EDE","EED","DDE","DEE","DED"];
+
+    loopCount = 10
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 30
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu5.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 24
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu6.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",   "EE", "DD",    "EDD","EDE","EED","DDE","DEE","DED"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 37
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu7.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["EDD","EDE","EED","DDE","DEE","DED",   "EDD","EDE","EED","DDE","DEE","DED",
+    "EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
+    for (var n = 0; n < loopCount; n++) {
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        WORDS.sort(() => Math.random() - 0.5);
+        for (repeatedWORDS of WORDS)
+        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
+    }
+
+    FinalSliceNumber = 27
+    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
+    doc.setValue(slicedWORDS.join(" "));
+
+    if (hideNow.checked == true){setMarker_short_after();}
+
+}
+
+SubMenu8.onclick = function() {
+    stop.click();
+
+    var slicedWORDS = [];
+    var repeatedWORDS = [];
+    var addedWORDS = [];
+    repeatCount = getRepeatCount();
+
+    var WORDS = ["DE","ED",   "DE","ED",   "DE","ED",    "DE","ED",    "DE","ED",   "EE", "DD",
+    "EDD","EDE","EED","DDE","DEE","DED",   "EDD","EDE","EED","DDE","DEE","DED",
+    "EDDE","EDEE","EDED","EEDE","EEDD","DDEE","DDED","DEED","DEDE","DEDD"];
+
+    loopCount = 30
     for (var n = 0; n < loopCount; n++) {
         WORDS.sort(() => Math.random() - 0.5);
         WORDS.sort(() => Math.random() - 0.5);
@@ -1188,58 +1352,10 @@ SubMenu3.onclick = function() {
 
     FinalSliceNumber = 32
     slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    + "\n" 
-    //+ "\n"
-    //+ "                                                                                                         \n"
-    //+ "[[ 연습시 참고사항 ]]\n"
-    //+ "- [조합]을 누를 때마다 내용이 바뀜.\n"
-    //+ "- [조합]부터 적으면서 수신\n"
-    //+ "- 소문자로 적기, 공백 띄우기\n"
-    //+ "- 수신이 힘들면, 속도/간격 늦추어서 연습후 점점 목표속도로"
-    );
+    doc.setValue(slicedWORDS.join(" "));
 
     if (hideNow.checked == true){setMarker_short_after();}
 
-}
-
-
-SubMenu4.onclick = function() {
-    stop.click();
-
-    var slicedWORDS = [];
-    var repeatedWORDS = [];
-    var addedWORDS = [];
-    repeatCount = getRepeatCount();
-
-    var WORDS = [
-    "DEDDE", "DEDEE", "DEDE", "EDEDE", "DED", "DEE", "EDE",
-    "EEDE", "DEDD", "EDED", "EEDD", "DDE", "EDEE", "EDD", "DE",
-    "EDEDD", "DEEDE","ED", "EED", "DDED", "EDDD", "DEED",
-    "DEDED", "DDEDE", "EDDED", "EDDED", "EDEED"
-    ];
-
-    loopCount = 1
-    for (var n = 0; n < loopCount; n++) {
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        WORDS.sort(() => Math.random() - 0.5);
-        for (repeatedWORDS of WORDS)
-        addedWORDS.push(Array(repeatCount).fill(repeatedWORDS).join(""));
-    }
-
-    FinalSliceNumber = 22
-    slicedWORDS = addedWORDS.slice(0, FinalSliceNumber);
-    doc.setValue(slicedWORDS.join(" ")
-    //+ "\n" 
-    //+ "                                                                                                         \n"
-    //+ "-----------------------------------------------------------------------------------------------------------\n"
-    //+ "- 알파벳 2~5개 조합. 약 3분\n"
-    );
-
-    if (hideNow.checked == true){setMarker_short_after();}
 }
 
 function onChangeHideNow(){

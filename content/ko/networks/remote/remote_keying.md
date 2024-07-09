@@ -36,4 +36,4 @@ HF의 리모트는 90년대 중반부터 시작되어, 인터넷의 사용
 - 매뉴얼이 아주 친절하지는 않습니다. ^  이 장치의 제작과 실험에 참여해 주신 HL1SB, HL2QX님께 감사드립니다.<br>
 <br>
 
-{{< newtabref href="/networks/img/원격CW키잉장치.pdf" title="원격CW키잉장치.pdf" >}} 새창에서 보기
+{{< newtabref href="/networks/img/원격CW키잉장치.pdf" title="원격 CW 키잉 장치 매뉴얼.pdf" >}} 새창에서 보기
