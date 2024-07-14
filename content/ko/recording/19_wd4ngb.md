@@ -3,7 +3,7 @@ linkTitle: WD4NGB ex-HL9JV
 title: 의정부에서 미군으로 근무
 # description:
 type: docs
-weight: 92
+weight: 94
 ---
 
 {{% pageinfo %}}
