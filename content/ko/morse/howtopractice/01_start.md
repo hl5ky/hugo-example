@@ -16,22 +16,22 @@ weight: 10
 <br><br>
 ▶ <b><span style="font-size:110%">왼쪽 메뉴의 순서대로 학습</span></b>
 
-1. <b><u>전신 학습 안내서</u></b> 읽기
+1. <b>전신 학습 안내서</b> 읽기
 <!--{{< newtabref href="/morse/koch/eng" title="부호연습(QSO코흐법).영문" >}}-->
-2. <b><u>부호 연습</u></b> - <부호연습(QSO코흐법).영문>의 연습. 부호를 외울 필요는 없습니다.
+2. <b>부호 연습</b> - <부호연습(QSO코흐법).영문>의 연습. 부호를 외울 필요는 없습니다.
  ({{< newtabref href="/morse/book/01_start/02_memorize/" title="부호의암기" >}} 참조)
 
-3. <b><u>실제 교신 연습</u></b> - <실제 교신 연습>의 <영문 예문 1,2,3>을 여러 번 반복 수신하여 자연스럽게 외웁니다.<br>
+3. <b>실제 교신 연습</b> - <실제 교신 연습>의 <영문 예문 1,2,3>을 여러 번 반복 수신하여 자연스럽게 외웁니다.<br>
    (부호 연습을 완전히 마치지 않은 상태에서 시작해도 됩니다.)
 
-4. <b><u>스케쥴 교신 참여</u></b> - 토, 일요일에 HL0CW, DS0AHQ에서 진행하는 {{< newtabref href="/morse/book/04_etc/01_hl0cw" title="스케쥴 교신" >}}의 수신 및 참여.
+4. <b>스케쥴 교신 참여</b> - 토, 일요일에 HL0CW, DS0AHQ에서 진행하는 {{< newtabref href="/morse/book/04_etc/01_hl0cw" title="스케쥴 교신" >}}의 수신 및 참여.
 
 <br><br>
 ▶ <b><span style="font-size:110%">함께 연습할 내용</span></b>
 
-1. <b><u>송신 연습 시작</u></b> - QSO코흐법.영문의 10단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신연습시작시기" >}} 참조)
+1. <b>송신 연습 시작</b> - QSO코흐법.영문의 10단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신연습시작시기" >}} 참조)
 
-2. <b><u>수신기로 수신</u></b> - QSO코흐법.영문의 10단계 정도에서 수신기로 전신 밴드 수신 시작.
+2. <b>수신기로 수신</b> - QSO코흐법.영문의 10단계 정도에서 수신기로 전신 밴드 수신 시작.
 <!--{{< newtabref href="/morse/qso/eng_1" title="영문 예문 1" >}}, {{< newtabref href="/morse/qso/eng_2" title="영문 예문 2" >}}-->
 
 
