@@ -42,7 +42,7 @@ title: Amateur Radio
 코흐법은 전신 학습을 위해 개발한 과학적인 학습법입니다. 이것을 개량한 QSO 코흐법으로 효과적인 전신 학습을 할 수 있습니다. 한글 연습 또한 QSO 코흐법을 적용하였습니다.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-walkie-talkie" title="남아프리카와의 DMR 교신 듣기!" url="/recording/zs6arg/" %}}
+{{% blocks/feature icon="fa-solid fa-walkie-talkie" title="남아프리카와의 DMR 교신 듣기!" url="/recording/04_zs6arg/" %}}
 아프리카는 단파대에서도 교신이 쉽지 않을뿐더러 장시간 대화는 더욱 어렵습니다. 인터넷을 사용하는 DMR에서는 전파상태와 상관이 없으므로 장시간 대화가 가능합니다.
 {{% /blocks/feature %}}
 
