@@ -11,12 +11,12 @@ weight: 10
 {{% pageinfo %}}
 <b>대상</b> : 전신을 처음으로 시작하는 분.<br>
 
-<b>내용</b> : 영문 부호 연습과 기본적인 영문 교신을 위한 준비 단계.<br>
-
-- 왼쪽 메뉴의 순서대로 학습하면 됩니다.
+<b>내용</b> : 영문 부호 연습과 기본적인 영문 교신을 위한 준비 단계.
 {{% /pageinfo %}}
 
 <br>
+
+▶ <b><span style="font-size:110%">왼쪽 메뉴의 순서대로 학습</span></b>
 
 1. <b><u>전신 학습 안내서</u></b> 읽기
 <!--{{< newtabref href="/morse/koch/eng" title="부호연습(QSO코흐법).영문" >}}-->
@@ -31,7 +31,7 @@ weight: 10
 <br><br>
 
 
-▶ <b><span style="font-size:110%">위의 연습 도중에 함께 학습할 내용</span></b>
+▶ <b><span style="font-size:110%">함께 연습할 내용</span></b>
 
 1. <b><u>송신 연습 시작</u></b> - QSO코흐법.영문의 10단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신연습시작시기" >}} 참조)
 
