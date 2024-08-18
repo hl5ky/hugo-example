@@ -13,9 +13,7 @@ weight: 10
 
 <b>내용</b> : 영문 부호 연습과 기본적인 영문 교신을 위한 준비 단계.
 {{% /pageinfo %}}
-
-<br>
-
+<br><br>
 ▶ <b><span style="font-size:110%">왼쪽 메뉴의 순서대로 학습</span></b>
 
 1. <b><u>전신 학습 안내서</u></b> 읽기
@@ -29,8 +27,6 @@ weight: 10
 4. <b><u>스케쥴 교신 참여</u></b> - 토, 일요일에 HL0CW, DS0AHQ에서 진행하는 {{< newtabref href="/morse/book/04_etc/01_hl0cw" title="스케쥴 교신" >}}의 수신 및 참여.
 
 <br><br>
-
-
 ▶ <b><span style="font-size:110%">함께 연습할 내용</span></b>
 
 1. <b><u>송신 연습 시작</u></b> - QSO코흐법.영문의 10단계 정도에서 송신 연습 시작. ({{< newtabref href="/morse/book/03_tx/03_tx_start" title="송신연습시작시기" >}} 참조)
@@ -42,7 +38,6 @@ weight: 10
 3. 영문 예문의 송신 연습.
 
 <br><br>
-
 > 입문 과정의 성공을 위해서 <u>학습의 지속성</u>이 가장 중요합니다.<br>
 > 지속하기 위해서는 그에 맞는 <u>마음 자세</u>가 필요합니다. ({{< newtabref href="/morse/book/01_start/07_time" title="방법,순서,마음가짐" >}} 참조)<br>
 > QSO코흐법 17단계 중, <u>5단계를 목표</u>로 시작하시기 바랍니다.<br>
