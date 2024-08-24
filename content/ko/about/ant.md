@@ -63,6 +63,6 @@ weight: 40
 > 50MHz 7el Yagi antenna
 
 <br>
-<img src="/about/img/KA1_406.png" style="width:900px;height:256"><br>
+<img src="/about/img/ANT_3ea_Small_Size.png" style="width:1100px;height:256"><br>
 
 > 2024년. Kojinsha KA1-406 Yagi antenna ( 7MHz~50MHz)<br>
