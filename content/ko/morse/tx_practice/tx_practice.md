@@ -4,8 +4,9 @@ title: 송신 연습 방법
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
-weight: 60
+weight: 30
 ---
+
 
 {{% pageinfo %}}
  이 방법은 교포햄인 W1TOY, 김영한님이 실행하신 방법을 참조하여 작성하였습니다.
@@ -22,7 +23,7 @@ weight: 60
 
 <span style="font-size:140%">연습 방법</span>
 
-<b><span style="font-size:130%">{{< newtabref href="/morse/tx_practice.html" title="송신 연습 프로그램" >}} 새창에서 열기</span></b>
+<b><span style="font-size:130%">{{< newtabref href="/morse/tx_practice/tx_practice.html" title="송신 연습 프로그램" >}} 새창에서 열기</span></b>
 
 연습 방법은, 정확한 부호를 듣고 그대로 송신하는 것입니다. 즉, 송신 연습 프로그램을 열고 컴퓨터가 들려주는 부호를 듣고 나서 바로 송신하는 것입니다. 방금 들었던 것을 송신하기 때문에 크게 어렵지 않습니다. 한 번 듣는 것이 부족하면 두 번 세 번 듣고 송신합니다. 순서를 정리하면 아래와 같습니다.
 
@@ -47,4 +48,10 @@ A의 연습이 끝나면, N, K, R, L, F, X의 송신을 연습합니다. 익숙�
 이어서, A, U, V, 4, N, D, B, 6의 연습을 합니다. 마찬가지로 두 개 또는 세 개 이상의 부호를 연속해서 연습합니다.
 
 위의 내용을 바탕으로 본인에게 맞는 방법으로 다른 부호도 계속 연습합니다.
+<br><br>
 
+<span style="font-size:140%">동영상으로 설명</span>
+
+위의 내용을 읽어서 이해가 잘 되지 않는다면 아래의 동영상을 참고하시기 바랍니다.
+<br>
+<iframe title="20160728_111701" width="900" height="600" src="https://play-tv.kakao.com/embed/player/cliplink/449139913?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe>

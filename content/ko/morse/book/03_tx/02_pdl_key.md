@@ -19,5 +19,9 @@ weight: 20
 패들은 키어에서 만들어주는 장점 또는 단점에 맞추어서 패들을 움직여주어야 합니다. 키어에 맞추려면 박자감을 갖추어야 가능합니다. 키어와 패들을 사용하는 것은 메트로놈을 사용하여 피아노를 치는 것과 유사합니다. 건반과 음악에 익숙하지 않은 사람에게 메트로놈까지 들이댄다면 연주가 쉽지 않을 것입니다. 왕초보는 키어의 박자에 맞추는데 급급하게 되고 결국 키어의 박자에 끌려다닐 수도 있습니다.
 
 하지만 서두에서도 얘기했듯이, 스트레이트키와 패들의 사용은, 어느쪽으로 선택하더라도 대부분 잘 적응하는 편이기 때문에 너무 민감하게 생각하지 않아도 됩니다.
+<br>
+<br>
+아래의 동영상은 스트레이트키와 패들의 장단점을 설명한 것입니다.
 
-
+<iframe title="20160728_111701" width="900" height="600" src="https://play-tv.kakao.com/embed/player/cliplink/446954000?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe>
+<br>
