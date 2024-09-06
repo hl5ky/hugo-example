@@ -16,7 +16,7 @@ weight: 98
 태양열 발전을 하고 배터리를 사용하면서 저출력으로 운용하지만 안테나가 좋아서 래그츄도 가능합니다. 대부분은 일반 전기뿐만 아니라 휴대폰이나 인터넷도 사용할 수 없는 환경입니다.
 
 <br>
-<b><span style="font-size:120%">EA2BY</span></b>
+<b><span style="font-size:120%">EA2BY</span></b>   2014년 교신
 
 스페인의 중부와 동북부에는 사막이 많이 있는데, Saragoza라는 도시의 주변도 대부분 사막으로 이루어져 있습니다. Alvaro가 운용하는 곳은 사막을 1시간 이상 운전해서 들어간 곳이라고 합니다.
 
@@ -26,7 +26,7 @@ weight: 98
 
 
 <br>
-<b><span style="font-size:120%">VA3AAA</span></b>
+<b><span style="font-size:120%">VA3AAA</span></b>   2024. 8. 25. 교신
 
 
 WD4NGB에게서 소개받은 캐나다햄입니다. 오대호에 있는 아주 작은 섬에서 XYL과 단 둘만 산다고 합니다. Stanley는 사람들이 많은 도시 생활을 싫어가고, 오토바이로 극지방 여행을 하는 등 열악한 환경에서 생활하는 것을 좋아합니다.
@@ -38,7 +38,7 @@ WD4NGB에게서 소개받은 캐나다햄입니다. 오대호에 있는 아주 �
 <center><audio src="https://blog.kakaocdn.net/dn/FWBPB/btsJmfM4Q4E/BI3Q4gsUAFkhhy6HTjfMr1/tfile.mp3" controls="controls"></audio></center><br>
 
 <br>
-<b><span style="font-size:120%">VK3FLAK</span></b>
+<b><span style="font-size:120%">VK3FLAK</span></b>   2014년 교신
 
 
 호주의 호출부호 중에서 서픽스가 4자리로 되어 있고 F로 시작하는 호출부호는 Foundation 자격을 가진 햄입니다. 우리나라의 자격과 비교하면 대략 4급 정도가 됩니다. 사용 주파수도 한정되어 있고 출력은 10w로 제한됩니다.
