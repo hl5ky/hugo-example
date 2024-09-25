@@ -17,7 +17,7 @@ weight: 104
 
 저녁 늦게 14MHz의 한 주파수에서 유럽의 많은 국들이 V85RH(브루나이)를 부르고 있었습니다. 유럽에서 태평양쪽과의 교신은 쉽지 않고, 브루나이에는 무선국도 많지 않으니, 유럽국들에게는 아주 좋은 기회가 됩니다.
 
-V85RH가 파일업을 처리하다가 갑자기 상대국(DA0W)에서 "any QTC?"라고 말하자, V85RH는 호출부호와 함께 알수없는 숫자를 부릅니다. 상대국은 하나 하나 확인하면서 "Roger"라고 말하다가 모두 확인이 되니, "Roger, QSL, thank you 73"라고 하면서 교신을 마칩니다.
+V85RH가 파일업을 처리하다가 갑자기 상대국(DA0W)에서 "any QTC?"라고 말하자, V85RH는 호출부호와 함께 알 수 없는 숫자를 부릅니다. 상대국은 하나 하나 확인하면서 "Roger"라고 말하다가 모두 확인이 되니, "Roger, QSL, thank you 73"라고 하면서 교신을 마칩니다.
 
 <center><audio src="https://blog.kakaocdn.net/dn/cBOtRd/btsJLhC5VJ5/ZzbUbYzyeQOeeFzjLgYD9K/tfile.mp3" controls="controls"></audio></center><br>
 
