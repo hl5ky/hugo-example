@@ -57,7 +57,7 @@ Configure에서 Port와 Speed를 설정하고, Connect를 눌러서 연결한다
    (각도가 작은 방향으로 회전함)
 2. <<는 CCW, >>는 CW를 나타냄. 마우스를 누르고 있는 동안 회전함.
 3. 6개의 지정 각도 회전함. 위의 STOP을 누르면 중단됨.
-4. Preset Targets. 각도값을 입력하고, Go를 누르면 회전함. 위의 STOP를 누르면 중단됨.
+4. Preset Targets. 각도값을 입력하고, Go를 누르면 회전함. 위의 STOP을 누르면 중단됨.
 <br><br>
 
 ■ 참고<br>
