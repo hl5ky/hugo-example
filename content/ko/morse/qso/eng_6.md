@@ -16,14 +16,14 @@ weight: 60
 
 <br>
 
-<center><audio src="https://blog.kakaocdn.net/dn/bL4UMy/btrBrKhekZw/85oqyMBxQxVKbcs81avxs1/tfile.mp3" controls="controls"></audio></center>
+<center><audio src="https://blog.kakaocdn.net/dn/lVgDa/btsKyFiIM3S/NlKQa8wjMeErekkZb5pQBk/tfile.mp3" controls="controls"></audio></center>
 <br>
 
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> CQ CQ CQ DE JA6EGL JA6EGL &lt;AR&gt; K</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ DU8DJ KN</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL GE TNX FER CALL &lt;BT&gt; UR 559 55N &lt;BT&gt; NAME IS MIYAKE MIYAKE &lt;BT&gt; QTH IS FUKUOKA FUKUOKA <span style="color: red;">HW CPI?</span><span style="color: #000000;"> DU8DJ DE JA6EGL KN</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ GE MIYAKE <span style="color: red;">SAN</span><span style="color: #006dd7;"> TNX FER RPT &lt;BT&gt; UR RST IS 579 57N NAME FRED FRED QTH ZAMBOANGA ZAMBOANGA HW? JA6EGL DE DU8DJ KN</span></p>
-<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL &lt;BT&gt; TNX FRED TKS FB QSO &lt;BT&gt; 73 CUAGAN DU8DJ DE JA6EGL &lt;SK&gt;</span></p>
+<p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> DU8DJ DE JA6EGL &lt;BT&gt; TNX FRED TKS FB QSO &lt;BT&gt; 73 CUAGN DU8DJ DE JA6EGL &lt;SK&gt;</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> JA6EGL DE DU8DJ OK MIYAKE SAN TNX FOR NICE QSO CUAGN 73 JA6EGL DE DU8DJ TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #000000;"><b>A:</b> 73 TU &lt;SK&gt; E E</span></p>
 <p data-ke-size="size16"><span style="color: #006dd7;"><b>B:</b> E E</span></p>
