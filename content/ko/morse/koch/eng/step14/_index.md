@@ -1,6 +1,6 @@
 ---
 linkTitle: 영문 14단계
-title: 영문 14단계 연습
+title: 영문 14단계
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down

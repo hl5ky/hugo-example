@@ -1,6 +1,6 @@
 ---
 linkTitle: 한글
-title: QSO 코흐법으로 한글 부호 연습
+title: QSO 코흐법 한글 부호 연습
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down

@@ -1,6 +1,6 @@
 ---
 linkTitle: 한글 2단계
-title: 한글 2단계 연습
+title: 한글 2단계
 # description: 
 type: docs
 # icon: fa-solid fa-angle-down
